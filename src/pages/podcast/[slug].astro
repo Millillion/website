@@ -1,0 +1,27 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const eps = await getCollection("podcast", (p) => !p.data.draft);
+  return eps.map((ep) => ({ params: { slug: ep.id }, props: { ep } }));
+}
+const { ep } = Astro.props;
+const { Content } = await render(ep);
+---
+<Base title={ep.data.title} description={ep.data.description}>
+  <article class="prose">
+    <h1>{ep.data.title}</h1>
+    <p class="muted">{ep.data.date.toLocaleDateString("en-US", { dateStyle: "long" })} · {ep.data.duration}</p>
+    <audio controls preload="none" src={ep.data.audio}></audio>
+    {ep.data.youtube && (
+      <div class="video">
+        <iframe src={`https://www.youtube-nocookie.com/embed/${ep.data.youtube}`} title={ep.data.title} loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    )}
+    {ep.data.blog && <p><a href={`/blog/${ep.data.blog}/`}>Read this as a blog post →</a></p>}
+    <Content />
+  </article>
+  <div class="box"><a class="cta primary" href="/support/">Support Millillion</a><a class="cta" href="/podcast.xml">Podcast RSS</a></div>
+</Base>

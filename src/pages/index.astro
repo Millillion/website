@@ -1,0 +1,36 @@
+---
+import Base from "../layouts/Base.astro";
+import { readmeHtml } from "../lib/github.js";
+import { getCollection } from "astro:content";
+
+// The home page IS the GitHub org profile README (Millillion/.github/profile/README.md).
+let html = await readmeHtml("Millillion/.github", "profile/README.md");
+// the site header already shows the logo
+html = html?.replace(/<p align="center">\s*<picture>[\s\S]*?<\/picture>\s*<\/p>/, "") ?? "";
+const posts = (await getCollection("blog", (p) => !p.data.draft)).sort((a, b) => b.data.date - a.data.date).slice(0, 3);
+const episodes = (await getCollection("podcast", (p) => !p.data.draft)).sort((a, b) => b.data.date - a.data.date).slice(0, 3);
+---
+<Base>
+  <article class="prose" set:html={html} />
+  <div class="box">
+    <a class="cta primary" href="/support/">Support Millillion</a>
+    <a class="cta" href="/podcast/">Listen</a>
+    <a class="cta" href="/blog/">Read</a>
+  </div>
+  {posts.length > 0 && (
+    <section>
+      <h2>Latest writing</h2>
+      <ul class="list">
+        {posts.map((p) => <li><a href={`/blog/${p.id}/`}>{p.data.title}</a><span class="meta">{p.data.date.toLocaleDateString("en-US", { dateStyle: "long" })}</span></li>)}
+      </ul>
+    </section>
+  )}
+  {episodes.length > 0 && (
+    <section>
+      <h2>Latest episodes</h2>
+      <ul class="list">
+        {episodes.map((e) => <li><a href={`/podcast/${e.id}/`}>{e.data.title}</a><span class="meta">{e.data.duration}</span></li>)}
+      </ul>
+    </section>
+  )}
+</Base>

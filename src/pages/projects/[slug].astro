@@ -1,0 +1,25 @@
+---
+import Base from "../../layouts/Base.astro";
+import { PROJECTS, SITE } from "../../site.js";
+import { readmeHtml } from "../../lib/github.js";
+
+export function getStaticPaths() {
+  return PROJECTS.map((p) => ({ params: { slug: p.slug }, props: { project: p } }));
+}
+const { project } = Astro.props;
+// The page body IS the project's README on GitHub; it is re-fetched on every build.
+const html = await readmeHtml(project.repo);
+const substantial = html && html.replace(/<[^>]+>/g, "").trim().length > 80;
+---
+<Base title={project.name} description={project.blurb}>
+  {substantial ? (
+    <article class="prose" set:html={html} />
+  ) : (
+    <article class="prose"><h1>{project.name}</h1><p>{project.blurb}</p><p class="muted">More soon.</p></article>
+  )}
+  <div class="box">
+    <p><strong>{project.name}</strong> is part of Millillion: impossibly ambitious, open-source software built with AI.</p>
+    <a class="cta" href={`https://github.com/${project.repo}`}>View on GitHub</a>
+    <a class="cta primary" href="/support/">Support Millillion</a>
+  </div>
+</Base>

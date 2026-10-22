@@ -1,0 +1,10 @@
+---
+import Base from "../../layouts/Base.astro";
+import { PROJECTS } from "../../site.js";
+---
+<Base title="Projects" description="Millillion's open-source projects.">
+  <h1>Projects</h1>
+  <ul class="list">
+    {PROJECTS.map((p) => <li><a href={`/projects/${p.slug}/`}>{p.name}</a><span class="meta">{p.blurb}</span></li>)}
+  </ul>
+</Base>

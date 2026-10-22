@@ -1,0 +1,20 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE } from "../site.js";
+---
+<Base title="Support" description="Fund the agents: help Millillion build impossibly ambitious open-source software.">
+  <article class="prose">
+    <h1>Support Millillion</h1>
+    <p>Millillion's projects are built with AI agents, and agents run on compute. The first goal is simple: <strong>one dedicated Claude account for every project.</strong> Every dollar of support goes toward that first.</p>
+  </article>
+  <div class="box">
+    <h2>Developers</h2>
+    <p>Sponsor through GitHub, monthly or one-time.</p>
+    <a class="cta primary" href={SITE.sponsors}>Sponsor on GitHub</a>
+  </div>
+  <div class="box">
+    <h2>Everyone else</h2>
+    <p>Become a patron. No GitHub account needed.</p>
+    {SITE.patreon ? <a class="cta primary" href={SITE.patreon}>Support on Patreon</a> : <p class="muted">Patreon is coming soon.</p>}
+  </div>
+</Base>

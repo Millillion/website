@@ -1,0 +1,59 @@
+---
+import "../styles/global.css";
+import { SITE } from "../site.js";
+
+const { title, description = SITE.description, image = "/og-image.png" } = Astro.props;
+const fullTitle = title ? `${title} · ${SITE.name}` : `${SITE.name}: ${SITE.tagline}`;
+const path = Astro.url.pathname;
+const nav = [
+  ["/projects/", "Projects"],
+  ["/blog/", "Blog"],
+  ["/podcast/", "Podcast"],
+  ["/meetup/", "Meetup"],
+  ["/support/", "Support"],
+];
+const canonical = new URL(path, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="alternate" type="application/rss+xml" title="Millillion blog" href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Millillion podcast" href="/podcast.xml" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <header class="site">
+      <a class="brand" href="/" aria-label="Millillion home">
+        <img class="logo-light" src="/millillion-black.svg" alt="ɛ∞ɜ" />
+        <img class="logo-dark" src="/millillion-white.svg" alt="ɛ∞ɜ" />
+      </a>
+      <nav>
+        {nav.map(([href, label]) => (
+          <a href={href} aria-current={path.startsWith(href) ? "page" : undefined}>{label}</a>
+        ))}
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site">
+      <span>ɛ∞ɜ Millillion · {SITE.tagline}</span>
+      <a href={SITE.github}>GitHub</a>
+      <a href="/rss.xml">Blog RSS</a>
+      <a href="/podcast.xml">Podcast RSS</a>
+      <a href="/support/">Support</a>
+    </footer>
+  </body>
+</html>

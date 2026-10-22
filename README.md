@@ -1,4 +1,4 @@
-# millillion.com
+# millillion.org
 
 The Millillion website: home, projects, blog, podcast, meetup and support. It's built with [Astro](https://astro.build) and deployed to Cloudflare Pages.
 

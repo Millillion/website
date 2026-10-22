@@ -2,17 +2,27 @@
 import Base from "../layouts/Base.astro";
 import { readmeHtml } from "../lib/github.js";
 import { getCollection } from "astro:content";
+import { SITE } from "../site.js";
 
 // The home page IS the GitHub org profile README (Millillion/.github/profile/README.md).
 let html = await readmeHtml("Millillion/.github", "profile/README.md");
 // the site header already shows the logo
-html = html?.replace(/<p align="center">\s*<picture>[\s\S]*?<\/picture>\s*<\/p>/, "") ?? "";
+html = (html ?? "")
+  .replace(/<p align="center">\s*<picture>[\s\S]*?<\/picture>\s*<\/p>/, "")
+  .replace(/<h3 align="center">[\s\S]*?<\/h3>/, ""); // the hero carries the tagline
 const posts = (await getCollection("blog", (p) => !p.data.draft)).sort((a, b) => b.data.date - a.data.date).slice(0, 3);
 const episodes = (await getCollection("podcast", (p) => !p.data.draft)).sort((a, b) => b.data.date - a.data.date).slice(0, 3);
 ---
 <Base>
+  <section class="hero">
+    <img class="logo-light" src="/millillion-black.svg" alt="ɛ∞ɜ" />
+    <img class="logo-dark" src="/millillion-white.svg" alt="ɛ∞ɜ" />
+    <p class="tagline">{SITE.tagline}</p>
+    <span class="seal" aria-hidden="true"></span>
+  </section>
+  <span class="rule" aria-hidden="true"></span>
   <article class="prose" set:html={html} />
-  <div class="box">
+  <div class="actions">
     <a class="cta primary" href="/support/">Support Millillion</a>
     <a class="cta" href="/podcast/">Listen</a>
     <a class="cta" href="/blog/">Read</a>

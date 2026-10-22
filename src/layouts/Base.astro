@@ -32,6 +32,11 @@ const canonical = new URL(path, Astro.site);
     <meta property="og:image" content={new URL(image, Astro.site)} />
     <meta property="og:url" content={canonical} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#f6f2ea" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#12110f" media="(prefers-color-scheme: dark)" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet" />
   </head>
   <body>
     <header class="site">
@@ -49,11 +54,14 @@ const canonical = new URL(path, Astro.site);
       <slot />
     </main>
     <footer class="site">
-      <span>ɛ∞ɜ Millillion · {SITE.tagline}</span>
-      <a href={SITE.github}>GitHub</a>
-      <a href="/rss.xml">Blog RSS</a>
-      <a href="/podcast.xml">Podcast RSS</a>
-      <a href="/support/">Support</a>
+      <span class="rule" aria-hidden="true"></span>
+      <div class="links">
+        <span class="mark">ɛ∞ɜ Millillion · {SITE.tagline}</span>
+        <a href={SITE.github}>GitHub</a>
+        <a href="/rss.xml">Blog RSS</a>
+        <a href="/podcast.xml">Podcast RSS</a>
+        <a href="/support/">Support</a>
+      </div>
     </footer>
   </body>
 </html>

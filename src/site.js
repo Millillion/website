@@ -25,5 +25,5 @@ export const PODCAST = {
   cover: "/podcast-cover.jpg", // 3000x3000
   ownerEmail: "lastmjs@millillion.org",
   spotify: "https://open.spotify.com/show/2TSiR5A8vVDAHEeGNpTY7e",
-  apple: "", // add once Apple approves the show
+  apple: "https://podcasts.apple.com/us/podcast/millillion/id6826041508",
 };

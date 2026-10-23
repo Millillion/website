@@ -18,7 +18,7 @@ Copy the media into a gitignored folder inside the session's working directory, 
 
 ## 1. Each Short (you do all of it)
 1. Open `https://studio.youtube.com/channel/UCsGdEXgpldl_V0gg0TJtJGw/videos/upload?d=ud`. Find the hidden file input (`find` "file input") and use `file_upload` with the Short's path.
-2. **Details**: select all in the title (ctrl+a) and type `<hook title> #shorts`. Type the description from make-videos §4. Under Audience choose **"No, it's not made for kids"**.
+2. **Details**: select all in the title (ctrl+a) and type `<hook title> #shorts`. Type the description from make-videos §4. Under Audience choose **"No, it's not made for kids"**. Then do the **Show more checklist** below.
 3. Click Next through Video elements and Checks. Under **Visibility** choose **Public**, then **Publish**.
 4. YouTube recognises a vertical video of 3 minutes or less as a Short. Shorts don't take custom thumbnails or chapters here; skip those.
 
@@ -29,8 +29,18 @@ Copy the media into a gitignored folder inside the session's working directory, 
    - Description: paste `episodes-src/NNN/youtube-description.txt`; the chapters come from it.
    - Thumbnail: `file_upload` with `thumbnail.jpg`.
    - Audience: "No, it's not made for kids".
+   - Then the **Show more checklist** below.
 3. **Video elements → Subtitles → Add → Upload file → With timing**: `file_upload` with `captions.srt`, language English.
 4. **Visibility: Public → Publish.** Copy the video link.
+
+## Show more checklist (every video; YouTube leaves these unset)
+- Paid promotion: **No**.
+- AI use: **No**. YouTube's label is only for realistic synthetic content: making a real person say or do something they didn't, altered real footage, realistic fake scenes, or AI music as the main focus. Jordan's real voice with graphics and captions doesn't qualify. If a future video does any of those things, answer Yes.
+- Tags: 5–8 topical tags. Only use topics the episode actually covers (grep `raw.txt`).
+- Video language **English**. Title and description language **English**.
+- Category **Science & Technology** (the default is People & Blogs).
+- Leave the defaults: Standard license, embedding allowed, comments on.
+- Save, then check the page with `innerText`: category, languages, tags, and the checked radios.
 
 ## 3. After publishing
 - Add the full video's YouTube id to the episode's frontmatter (`youtube:` in `src/content/podcast/NNN-*.md`) so the page embeds it. Build, commit and push.
@@ -42,3 +52,5 @@ Copy the media into a gitignored folder inside the session's working directory, 
 - Episode 1: four Shorts uploaded directly via `file_upload`. The 175 MB full video hit the 10 MB tool limit, and the R2 split-and-rejoin page script was blocked by the safety classifier; Jordan picked the file himself.
 - To change visibility from the Content list, open the visibility cell's dropdown arrow, choose Public, then Save. Clicking the label text alone sometimes does nothing.
 - Don't upload as Unlisted "to check first". Jordan expects Public.
+- Description links stay unclickable until the channel completes YouTube's one-time verification for advanced features. Jordan has to do that himself, since it involves identity checks. The Shorts "Related video" picker also wouldn't open ("You're all set… try refreshing") as of 2026-10-23. Once Jordan verifies, set each Short's Related video to the full episode.
+- The subtitles file input exists in the page as soon as "Upload file" is chosen, so `file_upload` works on it without clicking "Continue".

@@ -3,7 +3,7 @@ title: "1. We Are All Agentic Engineers Now"
 date: 2026-10-23
 description: "The first episode of the Millillion podcast. Jordan Last (lastmjs) shares his path from chatbots to AI agents that write all the code, and why we are all agentic engineers now: managing agents, judging their evidence, and building pipelines that refine slop into clean code."
 audio: "https://audio.millillion.org/episodes/millillion-001.mp3"
-audioBytes: 24500393
+audioBytes: 24618291
 duration: "00:25:31"
 blog: "we-are-all-agentic-engineers-now"
 ---

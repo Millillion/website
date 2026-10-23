@@ -29,7 +29,7 @@ Through 2025 the agents kept improving, but my team and I were still really codi
 
 So that's what I started doing. In December 2025 I used an AI to do a very complicated tax return for the first time. I take taxes extremely seriously, so it took me 24 straight hours of building verification schemes and generating code to make sure every number was correct. I felt good enough to sign it.
 
-Then I joined a construction startup and took on a complete AI transformation. We replaced the manufacturing software we were going to buy with our own, and I vibe-coded that demo in a day.
+Then I joined a construction startup and took on a complete AI transformation. We replaced the manufacturing software we were going to use with our own, and I vibe-coded that demo in a day.
 
 ## Generating is easy. Verifying is the job.
 
@@ -49,7 +49,7 @@ These AIs are *jagged* intelligences. Picture a bar chart of different areas: so
 
 That's also why it's agentic engineering *with an emphasis*. My emphasis is software development, and that's what gives me the ability to judge the output and the verification evidence the AI presents. Me and the AIs together can move far faster than before.
 
-I believe we will reach AGI, and that at some point the software engineering I do today will be completely automated: so good, so verified, formally verified even, that maybe I'll just review specifications and behavior. I'm not scared of that. I don't believe being economically useful is the purpose of humanity, and I think we're headed toward outrageous amounts of abundance. But for now, our skill sets are still vital as judges.
+I believe we will reach AGI, and that at some point the software engineering I do today will be completely automated: so good, so verified, formally verified even, that maybe I'll just review specifications and behavior. I'm not necessarily scared of that. I don't believe being economically useful is the purpose of humanity, and I think we're headed toward outrageous amounts of abundance. But for now, our skill sets are still vital as judges.
 
 ## Training the next generation
 

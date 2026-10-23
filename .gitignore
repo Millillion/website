@@ -18,3 +18,4 @@ episodes-src/*/**/*.m4a
 episodes-src/*/**/*.jpg
 episodes-src/*/**/*.webm
 episodes-src/*/**/*.mov
+episodes-src/*/trace.md

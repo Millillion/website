@@ -15,7 +15,7 @@ These days I don't call myself a software engineer anymore. I call myself an **a
 
 An agent is an instance of an AI that can actually go out and perform work for you, somewhat autonomously, and sometimes very, very autonomously. It's the evolution of the chatbot.
 
-Since around 2022, with the arrival of ChatGPT, chatbots have been everywhere. That's a back-and-forth: you ask a question and get a response, a lot like searching the web. And for a long time those answers lied to us constantly. They would make up CLI commands and API endpoints. You'd think, "I can't believe the exact command I need for this exact situation exists," and then you'd try it, and it definitely did not exist.
+Since around 2022, with the arrival of ChatGPT, chatbots have been everywhere. That's a back-and-forth: you ask a question and get a response, a lot like searching the web. And for a long time those answers lied to us so much. They would make up CLI commands and API endpoints. You'd think, "I can't believe this exact command that I exactly need for the situation exists," and then you'd try it, and it definitely did not exist.
 
 I first tried GPT-3 in 2020, and like everyone, I thought it was incredible. I had an edtech startup at the time and wondered if it could generate practice problems and assessments. We quickly found out it just wasn't good enough. Then ChatGPT came out, then GPT-3.5, and if you used these things at all you could *feel* the jump in intelligence each time.
 
@@ -27,7 +27,7 @@ But I could feel it coming.
 
 Through 2025 the agents kept improving, but my team and I were still really coding by hand, reviewing everything piece by piece. Then around October and November 2025, with models like GPT-5.1 and Opus 4.5, came the crazy jump in capability. That's when I realized: I think these things can generate *all* of the code now.
 
-So that's what I started doing. In December 2025 I used an AI to do a very complicated tax return for the first time. I take taxes extremely seriously, so it took me 24 straight hours of building verification schemes and generating code to make sure every number was correct. I felt good enough to sign it.
+So that's what I started doing. In December 2025 I used an AI to do a very complicated tax return for the first time. I had a meticulous human review process, and I take taxes extremely seriously. It took me 24 hours, literally, because I waited until the last minute: I sat there with the AI building out crazy verification schemes and generating all kinds of code to really make sure it was correct. As far as I know, it worked. I felt good enough to sign it, and it seems it's been accepted.
 
 Then I joined a construction startup and took on a complete AI transformation. We replaced the manufacturing software we were going to use with our own, and I vibe-coded that demo in a day.
 
@@ -39,13 +39,13 @@ I still believe that generating 100% of the code with AI is the right thing to d
 
 That's the heart of agentic engineering. The AI generates a stream of evidence about the work it's done. Do you really want to inspect all of that work meticulously with your own eyes? Sometimes you have to. But more and more, you want to **judge the evidence the AI presents to you**.
 
-For example, I have a skill for *abstractness*, a very important property of good software. I can tell the AI to make sure a PR or a file is sufficiently abstract, and it reasons through the code and changes it. I don't want to review every line it touched. I want to trust that the skill is correct, and trust that if the AI tells me it ran the skill, the code is now sufficiently abstract.
+For example, I have a skill for *abstractness*, a very important property of good software. I can tell the AI to make sure a PR or a file is sufficiently abstract, and it reasons through the code and changes it. I don't want to have to look over all the code it changes. I want to trust that the skill is correct, and trust that if the AI tells me it ran the skill, the code is now sufficiently abstract.
 
 That's the goal: keep raising the level of abstraction you work at, and give the AI ever bigger, more ambitious tasks. You test and probe, you judge the evidence, and you gain confidence. In the beginning you'll vibe things and check a lot of the work afterwards. Once you have your own pipeline that **refines slop into clean code**, whatever you're applying it to, you can start to trust it.
 
 ## Jagged intelligence, and why your expertise matters (for now)
 
-These AIs are *jagged* intelligences. Picture a bar chart of different areas: software engineering, mathematics, accounting, art, teaching, writing. The AI isn't equally capable at all of them, so the chart is jagged, with gaps. Humans can fill in those gaps, and that's why we're still economically useful for the moment.
+These AIs are *jagged* intelligences. Picture a bar chart of different areas: software engineering, mathematics, accounting, art, teaching, writing. The AI is not necessarily the same level of intelligence at all of them. There are gaps, so it makes a jagged graph. Humans can fill in those gaps, and that's why we're still economically useful for the moment.
 
 That's also why it's agentic engineering *with an emphasis*. My emphasis is software development, and that's what gives me the ability to judge the output and the verification evidence the AI presents. Me and the AIs together can move far faster than before.
 

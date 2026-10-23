@@ -6,6 +6,7 @@ audio: "https://audio.millillion.org/episodes/millillion-001.mp3"
 audioBytes: 24618291
 duration: "00:25:31"
 blog: "we-are-all-agentic-engineers-now"
+youtube: "VzOqi21QXkQ"
 ---
 
 The first episode of the Millillion podcast.

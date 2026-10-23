@@ -27,4 +27,5 @@ export const PODCAST = {
   ownerEmail: "lastmjs@millillion.org",
   spotify: "https://open.spotify.com/show/2TSiR5A8vVDAHEeGNpTY7e",
   apple: "https://podcasts.apple.com/us/podcast/millillion/id6826041508",
+  youtube: "https://www.youtube.com/@millillionai",
 };

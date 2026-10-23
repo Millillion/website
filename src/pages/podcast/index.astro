@@ -10,6 +10,7 @@ const eps = (await getCollection("podcast", (p) => !p.data.draft)).sort((a, b) =
   <p>
     {PODCAST.spotify && <a class="cta" href={PODCAST.spotify}>Spotify</a>}
     {PODCAST.apple && <a class="cta" href={PODCAST.apple}>Apple Podcasts</a>}
+    {PODCAST.youtube && <a class="cta" href={PODCAST.youtube}>YouTube</a>}
     <a class="cta" href="/podcast.xml">RSS</a>
   </p>
   {eps.length === 0 ? <p class="muted">The first episode is on its way.</p> : (

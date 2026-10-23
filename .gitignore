@@ -13,3 +13,8 @@ episodes-src/*/*/*.png
 episodes-src/*/thumbnail.jpg
 episodes-src/intro.wav
 episodes-src/*/whisper.log
+# never commit media from episode work dirs
+episodes-src/*/**/*.m4a
+episodes-src/*/**/*.jpg
+episodes-src/*/**/*.webm
+episodes-src/*/**/*.mov

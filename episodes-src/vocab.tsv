@@ -1,0 +1,21 @@
+# Whisper mishearings -> correct text. Regex (Python) TAB replacement. Add a line whenever a new one shows up.
+\bMel+il+i[ao]n\b	Millillion
+\bMal+il+i[ao]n\b	Millillion
+Last MJS	lastmjs
+\bchat ?gbt\b	ChatGPT
+\bgbt ?3\.5\b	GPT-3.5
+\bgbt ?3\b	GPT-3
+\bGBT (\d)	GPT-\1
+\bgbt\b	GPT
+\bcodecs\b	Codex
+\bopus (\d)	Opus \1
+\bsass\b	SaaS
+\bmercury\b	Mercury
+\bai\b	AI
+\bais\b	AIs
+\bpr\b	PR
+\brust\b	Rust
+\bagent engineer\b	agentic engineer
+\b[Uu]m\b,? ?	
+\b[Uu]h\b,? ?	
+\b(\d\.\d) or 3 (\d\.\d)\b	\1 or \2

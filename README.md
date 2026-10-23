@@ -27,3 +27,9 @@ npm run build
 - Build command: `npm run build`
 - Output directory: `dist`
 - Rebuild on pushes to this repo. Add a deploy hook so README edits elsewhere also trigger a rebuild.
+
+## AI skills (how episodes and posts are made)
+- [`publish-episode`](.claude/skills/publish-episode/SKILL.md): a raw recording becomes a mastered episode, transcript, blog post, and is published.
+- [`review-episode`](.claude/skills/review-episode/SKILL.md): automated checks, plus checking that the post says only what Jordan said.
+
+Scripts live in `episodes-src/`. Each run appends to the skill's Lessons, so the process improves over time.

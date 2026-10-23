@@ -4,6 +4,7 @@ export const SITE = {
   description:
     "Millillion goes after outrageously ambitious software projects, the ones that used to be just dreams, and builds them with AI. Everything is open source.",
   github: "https://github.com/Millillion",
+  skills: "https://github.com/Millillion/website/tree/main/.claude/skills", // the AI process behind posts and episodes
   sponsors: "https://github.com/sponsors/lastmjs",
   patreon: "", // add once the Patreon page exists
   email: "lastmjs@millillion.org",

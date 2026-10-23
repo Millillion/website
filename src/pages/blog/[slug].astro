@@ -1,6 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import { getCollection, render } from "astro:content";
+import { SITE } from "../../site.js";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", (p) => !p.data.draft);
@@ -15,7 +16,7 @@ const episodes = await getCollection("podcast", (e) => e.data.blog === post.id &
     <h1>{post.data.title}</h1>
     <p class="muted">{post.data.date.toLocaleDateString("en-US", { dateStyle: "long" })}</p>
     {post.data.adaptedFrom && (
-      <p class="ai-note">By Jordan Last, with AI. Written by AI from my own words in <a href={post.data.adaptedFrom.href}>{post.data.adaptedFrom.label}</a>.</p>
+      <p class="ai-note">By Jordan Last, with AI. Written by AI from my own words in <a href={post.data.adaptedFrom.href}>{post.data.adaptedFrom.label}</a>, using <a href={SITE.skills}>these skills</a>.</p>
     )}
     {episodes[0] && !post.data.adaptedFrom && <p><a href={`/podcast/${episodes[0].id}/`}>Listen to this as an episode →</a></p>}
     <Content />

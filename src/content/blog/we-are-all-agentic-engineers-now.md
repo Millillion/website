@@ -2,7 +2,6 @@
 title: "We Are All Agentic Engineers Now"
 date: 2026-10-23
 description: "From chatbots that made up CLI commands to agents that generate all of the code, and why that makes every one of us an agentic engineer."
-draft: true
 adaptedFrom:
   label: "episode 1 of the Millillion podcast"
   href: "/podcast/001-we-are-all-agentic-engineers-now/"

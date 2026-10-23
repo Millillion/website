@@ -15,11 +15,11 @@ const episodes = await getCollection("podcast", (e) => e.data.blog === post.id &
     <h1>{post.data.title}</h1>
     <p class="muted">{post.data.date.toLocaleDateString("en-US", { dateStyle: "long" })}</p>
     {post.data.adaptedFrom && (
-      <p class="ai-note">My ideas and words, from <a href={post.data.adaptedFrom.href}>{post.data.adaptedFrom.label}</a>. Written into this post by AI, then reviewed by me.</p>
+      <p class="ai-note">By Jordan Last, with AI. Written by AI from my own words in <a href={post.data.adaptedFrom.href}>{post.data.adaptedFrom.label}</a>.</p>
     )}
     {episodes[0] && !post.data.adaptedFrom && <p><a href={`/podcast/${episodes[0].id}/`}>Listen to this as an episode →</a></p>}
     <Content />
-    {post.data.adaptedFrom && <p class="signoff">— Jordan Last, with AI</p>}
+    {post.data.adaptedFrom && <p class="signoff">— By Jordan Last, with AI</p>}
   </article>
   <div class="box"><a class="cta primary" href="/support/">Support Millillion</a><a class="cta" href="/rss.xml">RSS</a></div>
 </Base>

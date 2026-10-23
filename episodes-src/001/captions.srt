@@ -1,0 +1,1719 @@
+1
+00:00:11,000 --> 00:00:15,480
+Hey everybody! This is Jordan Last, also known
+
+2
+00:00:15,480 --> 00:00:19,960
+as lastmjs. Hey, this is the first
+
+3
+00:00:19,960 --> 00:00:23,199
+episode of the Millillion podcast, and let me
+
+4
+00:00:23,199 --> 00:00:26,439
+just give you a quick background on
+
+5
+00:00:26,439 --> 00:00:28,819
+what Millillion is. I'll give you a quick
+
+6
+00:00:28,819 --> 00:00:31,199
+background on myself, in case you want to
+
+7
+00:00:31,199 --> 00:00:33,780
+know that. I think it'll be helpful. I'm
+
+8
+00:00:33,780 --> 00:00:36,359
+a software developer. I have been a
+
+9
+00:00:36,599 --> 00:00:44,560
+software developer for a while. I started my undergraduate education in 2009. I
+
+10
+00:00:44,560 --> 00:00:53,320
+graduated in 2017 with a bachelor's degree in computer science. I love
+
+11
+00:00:53,320 --> 00:01:01,079
+software. I love technology. It fascinates me. The latent power of all these
+
+12
+00:01:01,079 --> 00:01:06,840
+technologies that we've been inventing and being inspired to invent are just
+
+13
+00:01:06,840 --> 00:01:10,480
+absolutely fantastic to me. They're beautiful. They're amazing. I believe
+
+14
+00:01:10,479 --> 00:01:17,239
+technology is one of the key things, reasons, factors that brings prosperity
+
+15
+00:01:17,239 --> 00:01:22,359
+to the world, and that helps to end physical human suffering. It's not
+
+16
+00:01:22,359 --> 00:01:29,000
+without its weaknesses, but I think it's technology has been an absolute boon to
+
+17
+00:01:29,000 --> 00:01:35,840
+mankind. Generally speaking, it's much better than the benefits outweigh
+
+18
+00:01:35,840 --> 00:01:43,319
+the costs, in my opinion. I've been professionally developing to a
+
+19
+00:01:43,319 --> 00:01:48,919
+certain extent, probably since 2013, I would say.
+
+20
+00:01:48,919 --> 00:01:54,519
+I've had a good go at it,
+
+21
+00:01:54,519 --> 00:01:56,919
+I think. I mean, it's not still a little
+
+22
+00:01:56,919 --> 00:01:59,319
+bit early in my career, I would say, but
+
+23
+00:01:59,319 --> 00:02:09,240
+I've had an okay amount of experience. Right now, I call myself an agentic
+
+24
+00:02:09,240 --> 00:02:15,520
+engineer with an emphasis in software development. Before, I definitely called
+
+25
+00:02:15,519 --> 00:02:19,759
+myself a software developer or a software engineer. Now, though, I believe
+
+26
+00:02:19,759 --> 00:02:22,740
+personally that anyone in STEM fields or maybe
+
+27
+00:02:22,740 --> 00:02:25,719
+even anyone in any field, we are
+
+28
+00:02:25,719 --> 00:02:34,120
+all agentic engineers now or agentic developers. We are using AI agents
+
+29
+00:02:34,120 --> 00:02:40,199
+to solve problems now. That's what we're doing. We're coordinating agents,
+
+30
+00:02:40,199 --> 00:02:48,120
+we're managing agents, we're judging the outputs of agents, and an agent, in case
+
+31
+00:02:48,159 --> 00:02:52,680
+you don't know, an agent is an instance
+
+32
+00:02:52,680 --> 00:02:57,200
+of an AI, an artificial intelligence, that
+
+33
+00:02:57,200 --> 00:03:02,759
+can actually go out and perform work for you somewhat autonomously, sometimes very
+
+34
+00:03:02,759 --> 00:03:09,520
+very very autonomously. This is kind of the evolution of the chatbot. A
+
+35
+00:03:09,520 --> 00:03:15,599
+lot of people, I mean since 2022-ish, AI chatbots have been pretty popular
+
+36
+00:03:15,599 --> 00:03:20,799
+with the advent of ChatGPT. That's generally a back-and-forth
+
+37
+00:03:20,799 --> 00:03:27,479
+question-response type thing. I asked the AI a question in response to me, very
+
+38
+00:03:27,479 --> 00:03:31,280
+similar to googling something in a search engine. You kind of ask a question,
+
+39
+00:03:31,280 --> 00:03:33,139
+you have a query, and then you get a
+
+40
+00:03:33,139 --> 00:03:35,000
+response with a bunch of results. Kind of
+
+41
+00:03:35,000 --> 00:03:38,680
+the same thing since 2022, but late 2024
+
+42
+00:03:38,680 --> 00:03:42,359
+is when at least I first started to
+
+43
+00:03:42,360 --> 00:03:46,640
+experience AI agents, and I was in the context of software engineering, where
+
+44
+00:03:46,640 --> 00:03:50,960
+instead of just using ChatGPT or Claude to
+
+45
+00:03:50,960 --> 00:03:55,280
+do research, and you know maybe paste
+
+46
+00:03:55,280 --> 00:04:02,400
+a complicated Rust error into the chat interface, and you know get help, I
+
+47
+00:04:02,400 --> 00:04:05,420
+actually was able to start to tell the AI,
+
+48
+00:04:05,420 --> 00:04:08,440
+like in VS Code or Cursor or whatever
+
+49
+00:04:08,439 --> 00:04:11,019
+I was using at the time, like hey I
+
+50
+00:04:11,019 --> 00:04:13,599
+actually want you to write in here, write
+
+51
+00:04:13,599 --> 00:04:20,680
+in my editor, do this programming test, like actually generate code, and that was
+
+52
+00:04:20,680 --> 00:04:28,300
+crazy because it kind of worked. It worked just enough that you know I
+
+53
+00:04:28,300 --> 00:04:30,990
+obsessed over it. This was for all, I
+
+54
+00:04:30,990 --> 00:04:33,680
+feel like December 2024 is when I first
+
+55
+00:04:34,040 --> 00:04:38,160
+really tried out AI agents, and you know
+
+56
+00:04:38,160 --> 00:04:42,280
+the code, if I remember correctly it was
+
+57
+00:04:42,280 --> 00:04:45,660
+actually pretty terrible. It wasn't that great, but
+
+58
+00:04:45,660 --> 00:04:49,040
+it was kind of good, and I
+
+59
+00:04:49,040 --> 00:04:53,439
+feel like that's like the same thing with ChatGPT, or even GPT-3, I
+
+60
+00:04:53,439 --> 00:04:56,740
+believe in 2020 is when I first tried
+
+61
+00:04:56,740 --> 00:05:00,040
+GPT-3, and it's like oh my goodness, like
+
+62
+00:05:00,400 --> 00:05:03,879
+it's kind of good, like it seems good, and
+
+63
+00:05:03,879 --> 00:05:07,360
+then you don't really know how good or
+
+64
+00:05:07,360 --> 00:05:09,519
+bad it is. I think at first you
+
+65
+00:05:09,519 --> 00:05:11,680
+always think it's like super super super good,
+
+66
+00:05:11,680 --> 00:05:15,139
+right, and so you kind of get obsessed
+
+67
+00:05:15,139 --> 00:05:18,600
+with it, and then you start going crazy
+
+68
+00:05:18,600 --> 00:05:20,580
+with all the kinds of crazy ideas for like
+
+69
+00:05:20,580 --> 00:05:22,560
+what you can do with this, oh my
+
+70
+00:05:22,560 --> 00:05:25,340
+goodness, like can you generate, I mean I
+
+71
+00:05:25,340 --> 00:05:28,120
+did a edtech company as my first little
+
+72
+00:05:28,120 --> 00:05:35,199
+startup, and you know so I guess I probably thought like can this generate
+
+73
+00:05:35,199 --> 00:05:40,160
+practice problems, assessments for people, and then we quickly find out back in
+
+74
+00:05:40,160 --> 00:05:41,800
+2020 like oh no it's just really not
+
+75
+00:05:41,800 --> 00:05:43,439
+that good, it's not good enough for that.
+
+76
+00:05:43,439 --> 00:05:46,480
+Then 2022 GPT ChatGPT comes out, I don't
+
+77
+00:05:46,480 --> 00:05:49,519
+know I don't remember exactly but maybe
+
+78
+00:05:49,519 --> 00:05:53,100
+three GPT-3.5 came out shortly after that, and
+
+79
+00:05:53,100 --> 00:05:56,680
+then you could you know if you
+
+80
+00:05:56,680 --> 00:05:58,879
+were using it on a regular basis or you
+
+81
+00:05:58,879 --> 00:06:01,079
+know any basis at all you could kind of
+
+82
+00:06:01,079 --> 00:06:03,960
+feel the jump in intelligence, right, like oh
+
+83
+00:06:03,960 --> 00:06:06,840
+wow, like you just can feel it,
+
+84
+00:06:06,840 --> 00:06:12,040
+like the answers feel slightly better, it's not necessarily lying to you as
+
+85
+00:06:12,040 --> 00:06:19,879
+much as before, but still you know in 2022, 23, 2024, if I remember
+
+86
+00:06:19,879 --> 00:06:22,279
+correctly these things were lying to us so
+
+87
+00:06:22,279 --> 00:06:24,680
+much, they just would say it the most
+
+88
+00:06:24,680 --> 00:06:30,280
+ridiculous things, they would they would make up like CLI commands and API endpoints
+
+89
+00:06:30,280 --> 00:06:31,720
+and things, they would just make things up and
+
+90
+00:06:31,720 --> 00:06:33,160
+you'd be like oh my goodness I can't
+
+91
+00:06:33,160 --> 00:06:37,160
+believe this exact command that I exactly need for the situation exists, it's so
+
+92
+00:06:37,160 --> 00:06:39,080
+awesome, and then you go to try it and
+
+93
+00:06:39,080 --> 00:06:41,000
+then it definitely did not exist, so that
+
+94
+00:06:41,000 --> 00:06:43,879
+was kind of sad, but yeah anyways end
+
+95
+00:06:43,879 --> 00:06:46,759
+of 2024 agents start actually doing things
+
+96
+00:06:46,759 --> 00:06:51,319
+for you, like not just question response but actually generating code, and sorry
+
+97
+00:06:52,279 --> 00:06:55,000
+train of thought, now this podcast is gonna
+
+98
+00:06:55,000 --> 00:06:57,719
+be just whatever I want to say
+
+99
+00:06:57,719 --> 00:07:00,519
+basically, I'm just gonna be crazy trains of
+
+100
+00:07:00,519 --> 00:07:03,319
+thoughts and things, so you know it's
+
+101
+00:07:03,319 --> 00:07:05,199
+probably just going to be me for a
+
+102
+00:07:05,199 --> 00:07:07,079
+while, but who knows maybe I'll invite some
+
+103
+00:07:07,079 --> 00:07:10,120
+guests on, maybe I'll invite an AI on,
+
+104
+00:07:10,120 --> 00:07:13,159
+and the idea is to have interesting
+
+105
+00:07:13,159 --> 00:07:19,800
+conversations and useful conversations, I believe I have a lot of insights to
+
+106
+00:07:19,879 --> 00:07:23,080
+share and a lot of experience to share
+
+107
+00:07:23,080 --> 00:07:26,280
+that would be useful to many people, so
+
+108
+00:07:26,280 --> 00:07:28,040
+yeah so this code that's generating, it's like
+
+109
+00:07:28,040 --> 00:07:29,800
+it's just good enough that maybe it
+
+110
+00:07:29,800 --> 00:07:33,759
+could work, and at the time I was doing
+
+111
+00:07:33,759 --> 00:07:37,720
+a lot of Rust development in the blockchain
+
+112
+00:07:37,720 --> 00:07:43,560
+industry, building open source basically open source JavaScript and Python runtimes
+
+113
+00:07:43,560 --> 00:07:53,399
+for a decentralized cloud basically, and so you know this is we were doing
+
+114
+00:07:53,399 --> 00:07:58,759
+pretty I would say pretty intense relatively low level programming, not the
+
+115
+00:07:58,759 --> 00:08:01,079
+lowest at the low level, but you know
+
+116
+00:08:01,079 --> 00:08:03,399
+relatively low level, and you know it
+
+117
+00:08:03,399 --> 00:08:06,120
+was actually starting to do some things, doing
+
+118
+00:08:06,120 --> 00:08:08,840
+a lot of TypeScript as well, but it
+
+119
+00:08:08,839 --> 00:08:11,479
+just wasn't good enough, like I remember I
+
+120
+00:08:11,479 --> 00:08:14,119
+spent like one or two weeks really
+
+121
+00:08:14,119 --> 00:08:17,839
+trying to force the agent to to follow my
+
+122
+00:08:17,839 --> 00:08:21,560
+plans, like to do what I asked it to
+
+123
+00:08:21,560 --> 00:08:24,720
+do, I was coming up with like basically
+
+124
+00:08:24,720 --> 00:08:27,879
+before we had the skills standard, I was
+
+125
+00:08:27,879 --> 00:08:30,039
+trying to come up with like a skill,
+
+126
+00:08:30,039 --> 00:08:32,200
+like just like a markdown file or something
+
+127
+00:08:32,200 --> 00:08:34,680
+that had a process for the AI to follow,
+
+128
+00:08:34,680 --> 00:08:37,160
+like step one do this, step two do this,
+
+129
+00:08:37,160 --> 00:08:40,320
+step three do this, basically like you know
+
+130
+00:08:40,320 --> 00:08:43,480
+pseudocode, trying to force it to do
+
+131
+00:08:43,480 --> 00:08:46,759
+more than it could really do to you
+
+132
+00:08:46,759 --> 00:08:50,040
+know I don't I don't really remember exactly
+
+133
+00:08:50,040 --> 00:08:52,800
+what you know exactly what I was getting it
+
+134
+00:08:52,800 --> 00:08:55,560
+to do, but trying to push it to become
+
+135
+00:08:55,560 --> 00:08:58,200
+an autonomous AI agent like we have today,
+
+136
+00:08:58,200 --> 00:09:00,840
+and it just would not follow the
+
+137
+00:09:00,840 --> 00:09:03,440
+rules, it would just go off the rails, and it
+
+138
+00:09:03,440 --> 00:09:06,040
+was just crazy, so I kind of gave up
+
+139
+00:09:06,039 --> 00:09:07,639
+on that and realized like okay you know
+
+140
+00:09:07,639 --> 00:09:09,240
+what this it's just not ready like in
+
+141
+00:09:09,240 --> 00:09:11,360
+early 2025 is when I was doing that it's
+
+142
+00:09:11,360 --> 00:09:13,480
+like it's just not that it's just not
+
+143
+00:09:13,480 --> 00:09:15,559
+ready, but I could feel it I could feel
+
+144
+00:09:15,559 --> 00:09:17,639
+it coming right like I could I could see
+
+145
+00:09:17,639 --> 00:09:19,919
+like if things keep improving like this is
+
+146
+00:09:19,919 --> 00:09:22,199
+gonna get really good, and even with
+
+147
+00:09:22,199 --> 00:09:24,480
+like our taxes and accounting we were a
+
+148
+00:09:24,480 --> 00:09:26,759
+very small team so we were you know
+
+149
+00:09:26,759 --> 00:09:31,079
+trying to do as much ourselves as possible or at least prepare things well
+
+150
+00:09:31,079 --> 00:09:33,199
+enough to hand off to the people we paid
+
+151
+00:09:33,199 --> 00:09:35,319
+to do our taxes, and I remember like in
+
+152
+00:09:35,560 --> 00:09:40,040
+in Mercury right like going through transactions, and I could feel that these
+
+153
+00:09:40,040 --> 00:09:45,800
+agents were getting pretty good, and I had tried to you know ask tax
+
+154
+00:09:45,800 --> 00:09:50,600
+questions before and and you would make very basic arithmetic errors, but I
+
+155
+00:09:50,600 --> 00:09:54,920
+remember thinking like no let's let's prepare this I like now in each
+
+156
+00:09:54,920 --> 00:10:00,680
+transaction like we can actually put in the notes here you know everything
+
+157
+00:10:00,680 --> 00:10:05,160
+necessary to classify these things correctly with sales tax and use tax and
+
+158
+00:10:05,639 --> 00:10:09,319
+like where the members were actually physically working when they did these
+
+159
+00:10:09,319 --> 00:10:12,720
+things, and because I was preparing for a day
+
+160
+00:10:12,720 --> 00:10:16,120
+when AI agents would be able to just
+
+161
+00:10:16,120 --> 00:10:21,639
+grab all that information and basically do the taxes 100% themselves, and I was
+
+162
+00:10:21,639 --> 00:10:24,319
+in early 2025 when I really felt like
+
+163
+00:10:24,319 --> 00:10:27,000
+that that's that seems to be coming, and
+
+164
+00:10:27,000 --> 00:10:31,959
+then 2025 went on and into summer 2025 things were getting better agents were
+
+165
+00:10:32,040 --> 00:10:34,160
+getting better they could do more and more
+
+166
+00:10:34,160 --> 00:10:36,280
+but it still was really me coding
+
+167
+00:10:36,920 --> 00:10:38,840
+and my team you know we're coding by
+
+168
+00:10:38,840 --> 00:10:40,759
+hand right maybe they're the agents are
+
+169
+00:10:40,759 --> 00:10:45,160
+generating a good amount of our code but we're reviewing everything we're
+
+170
+00:10:45,879 --> 00:10:49,879
+we're really grabbing things piece by piece and you know they started to get
+
+171
+00:10:49,879 --> 00:10:52,879
+better they started to be able to do
+
+172
+00:10:52,879 --> 00:10:55,879
+changes across you know more files and
+
+173
+00:10:55,879 --> 00:10:58,519
+folders and it was getting better and better
+
+174
+00:10:58,840 --> 00:11:06,840
+but it wasn't until I would say October 2025
+
+175
+00:11:08,120 --> 00:11:12,039
+I think that's when I really first tasted it
+
+176
+00:11:12,039 --> 00:11:15,960
+I believe it was GPT-5.1 or maybe 5.2
+
+177
+00:11:17,799 --> 00:11:19,359
+and then they had like Codex versions of
+
+178
+00:11:19,359 --> 00:11:20,919
+those things at the time as well
+
+179
+00:11:21,559 --> 00:11:24,200
+and I was actually kind of getting out
+
+180
+00:11:24,200 --> 00:11:26,840
+of my previous business and just applying for
+
+181
+00:11:27,480 --> 00:11:34,440
+a job as a VP of information technology at a startup and
+
+182
+00:11:36,200 --> 00:11:39,480
+I wanted to build like a little prototype a little demo
+
+183
+00:11:41,160 --> 00:11:43,960
+and I realized like you know what I
+
+184
+00:11:43,960 --> 00:11:46,759
+did then this was right around when opus
+
+185
+00:11:48,360 --> 00:11:51,279
+4.5 is that the one that was crazy
+
+186
+00:11:51,279 --> 00:11:54,200
+in October or November it was right when
+
+187
+00:11:54,200 --> 00:11:57,519
+that crazy jump happened in the capabilities of the
+
+188
+00:11:57,519 --> 00:12:00,840
+models and that's when I realized you know
+
+189
+00:12:00,840 --> 00:12:05,360
+what I think these things can generate like all of the
+
+190
+00:12:05,360 --> 00:12:09,879
+code now like I think I can just rely on
+
+191
+00:12:09,879 --> 00:12:12,920
+them to generate all of the code and that's
+
+192
+00:12:12,920 --> 00:12:15,960
+what I started doing and I started realizing
+
+193
+00:12:15,960 --> 00:12:20,920
+holy smokes this is amazing like this we've jumped another threshold like
+
+194
+00:12:21,879 --> 00:12:24,039
+now we have agents that can actually do things for
+
+195
+00:12:24,039 --> 00:12:26,199
+us and so things got better in November things
+
+196
+00:12:26,199 --> 00:12:32,599
+got better in December in December 2025 I actually used
+
+197
+00:12:32,599 --> 00:12:39,000
+I believe GPT-5.2 or 5.3 to to do a very
+
+198
+00:12:39,000 --> 00:12:43,000
+complicated tax return for the first time obviously
+
+199
+00:12:43,000 --> 00:12:47,000
+I had a meticulous human review process
+
+200
+00:12:47,480 --> 00:12:51,080
+like myself meticulously reviewing it I take taxes extremely seriously
+
+201
+00:12:53,240 --> 00:12:57,160
+and it was so good it took me 24 hours
+
+202
+00:12:57,160 --> 00:13:01,080
+though 24 hours literally because I waited till the last
+
+203
+00:13:01,080 --> 00:13:04,879
+minute and I sat there with the AI for 24
+
+204
+00:13:04,879 --> 00:13:08,679
+hours building out having the day I build out crazy
+
+205
+00:13:08,679 --> 00:13:11,480
+like verification schemes and generating all kinds of
+
+206
+00:13:11,480 --> 00:13:14,279
+crazy code to really make sure this thing
+
+207
+00:13:14,279 --> 00:13:17,200
+was correct and it worked at least as far as I
+
+208
+00:13:17,200 --> 00:13:20,120
+know it worked I felt good enough to sign it
+
+209
+00:13:20,759 --> 00:13:23,680
+it's been accepted it seems and and we're building
+
+210
+00:13:23,680 --> 00:13:26,600
+on top of that so that was crazy
+
+211
+00:13:27,480 --> 00:13:29,159
+yeah sorry I'm just just telling you my
+
+212
+00:13:29,159 --> 00:13:30,839
+whole story now of at least AI
+
+213
+00:13:31,480 --> 00:13:34,440
+and then I did get this job at
+
+214
+00:13:34,440 --> 00:13:37,399
+this it's actually a construction startup and
+
+215
+00:13:37,559 --> 00:13:41,559
+and I basically took it on me to do a
+
+216
+00:13:41,559 --> 00:13:45,559
+complete AI transformation at this startup and it was
+
+217
+00:13:46,199 --> 00:13:49,399
+we've just been starting out so like it
+
+218
+00:13:49,399 --> 00:13:52,600
+was basically a a fresh greenfield project right
+
+219
+00:13:53,399 --> 00:13:55,279
+but you know in my interviews I was telling
+
+220
+00:13:55,279 --> 00:13:57,159
+saying crazy things like no it doesn't even
+
+221
+00:13:57,159 --> 00:13:59,079
+matter what like yeah I have my preferences for
+
+222
+00:13:59,079 --> 00:14:01,000
+language but it doesn't even matter what language
+
+223
+00:14:01,000 --> 00:14:03,079
+you write it doesn't even matter what front-end framework
+
+224
+00:14:03,079 --> 00:14:05,159
+you use like this AI they can just do
+
+225
+00:14:05,159 --> 00:14:08,159
+all of it and then I joined in December 2025
+
+226
+00:14:08,159 --> 00:14:11,159
+and I basically started vibe coding right like just
+
+227
+00:14:11,719 --> 00:14:14,559
+outrageous amounts of vibe coding just like I
+
+228
+00:14:14,559 --> 00:14:17,399
+didn't actually know like I didn't know how
+
+229
+00:14:18,199 --> 00:14:22,000
+really how good the code was or not because
+
+230
+00:14:22,000 --> 00:14:25,799
+I had I had basically just been vibe coding
+
+231
+00:14:25,799 --> 00:14:28,720
+since October because I you know it took a few
+
+232
+00:14:28,720 --> 00:14:31,639
+months off while I was thinking what to do next
+
+233
+00:14:31,639 --> 00:14:34,319
+after my previous company and so I wasn't quite
+
+234
+00:14:34,319 --> 00:14:37,000
+sure how excellent it was I wasn't quite
+
+235
+00:14:37,000 --> 00:14:40,799
+sure also because like the risk profile at this
+
+236
+00:14:40,799 --> 00:14:44,600
+new at this new startup in the construction
+
+237
+00:14:44,600 --> 00:14:47,039
+industry was very different than my previous risk profile
+
+238
+00:14:47,039 --> 00:14:49,480
+in blockchain where I mean things have to
+
+239
+00:14:49,480 --> 00:14:52,200
+be like as close to perfect as possible where
+
+240
+00:14:52,200 --> 00:14:54,919
+people would lose lots large amounts of money
+
+241
+00:14:54,919 --> 00:14:57,200
+so I was like the highest of the high
+
+242
+00:14:57,200 --> 00:14:59,480
+standard now at this construction startup it was more
+
+243
+00:14:59,480 --> 00:15:02,080
+like kind of a traditional SaaS apps right
+
+244
+00:15:02,080 --> 00:15:04,680
+like building out factory software building out 3d
+
+245
+00:15:04,680 --> 00:15:07,160
+modeling and CAD so it's like you know what like this
+
+246
+00:15:07,160 --> 00:15:09,639
+doesn't have to be as crazy so I started vibe
+
+247
+00:15:09,639 --> 00:15:12,120
+coding I mean crazy things were happening like
+
+248
+00:15:12,120 --> 00:15:14,600
+we replaced the manufacturing software that we were
+
+249
+00:15:14,600 --> 00:15:19,600
+going to use with our own thing I vibe coded that
+
+250
+00:15:19,600 --> 00:15:24,600
+demo in like one day and and it and yeah so
+
+251
+00:15:24,600 --> 00:15:27,360
+that that was like December January maybe into February
+
+252
+00:15:27,360 --> 00:15:30,120
+but then I started to think okay like I
+
+253
+00:15:30,120 --> 00:15:33,000
+need to start deploying this stuff into production people need
+
+254
+00:15:33,000 --> 00:15:35,879
+to start using it and I need to protect
+
+255
+00:15:35,879 --> 00:15:39,160
+this company from from hacks and data leaks so you
+
+256
+00:15:39,160 --> 00:15:42,440
+know I put my blockchain hat on again and
+
+257
+00:15:42,440 --> 00:15:45,360
+like okay this thing needs to be secure and that's
+
+258
+00:15:45,360 --> 00:15:48,279
+when I started realizing like all right do what do
+
+259
+00:15:48,279 --> 00:15:50,680
+I really feel comfortable like with all this code that's
+
+260
+00:15:50,680 --> 00:15:53,080
+generated let me let me dig in and see
+
+261
+00:15:54,040 --> 00:15:57,120
+no I mean I don't feel super comfortable with it like
+
+262
+00:15:57,120 --> 00:16:00,200
+I need to get in here and I started digging
+
+263
+00:16:00,200 --> 00:16:03,039
+in and like you know coming up just kind
+
+264
+00:16:03,039 --> 00:16:05,879
+of architecting the code still still from the very
+
+265
+00:16:05,879 --> 00:16:09,879
+first day and I still believe now generating the code
+
+266
+00:16:09,879 --> 00:16:13,879
+100% by AI is in my opinion the right thing
+
+267
+00:16:13,879 --> 00:16:17,600
+to do the question is after that how do you verify
+
+268
+00:16:17,600 --> 00:16:21,320
+and in in later episodes I think I'll go through
+
+269
+00:16:21,320 --> 00:16:24,440
+all kinds of things about my process but back
+
+270
+00:16:24,440 --> 00:16:27,560
+in January and February I was still reviewing
+
+271
+00:16:27,560 --> 00:16:31,680
+code I was still architecting things you know
+
+272
+00:16:31,680 --> 00:16:35,800
+putting in massive amounts of ESLint rules I'll
+
+273
+00:16:35,800 --> 00:16:38,800
+get into that process later so the point is
+
+274
+00:16:38,800 --> 00:16:41,800
+that I have become now an agentic engineer
+
+275
+00:16:41,799 --> 00:16:46,879
+I am an agentic engineer with an emphasis in
+
+276
+00:16:46,879 --> 00:16:51,959
+software engineering and I was this is a point
+
+277
+00:16:51,959 --> 00:16:54,919
+I was trying to make a long time ago in this
+
+278
+00:16:54,919 --> 00:16:57,879
+podcast a few minutes ago that we are all agentic
+
+279
+00:16:57,879 --> 00:17:01,960
+engineers now or agentic developers but we have an
+
+280
+00:17:01,960 --> 00:17:06,039
+emphasis in our area of expertise my emphasis
+
+281
+00:17:06,039 --> 00:17:09,200
+is software engineering or software development and so that
+
+282
+00:17:09,200 --> 00:17:12,360
+is my angle that gives me the unique
+
+283
+00:17:12,360 --> 00:17:15,600
+ability to judge the output and the verification evidence
+
+284
+00:17:15,600 --> 00:17:18,840
+that the AI presents to me and that me
+
+285
+00:17:18,839 --> 00:17:22,319
+and the AIs together can be super powerful and can
+
+286
+00:17:22,319 --> 00:17:25,799
+move much faster than before and you know I
+
+287
+00:17:25,799 --> 00:17:30,839
+personally believe we will reach AGI artificial general intelligence and I personally struggle
+
+288
+00:17:30,839 --> 00:17:35,159
+with like at least like I don't really
+
+289
+00:17:35,159 --> 00:17:39,480
+believe that my software engineering emphasis is going
+
+290
+00:17:39,480 --> 00:17:43,759
+to be vital for you know for that much longer
+
+291
+00:17:43,759 --> 00:17:48,039
+like I don't at some point I believe that 100%
+
+292
+00:17:48,039 --> 00:17:50,639
+of the software engineering that I'm doing right now
+
+293
+00:17:50,639 --> 00:17:53,240
+is going to be automated like it's going
+
+294
+00:17:53,240 --> 00:17:55,400
+to be so good it's going to be so
+
+295
+00:17:55,400 --> 00:17:57,559
+verified it's going to have formal verification of everything
+
+296
+00:17:57,559 --> 00:18:00,279
+it's going to you know like I don't know
+
+297
+00:18:00,279 --> 00:18:03,000
+like maybe I'll be reviewing the specifications and the
+
+298
+00:18:03,000 --> 00:18:06,319
+behavior but I believe a lot of this is going
+
+299
+00:18:06,319 --> 00:18:09,639
+to be super automated but for now I think my
+
+300
+00:18:09,639 --> 00:18:11,799
+skill set is still vital and I think a lot
+
+301
+00:18:11,799 --> 00:18:13,960
+of people's skill sets are still vital as they're
+
+302
+00:18:13,960 --> 00:18:16,840
+judging right but that's why you you need to in
+
+303
+00:18:16,840 --> 00:18:19,720
+my opinion become an agentic engineer you need to
+
+304
+00:18:19,720 --> 00:18:27,720
+fully embrace artificial intelligence and AI agents in a wise calculated way
+
+305
+00:18:28,519 --> 00:18:31,240
+I think you can vibe code vibe verify vibe
+
+306
+00:18:31,240 --> 00:18:33,960
+engineer as much as you want in the beginning
+
+307
+00:18:35,160 --> 00:18:38,000
+and then you start to review it yourself and you
+
+308
+00:18:38,000 --> 00:18:40,839
+start to figure out you know where the weaknesses
+
+309
+00:18:40,839 --> 00:18:47,480
+are these these artificial intelligences are are jagged that's a term people throw out
+
+310
+00:18:47,480 --> 00:18:54,279
+they are jagged intelligences meaning if you think of like a graph of intelligence
+
+311
+00:18:55,079 --> 00:18:58,679
+well what would the graph be like the y-axis
+
+312
+00:18:58,679 --> 00:19:02,279
+is like the level of intelligence and maybe the
+
+313
+00:19:02,279 --> 00:19:04,840
+x-axis is like I don't maybe it's like a bar
+
+314
+00:19:04,840 --> 00:19:07,400
+a bar chart so it has like different areas of
+
+315
+00:19:07,400 --> 00:19:13,079
+intelligence right like software engineering mathematics accounting art video generation
+
+316
+00:19:13,079 --> 00:19:17,480
+audio teaching writing like there's all kinds of
+
+317
+00:19:17,480 --> 00:19:21,879
+areas of intelligence or at least maybe
+
+318
+00:19:21,879 --> 00:19:24,759
+scalar capability the AI is not necessarily the
+
+319
+00:19:24,759 --> 00:19:27,639
+same level of intelligence at all of them
+
+320
+00:19:27,639 --> 00:19:32,639
+and there's gaps so it makes like a jagged graph
+
+321
+00:19:32,639 --> 00:19:37,639
+and so we as humans can sometimes fill in
+
+322
+00:19:37,640 --> 00:19:40,640
+those gaps and that's why we're still useful
+
+323
+00:19:40,640 --> 00:19:43,640
+economically for the moment I don't believe
+
+324
+00:19:43,640 --> 00:19:46,360
+being useful economically is like the purpose of humanity
+
+325
+00:19:46,360 --> 00:19:49,080
+so I mean I'm not necessarily scared for
+
+326
+00:19:49,080 --> 00:19:51,560
+the outrageous amounts of abundance that I believe we're
+
+327
+00:19:51,560 --> 00:19:54,040
+going to have we'll talk about that in other
+
+328
+00:19:54,040 --> 00:19:59,000
+episodes probably as well but yeah agentic engineering agentic development with an emphasis
+
+329
+00:19:59,000 --> 00:20:02,519
+in your current skill set that that's that's that's what
+
+330
+00:20:02,519 --> 00:20:06,040
+we need to be doing now and for example
+
+331
+00:20:06,680 --> 00:20:09,759
+this is kind of crazy we're hiring a new
+
+332
+00:20:09,759 --> 00:20:12,839
+person where I work and that person it's the
+
+333
+00:20:12,839 --> 00:20:15,199
+first member of my team I've been just a
+
+334
+00:20:15,199 --> 00:20:17,559
+one-man software engineering team we're gonna have two
+
+335
+00:20:17,559 --> 00:20:22,159
+people now and this person is actually a
+
+336
+00:20:22,159 --> 00:20:26,759
+junior developer in fact fresh just completely
+
+337
+00:20:26,759 --> 00:20:30,639
+fresh with a degree in I believe computer science
+
+338
+00:20:30,639 --> 00:20:34,519
+okay so what's crazy is this person has
+
+339
+00:20:34,519 --> 00:20:37,480
+barely any experience writing code by hand or
+
+340
+00:20:37,480 --> 00:20:40,440
+doing any kind of software development and he
+
+341
+00:20:40,440 --> 00:20:43,920
+learned in the AI era right so like what's that
+
+342
+00:20:43,920 --> 00:20:47,400
+going to be like what what am I actually going
+
+343
+00:20:47,400 --> 00:20:49,360
+to teach him how am I going to mentor him it's
+
+344
+00:20:49,360 --> 00:20:51,319
+something that he and I are going to have to
+
+345
+00:20:51,319 --> 00:20:54,960
+figure out because does does he need my full skill
+
+346
+00:20:54,960 --> 00:20:58,599
+set I I don't know like I mean that's what
+
+347
+00:20:58,599 --> 00:21:01,400
+I'm there for maybe he just needs like I mean I
+
+348
+00:21:01,400 --> 00:21:04,200
+have a whole set of skills I have a whole pipeline
+
+349
+00:21:04,599 --> 00:21:08,440
+to try to ensure that the slop is refined into
+
+350
+00:21:08,440 --> 00:21:12,279
+clean code and so what's what's he gonna do like
+
+351
+00:21:12,839 --> 00:21:15,199
+he could just use my pipeline and generally
+
+352
+00:21:15,199 --> 00:21:17,559
+speaking that's the whole point is that I'm
+
+353
+00:21:17,559 --> 00:21:20,279
+using the pipeline obviously I'm improving the pipeline and
+
+354
+00:21:20,279 --> 00:21:23,000
+stuff but maybe he just uses it and
+
+355
+00:21:23,000 --> 00:21:25,679
+what he really needs to do is understand
+
+356
+00:21:25,679 --> 00:21:28,359
+across the office the factory the construction site
+
+357
+00:21:28,359 --> 00:21:31,000
+maybe right now he is the one to gather
+
+358
+00:21:31,000 --> 00:21:33,639
+that context get the whole system in his head
+
+359
+00:21:33,640 --> 00:21:36,840
+and basically just make sure the user interface and
+
+360
+00:21:36,840 --> 00:21:40,040
+user experience is is beautiful and it works
+
+361
+00:21:40,040 --> 00:21:43,680
+well I don't know like what it's it's a new world so
+
+362
+00:21:43,680 --> 00:21:47,320
+I but what I'm gonna do is I'm gonna train him
+
+363
+00:21:48,360 --> 00:21:50,559
+to be an agentic engineer no matter what
+
+364
+00:21:50,559 --> 00:21:52,759
+like he's going to be an agentic engineer
+
+365
+00:21:52,759 --> 00:21:55,280
+we're going to learn how to manage agents
+
+366
+00:21:55,280 --> 00:21:57,800
+we're gonna learn how to write skills we're
+
+367
+00:21:57,799 --> 00:22:01,880
+going to learn how to you know I guess
+
+368
+00:22:01,880 --> 00:22:05,960
+think think very critically to judge like I think
+
+369
+00:22:06,519 --> 00:22:10,079
+judging now is one of the greatest things
+
+370
+00:22:10,079 --> 00:22:13,639
+that we are doing as agentic engineers because
+
+371
+00:22:14,200 --> 00:22:17,000
+basically the AIs are generating a stream of
+
+372
+00:22:17,000 --> 00:22:19,799
+evidence to us right evidence they're gonna
+
+373
+00:22:19,799 --> 00:22:23,319
+generate a bunch of stuff and unless you're vibe
+
+374
+00:22:23,319 --> 00:22:26,839
+doing stuff like what do you want to do
+
+375
+00:22:27,639 --> 00:22:29,079
+so
+
+376
+00:22:31,000 --> 00:22:32,919
+sorry unless you're generating a bunch of stuff then
+
+377
+00:22:34,039 --> 00:22:35,639
+sorry hold on I just lost my train of thought here
+
+378
+00:22:35,639 --> 00:22:37,240
+let me let me get right back to it so
+
+379
+00:22:38,919 --> 00:22:41,919
+vibe engineering yes the the AIs are going
+
+380
+00:22:41,919 --> 00:22:44,919
+to generate a bunch of of artifacts
+
+381
+00:22:45,639 --> 00:22:48,719
+sorry okay sorry this is just a stream
+
+382
+00:22:48,719 --> 00:22:51,799
+of consciousness so what's going to happen is
+
+383
+00:22:51,799 --> 00:22:54,599
+the AI is going to do a whole bunch of work for
+
+384
+00:22:54,599 --> 00:22:57,399
+you do you really want to have to go look through
+
+385
+00:22:57,399 --> 00:23:00,079
+that work meticulously with your own eyes in some
+
+386
+00:23:00,079 --> 00:23:02,759
+cases you might need to but in other cases
+
+387
+00:23:03,799 --> 00:23:07,039
+you're going to really just want to judge
+
+388
+00:23:07,039 --> 00:23:10,279
+like evidence that the AI presents to you
+
+389
+00:23:11,000 --> 00:23:14,119
+for example I have a skill called basically
+
+390
+00:23:14,119 --> 00:23:17,240
+of abstractness abstractness is a very very
+
+391
+00:23:17,240 --> 00:23:22,159
+important property in software development and with that
+
+392
+00:23:22,159 --> 00:23:27,079
+skill I can basically tell the AI
+
+393
+00:23:27,079 --> 00:23:30,000
+make sure that this code like in this
+
+394
+00:23:30,000 --> 00:23:32,920
+PR or this file whatever is sufficiently abstract
+
+395
+00:23:33,960 --> 00:23:37,200
+and the AI will go through and you know think and
+
+396
+00:23:37,200 --> 00:23:40,440
+reason and change the code so that it has a an
+
+397
+00:23:40,440 --> 00:23:43,880
+appropriate level of abstraction I don't want to have
+
+398
+00:23:43,880 --> 00:23:47,320
+to look over all the code that it changes
+
+399
+00:23:48,120 --> 00:23:50,440
+I instead want to trust that this skill is correct
+
+400
+00:23:50,440 --> 00:23:52,759
+and then trust that if the AI tells me
+
+401
+00:23:52,759 --> 00:23:55,360
+that it ran the abstractness skill then I know
+
+402
+00:23:55,360 --> 00:23:57,960
+that that skill or that that code is abstract
+
+403
+00:23:57,960 --> 00:24:00,320
+sufficiently that's what you want to do and you
+
+404
+00:24:00,320 --> 00:24:02,680
+want to keep raising the level of your own
+
+405
+00:24:02,680 --> 00:24:05,760
+abstraction that you're working at right like we want
+
+406
+00:24:05,760 --> 00:24:08,840
+to give the AI ever more ambitious and bigger
+
+407
+00:24:08,839 --> 00:24:11,639
+and bigger tasks and it will present us evidence of
+
+408
+00:24:11,639 --> 00:24:14,439
+what it's done it will eventually it will just
+
+409
+00:24:14,439 --> 00:24:17,199
+say I did this correctly and we'll trust it but we're
+
+410
+00:24:17,199 --> 00:24:19,959
+not there yet there's we need to be way more
+
+411
+00:24:19,959 --> 00:24:22,879
+in the weeds and checking but you know that's what
+
+412
+00:24:22,879 --> 00:24:25,799
+you do as an agentic engineer basically right you
+
+413
+00:24:25,799 --> 00:24:29,319
+you start to you test and probe you tell the AI
+
+414
+00:24:29,319 --> 00:24:32,839
+to do a task you look at the evidence that
+
+415
+00:24:32,919 --> 00:24:35,919
+it presents that it did it correctly and then you
+
+416
+00:24:35,919 --> 00:24:38,919
+judge that and then you start to gain confidence
+
+417
+00:24:38,919 --> 00:24:41,919
+right like in the beginning you're going to be
+
+418
+00:24:41,919 --> 00:24:44,919
+vibing things you're going to be maybe checking
+
+419
+00:24:44,919 --> 00:24:47,519
+a lot of that work after but once you start
+
+420
+00:24:47,519 --> 00:24:50,119
+to gain confidence once you have your own pipeline
+
+421
+00:24:50,119 --> 00:24:52,679
+that turns slop into cleanliness whatever you're applying
+
+422
+00:24:52,679 --> 00:24:55,240
+it to then you can start to gain
+
+423
+00:24:55,240 --> 00:24:58,679
+confidence so I think I'll cut it here that's
+
+424
+00:24:58,679 --> 00:25:02,119
+the first episode of Millillion yeah I guess that's
+
+425
+00:25:02,119 --> 00:25:06,519
+just a little background on me and just a I
+
+426
+00:25:06,519 --> 00:25:10,919
+want to push you to become an agentic engineer
+
+427
+00:25:10,919 --> 00:25:13,719
+yourself in future episodes we'll talk about what
+
+428
+00:25:13,719 --> 00:25:16,519
+Millillion even is and we'll dive into all
+
+429
+00:25:16,519 --> 00:25:21,199
+kinds of concepts so thanks for listening and
+
+430
+00:25:21,199 --> 00:25:25,879
+have a great day night or time goodbye

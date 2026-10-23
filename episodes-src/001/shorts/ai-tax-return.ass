@@ -1,0 +1,53 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: K,Shippori Mincho SemiBold,96,&H00121416,&H00909CA3,&H00EAF2F6,&H00EAF2F6,0,0,0,0,100,100,1,0,1,0,0,5,90,90,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.15,0:00:01.85,K,,0,0,0,,{\fad(60,40)}{\kf41}In {\kf33}December {\kf56}2025
+Dialogue: 0,0:00:01.87,0:00:03.55,K,,0,0,0,,{\fad(60,40)}{\kf1}I {\kf29}actually {\kf62}used
+Dialogue: 0,0:00:03.57,0:00:06.01,K,,0,0,0,,{\fad(60,40)}{\kf33}I {\kf29}believe {\kf112}GPT-5.2 {\kf34}or
+Dialogue: 0,0:00:06.03,0:00:07.25,K,,0,0,0,,{\fad(60,40)}{\kf59}5.3
+Dialogue: 0,0:00:07.27,0:00:11.11,K,,0,0,0,,{\fad(60,40)}{\kf37}to {\kf266}do {\kf44}a {\kf35}very
+Dialogue: 0,0:00:11.11,0:00:14.67,K,,0,0,0,,{\fad(60,40)}{\kf75}complicated {\kf83}tax {\kf48}return {\kf147}for
+Dialogue: 0,0:00:14.67,0:00:16.05,K,,0,0,0,,{\fad(60,40)}{\kf10}the {\kf17}first {\kf30}time.
+Dialogue: 0,0:00:16.07,0:00:16.47,K,,0,0,0,,{\fad(60,40)}{\kf33}Obviously
+Dialogue: 0,0:00:16.49,0:00:17.57,K,,0,0,0,,{\fad(60,40)}{\kf22}I {\kf37}had {\kf12}a {\kf35}meticulous
+Dialogue: 0,0:00:17.57,0:00:19.07,K,,0,0,0,,{\fad(60,40)}{\kf43}human {\kf33}review {\kf42}process
+Dialogue: 0,0:00:19.09,0:00:20.23,K,,0,0,0,,{\fad(60,40)}{\kf25}like {\kf40}myself
+Dialogue: 0,0:00:20.25,0:00:21.29,K,,0,0,0,,{\fad(60,40)}{\kf28}meticulously {\kf50}reviewing {\kf19}it.
+Dialogue: 0,0:00:21.31,0:00:22.29,K,,0,0,0,,{\fad(60,40)}{\kf3}I {\kf18}take {\kf33}taxes {\kf41}extremely
+Dialogue: 0,0:00:22.29,0:00:25.45,K,,0,0,0,,{\fad(60,40)}{\kf48}seriously.
+Dialogue: 0,0:00:25.47,0:00:26.79,K,,0,0,0,,{\fad(60,40)}{\kf44}And {\kf44}it {\kf14}was {\kf30}so
+Dialogue: 0,0:00:26.79,0:00:27.63,K,,0,0,0,,{\fad(60,40)}{\kf30}good.
+Dialogue: 0,0:00:27.65,0:00:28.75,K,,0,0,0,,{\fad(60,40)}{\kf17}It {\kf20}took {\kf19}me {\kf51}24
+Dialogue: 0,0:00:28.75,0:00:29.23,K,,0,0,0,,{\fad(60,40)}{\kf37}hours
+Dialogue: 0,0:00:29.25,0:00:29.49,K,,0,0,0,,{\fad(60,40)}{\kf12}though
+Dialogue: 0,0:00:29.51,0:00:30.99,K,,0,0,0,,{\fad(60,40)}{\kf44}24 {\kf81}hours
+Dialogue: 0,0:00:31.01,0:00:31.79,K,,0,0,0,,{\fad(60,40)}{\kf34}literally
+Dialogue: 0,0:00:31.81,0:00:32.51,K,,0,0,0,,{\fad(60,40)}{\kf15}because {\kf16}I {\kf19}waited {\kf17}till
+Dialogue: 0,0:00:32.51,0:00:33.71,K,,0,0,0,,{\fad(60,40)}{\kf10}the {\kf11}last {\kf28}minute.
+Dialogue: 0,0:00:33.73,0:00:34.85,K,,0,0,0,,{\fad(60,40)}{\kf28}And {\kf21}I {\kf34}sat {\kf28}there
+Dialogue: 0,0:00:34.85,0:00:35.51,K,,0,0,0,,{\fad(60,40)}{\kf21}with {\kf14}the {\kf11}AI {\kf17}for
+Dialogue: 0,0:00:35.51,0:00:37.81,K,,0,0,0,,{\fad(60,40)}{\kf39}24 {\kf52}hours
+Dialogue: 0,0:00:37.83,0:00:38.63,K,,0,0,0,,{\fad(60,40)}{\kf7}building {\kf38}out
+Dialogue: 0,0:00:38.65,0:00:39.59,K,,0,0,0,,{\fad(60,40)}{\kf28}having {\kf17}the {\kf17}day {\kf29}build
+Dialogue: 0,0:00:39.59,0:00:40.25,K,,0,0,0,,{\fad(60,40)}{\kf22}out {\kf43}crazy
+Dialogue: 0,0:00:40.25,0:00:41.95,K,,0,0,0,,{\fad(60,40)}{\kf35}like {\kf34}verification {\kf67}schemes {\kf32}and
+Dialogue: 0,0:00:41.95,0:00:44.23,K,,0,0,0,,{\fad(60,40)}{\kf179}generating {\kf21}all {\kf14}kinds {\kf11}of
+Dialogue: 0,0:00:44.23,0:00:45.17,K,,0,0,0,,{\fad(60,40)}{\kf14}crazy {\kf34}code {\kf19}to {\kf26}really
+Dialogue: 0,0:00:45.17,0:00:45.97,K,,0,0,0,,{\fad(60,40)}{\kf28}make {\kf17}sure {\kf17}this {\kf15}thing
+Dialogue: 0,0:00:45.97,0:00:46.85,K,,0,0,0,,{\fad(60,40)}{\kf14}was {\kf32}correct.
+Dialogue: 0,0:00:46.87,0:00:47.71,K,,0,0,0,,{\fad(60,40)}{\kf2}And {\kf28}it {\kf32}worked
+Dialogue: 0,0:00:47.73,0:00:49.21,K,,0,0,0,,{\fad(60,40)}{\kf17}at {\kf17}least.
+Dialogue: 0,0:00:49.23,0:00:49.77,K,,0,0,0,,{\fad(60,40)}{\kf10}As {\kf10}far {\kf11}as {\kf21}I
+Dialogue: 0,0:00:49.77,0:00:49.79,K,,0,0,0,,{\fad(60,40)}{\kf1}know
+Dialogue: 0,0:00:49.81,0:00:50.59,K,,0,0,0,,{\fad(60,40)}{\kf15}it {\kf24}worked.
+Dialogue: 0,0:00:50.61,0:00:51.27,K,,0,0,0,,{\fad(60,40)}{\kf21}I {\kf16}felt {\kf15}good {\kf11}enough
+Dialogue: 0,0:00:51.27,0:00:51.85,K,,0,0,0,,{\fad(60,40)}{\kf14}to {\kf20}sign {\kf24}it.

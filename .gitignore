@@ -5,3 +5,9 @@ dist/
 episodes-src/*/raw.*
 episodes-src/*/*.wav
 episodes-src/*/*.mp3
+episodes-src/*/*.mp4
+episodes-src/*/*/*.mp4
+episodes-src/*/*/*.wav
+episodes-src/*/*.png
+episodes-src/*/*/*.png
+episodes-src/*/thumbnail.jpg

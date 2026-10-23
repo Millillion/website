@@ -1,0 +1,179 @@
+1
+0:00:00,150 --> 0:00:02,430
+These artificial intelligences are
+
+2
+0:00:02,430 --> 0:00:04,070
+jagged.
+
+3
+0:00:04,090 --> 0:00:05,110
+That's a term people
+
+4
+0:00:05,110 --> 0:00:05,990
+throw out.
+
+5
+0:00:06,010 --> 0:00:07,610
+They are jagged intelligences,
+
+6
+0:00:07,630 --> 0:00:08,610
+meaning if you think
+
+7
+0:00:08,610 --> 0:00:10,370
+of like a graph
+
+8
+0:00:10,370 --> 0:00:13,370
+of intelligence,
+
+9
+0:00:13,390 --> 0:00:14,370
+what would the graph
+
+10
+0:00:14,370 --> 0:00:17,170
+be?
+
+11
+0:00:17,190 --> 0:00:18,790
+The y -axis is
+
+12
+0:00:18,790 --> 0:00:19,650
+like the level of
+
+13
+0:00:19,650 --> 0:00:20,790
+intelligence and maybe the
+
+14
+0:00:20,790 --> 0:00:22,630
+x -axis is like,
+
+15
+0:00:22,650 --> 0:00:22,970
+I don't know,
+
+16
+0:00:22,990 --> 0:00:23,350
+maybe it's like a
+
+17
+0:00:23,350 --> 0:00:24,310
+bar chart.
+
+18
+0:00:24,310 --> 0:00:24,950
+So it has like
+
+19
+0:00:24,950 --> 0:00:26,510
+different areas of intelligence,
+
+20
+0:00:26,530 --> 0:00:26,650
+right?
+
+21
+0:00:26,670 --> 0:00:27,890
+Like software engineering,
+
+22
+0:00:27,910 --> 0:00:28,670
+mathematics,
+
+23
+0:00:28,690 --> 0:00:30,510
+accounting,
+
+24
+0:00:30,530 --> 0:00:30,870
+art,
+
+25
+0:00:30,890 --> 0:00:31,510
+video generation,
+
+26
+0:00:31,530 --> 0:00:33,830
+audio,
+
+27
+0:00:33,850 --> 0:00:34,570
+teaching,
+
+28
+0:00:34,590 --> 0:00:35,470
+writing.
+
+29
+0:00:35,490 --> 0:00:36,430
+Like there's all kinds
+
+30
+0:00:36,430 --> 0:00:38,670
+of areas of intelligence
+
+31
+0:00:38,690 --> 0:00:40,170
+or at least maybe
+
+32
+0:00:40,170 --> 0:00:41,550
+scalar capability.
+
+33
+0:00:41,570 --> 0:00:42,450
+The AI is not
+
+34
+0:00:42,450 --> 0:00:44,710
+necessarily the same level
+
+35
+0:00:44,710 --> 0:00:45,590
+of intelligence at all
+
+36
+0:00:45,590 --> 0:00:46,530
+of them and there's
+
+37
+0:00:46,530 --> 0:00:47,250
+gaps.
+
+38
+0:00:47,270 --> 0:00:47,950
+So it makes like
+
+39
+0:00:47,950 --> 0:00:49,550
+a jagged graph.
+
+40
+0:00:49,550 --> 0:00:53,210
+And so we as
+
+41
+0:00:53,210 --> 0:00:55,650
+humans can sometimes fill
+
+42
+0:00:55,650 --> 0:00:56,950
+in those gaps and
+
+43
+0:00:56,950 --> 0:00:57,910
+that's why we're still
+
+44
+0:00:57,910 --> 0:00:59,910
+useful economically for the
+
+45
+0:00:59,910 --> 0:01:00,130
+moment.

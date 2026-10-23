@@ -1,0 +1,57 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: K,Shippori Mincho SemiBold,96,&H00121416,&H00909CA3,&H00EAF2F6,&H00EAF2F6,0,0,0,0,100,100,1,0,1,0,0,5,90,90,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.15,0:00:02.43,K,,0,0,0,,{\fad(60,40)}{\kf47}These {\kf36}artificial {\kf63}intelligences {\kf80}are
+Dialogue: 0,0:00:02.43,0:00:04.07,K,,0,0,0,,{\fad(60,40)}{\kf101}jagged.
+Dialogue: 0,0:00:04.09,0:00:05.11,K,,0,0,0,,{\fad(60,40)}{\kf39}That's {\kf8}a {\kf24}term {\kf30}people
+Dialogue: 0,0:00:05.11,0:00:05.99,K,,0,0,0,,{\fad(60,40)}{\kf24}throw {\kf45}out.
+Dialogue: 0,0:00:06.01,0:00:07.61,K,,0,0,0,,{\fad(60,40)}{\kf17}They {\kf11}are {\kf41}jagged {\kf72}intelligences
+Dialogue: 0,0:00:07.63,0:00:08.61,K,,0,0,0,,{\fad(60,40)}{\kf22}meaning {\kf56}if {\kf9}you {\kf9}think
+Dialogue: 0,0:00:08.61,0:00:10.37,K,,0,0,0,,{\fad(60,40)}{\kf17}of {\kf59}like {\kf72}a {\kf25}graph
+Dialogue: 0,0:00:10.37,0:00:13.37,K,,0,0,0,,{\fad(60,40)}{\kf17}of {\kf54}intelligence
+Dialogue: 0,0:00:13.39,0:00:14.37,K,,0,0,0,,{\fad(60,40)}{\kf47}what {\kf23}would {\kf12}the {\kf14}graph
+Dialogue: 0,0:00:14.37,0:00:17.17,K,,0,0,0,,{\fad(60,40)}{\kf17}be?
+Dialogue: 0,0:00:17.19,0:00:18.79,K,,0,0,0,,{\fad(60,40)}{\kf47}The {\kf47}y {\kf22}-axis {\kf41}is
+Dialogue: 0,0:00:18.79,0:00:19.65,K,,0,0,0,,{\fad(60,40)}{\kf21}like {\kf17}the {\kf30}level {\kf16}of
+Dialogue: 0,0:00:19.65,0:00:20.79,K,,0,0,0,,{\fad(60,40)}{\kf44}intelligence {\kf35}and {\kf16}maybe {\kf17}the
+Dialogue: 0,0:00:20.79,0:00:22.63,K,,0,0,0,,{\fad(60,40)}{\kf21}x {\kf28}-axis {\kf21}is {\kf44}like
+Dialogue: 0,0:00:22.65,0:00:22.97,K,,0,0,0,,{\fad(60,40)}{\kf16}I {\kf6}don't {\kf9}know
+Dialogue: 0,0:00:22.99,0:00:23.35,K,,0,0,0,,{\fad(60,40)}{\kf3}maybe {\kf12}it's {\kf12}like {\kf7}a
+Dialogue: 0,0:00:23.35,0:00:24.31,K,,0,0,0,,{\fad(60,40)}{\kf17}bar {\kf78}chart.
+Dialogue: 0,0:00:24.31,0:00:24.95,K,,0,0,0,,{\fad(60,40)}{\kf28}So {\kf7}it {\kf14}has {\kf14}like
+Dialogue: 0,0:00:24.95,0:00:26.51,K,,0,0,0,,{\fad(60,40)}{\kf21}different {\kf48}areas {\kf32}of {\kf40}intelligence
+Dialogue: 0,0:00:26.53,0:00:26.65,K,,0,0,0,,{\fad(60,40)}{\kf2}right?
+Dialogue: 0,0:00:26.67,0:00:27.89,K,,0,0,0,,{\fad(60,40)}{\kf8}Like {\kf21}software {\kf42}engineering
+Dialogue: 0,0:00:27.91,0:00:28.67,K,,0,0,0,,{\fad(60,40)}{\kf41}mathematics
+Dialogue: 0,0:00:28.69,0:00:30.51,K,,0,0,0,,{\fad(60,40)}{\kf47}accounting
+Dialogue: 0,0:00:30.53,0:00:30.87,K,,0,0,0,,{\fad(60,40)}{\kf21}art
+Dialogue: 0,0:00:30.89,0:00:31.51,K,,0,0,0,,{\fad(60,40)}{\kf16}video {\kf35}generation
+Dialogue: 0,0:00:31.53,0:00:33.83,K,,0,0,0,,{\fad(60,40)}{\kf42}audio
+Dialogue: 0,0:00:33.85,0:00:34.57,K,,0,0,0,,{\fad(60,40)}{\kf44}teaching
+Dialogue: 0,0:00:34.59,0:00:35.47,K,,0,0,0,,{\fad(60,40)}{\kf32}writing.
+Dialogue: 0,0:00:35.49,0:00:36.43,K,,0,0,0,,{\fad(60,40)}{\kf14}Like {\kf32}there's {\kf34}all {\kf13}kinds
+Dialogue: 0,0:00:36.43,0:00:38.67,K,,0,0,0,,{\fad(60,40)}{\kf16}of {\kf32}areas {\kf38}of {\kf51}intelligence
+Dialogue: 0,0:00:38.69,0:00:40.17,K,,0,0,0,,{\fad(60,40)}{\kf64}or {\kf19}at {\kf20}least {\kf43}maybe
+Dialogue: 0,0:00:40.17,0:00:41.55,K,,0,0,0,,{\fad(60,40)}{\kf57}scalar {\kf44}capability.
+Dialogue: 0,0:00:41.57,0:00:42.45,K,,0,0,0,,{\fad(60,40)}{\kf10}The {\kf28}AI {\kf17}is {\kf32}not
+Dialogue: 0,0:00:42.45,0:00:44.71,K,,0,0,0,,{\fad(60,40)}{\kf120}necessarily {\kf32}the {\kf37}same {\kf35}level
+Dialogue: 0,0:00:44.71,0:00:45.59,K,,0,0,0,,{\fad(60,40)}{\kf16}of {\kf32}intelligence {\kf19}at {\kf20}all
+Dialogue: 0,0:00:45.59,0:00:46.53,K,,0,0,0,,{\fad(60,40)}{\kf11}of {\kf17}them {\kf40}and {\kf23}there's
+Dialogue: 0,0:00:46.53,0:00:47.25,K,,0,0,0,,{\fad(60,40)}{\kf26}gaps.
+Dialogue: 0,0:00:47.27,0:00:47.95,K,,0,0,0,,{\fad(60,40)}{\kf2}So {\kf15}it {\kf32}makes {\kf17}like
+Dialogue: 0,0:00:47.95,0:00:49.55,K,,0,0,0,,{\fad(60,40)}{\kf15}a {\kf70}jagged {\kf74}graph.
+Dialogue: 0,0:00:49.55,0:00:53.21,K,,0,0,0,,{\fad(60,40)}{\kf35}And {\kf29}so {\kf256}we {\kf43}as
+Dialogue: 0,0:00:53.21,0:00:55.65,K,,0,0,0,,{\fad(60,40)}{\kf35}humans {\kf106}can {\kf60}sometimes {\kf42}fill
+Dialogue: 0,0:00:55.65,0:00:56.95,K,,0,0,0,,{\fad(60,40)}{\kf37}in {\kf35}those {\kf32}gaps {\kf24}and
+Dialogue: 0,0:00:56.95,0:00:57.91,K,,0,0,0,,{\fad(60,40)}{\kf24}that's {\kf21}why {\kf21}we're {\kf28}still
+Dialogue: 0,0:00:57.91,0:00:59.91,K,,0,0,0,,{\fad(60,40)}{\kf92}useful {\kf55}economically {\kf44}for {\kf7}the
+Dialogue: 0,0:00:59.91,0:01:00.13,K,,0,0,0,,{\fad(60,40)}{\kf21}moment.

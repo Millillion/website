@@ -1,0 +1,442 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Shippori Mincho SemiBold,70,&H00121416,&H00121416,&H00EAF2F6,&H00EAF2F6,0,0,0,0,100,100,1,0,1,0,0,5,220,220,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:11.00,0:00:15.48,Cap,,0,0,0,,{\fad(120,120)}Hey everybody! This is\NJordan Last, also known
+Dialogue: 0,0:00:15.48,0:00:19.96,Cap,,0,0,0,,{\fad(120,120)}as lastmjs. Hey, this is the first
+Dialogue: 0,0:00:19.96,0:00:23.20,Cap,,0,0,0,,{\fad(120,120)}episode of the Millillion\Npodcast, and let me
+Dialogue: 0,0:00:23.20,0:00:26.44,Cap,,0,0,0,,{\fad(120,120)}just give you a\Nquick background on
+Dialogue: 0,0:00:26.44,0:00:28.82,Cap,,0,0,0,,{\fad(120,120)}what Millillion is.\NI'll give you a quick
+Dialogue: 0,0:00:28.82,0:00:31.20,Cap,,0,0,0,,{\fad(120,120)}background on myself,\Nin case you want to
+Dialogue: 0,0:00:31.20,0:00:33.78,Cap,,0,0,0,,{\fad(120,120)}know that. I think\Nit'll be helpful. I'm
+Dialogue: 0,0:00:33.78,0:00:36.36,Cap,,0,0,0,,{\fad(120,120)}a software developer.\NI have been a
+Dialogue: 0,0:00:36.60,0:00:44.56,Cap,,0,0,0,,{\fad(120,120)}software developer for a while. I started\Nmy undergraduate education in 2009. I
+Dialogue: 0,0:00:44.56,0:00:53.32,Cap,,0,0,0,,{\fad(120,120)}graduated in 2017 with a bachelor's\Ndegree in computer science. I love
+Dialogue: 0,0:00:53.32,0:01:01.08,Cap,,0,0,0,,{\fad(120,120)}software. I love technology. It fascinates\Nme. The latent power of all these
+Dialogue: 0,0:01:01.08,0:01:06.84,Cap,,0,0,0,,{\fad(120,120)}technologies that we've been inventing\Nand being inspired to invent are just
+Dialogue: 0,0:01:06.84,0:01:10.48,Cap,,0,0,0,,{\fad(120,120)}absolutely fantastic to me. They're\Nbeautiful. They're amazing. I believe
+Dialogue: 0,0:01:10.48,0:01:17.24,Cap,,0,0,0,,{\fad(120,120)}technology is one of the key things,\Nreasons, factors that brings prosperity
+Dialogue: 0,0:01:17.24,0:01:22.36,Cap,,0,0,0,,{\fad(120,120)}to the world, and that helps to end\Nphysical human suffering. It's not
+Dialogue: 0,0:01:22.36,0:01:29.00,Cap,,0,0,0,,{\fad(120,120)}without its weaknesses, but I think it's\Ntechnology has been an absolute boon to
+Dialogue: 0,0:01:29.00,0:01:35.84,Cap,,0,0,0,,{\fad(120,120)}mankind. Generally speaking, it's much\Nbetter than the benefits outweigh
+Dialogue: 0,0:01:35.84,0:01:43.32,Cap,,0,0,0,,{\fad(120,120)}the costs, in my opinion. I've been\Nprofessionally developing to a
+Dialogue: 0,0:01:43.32,0:01:48.92,Cap,,0,0,0,,{\fad(120,120)}certain extent, probably\Nsince 2013, I would say.
+Dialogue: 0,0:01:48.92,0:01:54.52,Cap,,0,0,0,,{\fad(120,120)}I've had a good go at it,
+Dialogue: 0,0:01:54.52,0:01:56.92,Cap,,0,0,0,,{\fad(120,120)}I think. I mean, it's\Nnot still a little
+Dialogue: 0,0:01:56.92,0:01:59.32,Cap,,0,0,0,,{\fad(120,120)}bit early in my career,\NI would say, but
+Dialogue: 0,0:01:59.32,0:02:09.24,Cap,,0,0,0,,{\fad(120,120)}I've had an okay amount of experience.\NRight now, I call myself an agentic
+Dialogue: 0,0:02:09.24,0:02:15.52,Cap,,0,0,0,,{\fad(120,120)}engineer with an emphasis in software\Ndevelopment. Before, I definitely called
+Dialogue: 0,0:02:15.52,0:02:19.76,Cap,,0,0,0,,{\fad(120,120)}myself a software developer or a software\Nengineer. Now, though, I believe
+Dialogue: 0,0:02:19.76,0:02:22.74,Cap,,0,0,0,,{\fad(120,120)}personally that anyone\Nin STEM fields or maybe
+Dialogue: 0,0:02:22.74,0:02:25.72,Cap,,0,0,0,,{\fad(120,120)}even anyone in any field, we are
+Dialogue: 0,0:02:25.72,0:02:34.12,Cap,,0,0,0,,{\fad(120,120)}all agentic engineers now or agentic\Ndevelopers. We are using AI agents
+Dialogue: 0,0:02:34.12,0:02:40.20,Cap,,0,0,0,,{\fad(120,120)}to solve problems now. That's what\Nwe're doing. We're coordinating agents,
+Dialogue: 0,0:02:40.20,0:02:48.12,Cap,,0,0,0,,{\fad(120,120)}we're managing agents, we're judging the\Noutputs of agents, and an agent, in case
+Dialogue: 0,0:02:48.16,0:02:52.68,Cap,,0,0,0,,{\fad(120,120)}you don't know, an\Nagent is an instance
+Dialogue: 0,0:02:52.68,0:02:57.20,Cap,,0,0,0,,{\fad(120,120)}of an AI, an artificial\Nintelligence, that
+Dialogue: 0,0:02:57.20,0:03:02.76,Cap,,0,0,0,,{\fad(120,120)}can actually go out and perform work for\Nyou somewhat autonomously, sometimes very
+Dialogue: 0,0:03:02.76,0:03:09.52,Cap,,0,0,0,,{\fad(120,120)}very very autonomously. This is kind\Nof the evolution of the chatbot. A
+Dialogue: 0,0:03:09.52,0:03:15.60,Cap,,0,0,0,,{\fad(120,120)}lot of people, I mean since 2022-ish,\NAI chatbots have been pretty popular
+Dialogue: 0,0:03:15.60,0:03:20.80,Cap,,0,0,0,,{\fad(120,120)}with the advent of ChatGPT.\NThat's generally a back-and-forth
+Dialogue: 0,0:03:20.80,0:03:27.48,Cap,,0,0,0,,{\fad(120,120)}question-response type thing. I asked\Nthe AI a question in response to me, very
+Dialogue: 0,0:03:27.48,0:03:31.28,Cap,,0,0,0,,{\fad(120,120)}similar to googling something in a search\Nengine. You kind of ask a question,
+Dialogue: 0,0:03:31.28,0:03:33.14,Cap,,0,0,0,,{\fad(120,120)}you have a query,\Nand then you get a
+Dialogue: 0,0:03:33.14,0:03:35.00,Cap,,0,0,0,,{\fad(120,120)}response with a bunch\Nof results. Kind of
+Dialogue: 0,0:03:35.00,0:03:38.68,Cap,,0,0,0,,{\fad(120,120)}the same thing since\N2022, but late 2024
+Dialogue: 0,0:03:38.68,0:03:42.36,Cap,,0,0,0,,{\fad(120,120)}is when at least\NI first started to
+Dialogue: 0,0:03:42.36,0:03:46.64,Cap,,0,0,0,,{\fad(120,120)}experience AI agents, and I was in the\Ncontext of software engineering, where
+Dialogue: 0,0:03:46.64,0:03:50.96,Cap,,0,0,0,,{\fad(120,120)}instead of just using\NChatGPT or Claude to
+Dialogue: 0,0:03:50.96,0:03:55.28,Cap,,0,0,0,,{\fad(120,120)}do research, and\Nyou know maybe paste
+Dialogue: 0,0:03:55.28,0:04:02.40,Cap,,0,0,0,,{\fad(120,120)}a complicated Rust error into the chat\Ninterface, and you know get help, I
+Dialogue: 0,0:04:02.40,0:04:05.42,Cap,,0,0,0,,{\fad(120,120)}actually was able to\Nstart to tell the AI,
+Dialogue: 0,0:04:05.42,0:04:08.44,Cap,,0,0,0,,{\fad(120,120)}like in VS Code or\NCursor or whatever
+Dialogue: 0,0:04:08.44,0:04:11.02,Cap,,0,0,0,,{\fad(120,120)}I was using at the\Ntime, like hey I
+Dialogue: 0,0:04:11.02,0:04:13.60,Cap,,0,0,0,,{\fad(120,120)}actually want you to\Nwrite in here, write
+Dialogue: 0,0:04:13.60,0:04:20.68,Cap,,0,0,0,,{\fad(120,120)}in my editor, do this programming test,\Nlike actually generate code, and that was
+Dialogue: 0,0:04:20.68,0:04:28.30,Cap,,0,0,0,,{\fad(120,120)}crazy because it kind of worked. It\Nworked just enough that you know I
+Dialogue: 0,0:04:28.30,0:04:30.99,Cap,,0,0,0,,{\fad(120,120)}obsessed over it.\NThis was for all, I
+Dialogue: 0,0:04:30.99,0:04:33.68,Cap,,0,0,0,,{\fad(120,120)}feel like December\N2024 is when I first
+Dialogue: 0,0:04:34.04,0:04:38.16,Cap,,0,0,0,,{\fad(120,120)}really tried out AI\Nagents, and you know
+Dialogue: 0,0:04:38.16,0:04:42.28,Cap,,0,0,0,,{\fad(120,120)}the code, if I remember\Ncorrectly it was
+Dialogue: 0,0:04:42.28,0:04:45.66,Cap,,0,0,0,,{\fad(120,120)}actually pretty terrible.\NIt wasn't that great, but
+Dialogue: 0,0:04:45.66,0:04:49.04,Cap,,0,0,0,,{\fad(120,120)}it was kind of good, and I
+Dialogue: 0,0:04:49.04,0:04:53.44,Cap,,0,0,0,,{\fad(120,120)}feel like that's like the same\Nthing with ChatGPT, or even GPT-3, I
+Dialogue: 0,0:04:53.44,0:04:56.74,Cap,,0,0,0,,{\fad(120,120)}believe in 2020 is\Nwhen I first tried
+Dialogue: 0,0:04:56.74,0:05:00.04,Cap,,0,0,0,,{\fad(120,120)}GPT-3, and it's like\Noh my goodness, like
+Dialogue: 0,0:05:00.40,0:05:03.88,Cap,,0,0,0,,{\fad(120,120)}it's kind of good, like\Nit seems good, and
+Dialogue: 0,0:05:03.88,0:05:07.36,Cap,,0,0,0,,{\fad(120,120)}then you don't really\Nknow how good or
+Dialogue: 0,0:05:07.36,0:05:09.52,Cap,,0,0,0,,{\fad(120,120)}bad it is. I think at first you
+Dialogue: 0,0:05:09.52,0:05:11.68,Cap,,0,0,0,,{\fad(120,120)}always think it's like\Nsuper super super good,
+Dialogue: 0,0:05:11.68,0:05:15.14,Cap,,0,0,0,,{\fad(120,120)}right, and so you\Nkind of get obsessed
+Dialogue: 0,0:05:15.14,0:05:18.60,Cap,,0,0,0,,{\fad(120,120)}with it, and then\Nyou start going crazy
+Dialogue: 0,0:05:18.60,0:05:20.58,Cap,,0,0,0,,{\fad(120,120)}with all the kinds of\Ncrazy ideas for like
+Dialogue: 0,0:05:20.58,0:05:22.56,Cap,,0,0,0,,{\fad(120,120)}what you can do with this, oh my
+Dialogue: 0,0:05:22.56,0:05:25.34,Cap,,0,0,0,,{\fad(120,120)}goodness, like can\Nyou generate, I mean I
+Dialogue: 0,0:05:25.34,0:05:28.12,Cap,,0,0,0,,{\fad(120,120)}did a edtech company\Nas my first little
+Dialogue: 0,0:05:28.12,0:05:35.20,Cap,,0,0,0,,{\fad(120,120)}startup, and you know so I guess I\Nprobably thought like can this generate
+Dialogue: 0,0:05:35.20,0:05:40.16,Cap,,0,0,0,,{\fad(120,120)}practice problems, assessments for people,\Nand then we quickly find out back in
+Dialogue: 0,0:05:40.16,0:05:41.80,Cap,,0,0,0,,{\fad(120,120)}2020 like oh no it's\Njust really not
+Dialogue: 0,0:05:41.80,0:05:43.44,Cap,,0,0,0,,{\fad(120,120)}that good, it's not\Ngood enough for that.
+Dialogue: 0,0:05:43.44,0:05:46.48,Cap,,0,0,0,,{\fad(120,120)}Then 2022 GPT ChatGPT\Ncomes out, I don't
+Dialogue: 0,0:05:46.48,0:05:49.52,Cap,,0,0,0,,{\fad(120,120)}know I don't remember\Nexactly but maybe
+Dialogue: 0,0:05:49.52,0:05:53.10,Cap,,0,0,0,,{\fad(120,120)}three GPT-3.5 came out\Nshortly after that, and
+Dialogue: 0,0:05:53.10,0:05:56.68,Cap,,0,0,0,,{\fad(120,120)}then you could you know if you
+Dialogue: 0,0:05:56.68,0:05:58.88,Cap,,0,0,0,,{\fad(120,120)}were using it on a\Nregular basis or you
+Dialogue: 0,0:05:58.88,0:06:01.08,Cap,,0,0,0,,{\fad(120,120)}know any basis at\Nall you could kind of
+Dialogue: 0,0:06:01.08,0:06:03.96,Cap,,0,0,0,,{\fad(120,120)}feel the jump in\Nintelligence, right, like oh
+Dialogue: 0,0:06:03.96,0:06:06.84,Cap,,0,0,0,,{\fad(120,120)}wow, like you just can feel it,
+Dialogue: 0,0:06:06.84,0:06:12.04,Cap,,0,0,0,,{\fad(120,120)}like the answers feel slightly better,\Nit's not necessarily lying to you as
+Dialogue: 0,0:06:12.04,0:06:19.88,Cap,,0,0,0,,{\fad(120,120)}much as before, but still you know\Nin 2022, 23, 2024, if I remember
+Dialogue: 0,0:06:19.88,0:06:22.28,Cap,,0,0,0,,{\fad(120,120)}correctly these things\Nwere lying to us so
+Dialogue: 0,0:06:22.28,0:06:24.68,Cap,,0,0,0,,{\fad(120,120)}much, they just\Nwould say it the most
+Dialogue: 0,0:06:24.68,0:06:30.28,Cap,,0,0,0,,{\fad(120,120)}ridiculous things, they would they would\Nmake up like CLI commands and API endpoints
+Dialogue: 0,0:06:30.28,0:06:31.72,Cap,,0,0,0,,{\fad(120,120)}and things, they would\Njust make things up and
+Dialogue: 0,0:06:31.72,0:06:33.16,Cap,,0,0,0,,{\fad(120,120)}you'd be like oh my\Ngoodness I can't
+Dialogue: 0,0:06:33.16,0:06:37.16,Cap,,0,0,0,,{\fad(120,120)}believe this exact command that I exactly\Nneed for the situation exists, it's so
+Dialogue: 0,0:06:37.16,0:06:39.08,Cap,,0,0,0,,{\fad(120,120)}awesome, and then\Nyou go to try it and
+Dialogue: 0,0:06:39.08,0:06:41.00,Cap,,0,0,0,,{\fad(120,120)}then it definitely\Ndid not exist, so that
+Dialogue: 0,0:06:41.00,0:06:43.88,Cap,,0,0,0,,{\fad(120,120)}was kind of sad,\Nbut yeah anyways end
+Dialogue: 0,0:06:43.88,0:06:46.76,Cap,,0,0,0,,{\fad(120,120)}of 2024 agents start\Nactually doing things
+Dialogue: 0,0:06:46.76,0:06:51.32,Cap,,0,0,0,,{\fad(120,120)}for you, like not just question response\Nbut actually generating code, and sorry
+Dialogue: 0,0:06:52.28,0:06:55.00,Cap,,0,0,0,,{\fad(120,120)}train of thought, now\Nthis podcast is gonna
+Dialogue: 0,0:06:55.00,0:06:57.72,Cap,,0,0,0,,{\fad(120,120)}be just whatever I want to say
+Dialogue: 0,0:06:57.72,0:07:00.52,Cap,,0,0,0,,{\fad(120,120)}basically, I'm just\Ngonna be crazy trains of
+Dialogue: 0,0:07:00.52,0:07:03.32,Cap,,0,0,0,,{\fad(120,120)}thoughts and things,\Nso you know it's
+Dialogue: 0,0:07:03.32,0:07:05.20,Cap,,0,0,0,,{\fad(120,120)}probably just going to be me for a
+Dialogue: 0,0:07:05.20,0:07:07.08,Cap,,0,0,0,,{\fad(120,120)}while, but who knows\Nmaybe I'll invite some
+Dialogue: 0,0:07:07.08,0:07:10.12,Cap,,0,0,0,,{\fad(120,120)}guests on, maybe I'll\Ninvite an AI on,
+Dialogue: 0,0:07:10.12,0:07:13.16,Cap,,0,0,0,,{\fad(120,120)}and the idea is to\Nhave interesting
+Dialogue: 0,0:07:13.16,0:07:19.80,Cap,,0,0,0,,{\fad(120,120)}conversations and useful conversations,\NI believe I have a lot of insights to
+Dialogue: 0,0:07:19.88,0:07:23.08,Cap,,0,0,0,,{\fad(120,120)}share and a lot of\Nexperience to share
+Dialogue: 0,0:07:23.08,0:07:26.28,Cap,,0,0,0,,{\fad(120,120)}that would be useful\Nto many people, so
+Dialogue: 0,0:07:26.28,0:07:28.04,Cap,,0,0,0,,{\fad(120,120)}yeah so this code that's\Ngenerating, it's like
+Dialogue: 0,0:07:28.04,0:07:29.80,Cap,,0,0,0,,{\fad(120,120)}it's just good\Nenough that maybe it
+Dialogue: 0,0:07:29.80,0:07:33.76,Cap,,0,0,0,,{\fad(120,120)}could work, and at\Nthe time I was doing
+Dialogue: 0,0:07:33.76,0:07:37.72,Cap,,0,0,0,,{\fad(120,120)}a lot of Rust development\Nin the blockchain
+Dialogue: 0,0:07:37.72,0:07:43.56,Cap,,0,0,0,,{\fad(120,120)}industry, building open source basically\Nopen source JavaScript and Python runtimes
+Dialogue: 0,0:07:43.56,0:07:53.40,Cap,,0,0,0,,{\fad(120,120)}for a decentralized cloud basically,\Nand so you know this is we were doing
+Dialogue: 0,0:07:53.40,0:07:58.76,Cap,,0,0,0,,{\fad(120,120)}pretty I would say pretty intense\Nrelatively low level programming, not the
+Dialogue: 0,0:07:58.76,0:08:01.08,Cap,,0,0,0,,{\fad(120,120)}lowest at the low\Nlevel, but you know
+Dialogue: 0,0:08:01.08,0:08:03.40,Cap,,0,0,0,,{\fad(120,120)}relatively low level,\Nand you know it
+Dialogue: 0,0:08:03.40,0:08:06.12,Cap,,0,0,0,,{\fad(120,120)}was actually starting to\Ndo some things, doing
+Dialogue: 0,0:08:06.12,0:08:08.84,Cap,,0,0,0,,{\fad(120,120)}a lot of TypeScript\Nas well, but it
+Dialogue: 0,0:08:08.84,0:08:11.48,Cap,,0,0,0,,{\fad(120,120)}just wasn't good enough,\Nlike I remember I
+Dialogue: 0,0:08:11.48,0:08:14.12,Cap,,0,0,0,,{\fad(120,120)}spent like one or two weeks really
+Dialogue: 0,0:08:14.12,0:08:17.84,Cap,,0,0,0,,{\fad(120,120)}trying to force the\Nagent to to follow my
+Dialogue: 0,0:08:17.84,0:08:21.56,Cap,,0,0,0,,{\fad(120,120)}plans, like to do\Nwhat I asked it to
+Dialogue: 0,0:08:21.56,0:08:24.72,Cap,,0,0,0,,{\fad(120,120)}do, I was coming up\Nwith like basically
+Dialogue: 0,0:08:24.72,0:08:27.88,Cap,,0,0,0,,{\fad(120,120)}before we had the\Nskills standard, I was
+Dialogue: 0,0:08:27.88,0:08:30.04,Cap,,0,0,0,,{\fad(120,120)}trying to come up\Nwith like a skill,
+Dialogue: 0,0:08:30.04,0:08:32.20,Cap,,0,0,0,,{\fad(120,120)}like just like a markdown\Nfile or something
+Dialogue: 0,0:08:32.20,0:08:34.68,Cap,,0,0,0,,{\fad(120,120)}that had a process\Nfor the AI to follow,
+Dialogue: 0,0:08:34.68,0:08:37.16,Cap,,0,0,0,,{\fad(120,120)}like step one do this,\Nstep two do this,
+Dialogue: 0,0:08:37.16,0:08:40.32,Cap,,0,0,0,,{\fad(120,120)}step three do this,\Nbasically like you know
+Dialogue: 0,0:08:40.32,0:08:43.48,Cap,,0,0,0,,{\fad(120,120)}pseudocode, trying\Nto force it to do
+Dialogue: 0,0:08:43.48,0:08:46.76,Cap,,0,0,0,,{\fad(120,120)}more than it could\Nreally do to you
+Dialogue: 0,0:08:46.76,0:08:50.04,Cap,,0,0,0,,{\fad(120,120)}know I don't I don't\Nreally remember exactly
+Dialogue: 0,0:08:50.04,0:08:52.80,Cap,,0,0,0,,{\fad(120,120)}what you know exactly\Nwhat I was getting it
+Dialogue: 0,0:08:52.80,0:08:55.56,Cap,,0,0,0,,{\fad(120,120)}to do, but trying to\Npush it to become
+Dialogue: 0,0:08:55.56,0:08:58.20,Cap,,0,0,0,,{\fad(120,120)}an autonomous AI agent\Nlike we have today,
+Dialogue: 0,0:08:58.20,0:09:00.84,Cap,,0,0,0,,{\fad(120,120)}and it just would not follow the
+Dialogue: 0,0:09:00.84,0:09:03.44,Cap,,0,0,0,,{\fad(120,120)}rules, it would just go\Noff the rails, and it
+Dialogue: 0,0:09:03.44,0:09:06.04,Cap,,0,0,0,,{\fad(120,120)}was just crazy, so\NI kind of gave up
+Dialogue: 0,0:09:06.04,0:09:07.64,Cap,,0,0,0,,{\fad(120,120)}on that and realized\Nlike okay you know
+Dialogue: 0,0:09:07.64,0:09:09.24,Cap,,0,0,0,,{\fad(120,120)}what this it's just\Nnot ready like in
+Dialogue: 0,0:09:09.24,0:09:11.36,Cap,,0,0,0,,{\fad(120,120)}early 2025 is when I\Nwas doing that it's
+Dialogue: 0,0:09:11.36,0:09:13.48,Cap,,0,0,0,,{\fad(120,120)}like it's just not\Nthat it's just not
+Dialogue: 0,0:09:13.48,0:09:15.56,Cap,,0,0,0,,{\fad(120,120)}ready, but I could\Nfeel it I could feel
+Dialogue: 0,0:09:15.56,0:09:17.64,Cap,,0,0,0,,{\fad(120,120)}it coming right like\NI could I could see
+Dialogue: 0,0:09:17.64,0:09:19.92,Cap,,0,0,0,,{\fad(120,120)}like if things keep\Nimproving like this is
+Dialogue: 0,0:09:19.92,0:09:22.20,Cap,,0,0,0,,{\fad(120,120)}gonna get really\Ngood, and even with
+Dialogue: 0,0:09:22.20,0:09:24.48,Cap,,0,0,0,,{\fad(120,120)}like our taxes and\Naccounting we were a
+Dialogue: 0,0:09:24.48,0:09:26.76,Cap,,0,0,0,,{\fad(120,120)}very small team so\Nwe were you know
+Dialogue: 0,0:09:26.76,0:09:31.08,Cap,,0,0,0,,{\fad(120,120)}trying to do as much ourselves as\Npossible or at least prepare things well
+Dialogue: 0,0:09:31.08,0:09:33.20,Cap,,0,0,0,,{\fad(120,120)}enough to hand off to\Nthe people we paid
+Dialogue: 0,0:09:33.20,0:09:35.32,Cap,,0,0,0,,{\fad(120,120)}to do our taxes, and\NI remember like in
+Dialogue: 0,0:09:35.56,0:09:40.04,Cap,,0,0,0,,{\fad(120,120)}in Mercury right like going through\Ntransactions, and I could feel that these
+Dialogue: 0,0:09:40.04,0:09:45.80,Cap,,0,0,0,,{\fad(120,120)}agents were getting pretty good,\Nand I had tried to you know ask tax
+Dialogue: 0,0:09:45.80,0:09:50.60,Cap,,0,0,0,,{\fad(120,120)}questions before and and you would make\Nvery basic arithmetic errors, but I
+Dialogue: 0,0:09:50.60,0:09:54.92,Cap,,0,0,0,,{\fad(120,120)}remember thinking like no let's\Nlet's prepare this I like now in each
+Dialogue: 0,0:09:54.92,0:10:00.68,Cap,,0,0,0,,{\fad(120,120)}transaction like we can actually put\Nin the notes here you know everything
+Dialogue: 0,0:10:00.68,0:10:05.16,Cap,,0,0,0,,{\fad(120,120)}necessary to classify these things\Ncorrectly with sales tax and use tax and
+Dialogue: 0,0:10:05.64,0:10:09.32,Cap,,0,0,0,,{\fad(120,120)}like where the members were actually\Nphysically working when they did these
+Dialogue: 0,0:10:09.32,0:10:12.72,Cap,,0,0,0,,{\fad(120,120)}things, and because I\Nwas preparing for a day
+Dialogue: 0,0:10:12.72,0:10:16.12,Cap,,0,0,0,,{\fad(120,120)}when AI agents would\Nbe able to just
+Dialogue: 0,0:10:16.12,0:10:21.64,Cap,,0,0,0,,{\fad(120,120)}grab all that information and basically\Ndo the taxes 100% themselves, and I was
+Dialogue: 0,0:10:21.64,0:10:24.32,Cap,,0,0,0,,{\fad(120,120)}in early 2025 when\NI really felt like
+Dialogue: 0,0:10:24.32,0:10:27.00,Cap,,0,0,0,,{\fad(120,120)}that that's that seems\Nto be coming, and
+Dialogue: 0,0:10:27.00,0:10:31.96,Cap,,0,0,0,,{\fad(120,120)}then 2025 went on and into summer 2025\Nthings were getting better agents were
+Dialogue: 0,0:10:32.04,0:10:34.16,Cap,,0,0,0,,{\fad(120,120)}getting better they\Ncould do more and more
+Dialogue: 0,0:10:34.16,0:10:36.28,Cap,,0,0,0,,{\fad(120,120)}but it still was really me coding
+Dialogue: 0,0:10:36.92,0:10:38.84,Cap,,0,0,0,,{\fad(120,120)}and my team you know\Nwe're coding by
+Dialogue: 0,0:10:38.84,0:10:40.76,Cap,,0,0,0,,{\fad(120,120)}hand right maybe\Nthey're the agents are
+Dialogue: 0,0:10:40.76,0:10:45.16,Cap,,0,0,0,,{\fad(120,120)}generating a good amount of our code\Nbut we're reviewing everything we're
+Dialogue: 0,0:10:45.88,0:10:49.88,Cap,,0,0,0,,{\fad(120,120)}we're really grabbing things piece by\Npiece and you know they started to get
+Dialogue: 0,0:10:49.88,0:10:52.88,Cap,,0,0,0,,{\fad(120,120)}better they started\Nto be able to do
+Dialogue: 0,0:10:52.88,0:10:55.88,Cap,,0,0,0,,{\fad(120,120)}changes across you\Nknow more files and
+Dialogue: 0,0:10:55.88,0:10:58.52,Cap,,0,0,0,,{\fad(120,120)}folders and it was\Ngetting better and better
+Dialogue: 0,0:10:58.84,0:11:06.84,Cap,,0,0,0,,{\fad(120,120)}but it wasn't until I\Nwould say October 2025
+Dialogue: 0,0:11:08.12,0:11:12.04,Cap,,0,0,0,,{\fad(120,120)}I think that's when I\Nreally first tasted it
+Dialogue: 0,0:11:12.04,0:11:15.96,Cap,,0,0,0,,{\fad(120,120)}I believe it was\NGPT-5.1 or maybe 5.2
+Dialogue: 0,0:11:17.80,0:11:19.36,Cap,,0,0,0,,{\fad(120,120)}and then they had like\NCodex versions of
+Dialogue: 0,0:11:19.36,0:11:20.92,Cap,,0,0,0,,{\fad(120,120)}those things at the time as well
+Dialogue: 0,0:11:21.56,0:11:24.20,Cap,,0,0,0,,{\fad(120,120)}and I was actually\Nkind of getting out
+Dialogue: 0,0:11:24.20,0:11:26.84,Cap,,0,0,0,,{\fad(120,120)}of my previous business\Nand just applying for
+Dialogue: 0,0:11:27.48,0:11:34.44,Cap,,0,0,0,,{\fad(120,120)}a job as a VP of information\Ntechnology at a startup and
+Dialogue: 0,0:11:36.20,0:11:39.48,Cap,,0,0,0,,{\fad(120,120)}I wanted to build like a\Nlittle prototype a little demo
+Dialogue: 0,0:11:41.16,0:11:43.96,Cap,,0,0,0,,{\fad(120,120)}and I realized like\Nyou know what I
+Dialogue: 0,0:11:43.96,0:11:46.76,Cap,,0,0,0,,{\fad(120,120)}did then this was\Nright around when opus
+Dialogue: 0,0:11:48.36,0:11:51.28,Cap,,0,0,0,,{\fad(120,120)}4.5 is that the one that was crazy
+Dialogue: 0,0:11:51.28,0:11:54.20,Cap,,0,0,0,,{\fad(120,120)}in October or November\Nit was right when
+Dialogue: 0,0:11:54.20,0:11:57.52,Cap,,0,0,0,,{\fad(120,120)}that crazy jump happened\Nin the capabilities of the
+Dialogue: 0,0:11:57.52,0:12:00.84,Cap,,0,0,0,,{\fad(120,120)}models and that's when\NI realized you know
+Dialogue: 0,0:12:00.84,0:12:05.36,Cap,,0,0,0,,{\fad(120,120)}what I think these things\Ncan generate like all of the
+Dialogue: 0,0:12:05.36,0:12:09.88,Cap,,0,0,0,,{\fad(120,120)}code now like I think\NI can just rely on
+Dialogue: 0,0:12:09.88,0:12:12.92,Cap,,0,0,0,,{\fad(120,120)}them to generate all\Nof the code and that's
+Dialogue: 0,0:12:12.92,0:12:15.96,Cap,,0,0,0,,{\fad(120,120)}what I started doing\Nand I started realizing
+Dialogue: 0,0:12:15.96,0:12:20.92,Cap,,0,0,0,,{\fad(120,120)}holy smokes this is amazing like this\Nwe've jumped another threshold like
+Dialogue: 0,0:12:21.88,0:12:24.04,Cap,,0,0,0,,{\fad(120,120)}now we have agents that\Ncan actually do things for
+Dialogue: 0,0:12:24.04,0:12:26.20,Cap,,0,0,0,,{\fad(120,120)}us and so things got\Nbetter in November things
+Dialogue: 0,0:12:26.20,0:12:32.60,Cap,,0,0,0,,{\fad(120,120)}got better in December in\NDecember 2025 I actually used
+Dialogue: 0,0:12:32.60,0:12:39.00,Cap,,0,0,0,,{\fad(120,120)}I believe GPT-5.2 or\N5.3 to to do a very
+Dialogue: 0,0:12:39.00,0:12:43.00,Cap,,0,0,0,,{\fad(120,120)}complicated tax return for\Nthe first time obviously
+Dialogue: 0,0:12:43.00,0:12:47.00,Cap,,0,0,0,,{\fad(120,120)}I had a meticulous\Nhuman review process
+Dialogue: 0,0:12:47.48,0:12:51.08,Cap,,0,0,0,,{\fad(120,120)}like myself meticulously reviewing\Nit I take taxes extremely seriously
+Dialogue: 0,0:12:53.24,0:12:57.16,Cap,,0,0,0,,{\fad(120,120)}and it was so good\Nit took me 24 hours
+Dialogue: 0,0:12:57.16,0:13:01.08,Cap,,0,0,0,,{\fad(120,120)}though 24 hours literally\Nbecause I waited till the last
+Dialogue: 0,0:13:01.08,0:13:04.88,Cap,,0,0,0,,{\fad(120,120)}minute and I sat there\Nwith the AI for 24
+Dialogue: 0,0:13:04.88,0:13:08.68,Cap,,0,0,0,,{\fad(120,120)}hours building out having\Nthe day I build out crazy
+Dialogue: 0,0:13:08.68,0:13:11.48,Cap,,0,0,0,,{\fad(120,120)}like verification schemes\Nand generating all kinds of
+Dialogue: 0,0:13:11.48,0:13:14.28,Cap,,0,0,0,,{\fad(120,120)}crazy code to really\Nmake sure this thing
+Dialogue: 0,0:13:14.28,0:13:17.20,Cap,,0,0,0,,{\fad(120,120)}was correct and it worked\Nat least as far as I
+Dialogue: 0,0:13:17.20,0:13:20.12,Cap,,0,0,0,,{\fad(120,120)}know it worked I felt\Ngood enough to sign it
+Dialogue: 0,0:13:20.76,0:13:23.68,Cap,,0,0,0,,{\fad(120,120)}it's been accepted it seems\Nand and we're building
+Dialogue: 0,0:13:23.68,0:13:26.60,Cap,,0,0,0,,{\fad(120,120)}on top of that so that was crazy
+Dialogue: 0,0:13:27.48,0:13:29.16,Cap,,0,0,0,,{\fad(120,120)}yeah sorry I'm just\Njust telling you my
+Dialogue: 0,0:13:29.16,0:13:30.84,Cap,,0,0,0,,{\fad(120,120)}whole story now of at least AI
+Dialogue: 0,0:13:31.48,0:13:34.44,Cap,,0,0,0,,{\fad(120,120)}and then I did get this job at
+Dialogue: 0,0:13:34.44,0:13:37.40,Cap,,0,0,0,,{\fad(120,120)}this it's actually a\Nconstruction startup and
+Dialogue: 0,0:13:37.56,0:13:41.56,Cap,,0,0,0,,{\fad(120,120)}and I basically took\Nit on me to do a
+Dialogue: 0,0:13:41.56,0:13:45.56,Cap,,0,0,0,,{\fad(120,120)}complete AI transformation\Nat this startup and it was
+Dialogue: 0,0:13:46.20,0:13:49.40,Cap,,0,0,0,,{\fad(120,120)}we've just been\Nstarting out so like it
+Dialogue: 0,0:13:49.40,0:13:52.60,Cap,,0,0,0,,{\fad(120,120)}was basically a a fresh\Ngreenfield project right
+Dialogue: 0,0:13:53.40,0:13:55.28,Cap,,0,0,0,,{\fad(120,120)}but you know in my\Ninterviews I was telling
+Dialogue: 0,0:13:55.28,0:13:57.16,Cap,,0,0,0,,{\fad(120,120)}saying crazy things\Nlike no it doesn't even
+Dialogue: 0,0:13:57.16,0:13:59.08,Cap,,0,0,0,,{\fad(120,120)}matter what like yeah I\Nhave my preferences for
+Dialogue: 0,0:13:59.08,0:14:01.00,Cap,,0,0,0,,{\fad(120,120)}language but it doesn't\Neven matter what language
+Dialogue: 0,0:14:01.00,0:14:03.08,Cap,,0,0,0,,{\fad(120,120)}you write it doesn't even\Nmatter what front-end framework
+Dialogue: 0,0:14:03.08,0:14:05.16,Cap,,0,0,0,,{\fad(120,120)}you use like this\NAI they can just do
+Dialogue: 0,0:14:05.16,0:14:08.16,Cap,,0,0,0,,{\fad(120,120)}all of it and then I\Njoined in December 2025
+Dialogue: 0,0:14:08.16,0:14:11.16,Cap,,0,0,0,,{\fad(120,120)}and I basically started\Nvibe coding right like just
+Dialogue: 0,0:14:11.72,0:14:14.56,Cap,,0,0,0,,{\fad(120,120)}outrageous amounts of\Nvibe coding just like I
+Dialogue: 0,0:14:14.56,0:14:17.40,Cap,,0,0,0,,{\fad(120,120)}didn't actually know\Nlike I didn't know how
+Dialogue: 0,0:14:18.20,0:14:22.00,Cap,,0,0,0,,{\fad(120,120)}really how good the\Ncode was or not because
+Dialogue: 0,0:14:22.00,0:14:25.80,Cap,,0,0,0,,{\fad(120,120)}I had I had basically\Njust been vibe coding
+Dialogue: 0,0:14:25.80,0:14:28.72,Cap,,0,0,0,,{\fad(120,120)}since October because I\Nyou know it took a few
+Dialogue: 0,0:14:28.72,0:14:31.64,Cap,,0,0,0,,{\fad(120,120)}months off while I was\Nthinking what to do next
+Dialogue: 0,0:14:31.64,0:14:34.32,Cap,,0,0,0,,{\fad(120,120)}after my previous company\Nand so I wasn't quite
+Dialogue: 0,0:14:34.32,0:14:37.00,Cap,,0,0,0,,{\fad(120,120)}sure how excellent it\Nwas I wasn't quite
+Dialogue: 0,0:14:37.00,0:14:40.80,Cap,,0,0,0,,{\fad(120,120)}sure also because like\Nthe risk profile at this
+Dialogue: 0,0:14:40.80,0:14:44.60,Cap,,0,0,0,,{\fad(120,120)}new at this new startup\Nin the construction
+Dialogue: 0,0:14:44.60,0:14:47.04,Cap,,0,0,0,,{\fad(120,120)}industry was very different\Nthan my previous risk profile
+Dialogue: 0,0:14:47.04,0:14:49.48,Cap,,0,0,0,,{\fad(120,120)}in blockchain where\NI mean things have to
+Dialogue: 0,0:14:49.48,0:14:52.20,Cap,,0,0,0,,{\fad(120,120)}be like as close to\Nperfect as possible where
+Dialogue: 0,0:14:52.20,0:14:54.92,Cap,,0,0,0,,{\fad(120,120)}people would lose lots\Nlarge amounts of money
+Dialogue: 0,0:14:54.92,0:14:57.20,Cap,,0,0,0,,{\fad(120,120)}so I was like the\Nhighest of the high
+Dialogue: 0,0:14:57.20,0:14:59.48,Cap,,0,0,0,,{\fad(120,120)}standard now at this\Nconstruction startup it was more
+Dialogue: 0,0:14:59.48,0:15:02.08,Cap,,0,0,0,,{\fad(120,120)}like kind of a traditional\NSaaS apps right
+Dialogue: 0,0:15:02.08,0:15:04.68,Cap,,0,0,0,,{\fad(120,120)}like building out factory\Nsoftware building out 3d
+Dialogue: 0,0:15:04.68,0:15:07.16,Cap,,0,0,0,,{\fad(120,120)}modeling and CAD so it's\Nlike you know what like this
+Dialogue: 0,0:15:07.16,0:15:09.64,Cap,,0,0,0,,{\fad(120,120)}doesn't have to be as\Ncrazy so I started vibe
+Dialogue: 0,0:15:09.64,0:15:12.12,Cap,,0,0,0,,{\fad(120,120)}coding I mean crazy things\Nwere happening like
+Dialogue: 0,0:15:12.12,0:15:14.60,Cap,,0,0,0,,{\fad(120,120)}we replaced the manufacturing\Nsoftware that we were
+Dialogue: 0,0:15:14.60,0:15:19.60,Cap,,0,0,0,,{\fad(120,120)}going to use with our own\Nthing I vibe coded that
+Dialogue: 0,0:15:19.60,0:15:24.60,Cap,,0,0,0,,{\fad(120,120)}demo in like one day\Nand and it and yeah so
+Dialogue: 0,0:15:24.60,0:15:27.36,Cap,,0,0,0,,{\fad(120,120)}that that was like December\NJanuary maybe into February
+Dialogue: 0,0:15:27.36,0:15:30.12,Cap,,0,0,0,,{\fad(120,120)}but then I started\Nto think okay like I
+Dialogue: 0,0:15:30.12,0:15:33.00,Cap,,0,0,0,,{\fad(120,120)}need to start deploying this\Nstuff into production people need
+Dialogue: 0,0:15:33.00,0:15:35.88,Cap,,0,0,0,,{\fad(120,120)}to start using it\Nand I need to protect
+Dialogue: 0,0:15:35.88,0:15:39.16,Cap,,0,0,0,,{\fad(120,120)}this company from from\Nhacks and data leaks so you
+Dialogue: 0,0:15:39.16,0:15:42.44,Cap,,0,0,0,,{\fad(120,120)}know I put my blockchain\Nhat on again and
+Dialogue: 0,0:15:42.44,0:15:45.36,Cap,,0,0,0,,{\fad(120,120)}like okay this thing needs\Nto be secure and that's
+Dialogue: 0,0:15:45.36,0:15:48.28,Cap,,0,0,0,,{\fad(120,120)}when I started realizing\Nlike all right do what do
+Dialogue: 0,0:15:48.28,0:15:50.68,Cap,,0,0,0,,{\fad(120,120)}I really feel comfortable like\Nwith all this code that's
+Dialogue: 0,0:15:50.68,0:15:53.08,Cap,,0,0,0,,{\fad(120,120)}generated let me let\Nme dig in and see
+Dialogue: 0,0:15:54.04,0:15:57.12,Cap,,0,0,0,,{\fad(120,120)}no I mean I don't feel super\Ncomfortable with it like
+Dialogue: 0,0:15:57.12,0:16:00.20,Cap,,0,0,0,,{\fad(120,120)}I need to get in here\Nand I started digging
+Dialogue: 0,0:16:00.20,0:16:03.04,Cap,,0,0,0,,{\fad(120,120)}in and like you know\Ncoming up just kind
+Dialogue: 0,0:16:03.04,0:16:05.88,Cap,,0,0,0,,{\fad(120,120)}of architecting the code\Nstill still from the very
+Dialogue: 0,0:16:05.88,0:16:09.88,Cap,,0,0,0,,{\fad(120,120)}first day and I still believe\Nnow generating the code
+Dialogue: 0,0:16:09.88,0:16:13.88,Cap,,0,0,0,,{\fad(120,120)}100% by AI is in my\Nopinion the right thing
+Dialogue: 0,0:16:13.88,0:16:17.60,Cap,,0,0,0,,{\fad(120,120)}to do the question is after\Nthat how do you verify
+Dialogue: 0,0:16:17.60,0:16:21.32,Cap,,0,0,0,,{\fad(120,120)}and in in later episodes\NI think I'll go through
+Dialogue: 0,0:16:21.32,0:16:24.44,Cap,,0,0,0,,{\fad(120,120)}all kinds of things\Nabout my process but back
+Dialogue: 0,0:16:24.44,0:16:27.56,Cap,,0,0,0,,{\fad(120,120)}in January and February\NI was still reviewing
+Dialogue: 0,0:16:27.56,0:16:31.68,Cap,,0,0,0,,{\fad(120,120)}code I was still\Narchitecting things you know
+Dialogue: 0,0:16:31.68,0:16:35.80,Cap,,0,0,0,,{\fad(120,120)}putting in massive amounts\Nof ESLint rules I'll
+Dialogue: 0,0:16:35.80,0:16:38.80,Cap,,0,0,0,,{\fad(120,120)}get into that process\Nlater so the point is
+Dialogue: 0,0:16:38.80,0:16:41.80,Cap,,0,0,0,,{\fad(120,120)}that I have become now\Nan agentic engineer
+Dialogue: 0,0:16:41.80,0:16:46.88,Cap,,0,0,0,,{\fad(120,120)}I am an agentic engineer\Nwith an emphasis in
+Dialogue: 0,0:16:46.88,0:16:51.96,Cap,,0,0,0,,{\fad(120,120)}software engineering and\NI was this is a point
+Dialogue: 0,0:16:51.96,0:16:54.92,Cap,,0,0,0,,{\fad(120,120)}I was trying to make a\Nlong time ago in this
+Dialogue: 0,0:16:54.92,0:16:57.88,Cap,,0,0,0,,{\fad(120,120)}podcast a few minutes ago\Nthat we are all agentic
+Dialogue: 0,0:16:57.88,0:17:01.96,Cap,,0,0,0,,{\fad(120,120)}engineers now or agentic\Ndevelopers but we have an
+Dialogue: 0,0:17:01.96,0:17:06.04,Cap,,0,0,0,,{\fad(120,120)}emphasis in our area of\Nexpertise my emphasis
+Dialogue: 0,0:17:06.04,0:17:09.20,Cap,,0,0,0,,{\fad(120,120)}is software engineering or\Nsoftware development and so that
+Dialogue: 0,0:17:09.20,0:17:12.36,Cap,,0,0,0,,{\fad(120,120)}is my angle that\Ngives me the unique
+Dialogue: 0,0:17:12.36,0:17:15.60,Cap,,0,0,0,,{\fad(120,120)}ability to judge the output\Nand the verification evidence
+Dialogue: 0,0:17:15.60,0:17:18.84,Cap,,0,0,0,,{\fad(120,120)}that the AI presents\Nto me and that me
+Dialogue: 0,0:17:18.84,0:17:22.32,Cap,,0,0,0,,{\fad(120,120)}and the AIs together can\Nbe super powerful and can
+Dialogue: 0,0:17:22.32,0:17:25.80,Cap,,0,0,0,,{\fad(120,120)}move much faster than\Nbefore and you know I
+Dialogue: 0,0:17:25.80,0:17:30.84,Cap,,0,0,0,,{\fad(120,120)}personally believe we will reach AGI artificial\Ngeneral intelligence and I personally struggle
+Dialogue: 0,0:17:30.84,0:17:35.16,Cap,,0,0,0,,{\fad(120,120)}with like at least\Nlike I don't really
+Dialogue: 0,0:17:35.16,0:17:39.48,Cap,,0,0,0,,{\fad(120,120)}believe that my software\Nengineering emphasis is going
+Dialogue: 0,0:17:39.48,0:17:43.76,Cap,,0,0,0,,{\fad(120,120)}to be vital for you know\Nfor that much longer
+Dialogue: 0,0:17:43.76,0:17:48.04,Cap,,0,0,0,,{\fad(120,120)}like I don't at some\Npoint I believe that 100%
+Dialogue: 0,0:17:48.04,0:17:50.64,Cap,,0,0,0,,{\fad(120,120)}of the software engineering\Nthat I'm doing right now
+Dialogue: 0,0:17:50.64,0:17:53.24,Cap,,0,0,0,,{\fad(120,120)}is going to be automated\Nlike it's going
+Dialogue: 0,0:17:53.24,0:17:55.40,Cap,,0,0,0,,{\fad(120,120)}to be so good it's going to be so
+Dialogue: 0,0:17:55.40,0:17:57.56,Cap,,0,0,0,,{\fad(120,120)}verified it's going to have\Nformal verification of everything
+Dialogue: 0,0:17:57.56,0:18:00.28,Cap,,0,0,0,,{\fad(120,120)}it's going to you know\Nlike I don't know
+Dialogue: 0,0:18:00.28,0:18:03.00,Cap,,0,0,0,,{\fad(120,120)}like maybe I'll be reviewing\Nthe specifications and the
+Dialogue: 0,0:18:03.00,0:18:06.32,Cap,,0,0,0,,{\fad(120,120)}behavior but I believe\Na lot of this is going
+Dialogue: 0,0:18:06.32,0:18:09.64,Cap,,0,0,0,,{\fad(120,120)}to be super automated\Nbut for now I think my
+Dialogue: 0,0:18:09.64,0:18:11.80,Cap,,0,0,0,,{\fad(120,120)}skill set is still\Nvital and I think a lot
+Dialogue: 0,0:18:11.80,0:18:13.96,Cap,,0,0,0,,{\fad(120,120)}of people's skill sets\Nare still vital as they're
+Dialogue: 0,0:18:13.96,0:18:16.84,Cap,,0,0,0,,{\fad(120,120)}judging right but that's\Nwhy you you need to in
+Dialogue: 0,0:18:16.84,0:18:19.72,Cap,,0,0,0,,{\fad(120,120)}my opinion become an\Nagentic engineer you need to
+Dialogue: 0,0:18:19.72,0:18:27.72,Cap,,0,0,0,,{\fad(120,120)}fully embrace artificial intelligence\Nand AI agents in a wise calculated way
+Dialogue: 0,0:18:28.52,0:18:31.24,Cap,,0,0,0,,{\fad(120,120)}I think you can vibe\Ncode vibe verify vibe
+Dialogue: 0,0:18:31.24,0:18:33.96,Cap,,0,0,0,,{\fad(120,120)}engineer as much as you\Nwant in the beginning
+Dialogue: 0,0:18:35.16,0:18:38.00,Cap,,0,0,0,,{\fad(120,120)}and then you start to\Nreview it yourself and you
+Dialogue: 0,0:18:38.00,0:18:40.84,Cap,,0,0,0,,{\fad(120,120)}start to figure out you\Nknow where the weaknesses
+Dialogue: 0,0:18:40.84,0:18:47.48,Cap,,0,0,0,,{\fad(120,120)}are these these artificial intelligences are\Nare jagged that's a term people throw out
+Dialogue: 0,0:18:47.48,0:18:54.28,Cap,,0,0,0,,{\fad(120,120)}they are jagged intelligences meaning if\Nyou think of like a graph of intelligence
+Dialogue: 0,0:18:55.08,0:18:58.68,Cap,,0,0,0,,{\fad(120,120)}well what would the\Ngraph be like the y-axis
+Dialogue: 0,0:18:58.68,0:19:02.28,Cap,,0,0,0,,{\fad(120,120)}is like the level of\Nintelligence and maybe the
+Dialogue: 0,0:19:02.28,0:19:04.84,Cap,,0,0,0,,{\fad(120,120)}x-axis is like I don't\Nmaybe it's like a bar
+Dialogue: 0,0:19:04.84,0:19:07.40,Cap,,0,0,0,,{\fad(120,120)}a bar chart so it has\Nlike different areas of
+Dialogue: 0,0:19:07.40,0:19:13.08,Cap,,0,0,0,,{\fad(120,120)}intelligence right like software engineering\Nmathematics accounting art video generation
+Dialogue: 0,0:19:13.08,0:19:17.48,Cap,,0,0,0,,{\fad(120,120)}audio teaching writing\Nlike there's all kinds of
+Dialogue: 0,0:19:17.48,0:19:21.88,Cap,,0,0,0,,{\fad(120,120)}areas of intelligence\Nor at least maybe
+Dialogue: 0,0:19:21.88,0:19:24.76,Cap,,0,0,0,,{\fad(120,120)}scalar capability the AI\Nis not necessarily the
+Dialogue: 0,0:19:24.76,0:19:27.64,Cap,,0,0,0,,{\fad(120,120)}same level of intelligence\Nat all of them
+Dialogue: 0,0:19:27.64,0:19:32.64,Cap,,0,0,0,,{\fad(120,120)}and there's gaps so it\Nmakes like a jagged graph
+Dialogue: 0,0:19:32.64,0:19:37.64,Cap,,0,0,0,,{\fad(120,120)}and so we as humans\Ncan sometimes fill in
+Dialogue: 0,0:19:37.64,0:19:40.64,Cap,,0,0,0,,{\fad(120,120)}those gaps and that's\Nwhy we're still useful
+Dialogue: 0,0:19:40.64,0:19:43.64,Cap,,0,0,0,,{\fad(120,120)}economically for the\Nmoment I don't believe
+Dialogue: 0,0:19:43.64,0:19:46.36,Cap,,0,0,0,,{\fad(120,120)}being useful economically is\Nlike the purpose of humanity
+Dialogue: 0,0:19:46.36,0:19:49.08,Cap,,0,0,0,,{\fad(120,120)}so I mean I'm not\Nnecessarily scared for
+Dialogue: 0,0:19:49.08,0:19:51.56,Cap,,0,0,0,,{\fad(120,120)}the outrageous amounts of\Nabundance that I believe we're
+Dialogue: 0,0:19:51.56,0:19:54.04,Cap,,0,0,0,,{\fad(120,120)}going to have we'll talk\Nabout that in other
+Dialogue: 0,0:19:54.04,0:19:59.00,Cap,,0,0,0,,{\fad(120,120)}episodes probably as well but yeah agentic\Nengineering agentic development with an emphasis
+Dialogue: 0,0:19:59.00,0:20:02.52,Cap,,0,0,0,,{\fad(120,120)}in your current skill set that\Nthat's that's that's what
+Dialogue: 0,0:20:02.52,0:20:06.04,Cap,,0,0,0,,{\fad(120,120)}we need to be doing\Nnow and for example
+Dialogue: 0,0:20:06.68,0:20:09.76,Cap,,0,0,0,,{\fad(120,120)}this is kind of crazy\Nwe're hiring a new
+Dialogue: 0,0:20:09.76,0:20:12.84,Cap,,0,0,0,,{\fad(120,120)}person where I work and\Nthat person it's the
+Dialogue: 0,0:20:12.84,0:20:15.20,Cap,,0,0,0,,{\fad(120,120)}first member of my\Nteam I've been just a
+Dialogue: 0,0:20:15.20,0:20:17.56,Cap,,0,0,0,,{\fad(120,120)}one-man software engineering\Nteam we're gonna have two
+Dialogue: 0,0:20:17.56,0:20:22.16,Cap,,0,0,0,,{\fad(120,120)}people now and this\Nperson is actually a
+Dialogue: 0,0:20:22.16,0:20:26.76,Cap,,0,0,0,,{\fad(120,120)}junior developer in fact\Nfresh just completely
+Dialogue: 0,0:20:26.76,0:20:30.64,Cap,,0,0,0,,{\fad(120,120)}fresh with a degree in I\Nbelieve computer science
+Dialogue: 0,0:20:30.64,0:20:34.52,Cap,,0,0,0,,{\fad(120,120)}okay so what's crazy\Nis this person has
+Dialogue: 0,0:20:34.52,0:20:37.48,Cap,,0,0,0,,{\fad(120,120)}barely any experience\Nwriting code by hand or
+Dialogue: 0,0:20:37.48,0:20:40.44,Cap,,0,0,0,,{\fad(120,120)}doing any kind of software\Ndevelopment and he
+Dialogue: 0,0:20:40.44,0:20:43.92,Cap,,0,0,0,,{\fad(120,120)}learned in the AI era\Nright so like what's that
+Dialogue: 0,0:20:43.92,0:20:47.40,Cap,,0,0,0,,{\fad(120,120)}going to be like what\Nwhat am I actually going
+Dialogue: 0,0:20:47.40,0:20:49.36,Cap,,0,0,0,,{\fad(120,120)}to teach him how am I\Ngoing to mentor him it's
+Dialogue: 0,0:20:49.36,0:20:51.32,Cap,,0,0,0,,{\fad(120,120)}something that he and\NI are going to have to
+Dialogue: 0,0:20:51.32,0:20:54.96,Cap,,0,0,0,,{\fad(120,120)}figure out because does\Ndoes he need my full skill
+Dialogue: 0,0:20:54.96,0:20:58.60,Cap,,0,0,0,,{\fad(120,120)}set I I don't know like\NI mean that's what
+Dialogue: 0,0:20:58.60,0:21:01.40,Cap,,0,0,0,,{\fad(120,120)}I'm there for maybe he\Njust needs like I mean I
+Dialogue: 0,0:21:01.40,0:21:04.20,Cap,,0,0,0,,{\fad(120,120)}have a whole set of skills\NI have a whole pipeline
+Dialogue: 0,0:21:04.60,0:21:08.44,Cap,,0,0,0,,{\fad(120,120)}to try to ensure that\Nthe slop is refined into
+Dialogue: 0,0:21:08.44,0:21:12.28,Cap,,0,0,0,,{\fad(120,120)}clean code and so what's\Nwhat's he gonna do like
+Dialogue: 0,0:21:12.84,0:21:15.20,Cap,,0,0,0,,{\fad(120,120)}he could just use my\Npipeline and generally
+Dialogue: 0,0:21:15.20,0:21:17.56,Cap,,0,0,0,,{\fad(120,120)}speaking that's the\Nwhole point is that I'm
+Dialogue: 0,0:21:17.56,0:21:20.28,Cap,,0,0,0,,{\fad(120,120)}using the pipeline obviously\NI'm improving the pipeline and
+Dialogue: 0,0:21:20.28,0:21:23.00,Cap,,0,0,0,,{\fad(120,120)}stuff but maybe he\Njust uses it and
+Dialogue: 0,0:21:23.00,0:21:25.68,Cap,,0,0,0,,{\fad(120,120)}what he really needs\Nto do is understand
+Dialogue: 0,0:21:25.68,0:21:28.36,Cap,,0,0,0,,{\fad(120,120)}across the office the\Nfactory the construction site
+Dialogue: 0,0:21:28.36,0:21:31.00,Cap,,0,0,0,,{\fad(120,120)}maybe right now he\Nis the one to gather
+Dialogue: 0,0:21:31.00,0:21:33.64,Cap,,0,0,0,,{\fad(120,120)}that context get the\Nwhole system in his head
+Dialogue: 0,0:21:33.64,0:21:36.84,Cap,,0,0,0,,{\fad(120,120)}and basically just make\Nsure the user interface and
+Dialogue: 0,0:21:36.84,0:21:40.04,Cap,,0,0,0,,{\fad(120,120)}user experience is is\Nbeautiful and it works
+Dialogue: 0,0:21:40.04,0:21:43.68,Cap,,0,0,0,,{\fad(120,120)}well I don't know like what\Nit's it's a new world so
+Dialogue: 0,0:21:43.68,0:21:47.32,Cap,,0,0,0,,{\fad(120,120)}I but what I'm gonna do\Nis I'm gonna train him
+Dialogue: 0,0:21:48.36,0:21:50.56,Cap,,0,0,0,,{\fad(120,120)}to be an agentic\Nengineer no matter what
+Dialogue: 0,0:21:50.56,0:21:52.76,Cap,,0,0,0,,{\fad(120,120)}like he's going to be\Nan agentic engineer
+Dialogue: 0,0:21:52.76,0:21:55.28,Cap,,0,0,0,,{\fad(120,120)}we're going to learn\Nhow to manage agents
+Dialogue: 0,0:21:55.28,0:21:57.80,Cap,,0,0,0,,{\fad(120,120)}we're gonna learn how\Nto write skills we're
+Dialogue: 0,0:21:57.80,0:22:01.88,Cap,,0,0,0,,{\fad(120,120)}going to learn how\Nto you know I guess
+Dialogue: 0,0:22:01.88,0:22:05.96,Cap,,0,0,0,,{\fad(120,120)}think think very critically\Nto judge like I think
+Dialogue: 0,0:22:06.52,0:22:10.08,Cap,,0,0,0,,{\fad(120,120)}judging now is one of\Nthe greatest things
+Dialogue: 0,0:22:10.08,0:22:13.64,Cap,,0,0,0,,{\fad(120,120)}that we are doing as\Nagentic engineers because
+Dialogue: 0,0:22:14.20,0:22:17.00,Cap,,0,0,0,,{\fad(120,120)}basically the AIs are\Ngenerating a stream of
+Dialogue: 0,0:22:17.00,0:22:19.80,Cap,,0,0,0,,{\fad(120,120)}evidence to us right\Nevidence they're gonna
+Dialogue: 0,0:22:19.80,0:22:23.32,Cap,,0,0,0,,{\fad(120,120)}generate a bunch of stuff\Nand unless you're vibe
+Dialogue: 0,0:22:23.32,0:22:26.84,Cap,,0,0,0,,{\fad(120,120)}doing stuff like what\Ndo you want to do
+Dialogue: 0,0:22:27.64,0:22:29.08,Cap,,0,0,0,,{\fad(120,120)}so
+Dialogue: 0,0:22:31.00,0:22:32.92,Cap,,0,0,0,,{\fad(120,120)}sorry unless you're generating\Na bunch of stuff then
+Dialogue: 0,0:22:34.04,0:22:35.64,Cap,,0,0,0,,{\fad(120,120)}sorry hold on I just lost\Nmy train of thought here
+Dialogue: 0,0:22:35.64,0:22:37.24,Cap,,0,0,0,,{\fad(120,120)}let me let me get\Nright back to it so
+Dialogue: 0,0:22:38.92,0:22:41.92,Cap,,0,0,0,,{\fad(120,120)}vibe engineering yes\Nthe the AIs are going
+Dialogue: 0,0:22:41.92,0:22:44.92,Cap,,0,0,0,,{\fad(120,120)}to generate a bunch\Nof of artifacts
+Dialogue: 0,0:22:45.64,0:22:48.72,Cap,,0,0,0,,{\fad(120,120)}sorry okay sorry this\Nis just a stream
+Dialogue: 0,0:22:48.72,0:22:51.80,Cap,,0,0,0,,{\fad(120,120)}of consciousness so\Nwhat's going to happen is
+Dialogue: 0,0:22:51.80,0:22:54.60,Cap,,0,0,0,,{\fad(120,120)}the AI is going to do a\Nwhole bunch of work for
+Dialogue: 0,0:22:54.60,0:22:57.40,Cap,,0,0,0,,{\fad(120,120)}you do you really want to\Nhave to go look through
+Dialogue: 0,0:22:57.40,0:23:00.08,Cap,,0,0,0,,{\fad(120,120)}that work meticulously\Nwith your own eyes in some
+Dialogue: 0,0:23:00.08,0:23:02.76,Cap,,0,0,0,,{\fad(120,120)}cases you might need\Nto but in other cases
+Dialogue: 0,0:23:03.80,0:23:07.04,Cap,,0,0,0,,{\fad(120,120)}you're going to really\Njust want to judge
+Dialogue: 0,0:23:07.04,0:23:10.28,Cap,,0,0,0,,{\fad(120,120)}like evidence that\Nthe AI presents to you
+Dialogue: 0,0:23:11.00,0:23:14.12,Cap,,0,0,0,,{\fad(120,120)}for example I have a\Nskill called basically
+Dialogue: 0,0:23:14.12,0:23:17.24,Cap,,0,0,0,,{\fad(120,120)}of abstractness\Nabstractness is a very very
+Dialogue: 0,0:23:17.24,0:23:22.16,Cap,,0,0,0,,{\fad(120,120)}important property in software\Ndevelopment and with that
+Dialogue: 0,0:23:22.16,0:23:27.08,Cap,,0,0,0,,{\fad(120,120)}skill I can basically tell the AI
+Dialogue: 0,0:23:27.08,0:23:30.00,Cap,,0,0,0,,{\fad(120,120)}make sure that this\Ncode like in this
+Dialogue: 0,0:23:30.00,0:23:32.92,Cap,,0,0,0,,{\fad(120,120)}PR or this file whatever\Nis sufficiently abstract
+Dialogue: 0,0:23:33.96,0:23:37.20,Cap,,0,0,0,,{\fad(120,120)}and the AI will go through\Nand you know think and
+Dialogue: 0,0:23:37.20,0:23:40.44,Cap,,0,0,0,,{\fad(120,120)}reason and change the\Ncode so that it has a an
+Dialogue: 0,0:23:40.44,0:23:43.88,Cap,,0,0,0,,{\fad(120,120)}appropriate level of\Nabstraction I don't want to have
+Dialogue: 0,0:23:43.88,0:23:47.32,Cap,,0,0,0,,{\fad(120,120)}to look over all the\Ncode that it changes
+Dialogue: 0,0:23:48.12,0:23:50.44,Cap,,0,0,0,,{\fad(120,120)}I instead want to trust\Nthat this skill is correct
+Dialogue: 0,0:23:50.44,0:23:52.76,Cap,,0,0,0,,{\fad(120,120)}and then trust that\Nif the AI tells me
+Dialogue: 0,0:23:52.76,0:23:55.36,Cap,,0,0,0,,{\fad(120,120)}that it ran the abstractness\Nskill then I know
+Dialogue: 0,0:23:55.36,0:23:57.96,Cap,,0,0,0,,{\fad(120,120)}that that skill or that\Nthat code is abstract
+Dialogue: 0,0:23:57.96,0:24:00.32,Cap,,0,0,0,,{\fad(120,120)}sufficiently that's what\Nyou want to do and you
+Dialogue: 0,0:24:00.32,0:24:02.68,Cap,,0,0,0,,{\fad(120,120)}want to keep raising\Nthe level of your own
+Dialogue: 0,0:24:02.68,0:24:05.76,Cap,,0,0,0,,{\fad(120,120)}abstraction that you're\Nworking at right like we want
+Dialogue: 0,0:24:05.76,0:24:08.84,Cap,,0,0,0,,{\fad(120,120)}to give the AI ever more\Nambitious and bigger
+Dialogue: 0,0:24:08.84,0:24:11.64,Cap,,0,0,0,,{\fad(120,120)}and bigger tasks and it\Nwill present us evidence of
+Dialogue: 0,0:24:11.64,0:24:14.44,Cap,,0,0,0,,{\fad(120,120)}what it's done it will\Neventually it will just
+Dialogue: 0,0:24:14.44,0:24:17.20,Cap,,0,0,0,,{\fad(120,120)}say I did this correctly\Nand we'll trust it but we're
+Dialogue: 0,0:24:17.20,0:24:19.96,Cap,,0,0,0,,{\fad(120,120)}not there yet there's\Nwe need to be way more
+Dialogue: 0,0:24:19.96,0:24:22.88,Cap,,0,0,0,,{\fad(120,120)}in the weeds and checking\Nbut you know that's what
+Dialogue: 0,0:24:22.88,0:24:25.80,Cap,,0,0,0,,{\fad(120,120)}you do as an agentic\Nengineer basically right you
+Dialogue: 0,0:24:25.80,0:24:29.32,Cap,,0,0,0,,{\fad(120,120)}you start to you test\Nand probe you tell the AI
+Dialogue: 0,0:24:29.32,0:24:32.84,Cap,,0,0,0,,{\fad(120,120)}to do a task you look\Nat the evidence that
+Dialogue: 0,0:24:32.92,0:24:35.92,Cap,,0,0,0,,{\fad(120,120)}it presents that it did\Nit correctly and then you
+Dialogue: 0,0:24:35.92,0:24:38.92,Cap,,0,0,0,,{\fad(120,120)}judge that and then you\Nstart to gain confidence
+Dialogue: 0,0:24:38.92,0:24:41.92,Cap,,0,0,0,,{\fad(120,120)}right like in the beginning\Nyou're going to be
+Dialogue: 0,0:24:41.92,0:24:44.92,Cap,,0,0,0,,{\fad(120,120)}vibing things you're\Ngoing to be maybe checking
+Dialogue: 0,0:24:44.92,0:24:47.52,Cap,,0,0,0,,{\fad(120,120)}a lot of that work\Nafter but once you start
+Dialogue: 0,0:24:47.52,0:24:50.12,Cap,,0,0,0,,{\fad(120,120)}to gain confidence once\Nyou have your own pipeline
+Dialogue: 0,0:24:50.12,0:24:52.68,Cap,,0,0,0,,{\fad(120,120)}that turns slop into cleanliness\Nwhatever you're applying
+Dialogue: 0,0:24:52.68,0:24:55.24,Cap,,0,0,0,,{\fad(120,120)}it to then you can start to gain
+Dialogue: 0,0:24:55.24,0:24:58.68,Cap,,0,0,0,,{\fad(120,120)}confidence so I think\NI'll cut it here that's
+Dialogue: 0,0:24:58.68,0:25:02.12,Cap,,0,0,0,,{\fad(120,120)}the first episode of\NMillillion yeah I guess that's
+Dialogue: 0,0:25:02.12,0:25:06.52,Cap,,0,0,0,,{\fad(120,120)}just a little background\Non me and just a I
+Dialogue: 0,0:25:06.52,0:25:10.92,Cap,,0,0,0,,{\fad(120,120)}want to push you to become\Nan agentic engineer
+Dialogue: 0,0:25:10.92,0:25:13.72,Cap,,0,0,0,,{\fad(120,120)}yourself in future episodes\Nwe'll talk about what
+Dialogue: 0,0:25:13.72,0:25:16.52,Cap,,0,0,0,,{\fad(120,120)}Millillion even is and\Nwe'll dive into all
+Dialogue: 0,0:25:16.52,0:25:21.20,Cap,,0,0,0,,{\fad(120,120)}kinds of concepts so\Nthanks for listening and
+Dialogue: 0,0:25:21.20,0:25:25.88,Cap,,0,0,0,,{\fad(120,120)}have a great day\Nnight or time goodbye

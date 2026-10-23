@@ -1,0 +1,25 @@
+The first episode of the Millillion podcast. Jordan Last (lastmjs) shares his path from chatbots that made up CLI commands to AI agents that generate all of the code, and why we are all agentic engineers now: managing agents, judging the evidence they present, and building pipelines that refine slop into clean code.
+
+00:00 Intro
+00:11 Who I am
+01:59 We are all agentic engineers now
+03:02 From chatbots to agents
+03:35 The first coding agents (late 2024)
+08:08 Early 2025: not ready yet
+10:58 The threshold: AI writes all the code
+12:39 A 24-hour AI tax return
+13:31 An AI transformation at a construction startup
+16:13 Generating is easy, verifying is the job
+18:40 Jagged intelligence
+20:06 Mentoring a developer from the AI era
+23:11 Judging evidence: the abstractness skill
+24:55 Wrap-up
+
+Read it as a blog post: https://millillion.org/blog/we-are-all-agentic-engineers-now/
+Full transcript: https://millillion.org/podcast/001-we-are-all-agentic-engineers-now/
+Listen: Apple Podcasts https://podcasts.apple.com/us/podcast/millillion/id6826041508 · Spotify https://open.spotify.com/show/2TSiR5A8vVDAHEeGNpTY7e
+Support Millillion: https://millillion.org/support/
+
+How this video was made (by AI, from Jordan's recording): https://github.com/Millillion/website/tree/main/.claude/skills
+
+Millillion: impossibly ambitious AI. https://millillion.org

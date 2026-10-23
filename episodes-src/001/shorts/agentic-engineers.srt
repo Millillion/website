@@ -1,0 +1,95 @@
+1
+0:00:00,150 --> 0:00:03,370
+Right now I call
+
+2
+0:00:03,370 --> 0:00:07,440
+myself an agentic engineer
+
+3
+0:00:07,460 --> 0:00:09,050
+with an emphasis in
+
+4
+0:00:09,050 --> 0:00:11,430
+software development.
+
+5
+0:00:11,450 --> 0:00:12,550
+Before I definitely called
+
+6
+0:00:12,550 --> 0:00:13,490
+myself a software developer
+
+7
+0:00:13,490 --> 0:00:15,310
+or a software engineer.
+
+8
+0:00:15,330 --> 0:00:16,170
+Now though,
+
+9
+0:00:16,190 --> 0:00:17,710
+I believe personally that
+
+10
+0:00:17,710 --> 0:00:19,750
+anyone in STEM fields
+
+11
+0:00:19,750 --> 0:00:20,870
+or maybe even anyone
+
+12
+0:00:20,870 --> 0:00:22,230
+in any field,
+
+13
+0:00:22,250 --> 0:00:23,950
+we are all agentic
+
+14
+0:00:23,950 --> 0:00:25,970
+engineers now or agentic
+
+15
+0:00:25,970 --> 0:00:27,390
+developers.
+
+16
+0:00:27,410 --> 0:00:30,270
+We are using AI
+
+17
+0:00:30,270 --> 0:00:33,090
+agents to solve problems
+
+18
+0:00:33,090 --> 0:00:34,770
+now.
+
+19
+0:00:34,790 --> 0:00:35,370
+Like that's what we're
+
+20
+0:00:35,370 --> 0:00:35,710
+doing.
+
+21
+0:00:35,730 --> 0:00:37,950
+We're coordinating agents.
+
+22
+0:00:37,970 --> 0:00:40,090
+We're managing agents.
+
+23
+0:00:40,110 --> 0:00:41,870
+We're judging the outputs
+
+24
+0:00:41,870 --> 0:00:43,270
+of agents

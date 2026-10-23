@@ -1,0 +1,79 @@
+1
+0:00:00,150 --> 0:00:01,210
+These things were lying
+
+2
+0:00:01,210 --> 0:00:02,830
+to us so much.
+
+3
+0:00:02,850 --> 0:00:04,110
+They just would say
+
+4
+0:00:04,110 --> 0:00:05,430
+the most ridiculous things.
+
+5
+0:00:05,450 --> 0:00:06,690
+They would make up
+
+6
+0:00:06,690 --> 0:00:08,090
+like CLI commands and
+
+7
+0:00:08,090 --> 0:00:10,870
+API endpoints and things,
+
+8
+0:00:10,890 --> 0:00:11,550
+they would just make
+
+9
+0:00:11,550 --> 0:00:12,230
+things up and you'd
+
+10
+0:00:12,230 --> 0:00:12,430
+be like,
+
+11
+0:00:12,450 --> 0:00:12,890
+oh my goodness,
+
+12
+0:00:12,910 --> 0:00:13,570
+I can't believe this
+
+13
+0:00:13,570 --> 0:00:15,390
+exact command that I
+
+14
+0:00:15,390 --> 0:00:16,090
+exactly need for the
+
+15
+0:00:16,090 --> 0:00:16,910
+situation exists.
+
+16
+0:00:16,930 --> 0:00:17,750
+That's so awesome.
+
+17
+0:00:17,770 --> 0:00:18,130
+And then you go
+
+18
+0:00:18,130 --> 0:00:18,730
+to try it and
+
+19
+0:00:18,730 --> 0:00:19,870
+then it definitely did
+
+20
+0:00:19,870 --> 0:00:20,350
+not exist.

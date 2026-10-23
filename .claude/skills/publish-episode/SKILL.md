@@ -34,6 +34,13 @@ Repo: `Millillion/website` (Astro, deploys to Cloudflare Pages on push to `main`
 13. **Publish**: `npm run build`, commit, push, wait for deploy, then rerun `episodes-src/check_episode.sh episodes-src/NNN/episode.mp3` against the live site.
 14. **Report** to Jordan in a few lines: links to the episode page and post, and anything notable. Then **append to Lessons below** anything that went wrong or that you'd do differently.
 
+## Video (local until Jordan approves YouTube publishing)
+- **Full episode**: `python3 episodes-src/make_video.py NNN "N. Title" 11` → `episodes-src/NNN/video.mp4` (title card over the intro, captions on washi paper, ink waveform), `thumbnail.jpg`, `captions.srt` (upload to YouTube as subtitles). It's the archive version; on its own it won't grow a channel.
+- **Shorts** (highest reach): pick 3–5 self-contained 20–60 s moments (a thesis line, a funny or relatable story, a sharable idea) and run `python3 episodes-src/make_short.py NNN <slug> <raw_start> <raw_end> "<first words>" "<last words>" "<Hook title>"` → `episodes-src/NNN/shorts/<slug>.mp4`, with word-by-word karaoke captions, trimmed exactly at word boundaries.
+- **Visual essay** (prototype): `episodes-src/make_visual_chapter.py` draws motion graphics synced to word timestamps (built for the "Jagged intelligence" chapter of episode 1). Generalising it to one illustrated chapter per episode is the next step.
+- Write `episodes-src/NNN/youtube-description.txt`: summary, chapters (first at 00:00, from transcript times plus the 11 s intro offset), links to the post, transcript, Apple, Spotify, support and these skills.
+- Videos, PNGs and WAVs are gitignored; only scripts and text are committed.
+
 ## Already set up (don't redo)
 - Feed: `https://millillion.org/podcast.xml`. Apple Podcasts (id6826041508), Spotify (show 2TSiR5A8vVDAHEeGNpTY7e) and Podcast Index all read it; new episodes appear on their own within hours.
 - Audio host: R2 bucket `millillion-podcast`, served at `https://audio.millillion.org` (byte ranges supported).
@@ -46,4 +53,7 @@ Repo: `Millillion/website` (Astro, deploys to Cloudflare Pages on push to `main`
 - `audioBytes` must equal the exact MP3 size. Re-tagging changes the size, so update it after the final file is made.
 - DeepFilterNet 0.5.6 needs the torchaudio import patch; `setup_audio_tools.sh` applies it.
 - Apple Podcasts Connect sometimes errors on the first "Add"; retrying works. Cloudflare blocks Python's default urllib user agent, so use curl for checks.
+- Whisper word timestamps split tokens ("GPT" "5" ".2", "y" "-axis"); scripts glue tokens without a leading space onto the previous word. Version false starts ("or 3, 5.3") are dropped in Shorts.
+- Captions fade in/out over 120 ms, so a frame grabbed mid-fade looks grey; measure pixel darkness before calling it a colour bug.
+- Captions-on-paper alone is too simple to grow a YouTube audience (Jordan agreed). Lead with Shorts and illustrated chapters; the full video is the archive.
 - Jordan found the original "in" scale intro too dark, and high ringing notes sounded like mic feedback. Keep the intro bright (yō scale) and free of sustained high notes.

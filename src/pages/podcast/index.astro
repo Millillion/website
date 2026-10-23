@@ -7,7 +7,11 @@ const eps = (await getCollection("podcast", (p) => !p.data.draft)).sort((a, b) =
 <Base title="Podcast" description={PODCAST.description}>
   <h1>Podcast</h1>
   <p>{PODCAST.description}</p>
-  <p><a class="cta" href="/podcast.xml">Podcast RSS</a></p>
+  <p>
+    {PODCAST.spotify && <a class="cta" href={PODCAST.spotify}>Spotify</a>}
+    {PODCAST.apple && <a class="cta" href={PODCAST.apple}>Apple Podcasts</a>}
+    <a class="cta" href="/podcast.xml">RSS</a>
+  </p>
   {eps.length === 0 ? <p class="muted">The first episode is on its way.</p> : (
     <ul class="list">
       {eps.map((e) => <li><a href={`/podcast/${e.id}/`}>{e.data.title}</a><span class="meta">{e.data.date.toLocaleDateString("en-US", { dateStyle: "long" })} · {e.data.duration}</span></li>)}

@@ -12,7 +12,7 @@ import numpy as np
 import wave
 
 SR = 44100
-rng = np.random.default_rng(3003)
+rng = np.random.default_rng(3003)  # v2: bright yo-scale version; v1 (in scale) is make_intro_v1_dark.py
 
 
 def hz(note):
@@ -71,7 +71,7 @@ def sho(freqs, dur, attack=1.6):
     t = np.arange(n) / SR
     s = np.zeros(n)
     for f in freqs:
-        for h, a in ((1, 1.0), (3, 0.28), (5, 0.12), (7, 0.05)):
+        for h, a in ((1, 1.0), (3, 0.18), (5, 0.05)):
             s += a * np.sin(2 * np.pi * f * h * t + rng.uniform(0, 6.28))
     s /= len(freqs) * 1.45
     env = np.minimum(1, (t / attack) ** 2) * np.minimum(1, (dur - t) / 1.4).clip(0, 1)
@@ -98,28 +98,33 @@ def place(track, sound, at, gain=1.0, pan=0.0):
 
 
 def main(out):
+    """v2: the yo scale (D E F# A B) for a bright, hopeful, rising feel."""
     length = 12.5
     mix = np.zeros((int(SR * length), 2))
 
-    # drone + pad on D and A, entering from silence
-    place(mix, pad([hz("D3"), hz("A3"), hz("D4")], 12.0), 0.0, 0.16)
-    # taiko heartbeat
-    for at, g in ((0.35, 0.9), (3.35, 0.55), (6.35, 0.8), (9.4, 0.5)):
-        place(mix, taiko(gain=g), at, 0.55, pan=0.0)
+    # warm open pad: D major-pentatonic colour (D A E F#), swelling in
+    place(mix, pad([hz("D3"), hz("A3"), hz("E4"), hz("F#4")], 12.0, attack=1.6), 0.0, 0.15)
+    # light, lifting pulse: soft taiko on the downbeats, a quicker ghost hit before each
+    for at, g in ((0.30, 0.65), (2.30, 0.45), (4.30, 0.6), (6.30, 0.5), (8.30, 0.55)):
+        place(mix, taiko(dur=1.0, f0=110, f1=60, gain=g), at, 0.42)
+        place(mix, taiko(dur=0.5, f0=150, f1=90, gain=g * 0.35), at - 0.25, 0.42, pan=0.2)
 
-    # koto melody: a palindrome in the in scale, ɛ∞ɜ
-    phrase = ["D5", "Eb5", "G5", "A5", "Bb5", "A5", "G5", "Eb5", "D5"]
-    times = [1.30, 1.62, 1.94, 2.40, 3.05, 3.70, 4.16, 4.48, 4.80]
+    # koto: a rising arpeggio, then the palindrome motif in the yo scale
+    for k, nt in enumerate(["D4", "A4", "D5", "E5"]):
+        place(mix, koto(hz(nt), 2.4, bright=0.6), 0.55 + 0.16 * k, 0.24, pan=-0.4 + 0.25 * k)
+    phrase = ["D5", "E5", "F#5", "A5", "B5", "A5", "F#5", "E5", "D5"]
+    times = [1.55, 1.82, 2.09, 2.36, 2.90, 3.44, 3.71, 3.98, 4.25]
     for k, (nt, at) in enumerate(zip(phrase, times)):
-        place(mix, koto(hz(nt), 3.2, bright=0.5, bend=0.03 if nt in ("Eb5", "Bb5") else 0.0), at, 0.34,
-              pan=-0.35 + 0.7 * k / (len(phrase) - 1))
-    # answer an octave down, slower, resolving home
-    for nt, at in (("A4", 6.55), ("G4", 7.10), ("D4", 7.85)):
-        place(mix, koto(hz(nt), 4.0, bright=0.45), at, 0.36, pan=0.15)
-    # shō chord rises under the resolution
-    place(mix, sho([hz("D4"), hz("A4"), hz("Eb5"), hz("G5")], 5.4), 6.6, 0.11)
-    # final bell-like pluck
-    place(mix, koto(hz("D6"), 4.5, bright=0.65), 9.4, 0.16, pan=0.25)
+        place(mix, koto(hz(nt), 3.0, bright=0.62, bend=0.02 if nt == "B5" else 0.0), at, 0.33,
+              pan=-0.3 + 0.6 * k / (len(phrase) - 1))
+    # the answer climbs instead of falling: hope, then lift-off
+    for nt, at in (("E5", 5.15), ("F#5", 5.45), ("A5", 5.75), ("B5", 6.05), ("D6", 6.55)):
+        place(mix, koto(hz(nt), 3.6, bright=0.64), at, 0.30, pan=0.2)
+    # bright sho-like chord (D A E F# B) blooms under the resolution
+    place(mix, sho([hz("D4"), hz("A4"), hz("E5"), hz("F#5")], 5.0, attack=1.4), 6.3, 0.075)
+    # warm landing: a soft low D and A, letting the chord settle (no high, ringing notes)
+    for nt, at, g in (("D4", 8.6, 0.26), ("A3", 8.62, 0.18), ("D3", 8.64, 0.16)):
+        place(mix, koto(hz(nt), 4.0, bright=0.42), at, g, pan=-0.1)
 
     stereo = np.stack([reverb(mix[:, 0]), reverb(mix[:, 1])], axis=1)[: int(SR * (length + 2.0))]
     fade = int(2.4 * SR)

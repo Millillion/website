@@ -8,6 +8,8 @@ const blog = defineCollection({
     date: z.coerce.date(),
     description: z.string(),
     draft: z.boolean().default(false),
+    // set when the post was written by AI from Jordan's own words (e.g. a podcast episode)
+    adaptedFrom: z.object({ label: z.string(), href: z.string() }).optional(),
   }),
 });
 

@@ -10,7 +10,8 @@ INTRO="$DIR/intro.wav"
 TMP="$(mktemp -d)"; trap 'rm -rf "$TMP"' EXIT
 
 TRIM=(); [ -n "$END" ] && TRIM=(-t "$END")
-CHAIN="highpass=f=75,afftdn=nf=-28:tn=1,acompressor=threshold=-21dB:ratio=2.2:attack=12:release=220:makeup=1.5,deesser=i=0.35"
+# Studio voice chain. Input is expected to be DeepFilterNet-enhanced (enhance_voice.py), so no broadband denoise here.
+CHAIN="${CHAIN:-highpass=f=80,equalizer=f=250:t=q:w=1.0:g=-2.5,equalizer=f=4200:t=q:w=1.2:g=2.5,treble=g=1.5:f=11000,acompressor=threshold=-22dB:ratio=3:attack=8:release=180:makeup=2,deesser=i=0.4,agate=threshold=0.008:ratio=1.6:attack=5:release=250}"
 
 # pass 1: measure the voice
 MEAS=$(ffmpeg -hide_banner -nostats "${TRIM[@]}" -i "$RAW" -af "$CHAIN,loudnorm=I=-16:TP=-1.5:LRA=11:print_format=json" -f null - 2>&1 | sed -n '/^{/,/^}/p')

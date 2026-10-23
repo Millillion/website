@@ -111,3 +111,5 @@ footer.site .mark { font-family: var(--serif); letter-spacing: 0.08em; }
   header.site nav { gap: 14px; font-size: 13px; letter-spacing: 0.08em; }
   .hero { padding-top: 40px; }
 }
+.ai-note { font-size: 14px; color: var(--ink-soft); border-left: 2px solid var(--shu); padding: 2px 0 2px 12px; margin: 0 0 2em; }
+.signoff { font-family: var(--serif); margin-top: 2.4em; color: var(--ink-soft); letter-spacing: 0.04em; }

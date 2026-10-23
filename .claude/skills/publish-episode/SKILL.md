@@ -27,11 +27,11 @@ Repo: `Millillion/website` (Astro, deploys to Cloudflare Pages on push to `main`
 9. **Upload**: `cf r2 buckets objects upload episodes/millillion-NNN.mp3 --bucket-name millillion-podcast --file episodes-src/NNN/episode.mp3 --content-type audio/mpeg`. If you are *replacing* a file, also purge the cache: `cf cache purge --zone millillion.org --force --body '{"files":["https://audio.millillion.org/episodes/millillion-NNN.mp3"]}'`.
 10. **Write the episode page**: `src/content/podcast/NNN-<slug>.md` with frontmatter `title` ("N. Title"), `date`, `description` (what the episode is actually about, 1–2 sentences), `audio`, `audioBytes` (exact file size), `duration` (HH:MM:SS), and `blog` (the post slug). The body holds show notes (4–6 bullets of real topics), then `## Transcript` with the transcript.
 11. **Write the blog post**: `src/content/blog/<slug>.md`. Rules:
-    - First person, Jordan's voice and phrasing. Tighten and structure; never invent facts, opinions, numbers or stories.
+    - First person, Jordan's voice and phrasing. Tighten and structure; never invent facts, opinions, numbers or stories. Prefer his exact words to paraphrase, and keep every hedge ("I believe", "maybe", "not necessarily") and qualifier. Don't add intensifiers, causes or conclusions he didn't state.
     - Frontmatter `adaptedFrom: {label: "episode N of the Millillion podcast", href: "/podcast/NNN-<slug>/"}`. The site then renders "By Jordan Last, with AI" plus a link to how it was made. **Never claim Jordan reviewed it.**
     - Use the episode title unless a sharper one comes straight from his words.
 12. **Review**: run the `review-episode` skill. Fix everything it flags before calling it done.
-13. **Publish**: `npm run build`, commit, push, wait for deploy, then rerun `episodes-src/check_episode.sh episodes-src/NNN/episode.mp3` against the live site.
+13. **Publish**: `npm run build`, commit, push, wait for deploy, then rerun `episodes-src/check_episode.sh episodes-src/NNN/episode.mp3` and `python3 episodes-src/check_text.py NNN` against the live site. Both must exit 0.
 14. **Report** to Jordan in a few lines: links to the episode page and post, and anything notable. Then **append to Lessons below** anything that went wrong or that you'd do differently.
 
 ## Video and YouTube

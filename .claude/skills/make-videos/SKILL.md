@@ -11,11 +11,12 @@ Videos, PNGs and WAVs are gitignored. Commit the scripts and text (`shorts.tsv`,
 
 ## 1. Shorts (do these first; they grow the channel)
 1. Read `episodes-src/NNN/transcript.md` and pick 3–5 self-contained moments of 20–60 s: the thesis line, a funny or relatable story, a sharable idea. Each must make sense with no context and end on a complete thought.
-2. Add one row per Short to `episodes-src/NNN/shorts.tsv`, tab-separated: `slug`, `raw_start_s`, `raw_end_s`, `first words`, `last words`, `hook title`, `youtube description`. See `episodes-src/001/shorts.tsv`.
+2. Add one row per Short to `episodes-src/NNN/shorts.tsv`, tab-separated: `slug`, `raw_start_s`, `raw_end_s`, `first words`, `last words`, `hook title`, `youtube description`, `tags`. See `episodes-src/001/shorts.tsv`.
    - Times are in the **raw** recording (as in `raw.json`), padded a few seconds either side. The script trims exactly to the first and last phrase.
    - The first and last words must appear verbatim in Whisper's word-level transcript of the clip. If the script says `phrase not found`, open `shorts/<slug>-wide.json` and copy the words from there.
    - Hook title: Jordan's own claim, short, first person where he said it that way ("I did my taxes with AI in 24 hours"). Never invent a claim.
-   - Description: one or two sentences in his words saying what the moment is about.
+   - Description: one or two sentences in **his words from that clip**, saying what the moment is about. Reuse his phrasing ("we as humans can sometimes fill in those gaps") rather than paraphrasing ("humans fill in the gaps"). Paraphrase is how hedges get lost.
+   - Tags: 4–6 comma-separated phrases he actually said in the episode ("jagged intelligences", "tax return"), plus `Millillion, podcast`. No topics he didn't discuss, and no products he didn't name.
 3. Render: `episodes-src/make_shorts.sh NNN` → `episodes-src/NNN/shorts/<slug>.mp4` (1080×1920, logo and hook at the top, word-by-word karaoke captions, ink waveform, "MILLILLION PODCAST · EP N" footer).
 4. Check each one: grab frames (`ffmpeg -ss <t> -i x.mp4 -frames:v 1 f.png`) and read the `.srt`. Look for mishearings (fix them in `vocab.tsv`, never by hand), split numbers or model names, a cut mid-word, or a lowercase sentence start. Captions fade over 120 ms, so a frame grabbed mid-fade looks grey; that's expected.
 
@@ -31,7 +32,9 @@ Write `episodes-src/NNN/youtube-description.txt` for the full video, following e
 - Chapters: the first at `00:00 Intro`, then `00:11` onward from the transcript times plus the 11 s intro offset (transcript times already include it). Use at least 3 chapters, each ≥ 10 s, in ascending order.
 - Links: blog post, transcript page, Apple Podcasts, Spotify, the support page, these skills (`https://github.com/Millillion/website/tree/main/.claude/skills`), and the sign-off `Millillion: impossibly ambitious AI. https://millillion.org`.
 
-Each Short's YouTube description is its `shorts.tsv` description followed by:
+Write the full video's tags to `episodes-src/NNN/youtube-tags.txt`: phrases and names he actually said (check with `grep -i`).
+
+You don't assemble the Short text by hand: `check_text.py` builds the exact title, description and tags for every video into `episodes-src/NNN/youtube/<slug|full>.{title,description,tags}.txt`. Upload pastes from those files only. For reference, each Short's YouTube description is its `shorts.tsv` description followed by:
 ```
 From episode N of the Millillion podcast, "<Episode Title>".
 Full episode, transcript and blog post: https://millillion.org/podcast/NNN-<slug>/
@@ -40,11 +43,12 @@ Millillion: impossibly ambitious AI. https://millillion.org
 ```
 Its title is the hook title plus ` #shorts`.
 
-## 5. Hand off
-Run the `upload-youtube` skill. Jordan has approved public publishing; don't hold videos for his review.
+## 5. Check, then hand off
+Run the `review-episode` skill. `python3 episodes-src/check_text.py NNN` must exit 0, and you must have read every row of `trace.md` before anything is uploaded. Then run the `upload-youtube` skill. Jordan has approved public publishing; don't hold videos for his review.
 
 ## Lessons (append; newest last)
 - Whisper word timestamps split tokens ("GPT" "5" ".2", "y" "-axis"). The scripts glue pieces without a leading space onto the previous word and join model names to versions ("GPT-5.2"). False starts like "or 3, 5.3" are dropped.
 - Cut the Short's audio from the 44.1 kHz mastered episode, not the 16 kHz Whisper copy, or it sounds dull.
 - Capitalize the first word of each caption group that starts a sentence.
+- Episode 1's first Short descriptions paraphrased Jordan and lost his hedges ("isn't equally capable everywhere" for "not necessarily the same level"), and the tags included topics he never discussed ("Claude Code", "AI hallucinations"). `check_text.py` now catches both.
 - Captions on paper alone are too plain to grow a channel (Jordan agreed). Lead with Shorts and illustrated chapters.

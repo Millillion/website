@@ -153,3 +153,96 @@
 [14:58.640 --> 15:03.600]  coding I mean crazy things were happening like we replaced the manufacturing software that we were
 [15:03.600 --> 15:13.600]  going to use with our own thing I vibe coded that demo in like one day and um and it and uh yeah so
 [15:13.600 --> 15:19.120]  that that was like December January maybe into February but then I started to think okay like I
+[15:19.120 --> 15:24.880]  need to start deploying this stuff into production people need to start using it and I need to protect
+[15:24.880 --> 15:31.440]  this company from um from hacks and data leaks so you know I put my blockchain hat on again and
+[15:31.440 --> 15:37.280]  like okay this thing needs to be secure and that's when I started realizing like all right do what do
+[15:37.280 --> 15:42.080]  I really feel comfortable like with all this code that's generated uh let me let me dig in and see
+[15:43.040 --> 15:49.200]  no I mean I don't feel super comfortable with it like I need to get in here and I started digging
+[15:49.200 --> 15:54.880]  in and like you know coming up just kind of architecting the code still still from the very
+[15:54.880 --> 16:02.880]  first day and I still believe now generating the code 100% by AI is in my opinion the right thing
+[16:02.880 --> 16:10.320]  to do the question is after that how do you verify and in in later episodes I think I'll go through
+[16:10.320 --> 16:16.560]  all kinds of things about my process but um back in January and February um I was still reviewing
+[16:16.560 --> 16:24.800]  code I was still architecting things um you know putting in massive amounts of ESLint rules I'll
+[16:24.800 --> 16:30.800]  get into that process later so the point is that I have become now an agentic engineer
+[16:30.800 --> 16:40.960]  I am an agentic engineer with an emphasis in software engineering and I was this is a point
+[16:40.960 --> 16:46.880]  I was trying to make a long time ago in this podcast a few minutes ago that we are all agentic
+[16:46.880 --> 16:55.040]  engineers now or agentic developers but we have an emphasis in our area of expertise my emphasis
+[16:55.040 --> 17:01.360]  is software engineering or software development and so that is my angle that gives me the unique
+[17:01.360 --> 17:07.840]  ability to judge the output and the verification evidence that the AI presents to me and that me
+[17:07.840 --> 17:14.800]  and the AIs together can be super powerful and can move much faster than before um and you know I
+[17:14.800 --> 17:19.840]  personally believe we will reach AGI artificial general intelligence and I personally struggle
+[17:19.840 --> 17:28.480]  with like at least like I don't really believe that um my software engineering emphasis is going
+[17:28.480 --> 17:37.040]  to be vital for you know for that much longer like I don't at some point I believe that 100%
+[17:37.040 --> 17:42.240]  of the software engineering that I'm doing right now um is going to be automated like it's going
+[17:42.240 --> 17:46.560]  to be so good it's going to be so verified it's going to have formal verification of everything
+[17:46.560 --> 17:52.000]  it's going to you know like I don't know like maybe I'll be reviewing the specifications and the
+[17:52.000 --> 17:58.640]  behavior but I believe a lot of this is going to be super automated but for now um I think my
+[17:58.640 --> 18:02.960]  skill set is still vital and I think a lot of people's skill sets are still vital as they're
+[18:02.960 --> 18:08.720]  judging right but that's why you you need to in my opinion become an agentic engineer you need to
+[18:08.720 --> 18:16.720]  fully embrace artificial intelligence and AI agents in a wise um calculated way
+[18:17.520 --> 18:22.960]  I think you can vibe code vibe verify vibe engineer as much as you want in the beginning
+[18:24.160 --> 18:29.840]  and then you start to review it yourself and you start to figure out you know where the weaknesses
+[18:29.840 --> 18:36.480]  are these these artificial intelligences are um are jagged that's a term people throw out
+[18:36.480 --> 18:43.280]  they are jagged intelligences meaning if you think of like um a graph of intelligence um
+[18:44.080 --> 18:51.280]  well what would the graph be like uh the y-axis is like the level of intelligence and maybe the
+[18:51.280 --> 18:56.400]  x-axis is like I don't maybe it's like a bar a bar chart so it has like different areas of
+[18:56.400 --> 19:02.080]  intelligence right like software engineering mathematics accounting um art video generation
+[19:02.080 --> 19:10.880]  audio um teaching writing like there's all kinds of areas of intelligence um or at least maybe
+[19:10.880 --> 19:16.640]  scalar capability the AI is not necessarily the same level of intelligence at all of them
+[19:16.640 --> 19:26.640]  and there's gaps so it makes like a jagged graph and so um we as humans can sometimes fill in
+[19:26.640 --> 19:32.640]  those gaps and that's why we're still useful economically for the moment um I don't believe
+[19:32.640 --> 19:38.080]  being useful economically is like the purpose of humanity so I mean I'm not necessarily scared for
+[19:38.080 --> 19:43.040]  the outrageous amounts of abundance that I believe we're going to have we'll talk about that in other
+[19:43.040 --> 19:48.000]  episodes probably as well but yeah agentic engineering agentic development with an emphasis
+[19:48.000 --> 19:55.040]  in your current skill set um that that's uh that's that's what we need to be doing now and for example
+[19:55.680 --> 20:01.840]  this is kind of crazy um we're hiring a new person where I work and that person it's the
+[20:01.840 --> 20:06.560]  first uh member of my team I've been just a one-man software engineering team we're gonna have two
+[20:06.560 --> 20:15.760]  people now um and this person is actually uh a junior developer in fact fresh just completely
+[20:15.760 --> 20:23.520]  fresh with a degree um in uh I believe computer science okay so what's crazy is this person has
+[20:23.520 --> 20:29.440]  barely any experience writing code by hand or doing any kind of software development and he
+[20:29.440 --> 20:36.400]  learned in the ai era right so like what's that going to be like what what am I actually going
+[20:36.400 --> 20:40.320]  to teach him how am I going to mentor him it's something that he and I are going to have to
+[20:40.320 --> 20:47.600]  figure out because does does he need my full skill set I I don't know like I mean that's what
+[20:47.600 --> 20:53.200]  I'm there for maybe he just needs like I mean I have a whole set of skills I have a whole pipeline
+[20:53.600 --> 21:01.280]  to try to ensure that the slop is refined into clean code and so what's what's he gonna do like
+[21:01.840 --> 21:06.560]  he could just use my pipeline and generally speaking that's the whole point is that I'm
+[21:06.560 --> 21:12.000]  using the pipeline obviously I'm improving the pipeline and stuff but maybe he just uses it and
+[21:12.000 --> 21:17.360]  what he really needs to do is understand across the office the factory the construction site
+[21:17.360 --> 21:22.640]  maybe right now he is the one to gather that context get the whole system in his head
+[21:22.640 --> 21:29.040]  and basically just make sure the user interface and user experience is is beautiful and it works
+[21:29.040 --> 21:36.320]  well I don't know like what it's it's a new world so I but what I'm gonna do is I'm gonna train him
+[21:37.360 --> 21:41.760]  to be an agentic engineer no matter what like he's going to be an agentic engineer
+[21:41.760 --> 21:46.800]  we're going to learn how to uh manage agents we're gonna learn how to write skills we're
+[21:46.800 --> 21:54.960]  going to learn how to um you know I guess think think very critically to judge like I think
+[21:55.520 --> 22:02.640]  judging now is one of the greatest things that we are doing as agentic engineers uh because
+[22:03.200 --> 22:08.800]  basically the ais are generating a stream of evidence to us right evidence they're gonna
+[22:08.800 --> 22:15.840]  generate a bunch of stuff and um unless you're vibe doing stuff like what do you want to do
+[22:16.640 --> 22:18.080]  so um
+[22:20.000 --> 22:21.920]  sorry unless you're generating a bunch of stuff then
+[22:23.040 --> 22:26.240]  sorry hold on I just lost my train of thought here let me let me get right back to it so
+[22:27.920 --> 22:33.920]  vibe engineering yes the the ais are going to generate a bunch of of artifacts
+[22:34.640 --> 22:40.800]  sorry okay sorry this is just a stream of consciousness so what's going to happen is
+[22:40.800 --> 22:46.400]  the ai is going to do a whole bunch of work for you do you really want to have to go look through
+[22:46.400 --> 22:51.760]  that work meticulously with your own eyes in some cases you might need to but in other cases
+[22:52.800 --> 22:59.280]  you're going to really just want to judge like evidence that the ai presents to you
+[23:00.000 --> 23:06.240]  for example I have a skill called basically of abstractness abstractness is a very very
+[23:06.240 --> 23:16.080]  important property in software development and with that skill um I can basically tell the ai
+[23:16.080 --> 23:21.920]  make sure that this code like in this pr or this file whatever is sufficiently abstract
+[23:22.960 --> 23:29.440]  and the ai will go through and you know think and reason and change the code so that it has a an
+[23:29.440 --> 23:36.320]  appropriate level of abstraction I don't want to have to look over all the code that it changes
+[23:37.120 --> 23:41.760]  I instead want to trust that this skill is correct and then trust that if the ai tells me
+[23:41.760 --> 23:46.960]  that it ran the abstractness skill then I know that that skill or that that code is abstract
+[23:46.960 --> 23:51.680]  sufficiently that's what you want to do and you want to keep raising the level of your own
+[23:51.680 --> 23:57.840]  abstraction that you're working at right like we want to give the ai ever more ambitious and bigger
+[23:57.840 --> 24:03.440]  and bigger tasks and it will present us evidence of what it's done it will eventually it will just
+[24:03.440 --> 24:08.960]  say I did this correctly and we'll trust it but we're not there yet there's we need to be way more
+[24:08.960 --> 24:14.800]  in the weeds and checking but you know that's what you do as an agent engineer basically right you
+[24:14.800 --> 24:21.840]  you start to you test and probe you tell the ai to do a task you look at the evidence that
+[24:21.920 --> 24:27.920]  it presents that it did it correctly and then you judge that and then you start to gain confidence
+[24:27.920 --> 24:33.920]  right like in the beginning you're going to be vibing things you're going to be maybe checking
+[24:33.920 --> 24:39.120]  a lot of that work after but once you start to gain confidence once you have your own pipeline
+[24:39.120 --> 24:44.240]  that turns slop into cleanliness whatever you're applying it to then you can start to gain
+[24:44.240 --> 24:51.120]  confidence so I think I'll cut it here that's the first episode of Malillian um yeah I guess that's
+[24:51.120 --> 24:59.920]  just a little background on me and just uh a uh I want to push you to become an agentic engineer
+[24:59.920 --> 25:05.520]  yourself in future episodes we'll talk about what Malillian even is and we'll dive into all
+[25:05.520 --> 25:14.880]  kinds of concepts so thanks for listening and have a great day night or time goodbye

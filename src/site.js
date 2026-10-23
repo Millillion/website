@@ -6,7 +6,7 @@ export const SITE = {
   github: "https://github.com/Millillion",
   sponsors: "https://github.com/sponsors/lastmjs",
   patreon: "", // add once the Patreon page exists
-  email: "", // add the business email once the domain is set up
+  email: "lastmjs@millillion.org",
 };
 
 // Each project page renders the project's own README from GitHub at build time.
@@ -22,6 +22,6 @@ export const PODCAST = {
   description: "Thinking out loud about impossibly ambitious AI: what it lets us build, and building it.",
   category: "Technology",
   explicit: false,
-  cover: "/podcast-cover.png", // 3000x3000 cover goes here before submitting to Apple/Spotify
-  ownerEmail: "", // required by Apple/Spotify: the business email
+  cover: "/podcast-cover.jpg", // 3000x3000
+  ownerEmail: "lastmjs@millillion.org",
 };

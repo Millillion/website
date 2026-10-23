@@ -11,3 +11,5 @@ episodes-src/*/*/*.wav
 episodes-src/*/*.png
 episodes-src/*/*/*.png
 episodes-src/*/thumbnail.jpg
+episodes-src/intro.wav
+episodes-src/*/whisper.log

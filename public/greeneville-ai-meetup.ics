@@ -24,9 +24,9 @@ UID:greeneville-ai-meetup-2026-11-12@millillion.org
 DTSTAMP:20261023T230000Z
 DTSTART;TZID=America/New_York:20261112T190000
 DTEND;TZID=America/New_York:20261112T210000
-SUMMARY:Greeneville AI Meetup (hosted by Millillion)
+SUMMARY:Greeneville AI Meetup: What AI Can Do for You
 LOCATION:Big Spring Room\, Greeneville/Greene County Public Library\, 210 N Main St\, Greeneville\, TN
-DESCRIPTION:A free meetup for anyone curious about what AI can do now. Short talk\, live demo\, Q&A. https://millillion.org/meetup/
+DESCRIPTION:A free\, beginner-friendly evening to learn what AI can do for you\, with hands-on help and plenty of time for questions. https://millillion.org/meetup/
 URL:https://millillion.org/meetup/
 END:VEVENT
 END:VCALENDAR

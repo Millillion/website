@@ -1,0 +1,41 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE } from "../site.js";
+const mail = `mailto:${SITE.email}?subject=${encodeURIComponent("Working together")}`;
+---
+<Base title="Work with me" description="AI consulting, training, assessments, development and ongoing support for businesses in Greeneville, Greene County and beyond, from Jordan Last.">
+  <article class="prose">
+    <h1>Work with me</h1>
+    <p>AI can save your business real time and money, but it's hard to know where to start, which tools to trust, and what's worth doing. I help you figure that out, then make it work.</p>
+    <p>I work with businesses and teams in Greeneville, Greene County and anywhere online.</p>
+  </article>
+
+  <div class="box">
+    <h2>Consultations</h2>
+    <p>A conversation about your business and where AI fits. Bring your questions; leave with clear next steps.</p>
+  </div>
+  <div class="box">
+    <h2>Training</h2>
+    <p>Hands-on training for you or your team, from first steps with ChatGPT and Claude to agents like Codex and Claude Code, at whatever level you're starting from.</p>
+  </div>
+  <div class="box">
+    <h2>AI transformation assessments</h2>
+    <p>I look at how your business actually runs and show you where AI would save the most time or money, and what it would take.</p>
+  </div>
+  <div class="box">
+    <h2>AI development</h2>
+    <p>Custom tools, automations and AI agents, built around the software and processes you already use.</p>
+  </div>
+  <div class="box">
+    <h2>Ongoing maintenance</h2>
+    <p>AI tools change fast. I keep what we build working, up to date and improving.</p>
+  </div>
+
+  <article class="prose">
+    <h2>About me</h2>
+    <p>I'm Jordan Last, an agentic engineer with an emphasis in software development. I've been developing software professionally since about 2013, and today AI agents write the code while I direct, verify and judge their work. I've led an AI transformation at a construction startup, and I build <a href="/projects/">ambitious open-source projects</a> with agents every day. I talk about all of it on the <a href="/podcast/">Millillion podcast</a>.</p>
+    <h2>Get in touch</h2>
+    <p>Email me at <a href={mail}>{SITE.email}</a> and tell me a little about your business and what you'd like help with.</p>
+    <p><a class="cta primary" href={mail}>Email me</a></p>
+  </article>
+</Base>

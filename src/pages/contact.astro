@@ -1,0 +1,29 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE } from "../site.js";
+---
+<Base title="Contact" description="Contact Jordan Last at Millillion by email, phone, X or the contact form.">
+  <article class="prose">
+    <h1>Contact</h1>
+    <p id="sent" class="notice" hidden>Thank you. Your message was sent, and I'll get back to you soon.</p>
+    <p id="error" class="notice" hidden>Sorry, your message couldn't be sent. Please email me directly at <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+    <ul class="contact-list">
+      <li><strong>Email:</strong> <a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+      <li><strong>Phone:</strong> <a href={`tel:${SITE.phone.replace(/-/g, "")}`}>{SITE.phone}</a></li>
+      <li><strong>X:</strong> <a href={SITE.x}>@lastmjs</a></li>
+    </ul>
+    <h2>Send a message</h2>
+    <form class="contact-form" method="post" action="/api/contact">
+      <label>Name <input name="name" required maxlength="200" autocomplete="name" /></label>
+      <label>Email <input name="email" type="email" required maxlength="200" autocomplete="email" /></label>
+      <label>Message <textarea name="message" required rows="7" maxlength="5000"></textarea></label>
+      <label class="hp" aria-hidden="true">Company <input name="company" tabindex="-1" autocomplete="off" /></label>
+      <button class="cta primary" type="submit">Send</button>
+    </form>
+  </article>
+  <script is:inline>
+    const q = new URLSearchParams(location.search);
+    if (q.has("sent")) document.getElementById("sent").hidden = false;
+    if (q.has("error")) document.getElementById("error").hidden = false;
+  </script>
+</Base>

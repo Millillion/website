@@ -113,3 +113,15 @@ footer.site .mark { font-family: var(--serif); letter-spacing: 0.08em; }
 }
 .ai-note { font-size: 14px; color: var(--ink-soft); border-left: 2px solid var(--shu); padding: 2px 0 2px 12px; margin: 0 0 2em; }
 .signoff { font-family: var(--serif); margin-top: 2.4em; color: var(--ink-soft); letter-spacing: 0.04em; }
+
+/* contact form */
+.contact-list { list-style: none; padding: 0; }
+.contact-form { display: grid; gap: 1rem; max-width: 34rem; }
+.contact-form label { display: grid; gap: .35rem; font-weight: 500; }
+.contact-form input, .contact-form textarea {
+  font: inherit; color: inherit; background: transparent;
+  border: 1px solid currentColor; border-radius: 4px; padding: .6rem .7rem; opacity: .9;
+}
+.contact-form button { justify-self: start; cursor: pointer; }
+.contact-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.notice { padding: .8rem 1rem; border-left: 3px solid currentColor; }

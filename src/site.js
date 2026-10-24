@@ -8,6 +8,8 @@ export const SITE = {
   sponsors: "https://github.com/sponsors/lastmjs",
   patreon: "", // add once the Patreon page exists
   email: "lastmjs@millillion.org",
+  phone: "801-709-1860",
+  x: "https://x.com/lastmjs",
 };
 
 // Each project page renders the project's own README from GitHub at build time.

@@ -1,0 +1,1 @@
+{"name":"millillion-contact","compatibilityDate":"2026-10-01","triggers":[{"type":"fetch","pattern":"millillion.org/api/contact","zone":"millillion.org"}],"env":{"MAIL":{"type":"send-email","destinationAddress":"jordan.michael.last@gmail.com"}},"manifest":{"type":"complete","mainModule":"index.js","modules":{"index.js":{"type":"esm"},"index.js.map":{"type":"sourcemap"}}}}

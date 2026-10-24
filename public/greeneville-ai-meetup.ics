@@ -26,7 +26,7 @@ DTSTART;TZID=America/New_York:20261112T190000
 DTEND;TZID=America/New_York:20261112T210000
 SUMMARY:Greeneville AI Meetup: What AI Can Do for You
 LOCATION:Big Spring Room\, Greeneville/Greene County Public Library\, 210 N Main St\, Greeneville\, TN
-DESCRIPTION:A free\, beginner-friendly evening to learn what AI can do for you\, with hands-on help and plenty of time for questions. https://millillion.org/meetup/
+DESCRIPTION:A free evening to learn what AI can do for you\, from first steps to deep technical dives\, with hands-on help and plenty of time for questions. https://millillion.org/meetup/
 URL:https://millillion.org/meetup/
 END:VEVENT
 END:VCALENDAR

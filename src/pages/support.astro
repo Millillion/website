@@ -2,19 +2,20 @@
 import Base from "../layouts/Base.astro";
 import { SITE } from "../site.js";
 ---
-<Base title="Support" description="Fund the agents: help Millillion build impossibly ambitious open-source software.">
+<Base title="Support" description="Sponsor Jordan Last's work on Millillion: open-source formal verification tools built with AI agents.">
   <article class="prose">
     <h1>Support Millillion</h1>
-    <p>Millillion's projects are built with AI agents, and agents run on compute. The first goal is simple: <strong>one dedicated Claude account for every project.</strong> Every dollar of support goes toward that first.</p>
+    <p>I build open-source formal verification tools with AI agents, starting with Lasm (Lean for JavaScript and WebAssembly) and ProofScript. If this work is useful to you or you want to see it succeed, I'd appreciate your sponsorship. It supports me and the work on all of the Millillion projects.</p>
+    <p>My first goal is $250 a month, enough for one dedicated Claude Code account for Lasm.</p>
   </article>
   <div class="box">
-    <h2>Developers</h2>
-    <p>Sponsor through GitHub, monthly or one-time.</p>
+    <h2>Sponsor on GitHub</h2>
+    <p>Sponsorship is monthly, through GitHub Sponsors.</p>
     <a class="cta primary" href={SITE.sponsors}>Sponsor on GitHub</a>
   </div>
   <div class="box">
-    <h2>Everyone else</h2>
-    <p>Become a patron. No GitHub account needed.</p>
-    {SITE.patreon ? <a class="cta primary" href={SITE.patreon}>Support on Patreon</a> : <p class="muted">Patreon is coming soon.</p>}
+    <h2>Other ways to help</h2>
+    <p>Star the repos, try the projects, and report what breaks. Telling others about the work helps too.</p>
+    <a class="cta" href={SITE.github}>Millillion on GitHub</a>
   </div>
 </Base>

@@ -6,7 +6,6 @@ export const SITE = {
   github: "https://github.com/Millillion",
   skills: "https://github.com/Millillion/website/tree/main/.claude/skills", // the AI process behind posts and episodes
   sponsors: "https://github.com/sponsors/lastmjs",
-  patreon: "", // add once the Patreon page exists
   email: "lastmjs@millillion.org",
   phone: "801-709-1860",
   x: "https://x.com/lastmjs",

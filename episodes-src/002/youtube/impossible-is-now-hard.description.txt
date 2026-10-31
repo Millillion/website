@@ -1,0 +1,6 @@
+I believe that with AI, what was previously impossible or seemingly impossible or impractical is now possible. The easy tasks from before are now trivial, the hard tasks are now easy, and the impossible tasks are now hard. I want to formally verify all software.
+
+From episode 2 of the Millillion podcast, "Formally Verify All Software".
+Full episode, transcript and blog post: https://millillion.org/podcast/002-formally-verify-all-software/
+
+Millillion: impossibly ambitious AI. https://millillion.org

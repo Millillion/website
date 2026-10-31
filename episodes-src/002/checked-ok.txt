@@ -1,0 +1,3 @@
+fidelity: post: number '31' is not in the transcript	He said "October 31st, 1996"; the post writes "October 31st, 1996" and the checker splits off the ordinal.
+fidelity: post: name/term 'F' is not in the transcript	From "F#", which he said as "F-sharp" (vocab.tsv writes it F#).
+fidelity: post: name/term 'C' is not in the transcript	From "the Lean C code", his words at 24:28.

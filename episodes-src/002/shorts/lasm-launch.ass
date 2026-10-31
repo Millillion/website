@@ -1,0 +1,37 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: K,Shippori Mincho SemiBold,96,&H00121416,&H00909CA3,&H00EAF2F6,&H00EAF2F6,0,0,0,0,100,100,1,0,1,0,0,5,90,90,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.15,0:00:02.13,K,,0,0,0,,{\fad(60,40)}{\kf121}I {\kf20}want {\kf24}to {\kf32}announce
+Dialogue: 0,0:00:02.13,0:00:04.43,K,,0,0,0,,{\fad(60,40)}{\kf23}my {\kf48}project {\kf86}Lasm.
+Dialogue: 0,0:00:04.45,0:00:07.65,K,,0,0,0,,{\fad(60,40)}{\kf92}Lasm {\kf104}allows {\kf66}Lean {\kf58}to
+Dialogue: 0,0:00:07.65,0:00:10.67,K,,0,0,0,,{\fad(60,40)}{\kf45}run {\kf210}almost {\kf46}anywhere
+Dialogue: 0,0:00:10.67,0:00:12.33,K,,0,0,0,,{\fad(60,40)}{\kf61}that {\kf58}JavaScript {\kf45}or
+Dialogue: 0,0:00:12.33,0:00:13.27,K,,0,0,0,,{\fad(60,40)}{\kf52}WebAssembly {\kf41}runs
+Dialogue: 0,0:00:13.27,0:00:14.61,K,,0,0,0,,{\fad(60,40)}{\kf46}today.
+Dialogue: 0,0:00:14.63,0:00:15.65,K,,0,0,0,,{\fad(60,40)}{\kf19}So {\kf14}that {\kf22}means {\kf45}in
+Dialogue: 0,0:00:15.65,0:00:17.39,K,,0,0,0,,{\fad(60,40)}{\kf32}the {\kf17}web {\kf40}browser
+Dialogue: 0,0:00:17.41,0:00:19.47,K,,0,0,0,,{\fad(60,40)}{\kf44}in {\kf71}Node.js
+Dialogue: 0,0:00:19.49,0:00:20.61,K,,0,0,0,,{\fad(60,40)}{\kf56}on {\kf56}serverless
+Dialogue: 0,0:00:20.61,0:00:21.47,K,,0,0,0,,{\fad(60,40)}{\kf53}platforms {\kf32}like
+Dialogue: 0,0:00:21.47,0:00:22.67,K,,0,0,0,,{\fad(60,40)}{\kf56}Netlify
+Dialogue: 0,0:00:22.69,0:00:24.05,K,,0,0,0,,{\fad(60,40)}{\kf61}Vercel
+Dialogue: 0,0:00:24.07,0:00:25.11,K,,0,0,0,,{\fad(60,40)}{\kf79}Cloudflare
+Dialogue: 0,0:00:25.13,0:00:27.31,K,,0,0,0,,{\fad(60,40)}{\kf39}Cloudflare {\kf33}Workers
+Dialogue: 0,0:00:27.33,0:00:28.49,K,,0,0,0,,{\fad(60,40)}{\kf46}and {\kf17}Edge {\kf50}Platforms.
+Dialogue: 0,0:00:28.51,0:00:28.75,K,,0,0,0,,{\fad(60,40)}{\kf2}So {\kf14}yeah
+Dialogue: 0,0:00:28.77,0:00:29.49,K,,0,0,0,,{\fad(60,40)}{\kf9}the {\kf14}Edge {\kf48}Platforms
+Dialogue: 0,0:00:29.49,0:00:31.41,K,,0,0,0,,{\fad(60,40)}{\kf29}like {\kf161}Cloudflare
+Dialogue: 0,0:00:31.41,0:00:32.43,K,,0,0,0,,{\fad(60,40)}{\kf30}Workers {\kf38}and {\kf33}other
+Dialogue: 0,0:00:32.43,0:00:34.37,K,,0,0,0,,{\fad(60,40)}{\kf16}Edge {\kf113}Platforms.
+Dialogue: 0,0:00:34.39,0:00:35.39,K,,0,0,0,,{\fad(60,40)}{\kf24}And {\kf33}we {\kf17}have {\kf24}some
+Dialogue: 0,0:00:35.39,0:00:37.21,K,,0,0,0,,{\fad(60,40)}{\kf117}Bun {\kf17}and {\kf24}Deno {\kf21}support
+Dialogue: 0,0:00:37.21,0:00:37.55,K,,0,0,0,,{\fad(60,40)}{\kf14}as {\kf19}well.

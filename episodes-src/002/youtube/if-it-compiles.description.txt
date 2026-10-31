@@ -1,0 +1,6 @@
+With Lean, you write propositions, you write a proof, and you combine that with a name into a theorem. Lean will check it for you automatically. If it doesn't compile, the proof is wrong. If it compiles, the proof is right. So you can basically have AI generate the proof.
+
+From episode 2 of the Millillion podcast, "Formally Verify All Software".
+Full episode, transcript and blog post: https://millillion.org/podcast/002-formally-verify-all-software/
+
+Millillion: impossibly ambitious AI. https://millillion.org

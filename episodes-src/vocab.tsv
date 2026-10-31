@@ -23,7 +23,7 @@ Last MJS	lastmjs
 \bLastMJS\b	lastmjs
 \bcompile into Lozm\b	compile into Wasm
 \bat Lozm slash CLI\b	@lasm/cli
-\b(?:LOSM|Losm|Lozm|LASM)\b	Lasm
+\b(?:LOSM|Losm|Lozm|Lozum|LASM)\b	Lasm
 \bWOSM\b	Wasm
 \bnot enough by one\b	not an off-by-one
 \bthat I follow for years\b	that I've followed for years
@@ -39,3 +39,7 @@ Last MJS	lastmjs
 \bF-sharp\b	F#
 \blean\b	Lean
 \bNPM\b	npm
+# ep 2: "set our sights" (Short captions are fixed word by word, so this rule has no context)
+\bsites\b	sights
+\bCalculateAge\b	calculate age
+\bCalculateBirthday\b	calculate birthday

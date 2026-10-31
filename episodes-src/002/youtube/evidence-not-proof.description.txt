@@ -1,0 +1,6 @@
+With example-based testing, you're never actually proving that this is correct under all possible inputs or conditions. You're just generating evidence. Let's say you do 10 examples, and then 10 more examples trying to think of weird edge cases. There's no proof here. No mathematical proof, no logical proof, just evidence.
+
+From episode 2 of the Millillion podcast, "Formally Verify All Software".
+Full episode, transcript and blog post: https://millillion.org/podcast/002-formally-verify-all-software/
+
+Millillion: impossibly ambitious AI. https://millillion.org

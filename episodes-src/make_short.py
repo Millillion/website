@@ -71,7 +71,7 @@ ass = [f"""[Script Info]
 ScriptType: v4.00+
 PlayResX: {W}
 PlayResY: {H}
-WrapStyle: 2
+WrapStyle: 0
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -81,6 +81,9 @@ Style: K,Shippori Mincho SemiBold,96,&H00121416,&H00909CA3,&H00EAF2F6,&H00EAF2F6
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"""]
 srt, groups, cur = [], [], []
 for w in sel:
+    # keep each caption group on one line inside the 1080 px frame (~20 characters at 96 px)
+    if cur and len(" ".join(x["word"].strip() for x in cur + [w])) > 20:
+        groups.append(cur); cur = []
     cur.append(w)
     if len(cur) == 4 or re.search(r"[.!?,]$", w["word"].strip()):
         groups.append(cur); cur = []
@@ -110,8 +113,8 @@ html = f"""<html><head><style>@font-face{{font-family:M;src:url(file://{FONTS}/S
 @font-face{{font-family:Mm;src:url(file://{FONTS}/ShipporiMincho-Medium.ttf)}}
 body{{margin:0;width:{W}px;height:{H}px;background:#f6f2ea;color:#161412;font-family:M,serif;position:relative;overflow:hidden}}</style></head><body>
 <img src="file://{REPO}/public/millillion-black.svg" style="position:absolute;left:50%;transform:translateX(-50%);top:150px;width:360px">
-<div style="position:absolute;top:420px;left:80px;right:80px;text-align:center;font-size:74px;line-height:1.15">{HOOK}</div>
-<img src="file://{REPO}/public/brush-rule.svg" style="position:absolute;left:50%;transform:translateX(-50%);top:640px;width:300px;height:10px;opacity:.8">
+<div style="position:absolute;top:420px;left:80px;right:80px;text-align:center;font-size:74px;line-height:1.15">{HOOK}
+<img src="file://{REPO}/public/brush-rule.svg" style="display:block;margin:38px auto 0;width:300px;height:10px;opacity:.8"></div>
 <div style="position:absolute;bottom:230px;left:0;right:0;text-align:center;font-family:Mm;font-size:34px;letter-spacing:6px;color:#57524b">MILLILLION PODCAST · EP {int(NNN)}</div>
 <div style="position:absolute;bottom:165px;left:0;right:0;text-align:center;font-family:Mm;font-size:34px;letter-spacing:6px;color:#57524b">MILLILLION.ORG</div>
 <div style="position:absolute;bottom:110px;left:50%;margin-left:-9px;width:18px;height:18px;background:#b3341f;transform:rotate(45deg)"></div>

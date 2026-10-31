@@ -1,0 +1,493 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Shippori Mincho SemiBold,70,&H00121416,&H00121416,&H00EAF2F6,&H00EAF2F6,0,0,0,0,100,100,1,0,1,0,0,5,220,220,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:11.00,0:00:18.76,Cap,,0,0,0,,{\fad(120,120)}All right, everybody, welcome back to the\Nnext episode of Millillion, or the Millillion
+Dialogue: 0,0:00:18.76,0:00:19.76,Cap,,0,0,0,,{\fad(120,120)}podcast, actually.
+Dialogue: 0,0:00:19.76,0:00:23.20,Cap,,0,0,0,,{\fad(120,120)}This is Jordan, also\Nknown as lastmjs.
+Dialogue: 0,0:00:23.20,0:00:28.48,Cap,,0,0,0,,{\fad(120,120)}Today I want to talk to you about
+Dialogue: 0,0:00:28.48,0:00:33.76,Cap,,0,0,0,,{\fad(120,120)}my recently launched project\Ncalled Lasm, spelled L-A-S-M.
+Dialogue: 0,0:00:33.76,0:00:38.22,Cap,,0,0,0,,{\fad(120,120)}Lasm, that word, or that\Nname is a combination
+Dialogue: 0,0:00:38.22,0:00:42.68,Cap,,0,0,0,,{\fad(120,120)}of the name of the amazing\Nprogramming language
+Dialogue: 0,0:00:42.68,0:00:52.48,Cap,,0,0,0,,{\fad(120,120)}Lean, spelled L-E-A-N, and the amazing portable\Nbytecode format WebAssembly, which is shortened
+Dialogue: 0,0:00:52.48,0:00:58.76,Cap,,0,0,0,,{\fad(120,120)}to Wasm, W-A-S-M, together, Lasm.
+Dialogue: 0,0:00:58.76,0:01:03.08,Cap,,0,0,0,,{\fad(120,120)}Now let's just talk a little\Nbit about what's going on here.
+Dialogue: 0,0:01:04.08,0:01:09.52,Cap,,0,0,0,,{\fad(120,120)}Let's just talk about software\Ndevelopment in general.
+Dialogue: 0,0:01:09.52,0:01:15.32,Cap,,0,0,0,,{\fad(120,120)}Software development\Nis very difficult.
+Dialogue: 0,0:01:15.32,0:01:17.32,Cap,,0,0,0,,{\fad(120,120)}Why is it difficult?
+Dialogue: 0,0:01:17.32,0:01:21.92,Cap,,0,0,0,,{\fad(120,120)}Well, you're producing\Ntons and tons of code.
+Dialogue: 0,0:01:21.92,0:01:27.24,Cap,,0,0,0,,{\fad(120,120)}If you're not familiar with\Ncode, you basically write
+Dialogue: 0,0:01:27.24,0:01:32.56,Cap,,0,0,0,,{\fad(120,120)}out lines upon lines upon\Nlines of instructions.
+Dialogue: 0,0:01:33.08,0:01:38.76,Cap,,0,0,0,,{\fad(120,120)}So imagine a book or a\Nblog post or something.
+Dialogue: 0,0:01:38.76,0:01:43.36,Cap,,0,0,0,,{\fad(120,120)}Each of those lines is\Ntelling something to a human.
+Dialogue: 0,0:01:43.36,0:01:47.40,Cap,,0,0,0,,{\fad(120,120)}It could be instructions, it could be\Npersuasion, it could be just general information.
+Dialogue: 0,0:01:47.40,0:01:57.68,Cap,,0,0,0,,{\fad(120,120)}Generally speaking, when you're writing computer\Ncode, every line or statement is a specific
+Dialogue: 0,0:01:57.68,0:02:00.92,Cap,,0,0,0,,{\fad(120,120)}instruction that's telling\Nthe computer to do something.
+Dialogue: 0,0:02:01.00,0:02:06.34,Cap,,0,0,0,,{\fad(120,120)}And to create the software\Nthat runs our lives,
+Dialogue: 0,0:02:06.34,0:02:11.68,Cap,,0,0,0,,{\fad(120,120)}I mean, software in many\Nways is running many
+Dialogue: 0,0:02:11.68,0:02:13.32,Cap,,0,0,0,,{\fad(120,120)}or most aspects of our lives.
+Dialogue: 0,0:02:13.32,0:02:20.88,Cap,,0,0,0,,{\fad(120,120)}Whenever you interact with, I would say, probably\Nmost machines, there are computers processing
+Dialogue: 0,0:02:20.88,0:02:26.32,Cap,,0,0,0,,{\fad(120,120)}to make this stuff all\Nrun safely and securely.
+Dialogue: 0,0:02:26.32,0:02:28.84,Cap,,0,0,0,,{\fad(120,120)}So the problem with\Ngenerating so much code,
+Dialogue: 0,0:02:28.84,0:02:31.36,Cap,,0,0,0,,{\fad(120,120)}the problem with the\Namount of complexity
+Dialogue: 0,0:02:31.36,0:02:33.96,Cap,,0,0,0,,{\fad(120,120)}that we've created to\Nmake these machines run
+Dialogue: 0,0:02:33.96,0:02:36.56,Cap,,0,0,0,,{\fad(120,120)}our lives and make\Nour lives better and
+Dialogue: 0,0:02:36.56,0:02:41.76,Cap,,0,0,0,,{\fad(120,120)}more prosperous if we use these\Nthings correctly, in my opinion.
+Dialogue: 0,0:02:41.76,0:02:48.24,Cap,,0,0,0,,{\fad(120,120)}The problem with this absolutely outrageous\Namount of complexity is that it's complex.
+Dialogue: 0,0:02:48.24,0:02:55.12,Cap,,0,0,0,,{\fad(120,120)}And complexity is hard to\Nmanage and hard to tame.
+Dialogue: 0,0:02:55.12,0:02:57.68,Cap,,0,0,0,,{\fad(120,120)}The more moving parts\Nyou have, the more
+Dialogue: 0,0:02:57.68,0:03:00.24,Cap,,0,0,0,,{\fad(120,120)}pieces that need to\Nfit together in certain
+Dialogue: 0,0:03:00.24,0:03:04.08,Cap,,0,0,0,,{\fad(120,120)}ways, just the more\Ncomplicated something is, the
+Dialogue: 0,0:03:04.08,0:03:07.92,Cap,,0,0,0,,{\fad(120,120)}easier it is for\Nthat thing to fall
+Dialogue: 0,0:03:07.92,0:03:14.72,Cap,,0,0,0,,{\fad(120,120)}apart if we don't understand it very\Nwell and basically build it correctly.
+Dialogue: 0,0:03:14.72,0:03:19.64,Cap,,0,0,0,,{\fad(120,120)}So building correct software\Nthat always functions exactly
+Dialogue: 0,0:03:19.64,0:03:24.56,Cap,,0,0,0,,{\fad(120,120)}as we desire it to\Nfunction is very
+Dialogue: 0,0:03:24.56,0:03:26.80,Cap,,0,0,0,,{\fad(120,120)}difficult.
+Dialogue: 0,0:03:26.80,0:03:29.40,Cap,,0,0,0,,{\fad(120,120)}I think everyone\Nkind of knows this.
+Dialogue: 0,0:03:29.40,0:03:33.26,Cap,,0,0,0,,{\fad(120,120)}In our apps, in the\Nsoftware that people use on
+Dialogue: 0,0:03:33.26,0:03:37.12,Cap,,0,0,0,,{\fad(120,120)}a regular basis, we\Nknow of the term bug.
+Dialogue: 0,0:03:37.12,0:03:38.12,Cap,,0,0,0,,{\fad(120,120)}Things are buggy.
+Dialogue: 0,0:03:38.12,0:03:40.88,Cap,,0,0,0,,{\fad(120,120)}There are bugs in\Nall kinds of things.
+Dialogue: 0,0:03:40.88,0:03:43.56,Cap,,0,0,0,,{\fad(120,120)}And it's kind of annoying\Nwhen that happens.
+Dialogue: 0,0:03:43.56,0:03:44.56,Cap,,0,0,0,,{\fad(120,120)}Sometimes it's just annoying.
+Dialogue: 0,0:03:44.56,0:03:48.14,Cap,,0,0,0,,{\fad(120,120)}Like, oh, this, I don't\Nknow, my Instagram
+Dialogue: 0,0:03:48.14,0:03:51.72,Cap,,0,0,0,,{\fad(120,120)}app or Twitter app,\Nthere's some little thing
+Dialogue: 0,0:03:51.72,0:03:53.08,Cap,,0,0,0,,{\fad(120,120)}wrong with the UI or something.
+Dialogue: 0,0:03:53.08,0:03:54.08,Cap,,0,0,0,,{\fad(120,120)}That's okay.
+Dialogue: 0,0:03:54.08,0:03:55.64,Cap,,0,0,0,,{\fad(120,120)}It's not too bad.
+Dialogue: 0,0:03:55.64,0:03:58.56,Cap,,0,0,0,,{\fad(120,120)}But what if it's something with\Nyour bank account or bank balance?
+Dialogue: 0,0:03:58.56,0:04:02.44,Cap,,0,0,0,,{\fad(120,120)}Okay, that's a little bit\Nmore worrisome, right?
+Dialogue: 0,0:04:02.44,0:04:04.68,Cap,,0,0,0,,{\fad(120,120)}Like, if balances are\Nwrong or something, you
+Dialogue: 0,0:04:04.68,0:04:06.92,Cap,,0,0,0,,{\fad(120,120)}really need to go get that fixed.
+Dialogue: 0,0:04:06.92,0:04:11.68,Cap,,0,0,0,,{\fad(120,120)}What if you have a medical device\Nrunning inside of your body?
+Dialogue: 0,0:04:11.68,0:04:16.04,Cap,,0,0,0,,{\fad(120,120)}Like a pacemaker or\Nsomething like that, right?
+Dialogue: 0,0:04:16.04,0:04:20.04,Cap,,0,0,0,,{\fad(120,120)}What if you're in the\Nmiddle of a surgery?
+Dialogue: 0,0:04:20.04,0:04:27.76,Cap,,0,0,0,,{\fad(120,120)}And the only reason the surgery is possible\Nis because of machines including computers.
+Dialogue: 0,0:04:27.76,0:04:35.96,Cap,,0,0,0,,{\fad(120,120)}So software, writing correct software or writing\Nsoftware and verifying its correctness is
+Dialogue: 0,0:04:35.96,0:04:38.72,Cap,,0,0,0,,{\fad(120,120)}incredibly important.
+Dialogue: 0,0:04:38.72,0:04:40.60,Cap,,0,0,0,,{\fad(120,120)}Absolutely vital.
+Dialogue: 0,0:04:40.60,0:04:42.40,Cap,,0,0,0,,{\fad(120,120)}And you know, it\Ndepends on the type of
+Dialogue: 0,0:04:42.40,0:04:44.20,Cap,,0,0,0,,{\fad(120,120)}software that we just\Ndiscussed, like you don't need
+Dialogue: 0,0:04:44.20,0:04:48.48,Cap,,0,0,0,,{\fad(120,120)}absolute assurance for everything.
+Dialogue: 0,0:04:48.48,0:04:51.08,Cap,,0,0,0,,{\fad(120,120)}And it might be\Nimpossible to have, I
+Dialogue: 0,0:04:51.08,0:04:53.68,Cap,,0,0,0,,{\fad(120,120)}mean, the amount of\Nabsolute assurance that you
+Dialogue: 0,0:04:53.68,0:04:56.84,Cap,,0,0,0,,{\fad(120,120)}can have, I guess is what\Nwe're about to talk about.
+Dialogue: 0,0:04:56.84,0:05:00.54,Cap,,0,0,0,,{\fad(120,120)}But generally speaking, to\Nmake your software correct,
+Dialogue: 0,0:05:00.54,0:05:04.24,Cap,,0,0,0,,{\fad(120,120)}in the age before\NAI, at least, and
+Dialogue: 0,0:05:04.24,0:05:07.26,Cap,,0,0,0,,{\fad(120,120)}a lot of these concepts\Ndo flow into the world
+Dialogue: 0,0:05:07.26,0:05:10.28,Cap,,0,0,0,,{\fad(120,120)}of using AI agents to\Nwrite software, a lot
+Dialogue: 0,0:05:10.28,0:05:13.86,Cap,,0,0,0,,{\fad(120,120)}of the techniques that\Nwe've used in the
+Dialogue: 0,0:05:13.86,0:05:17.44,Cap,,0,0,0,,{\fad(120,120)}past are, well, let's\Njust go through them.
+Dialogue: 0,0:05:17.44,0:05:22.08,Cap,,0,0,0,,{\fad(120,120)}So first off, you have\Nthe original human
+Dialogue: 0,0:05:22.08,0:05:26.72,Cap,,0,0,0,,{\fad(120,120)}mind that is reasoning\Nthrough the code.
+Dialogue: 0,0:05:26.72,0:05:31.00,Cap,,0,0,0,,{\fad(120,120)}Usually I'd say software engineers\Ndon't try to write code that is wrong.
+Dialogue: 0,0:05:31.00,0:05:34.20,Cap,,0,0,0,,{\fad(120,120)}So the human engineer\Nuses their own cognition,
+Dialogue: 0,0:05:34.20,0:05:37.40,Cap,,0,0,0,,{\fad(120,120)}their own intellectual\Npower to come up with
+Dialogue: 0,0:05:37.40,0:05:41.58,Cap,,0,0,0,,{\fad(120,120)}a model in their mind\Nof what's happening
+Dialogue: 0,0:05:41.58,0:05:45.76,Cap,,0,0,0,,{\fad(120,120)}or what should happen\Nwhen their code runs.
+Dialogue: 0,0:05:45.76,0:05:51.44,Cap,,0,0,0,,{\fad(120,120)}And these models, generally\Nspeaking, are incomplete and flawed.
+Dialogue: 0,0:05:51.44,0:05:53.56,Cap,,0,0,0,,{\fad(120,120)}So what we do is we\Nbasically do our best.
+Dialogue: 0,0:05:53.56,0:05:56.56,Cap,,0,0,0,,{\fad(120,120)}Like if you're just a\Nsoftware developer engineer,
+Dialogue: 0,0:05:56.56,0:05:59.56,Cap,,0,0,0,,{\fad(120,120)}you know, writing out to\Nsome program, something
+Dialogue: 0,0:05:59.56,0:06:02.41,Cap,,0,0,0,,{\fad(120,120)}that you're doing,\Nyou go for it with
+Dialogue: 0,0:06:02.41,0:06:05.26,Cap,,0,0,0,,{\fad(120,120)}your absolute best, you\Ndo your best thinking,
+Dialogue: 0,0:06:05.26,0:06:09.05,Cap,,0,0,0,,{\fad(120,120)}you review it multiple\Ntimes, you really clean it
+Dialogue: 0,0:06:09.05,0:06:12.84,Cap,,0,0,0,,{\fad(120,120)}up, like you do everything\Nyou can yourself
+Dialogue: 0,0:06:12.84,0:06:16.16,Cap,,0,0,0,,{\fad(120,120)}before you say like,\Nokay, this is now ready
+Dialogue: 0,0:06:16.16,0:06:19.48,Cap,,0,0,0,,{\fad(120,120)}according to me, but\Nwhat does ready mean?
+Dialogue: 0,0:06:19.48,0:06:21.18,Cap,,0,0,0,,{\fad(120,120)}Usually if you're doing\Nit right, like this
+Dialogue: 0,0:06:21.18,0:06:22.88,Cap,,0,0,0,,{\fad(120,120)}is how I've done it at least.
+Dialogue: 0,0:06:22.88,0:06:25.30,Cap,,0,0,0,,{\fad(120,120)}Usually once you personally\Nhave done it correctly
+Dialogue: 0,0:06:25.30,0:06:27.72,Cap,,0,0,0,,{\fad(120,120)}or once you've personally\Nhave finished and
+Dialogue: 0,0:06:27.72,0:06:33.00,Cap,,0,0,0,,{\fad(120,120)}believe that you have done it correctly,\Nthen you create a pull request.
+Dialogue: 0,0:06:33.00,0:06:35.18,Cap,,0,0,0,,{\fad(120,120)}Usually I love Git, I love GitHub.
+Dialogue: 0,0:06:35.18,0:06:38.72,Cap,,0,0,0,,{\fad(120,120)}So you make a pull request with\Nthe code that you've created.
+Dialogue: 0,0:06:38.72,0:06:41.48,Cap,,0,0,0,,{\fad(120,120)}So you know, this could\Nbe something small, like
+Dialogue: 0,0:06:41.48,0:06:44.24,Cap,,0,0,0,,{\fad(120,120)}just a few files and\Na few hundred lines
+Dialogue: 0,0:06:44.24,0:06:48.06,Cap,,0,0,0,,{\fad(120,120)}of changes to something\Nabsolutely enormous, like at
+Dialogue: 0,0:06:48.06,0:06:51.88,Cap,,0,0,0,,{\fad(120,120)}least back in the\Nday, 50 files, 100
+Dialogue: 0,0:06:51.88,0:06:54.66,Cap,,0,0,0,,{\fad(120,120)}files, 300 files, like that's\Ngetting pretty huge for
+Dialogue: 0,0:06:54.66,0:06:57.44,Cap,,0,0,0,,{\fad(120,120)}a PR with who knows, like into the
+Dialogue: 0,0:06:57.44,0:07:02.32,Cap,,0,0,0,,{\fad(120,120)}thousands of lines changed,\Nadded, removed, or just changed.
+Dialogue: 0,0:07:02.32,0:07:07.52,Cap,,0,0,0,,{\fad(120,120)}So yeah, so you make\Nthis PR and then
+Dialogue: 0,0:07:07.52,0:07:12.72,Cap,,0,0,0,,{\fad(120,120)}what you do is you ask\Nanother cognitive being,
+Dialogue: 0,0:07:12.72,0:07:15.94,Cap,,0,0,0,,{\fad(120,120)}so another human on\Nyour team, you ask
+Dialogue: 0,0:07:15.94,0:07:19.16,Cap,,0,0,0,,{\fad(120,120)}that human, hey, can\Nyou review my PR?
+Dialogue: 0,0:07:19.16,0:07:21.06,Cap,,0,0,0,,{\fad(120,120)}And this is like built\Ninto the engineering
+Dialogue: 0,0:07:21.06,0:07:22.96,Cap,,0,0,0,,{\fad(120,120)}process, like usually\Nit's not like, oh, hey,
+Dialogue: 0,0:07:22.96,0:07:23.96,Cap,,0,0,0,,{\fad(120,120)}can you do this?
+Dialogue: 0,0:07:23.96,0:07:24.96,Cap,,0,0,0,,{\fad(120,120)}It's like, you must do this.
+Dialogue: 0,0:07:24.96,0:07:26.04,Cap,,0,0,0,,{\fad(120,120)}This is part of how we work.
+Dialogue: 0,0:07:26.04,0:07:31.24,Cap,,0,0,0,,{\fad(120,120)}So you usually have an independent human\Nsoftware engineer review your work.
+Dialogue: 0,0:07:31.24,0:07:33.20,Cap,,0,0,0,,{\fad(120,120)}And what's nice is\Nthat human has to come
+Dialogue: 0,0:07:33.20,0:07:35.16,Cap,,0,0,0,,{\fad(120,120)}up with their own\Nindependent model of what's
+Dialogue: 0,0:07:35.16,0:07:42.48,Cap,,0,0,0,,{\fad(120,120)}happening and, you know, their biases and their\Nsoftware upbringing and their life experience,
+Dialogue: 0,0:07:42.48,0:07:43.48,Cap,,0,0,0,,{\fad(120,120)}it's different.
+Dialogue: 0,0:07:43.48,0:07:46.48,Cap,,0,0,0,,{\fad(120,120)}Every person has a\Ndifferent brain, right?
+Dialogue: 0,0:07:46.48,0:07:49.40,Cap,,0,0,0,,{\fad(120,120)}And so they bring different\Nstrengths and weaknesses.
+Dialogue: 0,0:07:49.40,0:07:52.92,Cap,,0,0,0,,{\fad(120,120)}And so that usually\Nhelps to wring out even
+Dialogue: 0,0:07:52.92,0:07:56.44,Cap,,0,0,0,,{\fad(120,120)}more bugs as you think\Nabout things from different
+Dialogue: 0,0:07:56.44,0:07:57.88,Cap,,0,0,0,,{\fad(120,120)}angles.
+Dialogue: 0,0:07:57.88,0:08:02.04,Cap,,0,0,0,,{\fad(120,120)}And then, great, so you do\Nmultiple independent reviews.
+Dialogue: 0,0:08:02.04,0:08:04.24,Cap,,0,0,0,,{\fad(120,120)}That's like pretty standard.
+Dialogue: 0,0:08:04.24,0:08:08.00,Cap,,0,0,0,,{\fad(120,120)}But also as part of the code you\Nwrite, you usually write tests.
+Dialogue: 0,0:08:08.00,0:08:11.36,Cap,,0,0,0,,{\fad(120,120)}You write test cases.
+Dialogue: 0,0:08:11.36,0:08:16.30,Cap,,0,0,0,,{\fad(120,120)}And there's all, there are many, many\Ndifferent methodologies for testing software.
+Dialogue: 0,0:08:16.30,0:08:21.61,Cap,,0,0,0,,{\fad(120,120)}But the core concept\Nis that you write a
+Dialogue: 0,0:08:21.61,0:08:26.92,Cap,,0,0,0,,{\fad(120,120)}small program that executes\Nthe program under test
+Dialogue: 0,0:08:26.92,0:08:32.36,Cap,,0,0,0,,{\fad(120,120)}and then looks at its result and then\Nchecks that the result is correct.
+Dialogue: 0,0:08:32.36,0:08:35.22,Cap,,0,0,0,,{\fad(120,120)}So you make a program\Nthat calls the program
+Dialogue: 0,0:08:35.22,0:08:38.08,Cap,,0,0,0,,{\fad(120,120)}and then verifies the\Nresult of the program.
+Dialogue: 0,0:08:38.08,0:08:45.32,Cap,,0,0,0,,{\fad(120,120)}And the simplest form of testing is probably\Nexample-based testing, where you basically
+Dialogue: 0,0:08:45.32,0:08:47.48,Cap,,0,0,0,,{\fad(120,120)}just come up with an example.
+Dialogue: 0,0:08:47.48,0:08:52.24,Cap,,0,0,0,,{\fad(120,120)}Let's say the program you\Nhave just to be simple.
+Dialogue: 0,0:08:52.26,0:08:57.07,Cap,,0,0,0,,{\fad(120,120)}Let's say it's just a little\Nfunction that calculates
+Dialogue: 0,0:08:57.07,0:09:01.88,Cap,,0,0,0,,{\fad(120,120)}the age of a user based on their
+Dialogue: 0,0:09:01.88,0:09:03.22,Cap,,0,0,0,,{\fad(120,120)}birth date.
+Dialogue: 0,0:09:03.22,0:09:05.18,Cap,,0,0,0,,{\fad(120,120)}So like you have a function.
+Dialogue: 0,0:09:05.18,0:09:08.14,Cap,,0,0,0,,{\fad(120,120)}It takes as a parameter\Nthe birth date of a
+Dialogue: 0,0:09:08.14,0:09:11.10,Cap,,0,0,0,,{\fad(120,120)}user and then returns\Nthe age of the user
+Dialogue: 0,0:09:11.10,0:09:13.74,Cap,,0,0,0,,{\fad(120,120)}as like a number or an\Ninteger or something.
+Dialogue: 0,0:09:13.74,0:09:14.74,Cap,,0,0,0,,{\fad(120,120)}Okay, cool.
+Dialogue: 0,0:09:14.74,0:09:17.82,Cap,,0,0,0,,{\fad(120,120)}So what would an\Nexample-based test look like?
+Dialogue: 0,0:09:17.82,0:09:23.20,Cap,,0,0,0,,{\fad(120,120)}Well, you would say,\Nokay, you maybe contrive
+Dialogue: 0,0:09:23.20,0:09:28.58,Cap,,0,0,0,,{\fad(120,120)}a user who was born in 1996.
+Dialogue: 0,0:09:28.58,0:09:33.38,Cap,,0,0,0,,{\fad(120,120)}Let's say they were born in October, on\NHalloween, I'm recording this on Halloween.
+Dialogue: 0,0:09:33.38,0:09:37.38,Cap,,0,0,0,,{\fad(120,120)}They were born October 31st, 1996.
+Dialogue: 0,0:09:37.38,0:09:43.70,Cap,,0,0,0,,{\fad(120,120)}All right, what do you expect\Nthat function to return?
+Dialogue: 0,0:09:43.70,0:09:48.30,Cap,,0,0,0,,{\fad(120,120)}It should return 30, right?
+Dialogue: 0,0:09:48.30,0:09:49.98,Cap,,0,0,0,,{\fad(120,120)}Because it's been 30 years.
+Dialogue: 0,0:09:49.98,0:09:52.54,Cap,,0,0,0,,{\fad(120,120)}That person would be\Nturning 30 today, right?
+Dialogue: 0,0:09:52.54,0:09:55.22,Cap,,0,0,0,,{\fad(120,120)}I believe so.
+Dialogue: 0,0:09:55.22,0:09:58.06,Cap,,0,0,0,,{\fad(120,120)}Hopefully there's not\Nan off-by-one either.
+Dialogue: 0,0:09:58.06,0:09:59.66,Cap,,0,0,0,,{\fad(120,120)}So then you, boom, there you go.
+Dialogue: 0,0:09:59.66,0:10:00.66,Cap,,0,0,0,,{\fad(120,120)}That's your example test.
+Dialogue: 0,0:10:00.66,0:10:04.04,Cap,,0,0,0,,{\fad(120,120)}You would write a\Nfunction that says, all
+Dialogue: 0,0:10:04.04,0:10:07.42,Cap,,0,0,0,,{\fad(120,120)}right, create this user\Nor create this birth
+Dialogue: 0,0:10:07.42,0:10:08.42,Cap,,0,0,0,,{\fad(120,120)}date.
+Dialogue: 0,0:10:08.42,0:10:09.42,Cap,,0,0,0,,{\fad(120,120)}It's 1996.
+Dialogue: 0,0:10:09.42,0:10:10.42,Cap,,0,0,0,,{\fad(120,120)}Okay.
+Dialogue: 0,0:10:10.42,0:10:14.72,Cap,,0,0,0,,{\fad(120,120)}So if we calculate age\Nfunction, pass in that
+Dialogue: 0,0:10:14.72,0:10:19.02,Cap,,0,0,0,,{\fad(120,120)}birth date, it will\Ncalculate the age and
+Dialogue: 0,0:10:19.02,0:10:20.02,Cap,,0,0,0,,{\fad(120,120)}return it.
+Dialogue: 0,0:10:20.02,0:10:22.64,Cap,,0,0,0,,{\fad(120,120)}And then you'll check in\Nyour example-based, you
+Dialogue: 0,0:10:22.64,0:10:25.26,Cap,,0,0,0,,{\fad(120,120)}know, basically like\Na unit test, right?
+Dialogue: 0,0:10:25.26,0:10:30.50,Cap,,0,0,0,,{\fad(120,120)}You'll check in your example-based\Ntest if the result is 36.
+Dialogue: 0,0:10:30.50,0:10:34.10,Cap,,0,0,0,,{\fad(120,120)}Boom, that is one\Nexample-based test.
+Dialogue: 0,0:10:34.10,0:10:36.34,Cap,,0,0,0,,{\fad(120,120)}And this testing is\Nused quite a lot.
+Dialogue: 0,0:10:36.34,0:10:41.34,Cap,,0,0,0,,{\fad(120,120)}I guess I can't say, like,\Ngenerally speaking, but
+Dialogue: 0,0:10:41.34,0:10:46.34,Cap,,0,0,0,,{\fad(120,120)}for most testing I've\Nseen in like open
+Dialogue: 0,0:10:46.34,0:10:52.38,Cap,,0,0,0,,{\fad(120,120)}source projects, et cetera, like,\Nexample-based tests are used quite a lot.
+Dialogue: 0,0:10:52.38,0:10:56.50,Cap,,0,0,0,,{\fad(120,120)}And they're just a one-off example, like,\None-off example test this, one-off example
+Dialogue: 0,0:10:56.50,0:10:57.50,Cap,,0,0,0,,{\fad(120,120)}test this.
+Dialogue: 0,0:10:57.50,0:10:59.24,Cap,,0,0,0,,{\fad(120,120)}I mean, you might cluster\None-off examples in a
+Dialogue: 0,0:10:59.24,0:11:00.98,Cap,,0,0,0,,{\fad(120,120)}certain area, but there's\Na lot of example-based
+Dialogue: 0,0:11:00.98,0:11:03.06,Cap,,0,0,0,,{\fad(120,120)}testing out there\Nin my experience.
+Dialogue: 0,0:11:03.06,0:11:06.72,Cap,,0,0,0,,{\fad(120,120)}And hopefully you\Ncan see that it's a
+Dialogue: 0,0:11:06.72,0:11:10.38,Cap,,0,0,0,,{\fad(120,120)}little bit limited, like,\Nall you're doing, you're
+Dialogue: 0,0:11:10.38,0:11:15.46,Cap,,0,0,0,,{\fad(120,120)}trying to prove that your\Nfunctionality is true
+Dialogue: 0,0:11:15.46,0:11:20.54,Cap,,0,0,0,,{\fad(120,120)}or is correct no\Nmatter the input that
+Dialogue: 0,0:11:20.54,0:11:21.54,Cap,,0,0,0,,{\fad(120,120)}comes into it.
+Dialogue: 0,0:11:21.54,0:11:27.98,Cap,,0,0,0,,{\fad(120,120)}Like, for all inputs, this\Ncertain behavior holds.
+Dialogue: 0,0:11:27.98,0:11:32.74,Cap,,0,0,0,,{\fad(120,120)}The problem is with example-based testing,\Nyou're never actually proving that.
+Dialogue: 0,0:11:32.74,0:11:36.70,Cap,,0,0,0,,{\fad(120,120)}Like, you're not mathematically\Nor logically able to
+Dialogue: 0,0:11:36.70,0:11:40.66,Cap,,0,0,0,,{\fad(120,120)}say this is correct\Nunder all possible
+Dialogue: 0,0:11:40.66,0:11:43.14,Cap,,0,0,0,,{\fad(120,120)}inputs or conditions.
+Dialogue: 0,0:11:43.14,0:11:47.94,Cap,,0,0,0,,{\fad(120,120)}You're just generating evidence, like, all\Nright, I have evidence that this one example
+Dialogue: 0,0:11:47.94,0:11:48.94,Cap,,0,0,0,,{\fad(120,120)}works.
+Dialogue: 0,0:11:48.94,0:11:51.30,Cap,,0,0,0,,{\fad(120,120)}Okay, now you have, let's\Nsay you do 10 examples.
+Dialogue: 0,0:11:51.30,0:11:53.26,Cap,,0,0,0,,{\fad(120,120)}I have evidence of 10 examples.
+Dialogue: 0,0:11:53.26,0:11:55.90,Cap,,0,0,0,,{\fad(120,120)}And let's say you\Ndo 10 more examples
+Dialogue: 0,0:11:55.90,0:11:58.54,Cap,,0,0,0,,{\fad(120,120)}trying to think of\Nweird edge cases.
+Dialogue: 0,0:11:58.54,0:12:02.34,Cap,,0,0,0,,{\fad(120,120)}Okay, now I have 20 examples and\Nsome of them have edge cases.
+Dialogue: 0,0:12:02.34,0:12:05.54,Cap,,0,0,0,,{\fad(120,120)}Okay, that's fine.
+Dialogue: 0,0:12:05.54,0:12:08.14,Cap,,0,0,0,,{\fad(120,120)}That's getting better.
+Dialogue: 0,0:12:08.14,0:12:12.18,Cap,,0,0,0,,{\fad(120,120)}We're gaining more confidence\Nthat this function is correct.
+Dialogue: 0,0:12:12.18,0:12:14.14,Cap,,0,0,0,,{\fad(120,120)}But we really don't know.
+Dialogue: 0,0:12:14.14,0:12:15.22,Cap,,0,0,0,,{\fad(120,120)}There's no proof here.
+Dialogue: 0,0:12:15.22,0:12:16.22,Cap,,0,0,0,,{\fad(120,120)}We don't have a proof.
+Dialogue: 0,0:12:16.22,0:12:18.46,Cap,,0,0,0,,{\fad(120,120)}We have evidence.
+Dialogue: 0,0:12:18.46,0:12:22.06,Cap,,0,0,0,,{\fad(120,120)}No mathematical proof, no\Nlogical proof, just evidence.
+Dialogue: 0,0:12:22.06,0:12:24.30,Cap,,0,0,0,,{\fad(120,120)}So then what?
+Dialogue: 0,0:12:24.30,0:12:27.82,Cap,,0,0,0,,{\fad(120,120)}So then, what would\Nbe the next step?
+Dialogue: 0,0:12:27.82,0:12:30.62,Cap,,0,0,0,,{\fad(120,120)}How could we make\Nthis even better?
+Dialogue: 0,0:12:30.62,0:12:33.10,Cap,,0,0,0,,{\fad(120,120)}Well, let's continue down.
+Dialogue: 0,0:12:33.10,0:12:36.46,Cap,,0,0,0,,{\fad(120,120)}We're trying to prove this.
+Dialogue: 0,0:12:36.46,0:12:39.46,Cap,,0,0,0,,{\fad(120,120)}We want mathematical proof,\Nlike, you can look at
+Dialogue: 0,0:12:39.46,0:12:42.46,Cap,,0,0,0,,{\fad(120,120)}some kind of code or some kind of
+Dialogue: 0,0:12:42.46,0:12:47.42,Cap,,0,0,0,,{\fad(120,120)}proof or something, some statement\Nsaying this is correct for all inputs.
+Dialogue: 0,0:12:47.42,0:12:49.14,Cap,,0,0,0,,{\fad(120,120)}That's what we want.
+Dialogue: 0,0:12:49.14,0:12:51.38,Cap,,0,0,0,,{\fad(120,120)}But we only have\Nthese 20 examples.
+Dialogue: 0,0:12:52.18,0:12:55.58,Cap,,0,0,0,,{\fad(120,120)}Well, can we just\Ngenerate more examples?
+Dialogue: 0,0:12:55.58,0:12:57.74,Cap,,0,0,0,,{\fad(120,120)}Yeah, you can always\Ngenerate more examples.
+Dialogue: 0,0:12:57.74,0:13:00.18,Cap,,0,0,0,,{\fad(120,120)}The problem is that takes\Na lot of human effort.
+Dialogue: 0,0:13:00.18,0:13:01.18,Cap,,0,0,0,,{\fad(120,120)}Okay, yeah, we have AI.
+Dialogue: 0,0:13:01.18,0:13:01.86,Cap,,0,0,0,,{\fad(120,120)}Sure.
+Dialogue: 0,0:13:01.86,0:13:06.58,Cap,,0,0,0,,{\fad(120,120)}But even with AI, like,\Nyou will never generate
+Dialogue: 0,0:13:06.58,0:13:11.30,Cap,,0,0,0,,{\fad(120,120)}infinite examples because\Nthat's not possible to do.
+Dialogue: 0,0:13:11.30,0:13:13.10,Cap,,0,0,0,,{\fad(120,120)}Even with AI, you cannot\Ngenerate infinite examples.
+Dialogue: 0,0:13:13.10,0:13:15.38,Cap,,0,0,0,,{\fad(120,120)}So, all right, so what\Nif we then, instead
+Dialogue: 0,0:13:15.38,0:13:17.66,Cap,,0,0,0,,{\fad(120,120)}of one example, like\Nan actual written out
+Dialogue: 0,0:13:17.66,0:13:23.74,Cap,,0,0,0,,{\fad(120,120)}example, test case per example, what\Nif instead we thought like this?
+Dialogue: 0,0:13:23.74,0:13:28.60,Cap,,0,0,0,,{\fad(120,120)}What if instead we generated,\Nwe created like some
+Dialogue: 0,0:13:28.60,0:13:33.46,Cap,,0,0,0,,{\fad(120,120)}kind of object or function\Nthat can actually
+Dialogue: 0,0:13:33.46,0:13:41.90,Cap,,0,0,0,,{\fad(120,120)}generate random inputs of the shape of\Nthe parameter of the function under test?
+Dialogue: 0,0:13:41.90,0:13:44.42,Cap,,0,0,0,,{\fad(120,120)}So imagine this, just\Nthink of this for a second.
+Dialogue: 0,0:13:44.42,0:13:47.16,Cap,,0,0,0,,{\fad(120,120)}Our test is called\Ncalculate age, and remember,
+Dialogue: 0,0:13:47.16,0:13:49.90,Cap,,0,0,0,,{\fad(120,120)}it takes a date as an input.
+Dialogue: 0,0:13:49.90,0:13:53.10,Cap,,0,0,0,,{\fad(120,120)}The date is the birth date,\Nthe birth date as the input.
+Dialogue: 0,0:13:53.10,0:13:57.42,Cap,,0,0,0,,{\fad(120,120)}Okay, so what if we created like a function\Nthat generates random birth dates?
+Dialogue: 0,0:13:57.42,0:14:02.62,Cap,,0,0,0,,{\fad(120,120)}It can generate random\Nbirth dates from 4000 BC
+Dialogue: 0,0:14:02.62,0:14:07.82,Cap,,0,0,0,,{\fad(120,120)}to 2026 or any birth\Ndate, way back like
+Dialogue: 0,0:14:07.82,0:14:11.74,Cap,,0,0,0,,{\fad(120,120)}just millions of years to millions of\Nyears in the future or something, right?
+Dialogue: 0,0:14:11.74,0:14:16.70,Cap,,0,0,0,,{\fad(120,120)}Like the entire possible\Nset of birth dates.
+Dialogue: 0,0:14:16.70,0:14:20.48,Cap,,0,0,0,,{\fad(120,120)}Okay, now, with this\Nrandom function, let's say
+Dialogue: 0,0:14:20.48,0:14:24.26,Cap,,0,0,0,,{\fad(120,120)}we randomly generate\None of these things.
+Dialogue: 0,0:14:24.26,0:14:26.88,Cap,,0,0,0,,{\fad(120,120)}And in a loop, basically,\Nin a loop, we say,
+Dialogue: 0,0:14:26.88,0:14:29.50,Cap,,0,0,0,,{\fad(120,120)}generate a birth date, call the\Ncalculate birthday function,
+Dialogue: 0,0:14:29.50,0:14:30.62,Cap,,0,0,0,,{\fad(120,120)}come back.
+Dialogue: 0,0:14:30.62,0:14:32.86,Cap,,0,0,0,,{\fad(120,120)}And instead of checking\Nthat that example is
+Dialogue: 0,0:14:32.86,0:14:35.10,Cap,,0,0,0,,{\fad(120,120)}correct, because you\Ncan't check that the
+Dialogue: 0,0:14:35.10,0:14:37.52,Cap,,0,0,0,,{\fad(120,120)}example is just correct,\Nlike hard coded, because
+Dialogue: 0,0:14:37.52,0:14:39.94,Cap,,0,0,0,,{\fad(120,120)}we're trying to\Nget away from that.
+Dialogue: 0,0:14:39.94,0:14:45.02,Cap,,0,0,0,,{\fad(120,120)}What if you instead check\Nproperties that should hold?
+Dialogue: 0,0:14:45.02,0:14:55.54,Cap,,0,0,0,,{\fad(120,120)}Okay, like claims or propositions that should\Nhold whenever you're calculating a birth date.
+Dialogue: 0,0:14:55.54,0:14:56.94,Cap,,0,0,0,,{\fad(120,120)}So let's think of\Na couple of these.
+Dialogue: 0,0:14:56.94,0:15:02.42,Cap,,0,0,0,,{\fad(120,120)}So the age of a person should\Nnever be negative, right?
+Dialogue: 0,0:15:02.42,0:15:03.42,Cap,,0,0,0,,{\fad(120,120)}That doesn't...
+Dialogue: 0,0:15:03.42,0:15:07.02,Cap,,0,0,0,,{\fad(120,120)}Well, okay, okay, yeah, yeah.
+Dialogue: 0,0:15:07.02,0:15:10.22,Cap,,0,0,0,,{\fad(120,120)}So if a person was\Nborn, then yeah,
+Dialogue: 0,0:15:10.22,0:15:13.42,Cap,,0,0,0,,{\fad(120,120)}we're saying that there's\Nno negative ages here.
+Dialogue: 0,0:15:13.42,0:15:16.66,Cap,,0,0,0,,{\fad(120,120)}We're saying that age is from\Nwhen you're born and on.
+Dialogue: 0,0:15:16.66,0:15:19.94,Cap,,0,0,0,,{\fad(120,120)}So one property that should\Nhold for all inputs is
+Dialogue: 0,0:15:19.94,0:15:23.22,Cap,,0,0,0,,{\fad(120,120)}that the age never is\Nnever less than zero.
+Dialogue: 0,0:15:23.22,0:15:26.92,Cap,,0,0,0,,{\fad(120,120)}Boom, that is a property\Nwe could put in it
+Dialogue: 0,0:15:26.92,0:15:30.62,Cap,,0,0,0,,{\fad(120,120)}as a claim that we can\Nmake or proposition
+Dialogue: 0,0:15:30.62,0:15:32.30,Cap,,0,0,0,,{\fad(120,120)}that should hold for all inputs.
+Dialogue: 0,0:15:32.30,0:15:36.08,Cap,,0,0,0,,{\fad(120,120)}Now with this random\Ngenerator, we can generate
+Dialogue: 0,0:15:36.08,0:15:39.86,Cap,,0,0,0,,{\fad(120,120)}millions and billions of\Ninputs really cheaply.
+Dialogue: 0,0:15:39.86,0:15:42.08,Cap,,0,0,0,,{\fad(120,120)}Now we're still just\Ncreating evidence.
+Dialogue: 0,0:15:42.08,0:15:44.51,Cap,,0,0,0,,{\fad(120,120)}We still do not have\Na proof, but now
+Dialogue: 0,0:15:44.51,0:15:46.94,Cap,,0,0,0,,{\fad(120,120)}look, we have like this\Nrandom distribution and
+Dialogue: 0,0:15:46.94,0:15:48.74,Cap,,0,0,0,,{\fad(120,120)}we can generate way more evidence.
+Dialogue: 0,0:15:48.74,0:15:54.26,Cap,,0,0,0,,{\fad(120,120)}So we can start to emulate\Na mathematical proof.
+Dialogue: 0,0:15:54.26,0:15:57.01,Cap,,0,0,0,,{\fad(120,120)}We can emulate trying\Nto get as close as
+Dialogue: 0,0:15:57.01,0:15:59.76,Cap,,0,0,0,,{\fad(120,120)}possible to proof that all\Ninputs are always going
+Dialogue: 0,0:15:59.76,0:16:00.92,Cap,,0,0,0,,{\fad(120,120)}to be correct.
+Dialogue: 0,0:16:00.92,0:16:01.92,Cap,,0,0,0,,{\fad(120,120)}But it's asymptotic.
+Dialogue: 0,0:16:01.92,0:16:02.92,Cap,,0,0,0,,{\fad(120,120)}We'll never actually get there.
+Dialogue: 0,0:16:02.92,0:16:04.60,Cap,,0,0,0,,{\fad(120,120)}We will never get there.
+Dialogue: 0,0:16:04.60,0:16:09.60,Cap,,0,0,0,,{\fad(120,120)}And there's still not enough computational\Nresources to execute this thing for that long.
+Dialogue: 0,0:16:09.60,0:16:11.64,Cap,,0,0,0,,{\fad(120,120)}Okay, so then what's next?
+Dialogue: 0,0:16:11.64,0:16:13.16,Cap,,0,0,0,,{\fad(120,120)}What is the next step?
+Dialogue: 0,0:16:13.16,0:16:14.72,Cap,,0,0,0,,{\fad(120,120)}And you could think\Nof other properties.
+Dialogue: 0,0:16:14.72,0:16:16.12,Cap,,0,0,0,,{\fad(120,120)}I don't know off\Nthe top of my head.
+Dialogue: 0,0:16:16.12,0:16:18.04,Cap,,0,0,0,,{\fad(120,120)}I don't want to keep\Nthinking about it, but
+Dialogue: 0,0:16:18.04,0:16:19.96,Cap,,0,0,0,,{\fad(120,120)}you basically just think\Nof all the properties
+Dialogue: 0,0:16:19.96,0:16:25.32,Cap,,0,0,0,,{\fad(120,120)}that should hold and then\Nyou execute the generator.
+Dialogue: 0,0:16:25.32,0:16:28.08,Cap,,0,0,0,,{\fad(120,120)}That's called property testing\Nor property-based testing.
+Dialogue: 0,0:16:28.08,0:16:29.28,Cap,,0,0,0,,{\fad(120,120)}I love property-based testing.
+Dialogue: 0,0:16:29.28,0:16:31.00,Cap,,0,0,0,,{\fad(120,120)}It's really awesome.
+Dialogue: 0,0:16:31.00,0:16:33.60,Cap,,0,0,0,,{\fad(120,120)}But there's something better.
+Dialogue: 0,0:16:33.60,0:16:38.74,Cap,,0,0,0,,{\fad(120,120)}There actually is a way\Nto mathematically prove
+Dialogue: 0,0:16:38.74,0:16:43.88,Cap,,0,0,0,,{\fad(120,120)}that for a certain\Nfunction, it behaves
+Dialogue: 0,0:16:43.88,0:16:46.88,Cap,,0,0,0,,{\fad(120,120)}correctly under all inputs.
+Dialogue: 0,0:16:46.88,0:16:51.00,Cap,,0,0,0,,{\fad(120,120)}Sorry, that behaves correctly.
+Dialogue: 0,0:16:51.00,0:16:57.80,Cap,,0,0,0,,{\fad(120,120)}What I'm actually saying is that\Ncertain properties hold for all inputs.
+Dialogue: 0,0:16:57.80,0:17:02.68,Cap,,0,0,0,,{\fad(120,120)}And that is called\Nformal verification.
+Dialogue: 0,0:17:02.68,0:17:06.36,Cap,,0,0,0,,{\fad(120,120)}Formal verification, I\Nguess I'm not like an
+Dialogue: 0,0:17:06.36,0:17:10.04,Cap,,0,0,0,,{\fad(120,120)}expert in formal\Nverification, but to me,
+Dialogue: 0,0:17:10.04,0:17:13.40,Cap,,0,0,0,,{\fad(120,120)}it is an amazing concept that\NI've followed for years.
+Dialogue: 0,0:17:13.40,0:17:17.88,Cap,,0,0,0,,{\fad(120,120)}And I'm now really diving\Ninto it because AI
+Dialogue: 0,0:17:17.88,0:17:22.36,Cap,,0,0,0,,{\fad(120,120)}now makes it practical\Nto begin to formally
+Dialogue: 0,0:17:22.36,0:17:28.76,Cap,,0,0,0,,{\fad(120,120)}verify software that would just be outrageously\Ndifficult to formally verify before.
+Dialogue: 0,0:17:28.76,0:17:30.96,Cap,,0,0,0,,{\fad(120,120)}And so, sorry, I was trying to\Ndefine formal verification still.
+Dialogue: 0,0:17:30.96,0:17:39.16,Cap,,0,0,0,,{\fad(120,120)}So formal verification basically allows you to\Nprovide the mathematical proof that certain
+Dialogue: 0,0:17:39.16,0:17:42.28,Cap,,0,0,0,,{\fad(120,120)}properties do hold\Nunder all inputs.
+Dialogue: 0,0:17:42.28,0:17:45.42,Cap,,0,0,0,,{\fad(120,120)}And with enough cognitive\Neffort, hopefully you can
+Dialogue: 0,0:17:45.42,0:17:48.56,Cap,,0,0,0,,{\fad(120,120)}come up with a set\Nof properties or
+Dialogue: 0,0:17:48.56,0:17:57.64,Cap,,0,0,0,,{\fad(120,120)}a set of propositions that are individually\Nnecessary and collectively sufficient to characterize
+Dialogue: 0,0:17:57.64,0:18:02.12,Cap,,0,0,0,,{\fad(120,120)}the intended behavior\Nof your functionality.
+Dialogue: 0,0:18:02.12,0:18:07.36,Cap,,0,0,0,,{\fad(120,120)}I think that is the core\Nthing to understand.
+Dialogue: 0,0:18:07.36,0:18:11.08,Cap,,0,0,0,,{\fad(120,120)}And I mean, this would be\Nabsolutely just amazing
+Dialogue: 0,0:18:11.08,0:18:14.80,Cap,,0,0,0,,{\fad(120,120)}if all of our software,\Nnot just crazy
+Dialogue: 0,0:18:14.80,0:18:23.16,Cap,,0,0,0,,{\fad(120,120)}mathematical calculations, not just cryptographic\Nprimitives, not just like TCP, not low-level
+Dialogue: 0,0:18:23.16,0:18:30.76,Cap,,0,0,0,,{\fad(120,120)}protocols, no, not just that, but imagine\Nbeing able to formally verify front-end code
+Dialogue: 0,0:18:30.76,0:18:36.66,Cap,,0,0,0,,{\fad(120,120)}like HTML and CSS and\NJavaScript and SQLite
+Dialogue: 0,0:18:36.66,0:18:42.56,Cap,,0,0,0,,{\fad(120,120)}and Postgres back-end code\Nas well, HTTP endpoints,
+Dialogue: 0,0:18:42.56,0:18:43.96,Cap,,0,0,0,,{\fad(120,120)}reading to the file system.
+Dialogue: 0,0:18:43.96,0:18:46.52,Cap,,0,0,0,,{\fad(120,120)}What if we could formally\Nverify all of that?
+Dialogue: 0,0:18:46.52,0:18:48.36,Cap,,0,0,0,,{\fad(120,120)}That is my dream.
+Dialogue: 0,0:18:48.36,0:18:53.16,Cap,,0,0,0,,{\fad(120,120)}And with AI, that\Nbecomes a possibility.
+Dialogue: 0,0:18:53.16,0:19:02.12,Cap,,0,0,0,,{\fad(120,120)}I believe that with AI, what was previously\Nimpossible or seemingly impossible or impractical
+Dialogue: 0,0:19:02.12,0:19:06.28,Cap,,0,0,0,,{\fad(120,120)}is now possible.
+Dialogue: 0,0:19:06.28,0:19:08.40,Cap,,0,0,0,,{\fad(120,120)}That's how we need to\Nthink about it now.
+Dialogue: 0,0:19:08.40,0:19:11.02,Cap,,0,0,0,,{\fad(120,120)}The task that just seemed\Noutrageous before, that's
+Dialogue: 0,0:19:11.02,0:19:13.64,Cap,,0,0,0,,{\fad(120,120)}where we need to set our sights.
+Dialogue: 0,0:19:14.28,0:19:18.52,Cap,,0,0,0,,{\fad(120,120)}The easy tasks from\Nbefore are now trivial.
+Dialogue: 0,0:19:18.52,0:19:21.24,Cap,,0,0,0,,{\fad(120,120)}The hard tasks from\Nbefore are now easy.
+Dialogue: 0,0:19:21.24,0:19:25.44,Cap,,0,0,0,,{\fad(120,120)}The impossible tasks from\Nbefore are now hard.
+Dialogue: 0,0:19:25.44,0:19:28.24,Cap,,0,0,0,,{\fad(120,120)}In some ways, they're kind of\Neasy, actually, because of AI.
+Dialogue: 0,0:19:28.24,0:19:29.40,Cap,,0,0,0,,{\fad(120,120)}But now let's go after that.
+Dialogue: 0,0:19:29.40,0:19:32.52,Cap,,0,0,0,,{\fad(120,120)}So formally verify all software.
+Dialogue: 0,0:19:32.52,0:19:34.84,Cap,,0,0,0,,{\fad(120,120)}I feel like that is now my mantra.
+Dialogue: 0,0:19:34.84,0:19:35.84,Cap,,0,0,0,,{\fad(120,120)}That's what I'm after.
+Dialogue: 0,0:19:35.84,0:19:38.92,Cap,,0,0,0,,{\fad(120,120)}I want to formally\Nverify all software.
+Dialogue: 0,0:19:38.92,0:19:40.92,Cap,,0,0,0,,{\fad(120,120)}And that's just going to be crazy.
+Dialogue: 0,0:19:40.92,0:19:42.48,Cap,,0,0,0,,{\fad(120,120)}So how would you do this?
+Dialogue: 0,0:19:43.16,0:19:45.66,Cap,,0,0,0,,{\fad(120,120)}There are certain languages\Nand tools and techniques
+Dialogue: 0,0:19:45.66,0:19:48.16,Cap,,0,0,0,,{\fad(120,120)}that allow you to\Nformally verify things.
+Dialogue: 0,0:19:48.16,0:19:52.24,Cap,,0,0,0,,{\fad(120,120)}And my favorite is called\NLean, L-E-A-N, Lean.
+Dialogue: 0,0:19:52.24,0:19:56.52,Cap,,0,0,0,,{\fad(120,120)}Lean is a general purpose\Nprogramming language.
+Dialogue: 0,0:19:56.52,0:20:00.16,Cap,,0,0,0,,{\fad(120,120)}It's also a functional programming language,\Nwhich I'm in love with functional programming.
+Dialogue: 0,0:20:00.16,0:20:01.60,Cap,,0,0,0,,{\fad(120,120)}I have been for a long time.
+Dialogue: 0,0:20:01.60,0:20:06.20,Cap,,0,0,0,,{\fad(120,120)}But I've never really tried to adopt a\Ntruly functional programming language
+Dialogue: 0,0:20:06.20,0:20:11.28,Cap,,0,0,0,,{\fad(120,120)}because I just feel like it's been\Nimpractical, like Haskell and F# and things.
+Dialogue: 0,0:20:11.28,0:20:13.32,Cap,,0,0,0,,{\fad(120,120)}They're not super mainstream.
+Dialogue: 0,0:20:13.32,0:20:16.70,Cap,,0,0,0,,{\fad(120,120)}And I preferred to stay in\Nthe mainstream with TypeScript
+Dialogue: 0,0:20:16.70,0:20:20.08,Cap,,0,0,0,,{\fad(120,120)}and Rust, TypeScript and\NRust and things like that.
+Dialogue: 0,0:20:20.08,0:20:25.78,Cap,,0,0,0,,{\fad(120,120)}So the next, but Lean\Nis amazing because
+Dialogue: 0,0:20:25.78,0:20:31.48,Cap,,0,0,0,,{\fad(120,120)}it is a general purpose\Nfunctional programming language
+Dialogue: 0,0:20:31.48,0:20:36.44,Cap,,0,0,0,,{\fad(120,120)}with formal verification built in.
+Dialogue: 0,0:20:36.44,0:20:42.48,Cap,,0,0,0,,{\fad(120,120)}You can write functions\Nin the Lean syntax.
+Dialogue: 0,0:20:42.48,0:20:48.88,Cap,,0,0,0,,{\fad(120,120)}And you can prove propositions about those\Nfunctions right there in the Lean code.
+Dialogue: 0,0:20:48.88,0:20:52.20,Cap,,0,0,0,,{\fad(120,120)}It is in the same language.
+Dialogue: 0,0:20:52.20,0:20:53.80,Cap,,0,0,0,,{\fad(120,120)}Now, that is powerful.\NThat is amazing.
+Dialogue: 0,0:20:53.80,0:20:57.80,Cap,,0,0,0,,{\fad(120,120)}I don't know if you've\Nseen, but the major AI labs
+Dialogue: 0,0:20:57.80,0:21:01.80,Cap,,0,0,0,,{\fad(120,120)}have been heavily using Lean to\Nprove crazy mathematical things.
+Dialogue: 0,0:21:01.80,0:21:07.32,Cap,,0,0,0,,{\fad(120,120)}Formal verification is in some ways exploding\Nright now, becoming much more popular.
+Dialogue: 0,0:21:07.32,0:21:08.36,Cap,,0,0,0,,{\fad(120,120)}This is starting to spread.
+Dialogue: 0,0:21:08.36,0:21:12.36,Cap,,0,0,0,,{\fad(120,120)}And I think this\Nis really the next
+Dialogue: 0,0:21:12.36,0:21:16.36,Cap,,0,0,0,,{\fad(120,120)}evolution of software engineering\Nand programming languages,
+Dialogue: 0,0:21:16.36,0:21:19.24,Cap,,0,0,0,,{\fad(120,120)}is moving to formally\Nverify everything.
+Dialogue: 0,0:21:19.24,0:21:23.38,Cap,,0,0,0,,{\fad(120,120)}And this is going to allow us\Nto generate massive amounts
+Dialogue: 0,0:21:23.38,0:21:27.52,Cap,,0,0,0,,{\fad(120,120)}of code, much more code\Nthan we've ever had before,
+Dialogue: 0,0:21:27.52,0:21:32.56,Cap,,0,0,0,,{\fad(120,120)}and allow the AIs and the humans\Nto ensure that it is correct.
+Dialogue: 0,0:21:32.56,0:21:36.82,Cap,,0,0,0,,{\fad(120,120)}I think this is possibly\Nthe only way that we can
+Dialogue: 0,0:21:36.82,0:21:41.08,Cap,,0,0,0,,{\fad(120,120)}move forward and scale the amount\Nof code that we're generating.
+Dialogue: 0,0:21:41.08,0:21:46.00,Cap,,0,0,0,,{\fad(120,120)}And personally, what I'm super\Nexcited for with adopting Lean is like
+Dialogue: 0,0:21:46.00,0:21:50.92,Cap,,0,0,0,,{\fad(120,120)}my test cases at work, like these\Ntest suites are just growing.
+Dialogue: 0,0:21:50.92,0:21:55.08,Cap,,0,0,0,,{\fad(120,120)}And they take like 20, 30 minutes.
+Dialogue: 0,0:21:55.08,0:21:57.36,Cap,,0,0,0,,{\fad(120,120)}They take a long time to run.
+Dialogue: 0,0:21:57.36,0:22:00.10,Cap,,0,0,0,,{\fad(120,120)}And I'm hoping that\NI can shrink that a
+Dialogue: 0,0:22:00.10,0:22:02.84,Cap,,0,0,0,,{\fad(120,120)}lot with just a compilation\Ncheck with Lean.
+Dialogue: 0,0:22:02.84,0:22:03.96,Cap,,0,0,0,,{\fad(120,120)}I didn't say that before.
+Dialogue: 0,0:22:03.96,0:22:06.72,Cap,,0,0,0,,{\fad(120,120)}With Lean, you write a proof.
+Dialogue: 0,0:22:06.72,0:22:09.52,Cap,,0,0,0,,{\fad(120,120)}So you write propositions,\Nyou write a proof, and
+Dialogue: 0,0:22:09.52,0:22:12.32,Cap,,0,0,0,,{\fad(120,120)}you combine that with\Na name into a theorem.
+Dialogue: 0,0:22:12.32,0:22:15.32,Cap,,0,0,0,,{\fad(120,120)}And Lean will check it\Nfor you automatically.
+Dialogue: 0,0:22:15.32,0:22:16.60,Cap,,0,0,0,,{\fad(120,120)}It will check the proof.
+Dialogue: 0,0:22:16.60,0:22:19.36,Cap,,0,0,0,,{\fad(120,120)}And if it doesn't compile,\Nthen the proof is wrong.
+Dialogue: 0,0:22:19.36,0:22:20.80,Cap,,0,0,0,,{\fad(120,120)}If it compiles,\Nthe proof is right.
+Dialogue: 0,0:22:20.80,0:22:25.00,Cap,,0,0,0,,{\fad(120,120)}So you can basically have AI\Ngenerate the proof in whatever way.
+Dialogue: 0,0:22:25.00,0:22:27.24,Cap,,0,0,0,,{\fad(120,120)}The proof doesn't have to be\Npretty, doesn't have to be nice.
+Dialogue: 0,0:22:27.24,0:22:30.68,Cap,,0,0,0,,{\fad(120,120)}And you know that the proof\Nis correct, more or less.
+Dialogue: 0,0:22:30.68,0:22:34.72,Cap,,0,0,0,,{\fad(120,120)}There could be bugs in the Lean, proof\Nchecking kernel, and things like that.
+Dialogue: 0,0:22:34.72,0:22:38.44,Cap,,0,0,0,,{\fad(120,120)}And then you can also have the\NAI reason about the claims,
+Dialogue: 0,0:22:38.44,0:22:42.16,Cap,,0,0,0,,{\fad(120,120)}which are the prop type or\Nthe proposition type in Lean.
+Dialogue: 0,0:22:42.16,0:22:44.92,Cap,,0,0,0,,{\fad(120,120)}You can have the AI reason\Nabout those claims.
+Dialogue: 0,0:22:44.92,0:22:47.52,Cap,,0,0,0,,{\fad(120,120)}And I feel like it'll probably\Ndo a pretty good job.
+Dialogue: 0,0:22:47.52,0:22:56.28,Cap,,0,0,0,,{\fad(120,120)}But that's possibly an area where human\Nexpertise is maybe still very valuable.
+Dialogue: 0,0:22:56.28,0:22:57.28,Cap,,0,0,0,,{\fad(120,120)}But whatever, it doesn't matter.
+Dialogue: 0,0:22:57.28,0:23:01.00,Cap,,0,0,0,,{\fad(120,120)}We're heading towards being able\Nto formally verify, hopefully,
+Dialogue: 0,0:23:01.00,0:23:04.72,Cap,,0,0,0,,{\fad(120,120)}all software, at least much\Nmore software than before.
+Dialogue: 0,0:23:04.72,0:23:11.80,Cap,,0,0,0,,{\fad(120,120)}Now, finally, with that introduction,\NI want to announce my project Lasm.
+Dialogue: 0,0:23:11.80,0:23:17.00,Cap,,0,0,0,,{\fad(120,120)}Lasm allows Lean to run.
+Dialogue: 0,0:23:17.00,0:23:21.88,Cap,,0,0,0,,{\fad(120,120)}Almost anywhere that JavaScript\Nor WebAssembly runs today.
+Dialogue: 0,0:23:21.88,0:23:28.78,Cap,,0,0,0,,{\fad(120,120)}So that means in the web browser,\Nin Node.js, on serverless
+Dialogue: 0,0:23:28.78,0:23:35.68,Cap,,0,0,0,,{\fad(120,120)}platforms like Netlify, Vercel, Cloudflare,\NCloudflare Workers, and edge platforms.
+Dialogue: 0,0:23:35.68,0:23:41.56,Cap,,0,0,0,,{\fad(120,120)}So yeah, the edge platforms like Cloudflare\NWorkers and other edge platforms.
+Dialogue: 0,0:23:41.56,0:23:45.00,Cap,,0,0,0,,{\fad(120,120)}And we have some Bun and\NDeno support as well.
+Dialogue: 0,0:23:45.00,0:23:48.80,Cap,,0,0,0,,{\fad(120,120)}I don't remember exactly the extent\Nto which, but it's very extensive.
+Dialogue: 0,0:23:48.80,0:23:54.00,Cap,,0,0,0,,{\fad(120,120)}I have been pushing the AI\Nto very thoroughly test
+Dialogue: 0,0:23:54.00,0:23:59.20,Cap,,0,0,0,,{\fad(120,120)}and ensure that we have support\Nfor many, many platforms.
+Dialogue: 0,0:23:59.20,0:24:00.80,Cap,,0,0,0,,{\fad(120,120)}And this project is now launched.
+Dialogue: 0,0:24:00.80,0:24:07.28,Cap,,0,0,0,,{\fad(120,120)}You can go to the Millillion GitHub\Norganization, and you'll find Lasm there.
+Dialogue: 0,0:24:07.28,0:24:09.72,Cap,,0,0,0,,{\fad(120,120)}You'll also find Lasm on npm.
+Dialogue: 0,0:24:09.72,0:24:13.68,Cap,,0,0,0,,{\fad(120,120)}Search for @lasm/cli.
+Dialogue: 0,0:24:13.68,0:24:18.52,Cap,,0,0,0,,{\fad(120,120)}And yeah, you basically\Nnpm install this project.
+Dialogue: 0,0:24:18.52,0:24:20.24,Cap,,0,0,0,,{\fad(120,120)}The only dependency is Node.
+Dialogue: 0,0:24:20.24,0:24:24.40,Cap,,0,0,0,,{\fad(120,120)}It will fully take care of\Neverything else in the Lean
+Dialogue: 0,0:24:24.40,0:24:28.56,Cap,,0,0,0,,{\fad(120,120)}toolchain, and the Clang, and\NLLVM, and Emscripten, and Binaryen,
+Dialogue: 0,0:24:28.56,0:24:32.04,Cap,,0,0,0,,{\fad(120,120)}and all the crazy\Nstuff that gets the
+Dialogue: 0,0:24:32.04,0:24:35.52,Cap,,0,0,0,,{\fad(120,120)}Lean C code to compile into Wasm.
+Dialogue: 0,0:24:35.52,0:24:38.04,Cap,,0,0,0,,{\fad(120,120)}It's just all done for\Nyou behind the scenes.
+Dialogue: 0,0:24:38.12,0:24:42.62,Cap,,0,0,0,,{\fad(120,120)}And I've been testing it out\Njust a little bit manually
+Dialogue: 0,0:24:42.62,0:24:47.12,Cap,,0,0,0,,{\fad(120,120)}or personally, you know, with\Na little Claude Code CLI help.
+Dialogue: 0,0:24:47.12,0:24:51.68,Cap,,0,0,0,,{\fad(120,120)}And I mean, so far, it works.
+Dialogue: 0,0:24:51.68,0:24:55.56,Cap,,0,0,0,,{\fad(120,120)}And you can see there's a crazy\Ntest suite that, you know,
+Dialogue: 0,0:24:55.56,0:24:59.44,Cap,,0,0,0,,{\fad(120,120)}you can go check out for\Nyourself in the repo too.
+Dialogue: 0,0:24:59.44,0:25:02.08,Cap,,0,0,0,,{\fad(120,120)}And you can try this\Nout yourself as well.
+Dialogue: 0,0:25:02.08,0:25:07.28,Cap,,0,0,0,,{\fad(120,120)}But yeah, I booted up an actual\NHTTP server in Lean running in Node
+Dialogue: 0,0:25:07.28,0:25:12.48,Cap,,0,0,0,,{\fad(120,120)}on my computer, and I was able\Nto curl into it, which is crazy.
+Dialogue: 0,0:25:12.48,0:25:14.04,Cap,,0,0,0,,{\fad(120,120)}And yeah, go check\Nout the project.
+Dialogue: 0,0:25:14.04,0:25:16.12,Cap,,0,0,0,,{\fad(120,120)}There's all kinds of benchmarks.
+Dialogue: 0,0:25:16.12,0:25:19.40,Cap,,0,0,0,,{\fad(120,120)}I think we have things\Nfor like the cold starts,
+Dialogue: 0,0:25:19.40,0:25:22.68,Cap,,0,0,0,,{\fad(120,120)}memory, requests per second,\Nbinary size, things like that.
+Dialogue: 0,0:25:22.68,0:25:27.00,Cap,,0,0,0,,{\fad(120,120)}And, you know, I will be\Ncontinuing to hone this
+Dialogue: 0,0:25:27.00,0:25:31.32,Cap,,0,0,0,,{\fad(120,120)}project, plan to add all kinds of\Ndifferent testing methodologies,
+Dialogue: 0,0:25:31.32,0:25:37.12,Cap,,0,0,0,,{\fad(120,120)}including working towards formal\Nverification of Lasm itself.
+Dialogue: 0,0:25:37.12,0:25:40.82,Cap,,0,0,0,,{\fad(120,120)}And then, yeah, the\Npoint is now the idea is,
+Dialogue: 0,0:25:40.82,0:25:44.52,Cap,,0,0,0,,{\fad(120,120)}and this is it's still\Na new project, right?
+Dialogue: 0,0:25:44.52,0:25:47.48,Cap,,0,0,0,,{\fad(120,120)}It just launched, but open\Nissues if there are problems.
+Dialogue: 0,0:25:47.48,0:25:49.94,Cap,,0,0,0,,{\fad(120,120)}And, you know, I'm going to\Ncontinue to use this and
+Dialogue: 0,0:25:49.94,0:25:52.40,Cap,,0,0,0,,{\fad(120,120)}hopefully begin to adopt it, starting\Nwith their personal projects.
+Dialogue: 0,0:25:52.40,0:25:59.48,Cap,,0,0,0,,{\fad(120,120)}And maybe if it makes sense professionally\Nat the place that I work now.
+Dialogue: 0,0:25:59.48,0:26:07.20,Cap,,0,0,0,,{\fad(120,120)}The idea is you can write your\NCloudflare workers in Lean.
+Dialogue: 0,0:26:07.20,0:26:13.84,Cap,,0,0,0,,{\fad(120,120)}Yeah, you could write your Express\Napplication now in Lean, your Hono
+Dialogue: 0,0:26:13.84,0:26:20.48,Cap,,0,0,0,,{\fad(120,120)}app in Lean, and formally verify\Ncertain parts of those applications.
+Dialogue: 0,0:26:20.48,0:26:25.16,Cap,,0,0,0,,{\fad(120,120)}The extent to which you can formally\Nverify, I'm not super familiar with yet.
+Dialogue: 0,0:26:25.16,0:26:28.33,Cap,,0,0,0,,{\fad(120,120)}You know, we have to think\Nof the complexities of like,
+Dialogue: 0,0:26:28.33,0:26:31.51,Cap,,0,0,0,,{\fad(120,120)}I don't know, all the asynchronous\Nand concurrent and in Lean
+Dialogue: 0,0:26:31.51,0:26:34.68,Cap,,0,0,0,,{\fad(120,120)}opaque code because you can\Ncall into JavaScript, etc.
+Dialogue: 0,0:26:34.68,0:26:37.31,Cap,,0,0,0,,{\fad(120,120)}I'll be exploring a\Nton of that to find out
+Dialogue: 0,0:26:37.31,0:26:39.93,Cap,,0,0,0,,{\fad(120,120)}like the limits of this\Nand then figuring out, you
+Dialogue: 0,0:26:39.93,0:26:42.56,Cap,,0,0,0,,{\fad(120,120)}know, how do we how do\Nwe remove those limits?
+Dialogue: 0,0:26:42.56,0:26:44.28,Cap,,0,0,0,,{\fad(120,120)}The limits of the formal\Nverification, right?
+Dialogue: 0,0:26:44.28,0:26:47.60,Cap,,0,0,0,,{\fad(120,120)}Like, for example, when\Nyou call into a JavaScript
+Dialogue: 0,0:26:47.60,0:26:50.92,Cap,,0,0,0,,{\fad(120,120)}library, like when you\Ncall from Lean into Hono.
+Dialogue: 0,0:26:50.92,0:26:55.44,Cap,,0,0,0,,{\fad(120,120)}Well, that barrier right there, you know,\Nyour formal verification stops, right?
+Dialogue: 0,0:26:55.44,0:26:59.13,Cap,,0,0,0,,{\fad(120,120)}But, you know, your server\Nfunctionality, I would say probably
+Dialogue: 0,0:26:59.13,0:27:02.83,Cap,,0,0,0,,{\fad(120,120)}like your authentication code, your\Nbusiness rules, all that stuff,
+Dialogue: 0,0:27:02.83,0:27:06.52,Cap,,0,0,0,,{\fad(120,120)}I believe you can pull out\Ninto pretty pure functions.
+Dialogue: 0,0:27:06.52,0:27:12.18,Cap,,0,0,0,,{\fad(120,120)}And then, you know, your IO, your,\Nyou know, the actual HTTP handler
+Dialogue: 0,0:27:12.18,0:27:17.84,Cap,,0,0,0,,{\fad(120,120)}code that's doing the input output\Nstuff, like I don't think you can.
+Dialogue: 0,0:27:17.84,0:27:21.22,Cap,,0,0,0,,{\fad(120,120)}You could you could verify that\Nto some extent, I believe,
+Dialogue: 0,0:27:21.22,0:27:24.60,Cap,,0,0,0,,{\fad(120,120)}but all the business rules and the\Nauthentication and authorization, etc.
+Dialogue: 0,0:27:24.60,0:27:30.16,Cap,,0,0,0,,{\fad(120,120)}Hopefully, the idea is you can write\Npropositions for those and then prove them.
+Dialogue: 0,0:27:30.16,0:27:32.88,Cap,,0,0,0,,{\fad(120,120)}And then on the\Nfront end, I haven't
+Dialogue: 0,0:27:32.88,0:27:35.60,Cap,,0,0,0,,{\fad(120,120)}even really touched\Nfront end yet, but like.
+Dialogue: 0,0:27:35.60,0:27:39.14,Cap,,0,0,0,,{\fad(120,120)}The AI has told me it's it's\Nright now it's like an Elm
+Dialogue: 0,0:27:39.14,0:27:42.68,Cap,,0,0,0,,{\fad(120,120)}like architecture, if you're familiar\Nwith Elm for the front end and.
+Dialogue: 0,0:27:42.68,0:27:45.20,Cap,,0,0,0,,{\fad(120,120)}Yeah, we'll see.\NWe'll see. We'll see.
+Dialogue: 0,0:27:45.24,0:27:47.60,Cap,,0,0,0,,{\fad(120,120)}I'm super excited now.
+Dialogue: 0,0:27:47.60,0:27:52.10,Cap,,0,0,0,,{\fad(120,120)}Lean is open for business in\Nmany more platforms where
+Dialogue: 0,0:27:52.10,0:27:56.60,Cap,,0,0,0,,{\fad(120,120)}it was would have been very\Ndifficult to do before.
+Dialogue: 0,0:27:56.60,0:28:00.32,Cap,,0,0,0,,{\fad(120,120)}And I encourage you to try it out.
+Dialogue: 0,0:28:00.32,0:28:03.72,Cap,,0,0,0,,{\fad(120,120)}You just need Node,\Njust Node and npm
+Dialogue: 0,0:28:03.72,0:28:07.12,Cap,,0,0,0,,{\fad(120,120)}on your machine and\Nyou can get going.
+Dialogue: 0,0:28:07.12,0:28:12.68,Cap,,0,0,0,,{\fad(120,120)}I probably recommend using VS\NCode and the Lean 4 extension.
+Dialogue: 0,0:28:12.68,0:28:17.46,Cap,,0,0,0,,{\fad(120,120)}If you want to kind of dive\Ninto proof checking and stuff
+Dialogue: 0,0:28:17.46,0:28:22.24,Cap,,0,0,0,,{\fad(120,120)}on your own or I mean,\Njust go for it fully.
+Dialogue: 0,0:28:22.24,0:28:25.24,Cap,,0,0,0,,{\fad(120,120)}You could call vibe\Ncoding if you want, but.
+Dialogue: 0,0:28:25.24,0:28:29.30,Cap,,0,0,0,,{\fad(120,120)}I call it agentic engineering,\Nif you are probing
+Dialogue: 0,0:28:29.30,0:28:33.36,Cap,,0,0,0,,{\fad(120,120)}the AI, you know, asking\Nit clarifying questions.
+Dialogue: 0,0:28:33.36,0:28:37.90,Cap,,0,0,0,,{\fad(120,120)}If when you're doing the formal\Nverification, what you should do
+Dialogue: 0,0:28:37.90,0:28:42.44,Cap,,0,0,0,,{\fad(120,120)}probably is really discuss the\Npropositions that Lean has created.
+Dialogue: 0,0:28:42.44,0:28:45.82,Cap,,0,0,0,,{\fad(120,120)}Learning the syntax is probably\Na good idea so you can understand
+Dialogue: 0,0:28:45.82,0:28:49.20,Cap,,0,0,0,,{\fad(120,120)}the propositions natively, but also\NI'm not sure it's strictly necessary.
+Dialogue: 0,0:28:49.20,0:28:52.26,Cap,,0,0,0,,{\fad(120,120)}You can ask it like,\Nall right, list out the
+Dialogue: 0,0:28:52.26,0:28:55.32,Cap,,0,0,0,,{\fad(120,120)}propositions here and in plain\NEnglish, let's go over them.
+Dialogue: 0,0:28:55.32,0:29:01.95,Cap,,0,0,0,,{\fad(120,120)}And, you know, you could have it\Ntriple check, bump the reasoning up to
+Dialogue: 0,0:29:01.95,0:29:08.57,Cap,,0,0,0,,{\fad(120,120)}make sure that the intended behavior is characterized\Nappropriately with each proposition being individually
+Dialogue: 0,0:29:08.57,0:29:15.20,Cap,,0,0,0,,{\fad(120,120)}necessary and collectively sufficient to\Ncharacterize the functionality of what you're doing.
+Dialogue: 0,0:29:15.20,0:29:17.84,Cap,,0,0,0,,{\fad(120,120)}Yeah, join me on this journey.
+Dialogue: 0,0:29:17.84,0:29:25.44,Cap,,0,0,0,,{\fad(120,120)}Start learning Lean, start using Lasm and\Nlet's begin to formally verify all software.

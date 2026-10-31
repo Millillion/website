@@ -1,0 +1,29 @@
+The second episode of the Millillion podcast. Jordan Last (lastmjs) walks through how we try to make software correct, from code review and example-based tests to property-based testing and formal verification, and announces Lasm, his project that allows Lean to run almost anywhere that JavaScript or WebAssembly runs today.
+
+00:00 Intro
+00:11 Lasm: Lean and WebAssembly
+01:09 Why software development is difficult
+03:26 Bugs in apps, bank balances and pacemakers
+05:17 Human reasoning and code review
+08:04 Writing tests
+08:38 Example-based testing
+11:03 Evidence, not proof
+13:13 Property-based testing
+16:33 Formal verification
+18:53 The impossible tasks are now hard
+19:43 Lean
+22:03 If it compiles, the proof is right
+23:04 Announcing Lasm
+26:20 The limits of formal verification
+27:56 How to try it
+29:15 Wrap-up
+
+Lasm on GitHub: https://github.com/Millillion/lasm
+Read it as a blog post: https://millillion.org/blog/formally-verify-all-software/
+Full transcript: https://millillion.org/podcast/002-formally-verify-all-software/
+Listen: Apple Podcasts https://podcasts.apple.com/us/podcast/millillion/id6826041508 · Spotify https://open.spotify.com/show/2TSiR5A8vVDAHEeGNpTY7e
+Support Millillion: https://millillion.org/support/
+
+How this video was made (by AI, from Jordan's recording): https://github.com/Millillion/website/tree/main/.claude/skills
+
+Millillion: impossibly ambitious AI. https://millillion.org

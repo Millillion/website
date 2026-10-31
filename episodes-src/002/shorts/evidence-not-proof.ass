@@ -1,0 +1,64 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: K,Shippori Mincho SemiBold,96,&H00121416,&H00909CA3,&H00EAF2F6,&H00EAF2F6,0,0,0,0,100,100,1,0,1,0,0,5,90,90,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.15,0:00:01.31,K,,0,0,0,,{\fad(60,40)}{\kf43}The {\kf22}problem {\kf25}is {\kf24}with
+Dialogue: 0,0:00:01.31,0:00:01.87,K,,0,0,0,,{\fad(60,40)}{\kf55}example-based
+Dialogue: 0,0:00:01.87,0:00:02.69,K,,0,0,0,,{\fad(60,40)}{\kf40}testing
+Dialogue: 0,0:00:02.71,0:00:03.21,K,,0,0,0,,{\fad(60,40)}{\kf26}you're {\kf23}never
+Dialogue: 0,0:00:03.21,0:00:04.21,K,,0,0,0,,{\fad(60,40)}{\kf58}actually {\kf41}proving
+Dialogue: 0,0:00:04.21,0:00:05.91,K,,0,0,0,,{\fad(60,40)}{\kf37}that.
+Dialogue: 0,0:00:05.93,0:00:06.57,K,,0,0,0,,{\fad(60,40)}{\kf40}You're {\kf24}not
+Dialogue: 0,0:00:06.57,0:00:07.73,K,,0,0,0,,{\fad(60,40)}{\kf90}mathematically {\kf25}or
+Dialogue: 0,0:00:07.73,0:00:09.17,K,,0,0,0,,{\fad(60,40)}{\kf41}logically {\kf33}able {\kf19}to
+Dialogue: 0,0:00:09.17,0:00:10.57,K,,0,0,0,,{\fad(60,40)}{\kf28}say {\kf33}this {\kf31}is {\kf46}correct
+Dialogue: 0,0:00:10.57,0:00:12.75,K,,0,0,0,,{\fad(60,40)}{\kf119}under {\kf37}all {\kf60}possible
+Dialogue: 0,0:00:12.75,0:00:13.75,K,,0,0,0,,{\fad(60,40)}{\kf82}inputs {\kf17}or
+Dialogue: 0,0:00:13.75,0:00:15.47,K,,0,0,0,,{\fad(60,40)}{\kf44}conditions.
+Dialogue: 0,0:00:15.49,0:00:15.93,K,,0,0,0,,{\fad(60,40)}{\kf25}You're {\kf17}just
+Dialogue: 0,0:00:15.93,0:00:16.93,K,,0,0,0,,{\fad(60,40)}{\kf50}generating {\kf50}evidence
+Dialogue: 0,0:00:16.93,0:00:18.49,K,,0,0,0,,{\fad(60,40)}{\kf66}like
+Dialogue: 0,0:00:18.51,0:00:18.85,K,,0,0,0,,{\fad(60,40)}{\kf21}all {\kf12}right
+Dialogue: 0,0:00:18.87,0:00:19.79,K,,0,0,0,,{\fad(60,40)}{\kf17}I {\kf17}have {\kf32}evidence {\kf23}that
+Dialogue: 0,0:00:19.79,0:00:20.43,K,,0,0,0,,{\fad(60,40)}{\kf16}this {\kf19}one {\kf28}example
+Dialogue: 0,0:00:20.43,0:00:21.55,K,,0,0,0,,{\fad(60,40)}{\kf32}works.
+Dialogue: 0,0:00:21.57,0:00:21.77,K,,0,0,0,,{\fad(60,40)}{\kf1}OK
+Dialogue: 0,0:00:21.79,0:00:22.57,K,,0,0,0,,{\fad(60,40)}{\kf1}now {\kf54}let's {\kf9}say {\kf12}you
+Dialogue: 0,0:00:22.57,0:00:23.41,K,,0,0,0,,{\fad(60,40)}{\kf16}do {\kf26}10 {\kf41}examples.
+Dialogue: 0,0:00:23.41,0:00:24.45,K,,0,0,0,,{\fad(60,40)}{\kf53}I {\kf12}have {\kf26}evidence {\kf11}of
+Dialogue: 0,0:00:24.45,0:00:25.79,K,,0,0,0,,{\fad(60,40)}{\kf12}10 {\kf37}examples.
+Dialogue: 0,0:00:25.81,0:00:26.25,K,,0,0,0,,{\fad(60,40)}{\kf2}And {\kf13}let's {\kf14}say {\kf14}you
+Dialogue: 0,0:00:26.25,0:00:28.93,K,,0,0,0,,{\fad(60,40)}{\kf80}do {\kf94}10 {\kf33}more {\kf60}examples
+Dialogue: 0,0:00:28.93,0:00:30.41,K,,0,0,0,,{\fad(60,40)}{\kf98}trying {\kf15}to {\kf15}think {\kf18}of
+Dialogue: 0,0:00:30.41,0:00:31.21,K,,0,0,0,,{\fad(60,40)}{\kf21}weird {\kf17}edge {\kf28}cases.
+Dialogue: 0,0:00:31.23,0:00:31.37,K,,0,0,0,,{\fad(60,40)}{\kf12}OK
+Dialogue: 0,0:00:31.39,0:00:32.05,K,,0,0,0,,{\fad(60,40)}{\kf15}now {\kf12}I {\kf11}have {\kf25}20
+Dialogue: 0,0:00:32.05,0:00:32.95,K,,0,0,0,,{\fad(60,40)}{\kf44}examples {\kf19}and {\kf16}some {\kf10}of
+Dialogue: 0,0:00:32.95,0:00:33.33,K,,0,0,0,,{\fad(60,40)}{\kf5}them {\kf14}have {\kf17}edge
+Dialogue: 0,0:00:33.33,0:00:35.43,K,,0,0,0,,{\fad(60,40)}{\kf30}cases.
+Dialogue: 0,0:00:35.45,0:00:35.93,K,,0,0,0,,{\fad(60,40)}{\kf48}OK
+Dialogue: 0,0:00:35.93,0:00:37.05,K,,0,0,0,,{\fad(60,40)}{\kf48}that's {\kf27}fine.
+Dialogue: 0,0:00:37.07,0:00:38.25,K,,0,0,0,,{\fad(60,40)}{\kf24}That's {\kf93}getting
+Dialogue: 0,0:00:38.25,0:00:40.29,K,,0,0,0,,{\fad(60,40)}{\kf32}better.
+Dialogue: 0,0:00:40.31,0:00:41.47,K,,0,0,0,,{\fad(60,40)}{\kf47}We're {\kf28}gaining {\kf39}more
+Dialogue: 0,0:00:41.47,0:00:42.59,K,,0,0,0,,{\fad(60,40)}{\kf53}confidence {\kf38}that {\kf20}this
+Dialogue: 0,0:00:42.59,0:00:44.67,K,,0,0,0,,{\fad(60,40)}{\kf32}function {\kf25}is {\kf33}correct.
+Dialogue: 0,0:00:44.69,0:00:45.75,K,,0,0,0,,{\fad(60,40)}{\kf12}But {\kf37}we {\kf20}really {\kf35}don't
+Dialogue: 0,0:00:45.75,0:00:46.45,K,,0,0,0,,{\fad(60,40)}{\kf34}know.
+Dialogue: 0,0:00:46.47,0:00:47.23,K,,0,0,0,,{\fad(60,40)}{\kf30}There's {\kf15}no {\kf29}proof
+Dialogue: 0,0:00:47.23,0:00:47.69,K,,0,0,0,,{\fad(60,40)}{\kf30}here.
+Dialogue: 0,0:00:47.71,0:00:48.19,K,,0,0,0,,{\fad(60,40)}{\kf10}We {\kf10}don't {\kf15}have {\kf11}a
+Dialogue: 0,0:00:48.19,0:00:48.49,K,,0,0,0,,{\fad(60,40)}{\kf22}proof.
+Dialogue: 0,0:00:48.51,0:00:50.83,K,,0,0,0,,{\fad(60,40)}{\kf8}We {\kf9}have {\kf40}evidence.
+Dialogue: 0,0:00:50.85,0:00:51.47,K,,0,0,0,,{\fad(60,40)}{\kf24}No {\kf37}mathematical
+Dialogue: 0,0:00:51.47,0:00:51.83,K,,0,0,0,,{\fad(60,40)}{\kf30}proof
+Dialogue: 0,0:00:51.85,0:00:52.43,K,,0,0,0,,{\fad(60,40)}{\kf10}no {\kf19}logical {\kf24}proof
+Dialogue: 0,0:00:52.45,0:00:53.09,K,,0,0,0,,{\fad(60,40)}{\kf23}just {\kf40}evidence.

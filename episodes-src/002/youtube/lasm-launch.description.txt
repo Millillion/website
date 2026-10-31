@@ -1,0 +1,6 @@
+I want to announce my project Lasm. Lasm allows Lean to run almost anywhere that JavaScript or WebAssembly runs today: the web browser, Node.js, serverless platforms like Netlify, Vercel and Cloudflare Workers, and edge platforms.
+
+From episode 2 of the Millillion podcast, "Formally Verify All Software".
+Full episode, transcript and blog post: https://millillion.org/podcast/002-formally-verify-all-software/
+
+Millillion: impossibly ambitious AI. https://millillion.org

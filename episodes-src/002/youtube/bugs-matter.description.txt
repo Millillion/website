@@ -1,0 +1,6 @@
+Sometimes it's just annoying, like some little thing wrong with the UI in my Instagram app or Twitter app. But what if it's your bank balance, a pacemaker, or a surgery that's only possible because of machines including computers? Writing software and verifying its correctness is incredibly important. It depends on the type of software, and you don't need absolute assurance for everything.
+
+From episode 2 of the Millillion podcast, "Formally Verify All Software".
+Full episode, transcript and blog post: https://millillion.org/podcast/002-formally-verify-all-software/
+
+Millillion: impossibly ambitious AI. https://millillion.org

@@ -19,3 +19,23 @@ Last MJS	lastmjs
 \b[Uu]m\b,? ?	
 \b[Uu]h\b,? ?	
 \b(\d\.\d) or 3 (\d\.\d)\b	\1 or \2
+\bMil+il+in\b	Millillion
+\bLastMJS\b	lastmjs
+\bcompile into Lozm\b	compile into Wasm
+\bat Lozm slash CLI\b	@lasm/cli
+\b(?:LOSM|Losm|Lozm|LASM)\b	Lasm
+\bWOSM\b	Wasm
+\bnot enough by one\b	not an off-by-one
+\bthat I follow for years\b	that I've followed for years
+\bI haven't for a long time\b	I have been for a long time
+\bInScript, and in Binaire\b	Emscripten, and Binaryen
+\bCloud Code\b	Claude Code
+\bHoNo\b	Hono
+\bBUN\b	Bun
+\bneed node that just snowed an NPM\b	need Node, just Node and npm
+\busing code and the lean for extension\b	using VS Code and the Lean 4 extension
+\bthat the proposition is natively\b	the propositions natively
+\b[Ee]dge [Pp]latforms\b	edge platforms
+\bF-sharp\b	F#
+\blean\b	Lean
+\bNPM\b	npm

@@ -15,7 +15,7 @@ export const SITE = {
 export const PROJECTS = [
   { slug: "lasm", name: "Lasm", repo: "Millillion/lasm", blurb: "Lean 4 compiled ahead of time to WebAssembly." },
   { slug: "proofscript", name: "ProofScript", repo: "Millillion/proofscript", blurb: "TypeScript with dependent types and formal verification." },
-  { slug: "ayeyaiyai", name: "AyeYaiYai", repo: "Millillion/ayeyaiyai", blurb: "An ahead-of-time compiler from JavaScript to WebAssembly." },
+  { slug: "wasmetal", name: "WasMetal", repo: "Millillion/wasmetal", blurb: "A WebAssembly CPU: a bare metal physical implementation of WebAssembly." },
 ];
 
 export const PODCAST = {

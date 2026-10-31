@@ -52,3 +52,5 @@ Run the `review-episode` skill. `python3 episodes-src/check_text.py NNN` must ex
 - Capitalize the first word of each caption group that starts a sentence.
 - Episode 1's first Short descriptions paraphrased Jordan and lost his hedges ("isn't equally capable everywhere" for "not necessarily the same level"), and the tags included topics he never discussed ("Claude Code", "AI hallucinations"). `check_text.py` now catches both.
 - Captions on paper alone are too plain to grow a channel (Jordan agreed). Lead with Shorts and illustrated chapters.
+- Episode 2: hooks of 3–4 lines collided with the fixed-position brush rule, and long 4-word caption groups ran off the frame edge. `make_short.py` now puts the rule under the hook and caps caption groups at about 20 characters.
+- Whisper small on a short clip can silently drop a sentence or a hedge ("kind of easy" became "easy"). Diff each Short's `.srt` against `raw.json` for the same range; if words are missing, nudge the clip's padding by a second or two and re-render (the transcription changes with the window).

@@ -68,3 +68,5 @@ Copy the media into a gitignored folder inside the session's working directory, 
 - Don't upload as Unlisted "to check first". Jordan expects Public.
 - Description links stay unclickable until the channel completes YouTube's one-time verification for advanced features. Jordan has to do that himself, since it involves identity checks. The Shorts "Related video" picker also wouldn't open ("You're all set… try refreshing") as of 2026-10-23. Once Jordan verifies, set each Short's Related video to the full episode.
 - The subtitles file input exists in the page as soon as "Upload file" is chosen, so `file_upload` works on it without clicking "Continue".
+- Episode 2: the upload dialog has no "Title and description language" field (only Video language). After publishing, open each video's edit page → Show more → set it to English → Save. In the language list, `scroll_to` the English option before clicking it, or the click can land on another language (it picked Abkhazian once).
+- The AI-use radio's visible text is just "Yes"/"No"; to read it back, list `tp-yt-paper-radio-button[checked]` texts rather than matching "AI wasn't used".

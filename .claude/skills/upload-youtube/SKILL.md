@@ -53,7 +53,11 @@ Copy the media into a gitignored folder inside the session's working directory, 
    - Category Science & Technology, languages English, paid promotion No, AI use No, not made for kids.
    - Visibility Public, Notices "—".
    - For the full video: Subtitles lists English, and the custom thumbnail is shown.
-4. On the public watch page (`youtube.com/watch?v=<id>`, or `/shorts/<id>`): the title shows, chapters appear on the progress bar, and the description links point to the right pages.
+4. On the public watch page (`youtube.com/watch?v=<id>`, or `/shorts/<id>`): the title shows, and the description links point to the right pages.
+5. **Chapters must be confirmed, not assumed.** "It just finished processing" is never an acceptable report. On a freshly loaded watch page, run `JSON.stringify(ytInitialData).match(/chapterRenderer/g)?.length` in `javascript_exec`; it must equal the number of timestamps in `full.description.txt`. Also check that the description's timestamps render as links. If they don't:
+   - First rule out the description format: first timestamp `00:00`, at least three, ascending, each chapter at least 10 seconds.
+   - Then check Studio → Settings → Channel → Feature eligibility. Chapters are an **Advanced feature**. If Advanced shows "Eligible" rather than "Enabled", chapters can't appear. Tell Jordan plainly that chapters are blocked until he completes the identity verification himself. Don't report the upload as done with chapters.
+   - If processing really is still running (no HD formats in `ytInitialPlayerResponse`), wait and recheck until the chapters are there. Don't hand back with "couldn't confirm".
 
 ## 4. After publishing
 - Add the full video's YouTube id to the episode's frontmatter (`youtube:` in `src/content/podcast/NNN-*.md`) so the page embeds it. Build, commit and push.
@@ -70,3 +74,4 @@ Copy the media into a gitignored folder inside the session's working directory, 
 - The subtitles file input exists in the page as soon as "Upload file" is chosen, so `file_upload` works on it without clicking "Continue".
 - Episode 2: the upload dialog has no "Title and description language" field (only Video language). After publishing, open each video's edit page → Show more → set it to English → Save. In the language list, `scroll_to` the English option before clicking it, or the click can land on another language (it picked Abkhazian once).
 - The AI-use radio's visible text is just "Yes"/"No"; to read it back, list `tp-yt-paper-radio-button[checked]` texts rather than matching "AI wasn't used".
+- Episode 2 (2026-10-31): no chapters on episode 1 or 2, even though the description timestamps are correct. Cause: the channel's Advanced features were only "Eligible", and "Add chapters" is an Advanced feature. I first reported "couldn't confirm, it just finished processing", and Jordan rightly rejected that. Always find the actual cause (step 3.5).

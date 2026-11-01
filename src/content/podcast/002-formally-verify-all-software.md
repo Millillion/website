@@ -6,6 +6,7 @@ audio: "https://audio.millillion.org/episodes/millillion-002.mp3"
 audioBytes: 28478976
 duration: "00:29:32"
 blog: "formally-verify-all-software"
+youtube: "vpFs70RWAIE"
 ---
 
 The second episode of the Millillion podcast.

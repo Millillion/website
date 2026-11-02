@@ -3,7 +3,9 @@
 // - readme: the latest commit touching each project's README.md (project pages)
 //   and the org profile README (the home page);
 // - content: the latest commit touching a project's Learn content (its
-//   manifest's directory and every directory the manifest lists).
+//   manifest's directory and every directory the manifest lists);
+// - npm: the latest published version of the project's npm package, which
+//   gates its release pages, so a new release appears once it publishes.
 // A changed pin is a commit to main, which Cloudflare Pages deploys, so README
 // and content edits reach the site within the hour.
 // Run by .github/workflows/sync-content.yml.
@@ -45,6 +47,11 @@ for (const project of PROJECTS) {
   if (project.learn) {
     const dir = project.learn.slice(0, project.learn.lastIndexOf("/")) || project.learn;
     pin(project.repo, "content", await latest(project.repo, [dir, ...(await manifestDirs(project))]));
+  }
+  if (project.npm) {
+    const res = await fetch(`https://registry.npmjs.org/${project.npm}`, { headers: { accept: "application/vnd.npm.install-v1+json" } });
+    if (!res.ok) throw new Error(`npm ${project.npm}: HTTP ${res.status}`);
+    pin(project.repo, "npm", (await res.json())["dist-tags"]?.latest);
   }
 }
 writeFileSync(file, JSON.stringify(pins, null, 2) + "\n");

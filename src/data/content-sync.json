@@ -3,12 +3,14 @@
     "readme": "fc4a1c8514497a6f2255d868d7cf84b46539898d"
   },
   "Millillion/lasm": {
-    "readme": "291b13d1f55541244b84e0cc81e4989aa47cec94"
+    "readme": "9b818131b98a907b7e939fb903aece498270ce94",
+    "content": "3b009d896a45c17497b41fec6df0ef7fb750d921",
+    "npm": "0.3.6"
   },
   "Millillion/proofscript": {
     "readme": "d3f556f4b35a43858cf753a880fdc397a850bc58"
   },
   "Millillion/wasmetal": {
-    "readme": "1a5485e2467c1e4e7588a6336d50f2eb829efceb"
+    "readme": "f6116398411bafb05568c262bc045d931729e206"
   }
 }

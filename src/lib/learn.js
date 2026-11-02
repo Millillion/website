@@ -39,12 +39,32 @@ async function text(url) {
   return body;
 }
 
-/** A project's pages, from its manifest; [] when it has none yet. */
+/** The versions of the project's npm package that are published, or null when it has none or npm is unreachable. */
+async function published(project) {
+  if (!project.npm) return null;
+  const key = `npm:${project.npm}`;
+  if (!cache.has(key)) {
+    const res = await fetch(`https://registry.npmjs.org/${project.npm}`, { headers: { accept: "application/vnd.npm.install-v1+json" } }).catch(() => null);
+    cache.set(key, res?.ok ? new Set(Object.keys((await res.json()).versions ?? {})) : null);
+  }
+  return cache.get(key);
+}
+
+/** A project's pages, from its manifest; [] when it has none yet. A release
+page appears only once its version is on npm (a version can be bumped, and
+its notes written, before it publishes, or never publish at all). */
 export async function learnPages(project) {
   if (!project.learn) return [];
   const body = await text(raw(project) + project.learn);
   if (!body) return [];
-  return (JSON.parse(body).pages ?? []).filter((p) => p.slug && p.title && p.path && p.kind);
+  const versions = await published(project);
+  return (JSON.parse(body).pages ?? [])
+    .filter((p) => p.slug && p.title && p.path && p.kind)
+    .filter((p) => {
+      if (p.kind !== "release" || !project.npm) return true;
+      const version = p.title.match(/(\d+\.\d+\.\d+\S*)/)?.[1];
+      return Boolean(versions && version && versions.has(version));
+    });
 }
 
 /** Every project's pages, newest first: [{ project, page }]. */

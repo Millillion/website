@@ -5,7 +5,8 @@ const posts = (await getCollection("blog", (p) => !p.data.draft)).sort((a, b) =>
 ---
 <Base title="Blog" description="Writing from Millillion.">
   <h1>Blog</h1>
-  {posts.length === 0 ? <p class="muted">The first post is on its way. <a href="/rss.xml">Subscribe via RSS</a>.</p> : (
+  <p><a class="cta" href="/rss.xml">RSS</a></p>
+  {posts.length === 0 ? <p class="muted">The first post is on its way.</p> : (
     <ul class="list">
       {posts.map((p) => <li><a href={`/blog/${p.id}/`}>{p.data.title}</a><span class="meta">{p.data.date.toLocaleDateString("en-US", { dateStyle: "long" })} · {p.data.description}</span></li>)}
     </ul>

@@ -9,7 +9,8 @@ for (const project of PROJECTS) if ((await learnPages(project)).length) hubs.pus
 ---
 <Base title="Learn" description="Tutorials, bugs our testing caught, proof spotlights and releases from Millillion's projects. AI-generated.">
   <h1>Learn</h1>
-  <p class="ai-note">{AI_NOTE} Tutorials are run in CI, so their commands work as written. <a href="/learn/rss.xml">RSS</a></p>
+  <p class="ai-note">{AI_NOTE} Tutorials are run in CI, so their commands work as written.</p>
+  <p><a class="cta" href="/learn/rss.xml">RSS</a></p>
   {hubs.length > 1 && <p class="muted">By project: {hubs.map((p, i) => <>{i > 0 && " · "}<a href={learnUrl(p)}>{p.name}</a></>)}</p>}
   {items.length === 0 ? <p class="muted">The first pages are on their way.</p> : (
     <ul class="list">

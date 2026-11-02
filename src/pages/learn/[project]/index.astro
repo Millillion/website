@@ -21,6 +21,7 @@ const byKind = (kind) =>
   <p class="muted"><a href="/learn/">Learn</a></p>
   <h1>Learn {project.name}</h1>
   <p class="ai-note">{AI_NOTE} Tutorials are run in CI, so their commands work as written.</p>
+  <p><a class="cta" href="/learn/rss.xml">RSS</a></p>
   {KINDS.map(([kind, label]) => {
     const list = byKind(kind);
     return list.length > 0 && (

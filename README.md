@@ -4,20 +4,27 @@ The Millillion website: home, projects, blog, podcast, meetup and support. It's 
 
 ## Single source of truth
 - **Home page** = the org profile README in [Millillion/.github](https://github.com/Millillion/.github/blob/main/profile/README.md).
-- **Project pages** = each project's own README, fetched from GitHub at build time.
+- **Project pages** = the opening of each project's own README (everything before its first `##` section), fetched from GitHub at build time, with a link to the full README.
 
-To change those pages, edit the README on GitHub and rebuild. Don't copy the text into this repo.
+To change those pages, edit the README on GitHub; the site picks it up within the hour (see Staying in sync). Don't copy the text into this repo.
 
 ## Content
 - Blog posts: `src/content/blog/<slug>.md` with frontmatter `title`, `date`, `description` (and optional `draft: true`).
 - Podcast episodes: `src/content/podcast/<slug>.md` with `title`, `date`, `description`, `audio` (R2 URL), `audioBytes`, `duration` ("HH:MM:SS"), and optional `youtube` (video id) and `blog` (companion post slug). The body holds show notes and the transcript.
 
-## Learn sections (AI-generated, per project)
-- A project with `learn` in `src/site.js` gets `/projects/<slug>/learn/`: tutorials, bugs caught, proof spotlights, platforms and releases.
+## Learn (AI-generated, per project)
+- `/learn/` is its own stream, next to Blog and Podcast. It holds tutorials, bugs caught, proof spotlights, platforms and releases from every project with `learn` in `src/site.js`. Each project also has a hub at `/learn/<slug>/` and an RSS feed at `/learn/rss.xml`.
 - The content lives in the project's own repo. Its manifest (Lasm: `content/index.json`) lists the pages, and Claude writes and publishes them automatically.
 - Every page says it is AI-generated.
-- `sync-content.yml` runs hourly. It pins each project's latest content commit in `src/data/content-sync.json`, and that commit redeploys the site.
 - To preview a project's content from disk: `LEARN_LOCAL=/path/to/checkout npm run build`.
+
+## Staying in sync
+`sync-content.yml` runs hourly. It pins, in `src/data/content-sync.json`, the latest commit of:
+- each project's README;
+- the org profile README;
+- each project's Learn content.
+
+A changed pin is a commit, and that commit redeploys the site, so edits on GitHub show here within the hour.
 
 ## Feeds
 - `/rss.xml`: the blog feed.
@@ -33,7 +40,7 @@ npm run build
 ## Deploy (Cloudflare Pages)
 - Build command: `npm run build`
 - Output directory: `dist`
-- Rebuild on pushes to this repo. Add a deploy hook so README edits elsewhere also trigger a rebuild.
+- Rebuild on pushes to this repo. README and content edits elsewhere arrive as `sync-content` commits.
 
 ## AI skills (how episodes and posts are made)
 - [`publish-episode`](.claude/skills/publish-episode/SKILL.md): a raw recording becomes a mastered episode, transcript, blog post, and is published.

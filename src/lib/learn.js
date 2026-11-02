@@ -1,11 +1,13 @@
 import { readFile } from "node:fs/promises";
 import { marked } from "marked";
-import sync from "../data/content-sync.json";
+import pins from "../data/content-sync.json";
+import { PROJECTS } from "../site.js";
 
-// A project's educational content lives in its own repo (the single source of
-// truth); `learn` names a manifest there. The commit is pinned in
-// src/data/content-sync.json by the sync-content workflow, so a build is
-// reproducible and a content change is a commit here, which redeploys the site.
+// Learn: AI-generated educational content, one stream across projects. Each
+// project keeps its content in its own repo (the single source of truth);
+// `learn` in src/site.js names its manifest. Content is fetched at the commit
+// the sync-content workflow pinned, so a content change is a commit here,
+// which redeploys the site.
 
 const cache = new Map();
 
@@ -17,8 +19,9 @@ export const KINDS = [
   ["platform", "Platforms"],
   ["release", "Releases"],
 ];
+export const kindLabel = (kind) => KINDS.find(([k]) => k === kind)?.[1] ?? kind;
 
-const ref = (project) => sync[project.repo] ?? "main";
+const ref = (project) => pins[project.repo]?.content ?? "main";
 const raw = (project) => `https://raw.githubusercontent.com/${project.repo}/${ref(project)}/`;
 
 // LEARN_LOCAL=/path/to/checkout previews a project's content from disk.
@@ -36,13 +39,19 @@ async function text(url) {
   return body;
 }
 
-/** The project's pages, from its manifest; [] when it has none yet. */
+/** A project's pages, from its manifest; [] when it has none yet. */
 export async function learnPages(project) {
   if (!project.learn) return [];
   const body = await text(raw(project) + project.learn);
   if (!body) return [];
-  const pages = JSON.parse(body).pages ?? [];
-  return pages.filter((p) => p.slug && p.title && p.path && p.kind);
+  return (JSON.parse(body).pages ?? []).filter((p) => p.slug && p.title && p.path && p.kind);
+}
+
+/** Every project's pages, newest first: [{ project, page }]. */
+export async function allLearn() {
+  const all = [];
+  for (const project of PROJECTS) for (const page of await learnPages(project)) all.push({ project, page });
+  return all.sort((a, b) => String(b.page.date).localeCompare(String(a.page.date)));
 }
 
 /** One page rendered to HTML: frontmatter removed, relative links made absolute. */
@@ -50,15 +59,18 @@ export async function learnHtml(project, page) {
   const md = await text(raw(project) + page.path);
   if (md === null) return null;
   const dir = page.path.includes("/") ? page.path.slice(0, page.path.lastIndexOf("/") + 1) : "";
-  const blob = `https://github.com/${project.repo}/blob/${ref(project)}/`;
-  let html = await marked.parse(md.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, ""));
+  const blob = `https://github.com/${project.repo}/blob/main/`;
+  const html = await marked.parse(md.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, ""));
   return html
     .replace(/(src|srcset)="(?!https?:|#|\/\/|data:)([^"]+)"/g, (_, a, p) => `${a}="${raw(project)}${dir}${p}"`)
     .replace(/href="(?!https?:|#|\/\/|mailto:)([^"]+)"/g, (_, p) => `href="${new URL(p, blob + dir)}"`);
 }
 
-export const sourceUrl = (project, page) => `https://github.com/${project.repo}/blob/${ref(project)}/${page.path}`;
-
+export const learnUrl = (project, page) => (page ? `/learn/${project.slug}/${page.slug}/` : `/learn/${project.slug}/`);
+export const sourceUrl = (project, page) => `https://github.com/${project.repo}/blob/main/${page.path}`;
 export const feedbackUrl = (project, page) =>
   `https://github.com/${project.repo}/issues/new?` +
-  new URLSearchParams({ title: `Content: ${page.title}`, body: `Page: https://millillion.org/projects/${project.slug}/learn/${page.slug}/\n\n` });
+  new URLSearchParams({ title: `Learn: ${page.title}`, body: `Page: https://millillion.org${learnUrl(project, page)}\n\n` });
+
+export const AI_NOTE =
+  "AI-generated: written by AI (Claude) from each project's repository and its CI results, and published automatically.";

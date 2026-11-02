@@ -3,6 +3,7 @@ import Base from "../layouts/Base.astro";
 import { readmeHtml } from "../lib/github.js";
 import { getCollection } from "astro:content";
 import { SITE } from "../site.js";
+import { allLearn, learnUrl, kindLabel } from "../lib/learn.js";
 
 // The home page IS the GitHub org profile README (Millillion/.github/profile/README.md).
 let html = await readmeHtml("Millillion/.github", "profile/README.md");
@@ -11,6 +12,7 @@ html = (html ?? "")
   .replace(/<p align="center">\s*<picture>[\s\S]*?<\/picture>\s*<\/p>/, "")
   .replace(/<h3 align="center">[\s\S]*?<\/h3>/, ""); // the hero carries the tagline
 const posts = (await getCollection("blog", (p) => !p.data.draft)).sort((a, b) => b.data.date - a.data.date).slice(0, 3);
+const learn = (await allLearn()).slice(0, 3);
 const episodes = (await getCollection("podcast", (p) => !p.data.draft)).sort((a, b) => b.data.date - a.data.date).slice(0, 3);
 ---
 <Base>
@@ -32,6 +34,14 @@ const episodes = (await getCollection("podcast", (p) => !p.data.draft)).sort((a,
       <h2>Latest writing</h2>
       <ul class="list">
         {posts.map((p) => <li><a href={`/blog/${p.id}/`}>{p.data.title}</a><span class="meta">{p.data.date.toLocaleDateString("en-US", { dateStyle: "long" })}</span></li>)}
+      </ul>
+    </section>
+  )}
+  {learn.length > 0 && (
+    <section>
+      <h2>Latest in Learn</h2>
+      <ul class="list">
+        {learn.map(({ project, page }) => <li><a href={learnUrl(project, page)}>{page.title}</a><span class="meta">{project.name} · {kindLabel(page.kind)} · AI-generated</span></li>)}
       </ul>
     </section>
   )}

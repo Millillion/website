@@ -1,0 +1,36 @@
+---
+import Base from "../../../layouts/Base.astro";
+import { PROJECTS } from "../../../site.js";
+import { learnPages, learnUrl, KINDS, AI_NOTE } from "../../../lib/learn.js";
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const project of PROJECTS) {
+    const pages = await learnPages(project);
+    if (pages.length) paths.push({ params: { project: project.slug }, props: { project, pages } });
+  }
+  return paths;
+}
+const { project, pages } = Astro.props;
+const byKind = (kind) =>
+  pages
+    .filter((p) => p.kind === kind)
+    .sort((a, b) => (kind === "tutorial" ? (a.order ?? 99) - (b.order ?? 99) : String(b.date).localeCompare(String(a.date))));
+---
+<Base title={`Learn ${project.name}`} description={`Tutorials, bugs our testing caught, proofs and releases for ${project.name}. AI-generated.`}>
+  <p class="muted"><a href="/learn/">Learn</a></p>
+  <h1>Learn {project.name}</h1>
+  <p class="ai-note">{AI_NOTE} Tutorials are run in CI, so their commands work as written.</p>
+  {KINDS.map(([kind, label]) => {
+    const list = byKind(kind);
+    return list.length > 0 && (
+      <section>
+        <h2>{label}</h2>
+        <ul class="list">
+          {list.map((p) => <li><a href={learnUrl(project, p)}>{p.title}</a><span class="meta">{p.date}{p.description ? ` · ${p.description}` : ""}</span></li>)}
+        </ul>
+      </section>
+    );
+  })}
+  <div class="box"><a class="cta" href={`/projects/${project.slug}/`}>About {project.name}</a><a class="cta" href={`https://github.com/${project.repo}`}>View on GitHub</a></div>
+</Base>

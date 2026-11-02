@@ -1,17 +1,20 @@
 ---
 import Base from "../../layouts/Base.astro";
-import { PROJECTS, SITE } from "../../site.js";
-import { readmeHtml } from "../../lib/github.js";
-import { learnPages } from "../../lib/learn.js";
+import { PROJECTS } from "../../site.js";
+import { readmeOpeningHtml, readmeUrl } from "../../lib/github.js";
+import { learnPages, learnUrl, kindLabel } from "../../lib/learn.js";
 
 export function getStaticPaths() {
   return PROJECTS.map((p) => ({ params: { slug: p.slug }, props: { project: p } }));
 }
 const { project } = Astro.props;
-// The page body IS the project's README on GitHub; it is re-fetched on every build.
-const html = await readmeHtml(project.repo);
-const learn = (await learnPages(project)).length > 0;
+// The page opens with the README's opening (everything before its first `##`
+// section), the project's hook, kept in sync with GitHub by sync-content.
+const html = await readmeOpeningHtml(project.repo);
 const substantial = html && html.replace(/<[^>]+>/g, "").trim().length > 80;
+const learn = (await learnPages(project))
+  .sort((a, b) => String(b.date).localeCompare(String(a.date)))
+  .slice(0, 5);
 ---
 <Base title={project.name} description={project.blurb}>
   {substantial ? (
@@ -19,9 +22,18 @@ const substantial = html && html.replace(/<[^>]+>/g, "").trim().length > 80;
   ) : (
     <article class="prose"><h1>{project.name}</h1><p>{project.blurb}</p><p class="muted">More soon.</p></article>
   )}
+  <p><a href={readmeUrl(project.repo)}>Read the full README on GitHub →</a></p>
+  {learn.length > 0 && (
+    <section>
+      <h2>Learn {project.name}</h2>
+      <ul class="list">
+        {learn.map((p) => <li><a href={learnUrl(project, p)}>{p.title}</a><span class="meta">{kindLabel(p.kind)} · {p.date}</span></li>)}
+      </ul>
+      <p><a href={learnUrl(project)}>Everything in Learn {project.name} →</a> <span class="muted">(AI-generated)</span></p>
+    </section>
+  )}
   <div class="box">
     <p><strong>{project.name}</strong> is part of Millillion: impossibly ambitious, open-source software built with AI.</p>
-    {learn && <a class="cta" href={`/projects/${project.slug}/learn/`}>Learn {project.name}</a>}
     <a class="cta" href={`https://github.com/${project.repo}`}>View on GitHub</a>
     <a class="cta primary" href="/support/">Support Millillion</a>
   </div>

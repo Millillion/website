@@ -7,6 +7,7 @@ const fullTitle = title ? `${title} · ${SITE.name}` : `${SITE.name}: ${SITE.tag
 const path = Astro.url.pathname;
 const nav = [
   ["/projects/", "Projects"],
+  ["/learn/", "Learn"],
   ["/blog/", "Blog"],
   ["/podcast/", "Podcast"],
   ["/meetup/", "Meetup"],
@@ -29,6 +30,7 @@ const canonical = new URL(path, Astro.site);
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="alternate" type="application/rss+xml" title="Millillion blog" href="/rss.xml" />
     <link rel="alternate" type="application/rss+xml" title="Millillion podcast" href="/podcast.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Millillion: Learn" href="/learn/rss.xml" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(image, Astro.site)} />

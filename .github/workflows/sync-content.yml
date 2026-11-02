@@ -1,7 +1,4 @@
-# Projects keep their educational content in their own repos (src/site.js
-# `learn`). Every hour this pins each project's latest commit that touched its
-# content in src/data/content-sync.json; a change is a commit to main here,
-# which Cloudflare Pages deploys. The site never copies the content itself.
+# Pins the README and Learn-content commits the site renders (scripts/sync-content.mjs).
 name: sync-content
 on:
   schedule: [{ cron: "17 * * * *" }]
@@ -25,5 +22,5 @@ jobs:
           git diff --quiet && { echo "content unchanged"; exit 0; }
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -am "Sync project content: $(node -e 'console.log(Object.entries(require("./src/data/content-sync.json")).map(([r,s])=>r+"@"+s.slice(0,7)).join(", "))')"
+          git commit -am "Sync READMEs and project content"
           git push

@@ -1,0 +1,21 @@
+---
+import Base from "../../layouts/Base.astro";
+import { PROJECTS } from "../../site.js";
+import { allLearn, learnPages, learnUrl, kindLabel, AI_NOTE } from "../../lib/learn.js";
+
+const items = await allLearn();
+const hubs = [];
+for (const project of PROJECTS) if ((await learnPages(project)).length) hubs.push(project);
+---
+<Base title="Learn" description="Tutorials, bugs our testing caught, proof spotlights and releases from Millillion's projects. AI-generated.">
+  <h1>Learn</h1>
+  <p class="ai-note">{AI_NOTE} Tutorials are run in CI, so their commands work as written. <a href="/learn/rss.xml">RSS</a></p>
+  {hubs.length > 1 && <p class="muted">By project: {hubs.map((p, i) => <>{i > 0 && " · "}<a href={learnUrl(p)}>{p.name}</a></>)}</p>}
+  {items.length === 0 ? <p class="muted">The first pages are on their way.</p> : (
+    <ul class="list">
+      {items.map(({ project, page }) => (
+        <li><a href={learnUrl(project, page)}>{page.title}</a><span class="meta"><a href={learnUrl(project)}>{project.name}</a> · {kindLabel(page.kind)} · {page.date}{page.description ? ` · ${page.description}` : ""}</span></li>
+      ))}
+    </ul>
+  )}
+</Base>

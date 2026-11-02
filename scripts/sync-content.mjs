@@ -1,5 +1,12 @@
-// Pins, per project with `learn` content (src/site.js), the latest commit on
-// main that touched the manifest's directory. Run by .github/workflows/sync-content.yml.
+// Pins the commits the site renders, in src/data/content-sync.json:
+//   { "<repo>": { "readme": sha, "content": sha } }
+// - readme: the latest commit touching each project's README.md (project pages)
+//   and the org profile README (the home page);
+// - content: the latest commit touching a project's Learn content (its
+//   manifest's directory and every directory the manifest lists).
+// A changed pin is a commit to main, which Cloudflare Pages deploys, so README
+// and content edits reach the site within the hour.
+// Run by .github/workflows/sync-content.yml.
 import { readFileSync, writeFileSync } from "node:fs";
 import { PROJECTS } from "../src/site.js";
 
@@ -7,27 +14,37 @@ const file = new URL("../src/data/content-sync.json", import.meta.url);
 const pins = JSON.parse(readFileSync(file, "utf8"));
 const headers = { accept: "application/vnd.github+json", ...(process.env.GH_TOKEN && { authorization: `Bearer ${process.env.GH_TOKEN}` }) };
 
-for (const project of PROJECTS.filter((p) => p.learn)) {
-  const dir = project.learn.slice(0, project.learn.lastIndexOf("/")) || project.learn;
-  // The manifest lists files outside its directory too (release notes), so pin the
-  // latest commit to either.
-  const latest = [];
-  for (const path of [dir, ...(await manifestPaths(project))]) {
-    const res = await fetch(`https://api.github.com/repos/${project.repo}/commits?sha=main&per_page=1&path=${encodeURIComponent(path)}`, { headers });
-    if (!res.ok) throw new Error(`${project.repo} ${path}: HTTP ${res.status}`);
+async function latest(repo, paths) {
+  let best = null;
+  for (const path of paths) {
+    const res = await fetch(`https://api.github.com/repos/${repo}/commits?sha=main&per_page=1&path=${encodeURIComponent(path)}`, { headers });
+    if (!res.ok) throw new Error(`${repo} ${path}: HTTP ${res.status}`);
     const [commit] = await res.json();
-    if (commit) latest.push({ sha: commit.sha, date: commit.commit.committer.date });
+    if (commit && (!best || commit.commit.committer.date > best.date)) best = { sha: commit.sha, date: commit.commit.committer.date };
   }
-  if (!latest.length) continue;
-  latest.sort((a, b) => b.date.localeCompare(a.date));
-  if (pins[project.repo] !== latest[0].sha) console.log(`${project.repo}: ${pins[project.repo] ?? "(none)"} -> ${latest[0].sha}`);
-  pins[project.repo] = latest[0].sha;
+  return best?.sha;
 }
-writeFileSync(file, JSON.stringify(pins, null, 2) + "\n");
 
-async function manifestPaths(project) {
+async function manifestDirs(project) {
   const res = await fetch(`https://raw.githubusercontent.com/${project.repo}/main/${project.learn}`);
   if (!res.ok) return [];
-  const dirs = new Set((await res.json()).pages?.map((p) => p.path.slice(0, p.path.lastIndexOf("/"))).filter(Boolean));
-  return [...dirs];
+  const pages = (await res.json()).pages ?? [];
+  return [...new Set(pages.map((p) => p.path.slice(0, p.path.lastIndexOf("/"))).filter(Boolean))];
 }
+
+function pin(repo, key, sha) {
+  if (!sha) return;
+  pins[repo] ??= {};
+  if (pins[repo][key] !== sha) console.log(`${repo} ${key}: ${pins[repo][key] ?? "(none)"} -> ${sha}`);
+  pins[repo][key] = sha;
+}
+
+pin("Millillion/.github", "readme", await latest("Millillion/.github", ["profile/README.md"]));
+for (const project of PROJECTS) {
+  pin(project.repo, "readme", await latest(project.repo, ["README.md"]));
+  if (project.learn) {
+    const dir = project.learn.slice(0, project.learn.lastIndexOf("/")) || project.learn;
+    pin(project.repo, "content", await latest(project.repo, [dir, ...(await manifestDirs(project))]));
+  }
+}
+writeFileSync(file, JSON.stringify(pins, null, 2) + "\n");

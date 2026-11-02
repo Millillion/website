@@ -20,7 +20,7 @@ const kind = KINDS.find(([k]) => k === page.kind)?.[1] ?? page.kind;
   <p class="muted"><a href={`/projects/${project.slug}/learn/`}>Learn {project.name}</a> · {kind}{page.date ? ` · ${page.date}` : ""}</p>
   <p class="ai-note">
     <strong>AI-generated.</strong> Written by AI (Claude) from the {project.name} repository and published
-    automatically; Jordan reviews pages after they go live. <a href={sourceUrl(project, page)}>Source</a> ·
+    automatically. <a href={sourceUrl(project, page)}>Source</a> ·
     <a href={feedbackUrl(project, page)}>Report a mistake</a>
   </p>
   <article class="prose" set:html={html} />

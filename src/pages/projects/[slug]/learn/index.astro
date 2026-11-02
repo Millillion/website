@@ -1,0 +1,39 @@
+---
+import Base from "../../../../layouts/Base.astro";
+import { PROJECTS } from "../../../../site.js";
+import { learnPages, KINDS } from "../../../../lib/learn.js";
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const project of PROJECTS.filter((p) => p.learn)) {
+    const pages = await learnPages(project);
+    if (pages.length) paths.push({ params: { slug: project.slug }, props: { project, pages } });
+  }
+  return paths;
+}
+const { project, pages } = Astro.props;
+const byKind = (kind) =>
+  pages
+    .filter((p) => p.kind === kind)
+    .sort((a, b) => (kind === "tutorial" ? (a.order ?? 99) - (b.order ?? 99) : String(b.date).localeCompare(String(a.date))));
+---
+<Base title={`Learn ${project.name}`} description={`Tutorials, bugs caught, proofs and releases for ${project.name}.`}>
+  <h1>Learn {project.name}</h1>
+  <p class="ai-note">
+    Everything in this section is <strong>AI-generated</strong>: written by AI (Claude) from the {project.name}
+    repository and its CI results, and published automatically. Jordan reviews it after it goes live.
+    Tutorials are run in CI, so their commands work as written.
+  </p>
+  {KINDS.map(([kind, label]) => {
+    const list = byKind(kind);
+    return list.length > 0 && (
+      <section>
+        <h2>{label}</h2>
+        <ul class="list">
+          {list.map((p) => <li><a href={`/projects/${project.slug}/learn/${p.slug}/`}>{p.title}</a><span class="meta">{p.date}{p.description ? ` · ${p.description}` : ""}</span></li>)}
+        </ul>
+      </section>
+    );
+  })}
+  <div class="box"><a class="cta" href={`/projects/${project.slug}/`}>About {project.name}</a><a class="cta primary" href="/support/">Support Millillion</a></div>
+</Base>

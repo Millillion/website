@@ -1,0 +1,34 @@
+---
+import Base from "../../../../layouts/Base.astro";
+import { PROJECTS } from "../../../../site.js";
+import { learnPages, learnHtml, sourceUrl, feedbackUrl, KINDS } from "../../../../lib/learn.js";
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const project of PROJECTS.filter((p) => p.learn)) {
+    for (const page of await learnPages(project)) {
+      const html = await learnHtml(project, page);
+      if (html) paths.push({ params: { slug: project.slug, page: page.slug }, props: { project, page, html } });
+    }
+  }
+  return paths;
+}
+const { project, page, html } = Astro.props;
+const kind = KINDS.find(([k]) => k === page.kind)?.[1] ?? page.kind;
+---
+<Base title={page.title} description={page.description}>
+  <p class="muted"><a href={`/projects/${project.slug}/learn/`}>Learn {project.name}</a> · {kind}{page.date ? ` · ${page.date}` : ""}</p>
+  <p class="ai-note">
+    <strong>AI-generated.</strong> Written by AI (Claude) from the {project.name} repository and published
+    automatically; Jordan reviews pages after they go live. <a href={sourceUrl(project, page)}>Source</a> ·
+    <a href={feedbackUrl(project, page)}>Report a mistake</a>
+  </p>
+  <article class="prose" set:html={html} />
+  {page.sources?.length > 0 && (
+    <div class="box">
+      <h2>Sources</h2>
+      <ul>{page.sources.map((s) => <li><a href={s}>{s.replace(/^https?:\/\/(www\.)?/, "")}</a></li>)}</ul>
+    </div>
+  )}
+  <div class="box"><a class="cta" href={`/projects/${project.slug}/learn/`}>More from Learn {project.name}</a><a class="cta primary" href="/support/">Support Millillion</a></div>
+</Base>

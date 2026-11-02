@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import { PROJECTS, SITE } from "../../site.js";
 import { readmeHtml } from "../../lib/github.js";
+import { learnPages } from "../../lib/learn.js";
 
 export function getStaticPaths() {
   return PROJECTS.map((p) => ({ params: { slug: p.slug }, props: { project: p } }));
@@ -9,6 +10,7 @@ export function getStaticPaths() {
 const { project } = Astro.props;
 // The page body IS the project's README on GitHub; it is re-fetched on every build.
 const html = await readmeHtml(project.repo);
+const learn = (await learnPages(project)).length > 0;
 const substantial = html && html.replace(/<[^>]+>/g, "").trim().length > 80;
 ---
 <Base title={project.name} description={project.blurb}>
@@ -19,6 +21,7 @@ const substantial = html && html.replace(/<[^>]+>/g, "").trim().length > 80;
   )}
   <div class="box">
     <p><strong>{project.name}</strong> is part of Millillion: impossibly ambitious, open-source software built with AI.</p>
+    {learn && <a class="cta" href={`/projects/${project.slug}/learn/`}>Learn {project.name}</a>}
     <a class="cta" href={`https://github.com/${project.repo}`}>View on GitHub</a>
     <a class="cta primary" href="/support/">Support Millillion</a>
   </div>

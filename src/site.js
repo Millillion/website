@@ -12,8 +12,10 @@ export const SITE = {
 };
 
 // Each project page renders the project's own README from GitHub at build time.
+// `learn`: the project's AI-generated educational content (a manifest in its repo),
+// published under /projects/<slug>/learn/ (src/lib/learn.js).
 export const PROJECTS = [
-  { slug: "lasm", name: "Lasm", repo: "Millillion/lasm", blurb: "Lean 4 compiled ahead of time to WebAssembly." },
+  { slug: "lasm", name: "Lasm", repo: "Millillion/lasm", blurb: "Lean 4 compiled ahead of time to WebAssembly.", learn: "content/index.json" },
   { slug: "proofscript", name: "ProofScript", repo: "Millillion/proofscript", blurb: "TypeScript with dependent types and formal verification." },
   { slug: "wasmetal", name: "WasMetal", repo: "Millillion/wasmetal", blurb: "A WebAssembly CPU: a bare metal physical implementation of WebAssembly." },
 ];

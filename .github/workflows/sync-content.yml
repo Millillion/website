@@ -1,0 +1,29 @@
+# Projects keep their educational content in their own repos (src/site.js
+# `learn`). Every hour this pins each project's latest commit that touched its
+# content in src/data/content-sync.json; a change is a commit to main here,
+# which Cloudflare Pages deploys. The site never copies the content itself.
+name: sync-content
+on:
+  schedule: [{ cron: "17 * * * *" }]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: sync-content, cancel-in-progress: false }
+jobs:
+  sync:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+      - name: Pin each project's latest content commit
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: node scripts/sync-content.mjs
+      - name: Commit if anything changed
+        run: |
+          git diff --quiet && { echo "content unchanged"; exit 0; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Sync project content: $(node -e 'console.log(Object.entries(require("./src/data/content-sync.json")).map(([r,s])=>r+"@"+s.slice(0,7)).join(", "))')"
+          git push

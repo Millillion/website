@@ -12,6 +12,13 @@ To change those pages, edit the README on GitHub and rebuild. Don't copy the tex
 - Blog posts: `src/content/blog/<slug>.md` with frontmatter `title`, `date`, `description` (and optional `draft: true`).
 - Podcast episodes: `src/content/podcast/<slug>.md` with `title`, `date`, `description`, `audio` (R2 URL), `audioBytes`, `duration` ("HH:MM:SS"), and optional `youtube` (video id) and `blog` (companion post slug). The body holds show notes and the transcript.
 
+## Learn sections (AI-generated, per project)
+- A project with `learn` in `src/site.js` gets `/projects/<slug>/learn/`: tutorials, bugs caught, proof spotlights, platforms and releases.
+- The content lives in the project's own repo. Its manifest (Lasm: `content/index.json`) lists the pages, and Claude writes and publishes them automatically.
+- Every page says it is AI-generated. Jordan reviews pages after they go live.
+- `sync-content.yml` runs hourly. It pins each project's latest content commit in `src/data/content-sync.json`, and that commit redeploys the site.
+- To preview a project's content from disk: `LEARN_LOCAL=/path/to/checkout npm run build`.
+
 ## Feeds
 - `/rss.xml`: the blog feed.
 - `/podcast.xml`: the podcast feed, the URL submitted to Apple Podcasts and Spotify.

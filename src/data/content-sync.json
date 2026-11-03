@@ -4,13 +4,13 @@
   },
   "Millillion/lasm": {
     "readme": "31d3f1bf8e9b88ef8a0548582631c02a5b7be3c3",
-    "content": "31d3f1bf8e9b88ef8a0548582631c02a5b7be3c3",
+    "content": "bb3b5a3e78d57c99eb68e78ec725b021e0edce45",
     "npm": "0.3.9"
   },
   "Millillion/proofscript": {
     "readme": "e54ccb585a36e7b0ab69c9f018efd8870ef481a9"
   },
   "Millillion/wasmetal": {
-    "readme": "c21a7bee814b0e6460d8dfb21d1be1b9a6f6a899"
+    "readme": "11674d60bda811963ceb857ad174e6fd255b23bc"
   }
 }

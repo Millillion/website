@@ -13,7 +13,13 @@ To change those pages, edit the README on GitHub; the site picks it up within th
 - Podcast episodes: `src/content/podcast/<slug>.md` with `title`, `date`, `description`, `audio` (R2 URL), `audioBytes`, `duration` ("HH:MM:SS"), and optional `youtube` (video id) and `blog` (companion post slug). The body holds show notes and the transcript.
 
 ## Learn (AI-generated, per project)
-- `/learn/` is its own stream, next to Blog and Podcast. It holds tutorials, bugs caught, proof spotlights, platforms and releases from every project with `learn` in `src/site.js`. Each project also has a hub at `/learn/<slug>/` and an RSS feed at `/learn/rss.xml`.
+- `/learn/` is its own section, next to Blog and Podcast. It covers every project with `learn` in `src/site.js`.
+- **Streams.** `/learn/` is split into four streams, set by each page's `kind` (`STREAMS` in `src/lib/learn.js`). Each stream has its own page at `/learn/<stream>/` and its own feed at `/learn/<stream>/rss.xml`:
+  - Tutorials: `overview` (pinned as "Start here") and `tutorial`;
+  - Proofs: `proof-spotlight`;
+  - Testing: `bug-caught` and `platform`;
+  - Releases: `release`.
+- `/learn/rss.xml` has everything. Each project also has a hub at `/learn/<project>/`. Page URLs are `/learn/<project>/<slug>/` whatever the stream.
 - The content lives in the project's own repo. Its manifest (Lasm: `content/index.json`) lists the pages, and Claude writes and publishes them automatically.
 - Every page says it is AI-generated.
 - To preview a project's content from disk: `LEARN_LOCAL=/path/to/checkout npm run build`.

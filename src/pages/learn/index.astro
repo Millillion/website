@@ -1,22 +1,31 @@
 ---
 import Base from "../../layouts/Base.astro";
 import { PROJECTS } from "../../site.js";
-import { allLearn, learnPages, learnUrl, kindLabel, AI_NOTE } from "../../lib/learn.js";
+import { STREAMS, streamItems, streamUrl, learnPages, learnUrl, kindLabel, AI_NOTE } from "../../lib/learn.js";
 
-const items = await allLearn();
+const SHOWN = 3;
+const streams = [];
+for (const stream of STREAMS) streams.push({ stream, items: await streamItems(stream) });
 const hubs = [];
 for (const project of PROJECTS) if ((await learnPages(project)).length) hubs.push(project);
 ---
-<Base title="Learn" description="Tutorials, bugs our testing caught, proof spotlights and releases from Millillion's projects. AI-generated.">
+<Base title="Learn" description="Tutorials, proofs, testing write-ups and releases from Millillion's projects. AI-generated.">
   <h1>Learn</h1>
   <p class="ai-note">{AI_NOTE} Tutorials are run in CI, so their commands work as written.</p>
-  <p><a class="cta" href="/learn/rss.xml">RSS</a></p>
-  {hubs.length > 1 && <p class="muted">By project: {hubs.map((p, i) => <>{i > 0 && " · "}<a href={learnUrl(p)}>{p.name}</a></>)}</p>}
-  {items.length === 0 ? <p class="muted">The first pages are on their way.</p> : (
-    <ul class="list">
-      {items.map(({ project, page }) => (
-        <li><a href={learnUrl(project, page)}>{page.title}</a><span class="meta"><a href={learnUrl(project)}>{project.name}</a> · {kindLabel(page.kind)} · {page.date}{page.description ? ` · ${page.description}` : ""}</span></li>
-      ))}
-    </ul>
-  )}
+  <p><a class="cta" href="/learn/rss.xml">RSS</a> <span class="muted">Everything in Learn. Each stream below also has its own feed.</span></p>
+  <p class="muted">Streams: {STREAMS.map((s, i) => <>{i > 0 && " · "}<a href={streamUrl(s)}>{s.name}</a></>)}{hubs.length > 1 && <> · By project: {hubs.map((p, i) => <>{i > 0 && " · "}<a href={learnUrl(p)}>{p.name}</a></>)}</>}</p>
+  {streams.map(({ stream, items }) => (
+    <section>
+      <h2><a href={streamUrl(stream)}>{stream.name}</a></h2>
+      <p class="muted">{stream.blurb}</p>
+      {items.length === 0 ? <p class="muted">The first pages are on their way.</p> : (
+        <ul class="list">
+          {items.slice(0, SHOWN).map(({ project, page }) => (
+            <li><a href={learnUrl(project, page)}>{page.title}</a><span class="meta">{page.kind === "overview" ? "Start here" : kindLabel(page.kind)} · {project.name} · {page.date}</span></li>
+          ))}
+        </ul>
+      )}
+      <p><a href={streamUrl(stream)}>All {stream.name.toLowerCase()}{items.length > SHOWN ? ` (${items.length})` : ""} →</a> · <a href={`${streamUrl(stream)}rss.xml`}>{stream.name} RSS</a></p>
+    </section>
+  ))}
 </Base>

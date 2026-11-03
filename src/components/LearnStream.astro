@@ -1,0 +1,23 @@
+---
+import Base from "../layouts/Base.astro";
+import { STREAMS, streamItems, streamUrl, learnUrl, kindLabel, AI_NOTE } from "../lib/learn.js";
+
+const { slug } = Astro.props;
+const stream = STREAMS.find((s) => s.slug === slug);
+const items = await streamItems(stream);
+---
+<Base title={`${stream.name} · Learn`} description={`${stream.blurb} AI-generated.`} rss={`${streamUrl(stream)}rss.xml`}>
+  <p class="muted"><a href="/learn/">Learn</a></p>
+  <h1>{stream.name}</h1>
+  <p>{stream.blurb}</p>
+  <p class="ai-note">{AI_NOTE}</p>
+  <p><a class="cta" href={`${streamUrl(stream)}rss.xml`}>RSS</a></p>
+  <p class="muted">Other streams: {STREAMS.filter((s) => s !== stream).map((s, i) => <>{i > 0 && " · "}<a href={streamUrl(s)}>{s.name}</a></>)}</p>
+  {items.length === 0 ? <p class="muted">The first pages are on their way.</p> : (
+    <ul class="list">
+      {items.map(({ project, page }) => (
+        <li><a href={learnUrl(project, page)}>{page.title}</a><span class="meta">{page.kind === "overview" ? "Start here" : stream.kinds.length > 1 ? kindLabel(page.kind) : project.name} · {page.date}{page.description ? ` · ${page.description}` : ""}</span></li>
+      ))}
+    </ul>
+  )}
+</Base>

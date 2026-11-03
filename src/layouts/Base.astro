@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import { SITE } from "../site.js";
 
-const { title, description = SITE.description, image = "/og-image.png" } = Astro.props;
+const { title, description = SITE.description, image = "/og-image.png", rss } = Astro.props;
 const fullTitle = title ? `${title} · ${SITE.name}` : `${SITE.name}: ${SITE.tagline}`;
 const path = Astro.url.pathname;
 const nav = [
@@ -31,6 +31,7 @@ const canonical = new URL(path, Astro.site);
     <link rel="alternate" type="application/rss+xml" title="Millillion blog" href="/rss.xml" />
     <link rel="alternate" type="application/rss+xml" title="Millillion podcast" href="/podcast.xml" />
     <link rel="alternate" type="application/rss+xml" title="Millillion: Learn" href="/learn/rss.xml" />
+    {rss && <link rel="alternate" type="application/rss+xml" title={title} href={rss} />}
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(image, Astro.site)} />
@@ -66,6 +67,7 @@ const canonical = new URL(path, Astro.site);
         <a href={SITE.github}>GitHub</a>
         <a href="/rss.xml">Blog RSS</a>
         <a href="/podcast.xml">Podcast RSS</a>
+        <a href="/learn/rss.xml">Learn RSS</a>
         <a href="/support/">Support</a>
       </div>
     </footer>

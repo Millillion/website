@@ -21,6 +21,30 @@ export const KINDS = [
 ];
 export const kindLabel = (kind) => KINDS.find(([k]) => k === kind)?.[1] ?? kind;
 
+/** Learn's independent streams, each with its own page and RSS feed. Page URLs
+ * stay /learn/<project>/<slug>/ whatever stream a page is in. */
+export const STREAMS = [
+  { slug: "tutorials", name: "Tutorials", kinds: ["overview", "tutorial"],
+    blurb: "Step-by-step guides, each run in CI so its commands work as written." },
+  { slug: "proofs", name: "Proofs", kinds: ["proof-spotlight"],
+    blurb: "One theorem at a time: what it says, why it matters and where Lean checks it." },
+  { slug: "testing", name: "Testing", kinds: ["bug-caught", "platform"],
+    blurb: "Bugs our testing caught before users did, and how each platform is tested." },
+  { slug: "releases", name: "Releases", kinds: ["release"],
+    blurb: "What changed in each published version." },
+];
+export const streamOf = (kind) => STREAMS.find((s) => s.kinds.includes(kind));
+export const streamUrl = (stream) => `/learn/${stream.slug}/`;
+
+/** A stream's pages, [{ project, page }]: tutorials in reading order ("Start
+ * here" first), every other stream newest first. */
+export async function streamItems(stream) {
+  const items = (await allLearn()).filter(({ page }) => stream.kinds.includes(page.kind));
+  if (stream.slug !== "tutorials") return items;
+  const rank = ({ page }) => (page.kind === "overview" ? -1 : page.order ?? 99);
+  return items.sort((a, b) => rank(a) - rank(b));
+}
+
 const ref = (project) => pins[project.repo]?.content ?? "main";
 const raw = (project) => `https://raw.githubusercontent.com/${project.repo}/${ref(project)}/`;
 

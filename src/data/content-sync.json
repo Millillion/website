@@ -5,12 +5,12 @@
   "Millillion/lasm": {
     "readme": "3e78bbd2e641282c237cba05a5cd0e51eba30aae",
     "content": "f0569b83d66d851c6e528663693ea61569eb6545",
-    "npm": "0.4.0"
+    "npm": "0.4.1"
   },
   "Millillion/proofscript": {
     "readme": "58fe7d524a68330de8d0115c335b608b5c746300"
   },
   "Millillion/wasmetal": {
-    "readme": "772c0741f237ed692231ca3c3f9bd7205510ea5c"
+    "readme": "b620e8712cb2b99e4540da7e739f7038fdf0c335"
   }
 }

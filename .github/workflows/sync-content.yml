@@ -1,7 +1,13 @@
 # Pins the README and Learn-content commits the site renders (scripts/sync-content.mjs).
 name: sync-content
 on:
-  schedule: [{ cron: "17 * * * *" }]
+  # Hourly, except on Sunday in US Eastern time (Jordan, 2026-11-07): Sunday
+  # 00:00-03:59 UTC is still Saturday in New York, and Monday 00:00-04:59 UTC
+  # is still Sunday there, under both EST and EDT.
+  schedule:
+    - cron: "17 * * * 2-6"
+    - cron: "17 0-3 * * 0"
+    - cron: "17 5-23 * * 1"
   workflow_dispatch:
 permissions:
   contents: write

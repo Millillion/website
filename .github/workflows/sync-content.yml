@@ -3,7 +3,9 @@ name: sync-content
 on:
   # Hourly, except on Sunday in US Eastern time (Jordan, 2026-11-07): Sunday
   # 00:00-03:59 UTC is still Saturday in New York, and Monday 00:00-04:59 UTC
-  # is still Sunday there, under both EST and EDT.
+  # is still Sunday there, under both EST and EDT. GitHub starts scheduled runs
+  # hours late, so the job `sunday` also skips a scheduled run that starts on
+  # Sunday in New York.
   schedule:
     - cron: "17 * * * 2-6"
     - cron: "17 0-3 * * 0"
@@ -13,7 +15,23 @@ permissions:
   contents: write
 concurrency: { group: sync-content, cancel-in-progress: false }
 jobs:
+  sunday:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    permissions: {}
+    outputs: { skip: "${{ steps.day.outputs.skip }}" }
+    steps:
+      - id: day
+        env: { EVENT: "${{ github.event_name }}" }
+        run: |
+          day=$(TZ=America/New_York date +%u)
+          skip=false
+          if [ "$EVENT" = schedule ] && [ "$day" = 7 ]; then skip=true; fi
+          echo "skip=$skip" >> "$GITHUB_OUTPUT"
+          if [ "$skip" = true ]; then echo "Sunday in New York: this scheduled run does nothing." | tee -a "$GITHUB_STEP_SUMMARY"; fi
   sync:
+    needs: sunday
+    if: needs.sunday.outputs.skip != 'true'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:

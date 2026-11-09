@@ -25,7 +25,7 @@ To change those pages, edit the README on GitHub; the site picks it up within th
 - To preview a project's content from disk: `LEARN_LOCAL=/path/to/checkout npm run build`.
 
 ## Staying in sync
-`sync-content.yml` runs hourly. It pins, in `src/data/content-sync.json`, the latest commit of:
+`sync-content.yml` runs hourly, except on a Sunday in US Eastern time (its crons skip Sunday, and its `sunday` job skips a late scheduled run that starts on Sunday). It pins, in `src/data/content-sync.json`, the latest commit of:
 - each project's README;
 - the org profile README;
 - each project's Learn content.

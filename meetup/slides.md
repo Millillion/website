@@ -201,7 +201,7 @@ Advice: start with the free plan. If you use it every day, $20 a month (Claude P
 <rect x="354" y="20" width="380" height="210" rx="8" fill="#b3341f"/>
 <text x="544" y="76" font-size="36" fill="#f6f2ea">Agent</text>
 <text x="544" y="136" font-size="28" fill="#f6f2ea">plan → act → check</text>
-<path d="M 645 148 C 645 194, 441 194, 441 152" fill="none" stroke="#f6f2ea" stroke-width="2.5" stroke-linecap="round" marker-end="url(#a2w)"/>
+<path d="M 645 150 V 176 H 441 V 156" fill="none" stroke="#f6f2ea" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#a2w)"/>
 <text x="544" y="215" font-size="20" fill="#f6f2ea" font-weight="500">repeats until done</text>
 <rect x="878" y="70" width="200" height="110" rx="8" fill="#ece6da"/>
 <text x="978" y="124" font-size="32" fill="#161412">Finished</text>

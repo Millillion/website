@@ -194,14 +194,14 @@ Advice: start with the free plan. If you use it every day, $20 a month (Claude P
 ## Prompt and work
 
 <svg class="diagram" viewBox="0 0 1088 400" xmlns="http://www.w3.org/2000/svg">
-<defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#161412"/></marker><marker id="a2w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#f6f2ea"/></marker></defs>
+<defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#161412"/></marker><marker id="a2w" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#f6f2ea"/></marker></defs>
 <g font-family="Shippori Mincho, serif" font-weight="600" text-anchor="middle">
 <rect x="10" y="70" width="200" height="110" rx="8" fill="#ece6da"/>
 <text x="110" y="138" font-size="36" fill="#161412">You</text>
 <rect x="354" y="20" width="380" height="210" rx="8" fill="#b3341f"/>
 <text x="544" y="76" font-size="36" fill="#f6f2ea">Agent</text>
 <text x="544" y="136" font-size="28" fill="#f6f2ea">plan → act → check</text>
-<path d="M 618 156 C 618 192, 470 192, 470 160" fill="none" stroke="#f6f2ea" stroke-width="2.5" marker-end="url(#a2w)"/>
+<path d="M 645 148 C 645 194, 441 194, 441 152" fill="none" stroke="#f6f2ea" stroke-width="2.5" stroke-linecap="round" marker-end="url(#a2w)"/>
 <text x="544" y="215" font-size="20" fill="#f6f2ea" font-weight="500">repeats until done</text>
 <rect x="878" y="70" width="200" height="110" rx="8" fill="#ece6da"/>
 <text x="978" y="124" font-size="32" fill="#161412">Finished</text>

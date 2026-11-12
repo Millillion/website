@@ -164,7 +164,7 @@ People can try along on their phones at claude.ai.
 <tr><td>Free</td><td>$0</td></tr>
 <tr><td>Go</td><td>$8 a month</td></tr>
 <tr><td>Plus</td><td>$20 a month</td></tr>
-<tr><td>Pro</td><td>from $100 a month</td></tr>
+<tr><td>Pro</td><td>$100, $200 or $500 a month</td></tr>
 </table>
 </div>
 </div>

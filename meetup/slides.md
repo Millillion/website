@@ -62,8 +62,10 @@ Quick show of hands: who has used ChatGPT or Claude? Who uses one every week? Wh
 
 ## Millillion
 
+<p class="tagline">Impossibly ambitious AI</p>
+
 <div class="tiles three">
-<div><span class="big">Lasm</span><span class="cap">Lean proofs in JavaScript and WebAssembly</span></div>
+<div><span class="big">Lasm</span><span class="cap">Lean for JavaScript and WebAssembly runtimes</span></div>
 <div><span class="big">ProofScript</span><span class="cap">TypeScript with built-in proofs</span></div>
 <div><span class="big">Wasmetal</span><span class="cap">A WebAssembly CPU in hardware</span></div>
 </div>

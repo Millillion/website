@@ -144,6 +144,41 @@ Optional: voice mode, or a photo of something in the room.
 
 ---
 
+## Getting started
+
+<div class="plans">
+<div>
+<h3>Claude <span>claude.ai</span></h3>
+<table>
+<tr><td>Free</td><td>$0</td></tr>
+<tr><td>Pro</td><td>$20 a month</td></tr>
+<tr><td>Max</td><td>$100 a month</td></tr>
+<tr><td>Ultra</td><td>$200 a month</td></tr>
+</table>
+</div>
+<div>
+<h3>ChatGPT <span>chatgpt.com</span></h3>
+<table>
+<tr><td>Free</td><td>$0</td></tr>
+<tr><td>Go</td><td>$8 a month</td></tr>
+<tr><td>Plus</td><td>$20 a month</td></tr>
+<tr><td>Pro</td><td>from $100 a month</td></tr>
+</table>
+</div>
+</div>
+
+<p class="caption">Both: web, Mac, Windows, iPhone and Android. Start free.</p>
+
+<!--
+Checked on claude.com/pricing and chatgpt.com/pricing on November 11, 2026. Prices are before tax.
+Claude: Free $0. Pro $20 a month, or $17 a month billed yearly ($200 up front); includes Claude Code. Max $100 a month (5x Pro usage). Ultra $200 a month (10x Pro weekly usage).
+ChatGPT: Free $0. Go $8 a month (may include ads). Plus $20 a month. Pro comes in three tiers: $100, $200 or $500 a month.
+Apps: claude.com/download and chatgpt.com/download for desktop; App Store and Google Play for phones. Same account everywhere.
+Advice: start with the free plan. If you use it every day, $20 a month (Claude Pro or ChatGPT Plus) is the usual next step.
+-->
+
+---
+
 <!-- _class: divider -->
 
 <div class="num">03</div>

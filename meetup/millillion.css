@@ -96,6 +96,14 @@ ol.overview li::before { content: counter(o, decimal-leading-zero); color: var(-
 .tiles .big { font-size: 44px; display: block; }
 .tiles .cap { font: 400 22px/1.4 var(--sans); color: var(--ink-soft); display: block; margin-top: 10px; }
 
+.plans { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+.plans h3 { font-size: 40px; margin-bottom: 18px; }
+.plans h3 span { font: 400 22px/1 var(--sans); color: var(--ink-soft); margin-left: 14px; letter-spacing: 0.02em; }
+.plans table { width: 100%; border-collapse: collapse; font-size: 30px; }
+.plans td { padding: 12px 0; border-bottom: 1px solid var(--ink-faint); }
+.plans td:first-child { font-family: var(--serif); font-weight: 600; }
+.plans td:last-child { text-align: right; color: var(--ink-soft); }
+
 /* diagrams */
 svg.diagram { width: 100%; height: auto; display: block; }
 .caption { text-align: center; font: 500 30px/1.4 var(--serif); color: var(--ink-soft); margin-top: 26px; }

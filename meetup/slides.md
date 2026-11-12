@@ -567,7 +567,7 @@ The job shifts from doing the work to judging the evidence the AI presents. Let 
 ## Thank you
 
 <div class="qrrow">
-<div><img class="qr" src="images/qr-signup.svg" alt="QR code for the event news sign-up"><p>Sign up for Millillion event news<br>millillion.org/meetup</p></div>
+<div><img class="qr" src="images/qr-signup.svg" alt="QR code for the event news sign-up"><p>Sign up for Millillion event news<br>millillion.org/meetup/signup</p></div>
 <div><img class="qr" src="images/qr-slides.svg" alt="QR code for the slides"><p>These slides<br>millillion.org/meetup/slides</p></div>
 </div>
 

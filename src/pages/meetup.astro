@@ -3,13 +3,36 @@ import Base from "../layouts/Base.astro";
 import { SITE } from "../site.js";
 ---
 <Base title="Greeneville AI Meetup: What AI Can Do for You" description="A free evening to learn what AI can do for you, from first steps to deep technical dives, with hands-on help and plenty of time for questions. Thursday, November 12, 2026, 7–9pm, Greeneville/Greene County Public Library.">
-  <article class="prose">
+  <article class="meetup">
+    <p class="eyebrow">Free community meetup · Greeneville, Tennessee</p>
     <h1>Greeneville AI Meetup</h1>
-    <p class="lede"><strong>What AI Can Do for You</strong><br>Thursday, November 12, 2026, 7–9pm<br>Big Spring Room, Greeneville/Greene County Public Library, 210 N Main St<br>Free and open to everyone</p>
+    <p class="sub">An evening to learn what AI can do for you, from your first question to AI agents that do real work. Beginners are especially welcome.</p>
+
+    <dl class="facts">
+      <dt>When</dt><dd>Thursday, November 12, 2026, 7–9pm</dd>
+      <dt>Where</dt><dd>Big Spring Room, Greeneville/Greene County Public Library<br><a href="https://maps.google.com/?q=210+N+Main+St,+Greeneville,+TN+37745">210 N Main St, Greeneville</a></dd>
+      <dt>Cost</dt><dd>Free and open to everyone</dd>
+    </dl>
+
+    <div class="actions">
+      <a class="cta primary" href="/meetup/signup/">Get event news</a>
+      <a class="cta" href="/meetup/slides/">Slides</a>
+      <a class="cta" href="/greeneville-ai-meetup.ics">Add to calendar</a>
+    </div>
+
+    <h2>What we'll cover</h2>
+    <ul class="topics">
+      <li><strong>Chatbots</strong><span>Asking ChatGPT and Claude for help with writing, research, planning and everyday questions.</span></li>
+      <li><strong>Agents</strong><span>Tools like Claude Code and Codex that don't just answer, but do the work for you.</span></li>
+      <li><strong>Try it yourself</strong><span>Bring a phone or laptop if you have one, and get help as you go. Optional.</span></li>
+      <li><strong>The deep end</strong><span>A live look at how AI agents build real software, and how to check their work.</span></li>
+      <li><strong>Questions</strong><span>Ask anything, at any level, all evening.</span></li>
+      <li><strong>No experience needed</strong><span>Whatever your age or background, you're welcome.</span></li>
+    </ul>
 
     <section class="signup" id="event-news">
       <h2>Get Millillion event news</h2>
-      <p>The next Greeneville AI Meetup, other meetups, conferences and anything else Millillion hosts.</p>
+      <p>Hear about the next Greeneville AI Meetup, other meetups, conferences and anything else Millillion hosts.</p>
       <p id="joined" class="notice" hidden>Thank you. You're on the list.</p>
       <p id="join-error" class="notice" hidden>Sorry, that didn't go through. Please check your email address and try again.</p>
       <form class="signup-form" method="post" action="/api/events">
@@ -21,21 +44,13 @@ import { SITE } from "../site.js";
       </form>
     </section>
 
-    <p class="contact-line">Questions? Jordan Last · <a href={`mailto:${SITE.email}`}>{SITE.email}</a> · <a href={`tel:${SITE.phone.replace(/-/g, "")}`}>{SITE.phone}</a></p>
-    <p><a class="cta" href="/meetup/slides/">Slides</a> <a class="cta" href="/greeneville-ai-meetup.ics">Add to calendar</a></p>
+    <section class="host">
+      <h2>Your host</h2>
+      <p><strong>Jordan Last</strong>, an agentic engineer with an emphasis in software development, and the founder of <a href="/">Millillion</a>.</p>
+      <p class="contact">Questions? <a href={`mailto:${SITE.email}`}>{SITE.email}</a> · <a href={`tel:${SITE.phone.replace(/-/g, "")}`}>{SITE.phone}</a></p>
+    </section>
 
-    <h2>About the evening</h2>
-    <p><strong>What can AI do for you?</strong> If you've heard about ChatGPT and AI but feel like you don't know what's going on, this evening is for you. And if you're already using AI and want to go deeper, it's for you too.</p>
-    <p>The Greeneville AI Meetup is a free, friendly evening for everyone, whatever your age or background. Beginners are especially welcome, and no technical experience is needed. We'll cover:</p>
-    <ul>
-      <li><strong>Chat:</strong> asking AI tools like ChatGPT and Claude for help with writing, research, planning and everyday questions</li>
-      <li><strong>Agents:</strong> newer tools like Codex and Claude Code that don't just answer questions, but actually do work for you</li>
-      <li><strong>Hands-on practice:</strong> bring a phone or laptop if you have one and try it yourself, with help (optional)</li>
-      <li><strong>The deep end:</strong> a live look at how AI agents build real software, for anyone who wants the technical details</li>
-      <li><strong>In-depth Q&amp;A:</strong> ask anything, at any level</li>
-    </ul>
-    <p>Presented by Jordan Last, an agentic engineer with an emphasis in software development. Hosted by Millillion.</p>
-    <p class="muted">The meetup is held at the library; it isn't a library-sponsored program.</p>
+    <p class="fine">The meetup is held at the library; it isn't a library-sponsored program.</p>
   </article>
   <script is:inline>
     const q = new URLSearchParams(location.search);

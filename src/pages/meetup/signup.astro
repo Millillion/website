@@ -1,0 +1,31 @@
+---
+import Base from "../../layouts/Base.astro";
+import { SITE } from "../../site.js";
+---
+<Base title="Sign up for Millillion event news" description="Hear about the next Greeneville AI Meetup, other meetups, conferences and anything else Millillion hosts.">
+  <article class="meetup signup-page">
+    <p class="eyebrow">Millillion event news</p>
+    <h1>Sign up</h1>
+    <p class="sub">Hear about the next Greeneville AI Meetup, other meetups, conferences and anything else Millillion hosts.</p>
+
+    <section class="signup">
+      <p id="joined" class="notice" hidden>Thank you. You're on the list.</p>
+      <p id="join-error" class="notice" hidden>Sorry, that didn't go through. Please check your email address and try again.</p>
+      <form class="signup-form" method="post" action="/api/events">
+        <label>Name <input name="name" required maxlength="200" autocomplete="name" /></label>
+        <label>Email <input name="email" type="email" required maxlength="200" autocomplete="email" /></label>
+        <input type="hidden" name="source" value="signup page" />
+        <input type="hidden" name="back" value="/meetup/signup/" />
+        <label class="hp" aria-hidden="true">Company <input name="company" tabindex="-1" autocomplete="off" /></label>
+        <button class="cta primary" type="submit">Sign up</button>
+      </form>
+    </section>
+
+    <p class="after"><a href="/meetup/">Greeneville AI Meetup</a> · <a href="/meetup/slides/">Slides</a> · Questions? <a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+  </article>
+  <script is:inline>
+    const q = new URLSearchParams(location.search);
+    if (q.has("joined")) { document.getElementById("joined").hidden = false; document.querySelector(".signup-form").hidden = true; }
+    if (q.has("error")) document.getElementById("join-error").hidden = false;
+  </script>
+</Base>

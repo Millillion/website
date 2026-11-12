@@ -125,17 +125,42 @@ footer.site .mark { font-family: var(--serif); letter-spacing: 0.08em; }
 .contact-form button { justify-self: start; cursor: pointer; }
 .contact-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .notice { padding: .8rem 1rem; border-left: 3px solid currentColor; }
-/* meetup: event news sign-up up top */
-.lede { font-size: 1.05rem; margin-top: -0.4em; }
-.signup { background: var(--wash); border-left: 3px solid var(--shu); padding: 20px 24px 24px; margin: 28px 0 18px; border-radius: 2px; }
-.prose .signup h2 { margin: 0 0 0.3em; }
-.prose .signup h2::before { display: none; }
-.signup p { margin-bottom: 0.9em; }
+/* meetup page */
+.meetup { max-width: var(--max); margin: 0 auto; }
+.meetup .eyebrow { font: 500 13px/1.6 var(--serif); letter-spacing: 0.18em; text-transform: uppercase; color: var(--shu); margin: 56px 0 0; }
+.meetup h1 { margin: 14px 0 10px; }
+.meetup .sub { font: 500 1.2rem/1.6 var(--serif); color: var(--ink-soft); margin: 0 0 28px; }
+.meetup .facts { display: grid; grid-template-columns: auto 1fr; gap: 10px 22px; margin: 0 0 30px; padding: 22px 0; border-top: 1px solid var(--ink-faint); border-bottom: 1px solid var(--ink-faint); }
+.meetup .facts dt { font: 600 12px/1.9 var(--serif); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); }
+.meetup .facts dd { margin: 0; line-height: 1.6; }
+.meetup .actions { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 10px; margin: 0 0 8px; }
+.meetup h2 { font-size: 1.35rem; margin: 64px 0 18px; }
+.meetup h2::before { display: block; content: ""; width: 7rem; height: 6px; margin-bottom: 0.9em; background: var(--ink); opacity: 0.85; -webkit-mask: url(/brush-rule-short.svg) left center / 100% 100% no-repeat; mask: url(/brush-rule-short.svg) left center / 100% 100% no-repeat; }
+.meetup .topics { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+.meetup .topics li { padding: 14px 0; border-bottom: 1px solid var(--ink-faint); line-height: 1.55; }
+.meetup .topics strong { display: block; font: 600 1.05rem/1.4 var(--serif); margin-bottom: 2px; }
+.meetup .topics span { color: var(--ink-soft); font-size: 15px; }
+.meetup .signup { background: var(--wash); border-top: 3px solid var(--shu); padding: 26px 28px 28px; margin-top: 64px; border-radius: 2px; }
+.meetup .signup h2 { margin: 0 0 6px; }
+.meetup .signup h2::before { display: none; }
+.meetup .signup p { margin: 0 0 18px; color: var(--ink-soft); }
 .signup-form { display: grid; grid-template-columns: 1fr 1fr auto; gap: 12px; align-items: end; }
-.signup-form label { display: grid; gap: .3rem; font-weight: 500; font-size: 15px; }
-.signup-form input { font: inherit; color: inherit; background: var(--paper); border: 1px solid var(--ink-soft); border-radius: 4px; padding: .55rem .7rem; }
-.signup-form button { cursor: pointer; padding: 11px 22px; }
+.signup-form label { display: grid; gap: .3rem; font-weight: 500; font-size: 14px; }
+.signup-form input { font: inherit; color: inherit; background: var(--paper); border: 1px solid var(--ink-soft); border-radius: 4px; padding: .6rem .75rem; }
+.signup-form input:focus { outline: 2px solid var(--shu); outline-offset: 1px; border-color: var(--shu); }
+.signup-form button { cursor: pointer; padding: 12px 24px; }
 .signup-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-@media (max-width: 560px) { .signup-form { grid-template-columns: 1fr; } .signup-form button { justify-self: start; } }
-.contact-line { font-size: 15px; }
-.contact-line a { white-space: nowrap; }
+.meetup .notice { margin: 0 0 16px; background: var(--paper); }
+.meetup .host p { margin: 0 0 10px; }
+.meetup .host .contact a { white-space: nowrap; }
+.meetup .fine { font-size: 14px; color: var(--ink-soft); margin-top: 40px; }
+.signup-page .signup { margin-top: 28px; }
+.signup-page .after { margin-top: 28px; font-size: 15px; color: var(--ink-soft); }
+@media (max-width: 560px) {
+  .meetup .facts { grid-template-columns: 1fr; gap: 2px; }
+  .meetup .facts dd { margin-bottom: 10px; }
+  .meetup .topics { grid-template-columns: 1fr; }
+  .signup-form { grid-template-columns: 1fr; }
+  .signup-form button { justify-self: stretch; }
+}
+.signup-form[hidden] { display: none; }

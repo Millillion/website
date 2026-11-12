@@ -495,6 +495,25 @@ Show github.com/Millillion/lasm, ProofScript, and the Fable video tweet: <TWEET 
 
 ---
 
+<!-- _class: define -->
+
+<div class="entry">
+<div class="term">engineer <span>noun</span></div>
+<div class="def">A person who applies knowledge and judgment to design and build solutions to practical problems.</div>
+</div>
+
+<div class="entry">
+<div class="term">agentic engineer <span>noun</span></div>
+<div class="def">A person who applies knowledge and judgment to design and build solutions to practical problems, <em>using AI agents as the medium</em>.</div>
+</div>
+
+<!--
+An engineer has always been someone who uses knowledge and judgment to design and build solutions to practical problems. The medium changes: steel, circuits, code.
+An agentic engineer does the same thing, but the medium is AI agents. You decide what the problem is, specify the solution, direct the agents, and judge the evidence that the work is right.
+-->
+
+---
+
 <!-- _class: statement everyone -->
 
 # Everyone is an agentic engineer now

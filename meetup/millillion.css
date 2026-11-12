@@ -88,6 +88,12 @@ section.everyone > p:not(.caption) { margin-top: 18px; }
 .fields em { color: var(--shu); }
 section.everyone .caption { margin-top: 40px; font-size: 28px; }
 
+section.define { gap: 54px; }
+.entry .term { font: 600 52px/1.2 var(--serif); letter-spacing: 0.02em; }
+.entry .term span { font: italic 400 26px/1 var(--serif); color: var(--ink-soft); margin-left: 14px; letter-spacing: 0; }
+.entry .def { font: 500 32px/1.5 var(--serif); color: var(--ink-soft); margin-top: 10px; padding-left: 26px; border-left: 3px solid var(--ink-faint); max-width: 1000px; }
+.entry:last-child .def { border-left-color: var(--shu); color: var(--ink); }
+
 /* overview list */
 ol.overview { list-style: none; padding: 0; counter-reset: o; columns: 2; column-gap: 80px; }
 ol.overview li { counter-increment: o; font: 600 38px/1.3 var(--serif); margin: 0 0 30px; break-inside: avoid; }

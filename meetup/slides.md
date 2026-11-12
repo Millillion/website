@@ -298,9 +298,9 @@ Tell the story in your own words: when it changed, the turning point, what a typ
 <rect x="500" y="30" width="270" height="310" rx="8" fill="none" stroke="#161412" stroke-width="2"/>
 <text x="635" y="72" font-size="30" fill="#161412">Check</text>
 <g font-size="22" font-weight="500">
-<rect x="520" y="95" width="230" height="64" rx="6" fill="#ece6da"/><text x="635" y="135" fill="#161412">Human review</text>
+<rect x="520" y="95" width="230" height="64" rx="6" fill="#ece6da"/><text x="635" y="135" fill="#161412">Deterministic checks</text>
 <rect x="520" y="175" width="230" height="64" rx="6" fill="#ece6da"/><text x="635" y="215" fill="#161412">AI review</text>
-<rect x="520" y="255" width="230" height="64" rx="6" fill="#ece6da"/><text x="635" y="295" fill="#161412">Deterministic checks</text>
+<rect x="520" y="255" width="230" height="64" rx="6" fill="#ece6da"/><text x="635" y="295" fill="#161412">Human review</text>
 </g>
 <rect x="830" y="130" width="250" height="110" rx="8" fill="#ece6da"/><text x="955" y="182" font-size="30" fill="#161412">Evidence</text><text x="955" y="218" font-size="20" fill="#57524b" font-weight="500">you judge it</text>
 <g stroke="#161412" stroke-width="3">
@@ -323,16 +323,41 @@ This works for any knowledge work, not just software.
 
 ---
 
-## Three kinds of checks
+## Verification
 
-<div class="tiles three">
-<div><span class="big">Human</span><span class="cap">You read the work. Smart, but can miss things.</span></div>
-<div><span class="big">AI</span><span class="cap">Other agents review it. Fast and thorough, but can miss things.</span></div>
-<div><span class="big">Deterministic</span><span class="cap">Tests, type checks, proofs. Same answer every time.</span></div>
-</div>
+<svg class="diagram" viewBox="0 0 1088 420" xmlns="http://www.w3.org/2000/svg">
+<g font-family="Shippori Mincho, serif" font-weight="600" text-anchor="middle">
+<polygon points="40,10 720,10 660,140 100,140" fill="#161412"/>
+<text x="380" y="68" font-size="32" fill="#f6f2ea">1. Deterministic checks</text>
+<text x="380" y="108" font-size="22" fill="#f6f2ea" font-weight="500">as many as possible</text>
+<polygon points="108,150 652,150 592,280 168,280" fill="#b3341f"/>
+<text x="380" y="208" font-size="32" fill="#f6f2ea">2. AI review</text>
+<text x="380" y="248" font-size="22" fill="#f6f2ea" font-weight="500">what programs can't check</text>
+<polygon points="176,290 584,290 524,410 236,410" fill="#ece6da"/>
+<text x="380" y="345" font-size="32" fill="#161412">3. Human review</text>
+<text x="380" y="383" font-size="22" fill="#57524b" font-weight="500">whatever is left</text>
+<g text-anchor="start" font-size="24">
+<line x1="770" y1="20" x2="770" y2="130" stroke="#161412" stroke-width="3"/>
+<text x="792" y="58" fill="#161412">Deterministic</text>
+<text x="792" y="92" fill="#57524b" font-weight="500" font-size="20">A program or script.</text>
+<text x="792" y="120" fill="#57524b" font-weight="500" font-size="20">Same input, same result.</text>
+<line x1="770" y1="160" x2="770" y2="400" stroke="#b3341f" stroke-width="3"/>
+<text x="792" y="250" fill="#b3341f">Stochastic</text>
+<text x="792" y="284" fill="#57524b" font-weight="500" font-size="20">Judgment by AI or people.</text>
+<text x="792" y="312" fill="#57524b" font-weight="500" font-size="20">Results can vary.</text>
+</g>
+</g>
+</svg>
+
+<p class="caption">Fill each level in order. The agentic engineer guides the AI through it.</p>
 
 <!--
-Human and AI review are "stochastic": like spot checks, useful but not guaranteed. Deterministic checks are programs that give the same answer every time. Formal verification is the strongest: a mathematical proof that the code is correct.
+Robust verification combines deterministic and stochastic checks.
+Deterministic checks are repeatable and predictable: always the same result for the same input. Usually a program or script: tests, type checks, linters, proofs.
+Stochastic checks are what AIs and humans do: reading, judging, reviewing. Useful, but results can vary.
+Order: get as many deterministic checks as possible. Whatever can't be done deterministically, check stochastically with AI, as much as possible. Whatever is left over must be checked by humans.
+The agentic engineer guides the AI through this: fill up the deterministic checks first, then decide what AI review can cover, then what a human must review.
+Formal verification is the strongest deterministic check: a mathematical proof that the code is correct.
 -->
 
 ---

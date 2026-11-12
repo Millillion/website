@@ -1,30 +1,20 @@
 ---
 marp: true
+theme: millillion
 title: "Greeneville AI Meetup: What AI Can Do for You"
 description: Thursday, November 12, 2026, Big Spring Room, Greeneville/Greene County Public Library
 author: Jordan Last
-paginate: true
-style: |
-  section { font-size: 30px; }
-  section.lead { text-align: center; }
-  section.lead h1 { font-size: 56px; }
-  .qr { width: 260px; }
-  .cols { display: flex; gap: 48px; align-items: center; }
-  .cols > div { flex: 1; }
-  .small { font-size: 22px; color: #555; }
 ---
 
-<!-- _class: lead -->
-<!-- _paginate: false -->
+<!-- _class: title -->
+
+<img class="logo" src="images/millillion-black.svg" alt="ɛ∞ɜ">
 
 # Greeneville AI Meetup
 
-## What AI Can Do for You
-
-Thursday, November 12, 2026
-Big Spring Room, Greeneville/Greene County Public Library
-
-Jordan Last
+<div class="sub">What AI Can Do for You</div>
+<div class="meta">Thursday, November 12, 2026 · Big Spring Room, Greeneville/Greene County Public Library</div>
+<div class="seal"></div>
 
 <!--
 Doors at 7:00. Start about 7:05.
@@ -32,221 +22,193 @@ Doors at 7:00. Start about 7:05.
 
 ---
 
-## Welcome
+## Tonight
 
-- I'm Jordan Last. I build software with AI agents every day.
-- Tonight is for everyone. Beginners are especially welcome.
-- Questions are welcome at any time, not just at the end.
-- Please sign up so I can tell you about future meetups.
+<ol class="overview">
+<li>Introduction</li>
+<li>Chatbots</li>
+<li>Agents</li>
+<li>One Year Ago</li>
+<li>Slop Refinery Pipeline</li>
+<li>Agentic Engineers</li>
+</ol>
 
-<div class="cols">
-<div>
+<p class="muted small">Questions are welcome at any time.</p>
 
-**Slides:** millillion.org/meetup/slides
-**Meetup page:** millillion.org/meetup
+---
 
-</div>
-<img class="qr" src="images/qr-slides.svg" alt="QR code for the slides">
-</div>
+<!-- _class: divider -->
+
+<div class="num">01</div>
+
+# Introduction
+
+<div class="brush"></div>
+
+---
+
+## Jordan Last
+
+- Agentic engineer
+- Software, built with AI agents, every day
+- Greeneville, Tennessee
 
 <!--
-Point to the sign-up sheet / sign-up QR now.
+Who you are, how you got here, why you moved to Greeneville, why you're starting this meetup.
 Quick show of hands: who has used ChatGPT or Claude? Who uses one every week? Who has used an AI agent?
 -->
 
 ---
 
-## Tonight
+## Millillion
 
-| Time | |
-|---|---|
-| 7:10 | Chatbots, and a live demo |
-| 7:30 | AI agents, and a live demo |
-| 8:00 | Agents in every kind of knowledge work |
-| 8:05 | How I check AI's work, and what I've built with it |
-| 8:35 | Q&A |
+<div class="tiles three">
+<div><span class="big">Lasm</span><span class="cap">Lean proofs in JavaScript and WebAssembly</span></div>
+<div><span class="big">ProofScript</span><span class="cap">TypeScript with built-in proofs</span></div>
+<div><span class="big">Wasmetal</span><span class="cap">A WebAssembly CPU in hardware</span></div>
+</div>
 
----
-
-<!-- _class: lead -->
-
-# Part 1: Chatbots
-
----
-
-## A chatbot is a conversation with an AI
-
-- You type (or say) a **prompt**: a question or a request.
-- The AI writes back a **response**.
-- It's a lot like Google: you ask, it answers.
-- The difference: it writes a full answer for you, and you can keep talking to refine it.
+<p class="caption">millillion.org</p>
 
 <!--
-Emphasize the word "prompt". We'll use it all night.
+What Millillion is and why. Show millillion.org and the projects page.
 -->
+
+---
+
+<!-- _class: divider -->
+
+<div class="num">02</div>
+
+# Chatbots
+
+<div class="brush"></div>
+
+---
+
+## Prompt and response
+
+<svg class="diagram" viewBox="0 0 1088 230" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#161412"/></marker></defs>
+<g font-family="Shippori Mincho, serif" font-weight="600" text-anchor="middle">
+<rect x="10" y="60" width="230" height="110" rx="8" fill="#ece6da"/>
+<text x="125" y="128" font-size="38" fill="#161412">You</text>
+<rect x="429" y="60" width="230" height="110" rx="8" fill="#b3341f"/>
+<text x="544" y="128" font-size="38" fill="#f6f2ea">AI</text>
+<rect x="848" y="60" width="230" height="110" rx="8" fill="#ece6da"/>
+<text x="963" y="128" font-size="38" fill="#161412">Answer</text>
+<line x1="250" y1="115" x2="419" y2="115" stroke="#161412" stroke-width="3" marker-end="url(#a1)"/>
+<line x1="669" y1="115" x2="838" y2="115" stroke="#161412" stroke-width="3" marker-end="url(#a1)"/>
+<text x="334" y="96" font-size="28" fill="#57524b">prompt</text>
+<text x="753" y="96" font-size="28" fill="#57524b">response</text>
+</g>
+</svg>
+
+<p class="caption">Like Google: you ask, it answers.</p>
 
 ---
 
 ## The two main chatbots
 
-<div class="cols">
-<div>
-
-**ChatGPT**
-made by **OpenAI**
-
-</div>
-<div>
-
-**Claude**
-made by **Anthropic**
-
-</div>
+<div class="tiles two">
+<div><span class="big">ChatGPT</span><span class="cap">OpenAI · 2015 · Sam Altman</span></div>
+<div><span class="big">Claude</span><span class="cap">Anthropic · 2021 · Dario and Daniela Amodei</span></div>
 </div>
 
-Both have free versions. Paid plans start around $20 a month.
-
----
-
-## OpenAI
-
-- Founded in **December 2015** in San Francisco as a nonprofit research lab.
-- Co-founders included **Sam Altman**, **Greg Brockman**, **Ilya Sutskever** and **Elon Musk**.
-- **Sam Altman**, the CEO, dropped out of Stanford to start a company, then ran **Y Combinator**, the best-known startup accelerator.
-- Released **ChatGPT** on **November 30, 2022**. It became one of the fastest-growing apps in history.
+<p class="caption">And many others: Gemini, Copilot, Meta AI, Grok, DeepSeek</p>
 
 <!--
-Musk left the board in 2018 and later sued OpenAI. Altman was briefly fired by the board and reinstated in November 2023. Use either if the room is interested.
+OpenAI: founded December 2015 in San Francisco as a nonprofit research lab. Co-founders included Sam Altman, Greg Brockman, Ilya Sutskever and Elon Musk. Altman dropped out of Stanford to start a company (Loopt), then ran Y Combinator, the best-known startup accelerator. ChatGPT launched November 30, 2022 and became one of the fastest-growing apps in history.
+Anthropic: founded 2021 by siblings Dario and Daniela Amodei and several colleagues, all from OpenAI. Dario was OpenAI's VP of Research and led work on GPT-2 and GPT-3. They left to build an AI company focused on safety. Claude launched March 2023.
+Others: Google (Gemini), Microsoft (Copilot), Meta (Meta AI), xAI (Grok), DeepSeek (China).
 -->
 
 ---
 
-## Anthropic
+<!-- _class: statement -->
 
-- Founded in **2021** by **Dario Amodei** and **Daniela Amodei**, a brother and sister, with several colleagues.
-- They came from **OpenAI**: Dario was its VP of Research and led work on GPT-2 and GPT-3.
-- They left to build an AI company focused on **safety**.
-- Released **Claude** in **March 2023**. Their tool **Claude Code** is what I use every day, and what I'll demo tonight.
+# Demo
 
----
-
-## Many others
-
-- **Google:** Gemini
-- **Microsoft:** Copilot
-- **Meta:** Meta AI
-- **xAI** (Elon Musk): Grok
-- Plus many more in the US, China and Europe
-
-They all work the same basic way: prompt and response.
-
----
-
-## Live demo: chatbot
-
-Try along on your phone at **chatgpt.com** or **claude.ai**.
+<p>chatgpt.com · claude.ai</p>
 
 <!--
-Demo prompts (Claude or ChatGPT; voice mode is a good surprise for beginners):
+Try along on your phone.
 1. "I run a small family restaurant on Main Street in Greeneville, Tennessee. Give me five low-cost ideas to bring in more customers this winter."
 2. "Write a short Facebook post announcing the second idea."
-3. "Translate that post into Spanish." Ask if anyone in the room speaks Spanish and can judge it.
-4. Ask the audience for a question from their own work or life.
-Optional: take a photo of something in the room (or the flyer) and ask about it.
+3. "Translate that post into Spanish." Ask if anyone in the room can judge it.
+4. Take a question from the audience.
+Optional: voice mode, or a photo of something in the room.
 -->
 
 ---
 
-## Getting good answers
+<!-- _class: divider -->
 
-- **Give context:** who you are, what it's for, who will read it.
-- **Be specific:** "two short paragraphs, friendly, no jargon."
-- **Keep going:** ask for changes. It's a conversation.
-- **Check what matters:** it can be confidently wrong about facts, numbers and names.
-- **Protect privacy:** no passwords, account numbers or other people's private information.
+<div class="num">03</div>
 
----
+# Agents
 
-<!-- _class: lead -->
-
-# Part 2: AI agents
+<div class="brush"></div>
 
 ---
 
-## From prompt and response to prompt and work
+## Prompt and work
 
-<div class="cols">
-<div>
-
-**Chatbot**
-- You prompt, it responds
-- You copy and paste the result
-- One answer at a time
-
-</div>
-<div>
-
-**Agent**
-- You prompt, it **works**
-- It plans, takes many steps on its own, and checks its work
-- It hands you a finished result
-
-</div>
-</div>
-
----
-
-## What an agent can work with
-
-- **Your files:** read, write and organize them
-- **Your email and calendar**, if you connect them
-- **Your web browser:** it can click, type and fill in forms
-- **Documents:** PDFs, spreadsheets, slides
-- **Software:** whole programs, websites and apps, published online
-
-In short, it can start doing knowledge work for you.
+<svg class="diagram" viewBox="0 0 1088 400" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#161412"/></marker><marker id="a2w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#f6f2ea"/></marker></defs>
+<g font-family="Shippori Mincho, serif" font-weight="600" text-anchor="middle">
+<rect x="10" y="70" width="200" height="110" rx="8" fill="#ece6da"/>
+<text x="110" y="138" font-size="36" fill="#161412">You</text>
+<rect x="354" y="20" width="380" height="210" rx="8" fill="#b3341f"/>
+<text x="544" y="76" font-size="36" fill="#f6f2ea">Agent</text>
+<text x="544" y="136" font-size="28" fill="#f6f2ea">plan → act → check</text>
+<path d="M 618 156 C 618 192, 470 192, 470 160" fill="none" stroke="#f6f2ea" stroke-width="2.5" marker-end="url(#a2w)"/>
+<text x="544" y="215" font-size="20" fill="#f6f2ea" font-weight="500">repeats until done</text>
+<rect x="878" y="70" width="200" height="110" rx="8" fill="#ece6da"/>
+<text x="978" y="124" font-size="32" fill="#161412">Finished</text>
+<text x="978" y="160" font-size="32" fill="#161412">work</text>
+<line x1="220" y1="125" x2="344" y2="125" stroke="#161412" stroke-width="3" marker-end="url(#a2)"/>
+<line x1="744" y1="125" x2="868" y2="125" stroke="#161412" stroke-width="3" marker-end="url(#a2)"/>
+<text x="282" y="106" font-size="26" fill="#57524b">prompt</text>
+<g font-size="26" fill="#161412">
+<rect x="234" y="310" width="130" height="70" rx="6" fill="none" stroke="#161412" stroke-width="2"/><text x="299" y="354">Files</text>
+<rect x="384" y="310" width="130" height="70" rx="6" fill="none" stroke="#161412" stroke-width="2"/><text x="449" y="354">Email</text>
+<rect x="534" y="310" width="150" height="70" rx="6" fill="none" stroke="#161412" stroke-width="2"/><text x="609" y="354">Calendar</text>
+<rect x="704" y="310" width="150" height="70" rx="6" fill="none" stroke="#161412" stroke-width="2"/><text x="779" y="354">Browser</text>
+</g>
+<g stroke="#57524b" stroke-width="2" stroke-dasharray="6 6">
+<line x1="299" y1="308" x2="440" y2="232"/><line x1="449" y1="308" x2="510" y2="232"/><line x1="609" y1="308" x2="580" y2="232"/><line x1="779" y1="308" x2="650" y2="232"/>
+</g>
+</g>
+</svg>
 
 <!--
-Agents: Claude Code (Anthropic), Codex (OpenAI), and others. Mention that you approve what it's allowed to do.
+A chatbot gives you an answer. An agent does the work: it plans, takes many steps on its own, checks its work, and hands you the result.
+It can read and write your files, use your email and calendar if you connect them, and control your browser: click, type, fill in forms.
+It can make PDFs, spreadsheets, websites and whole software projects. Examples: Claude Code (Anthropic), Codex (OpenAI).
 -->
 
 ---
 
-## My last year as a software engineer
+<!-- _class: statement -->
 
-<div class="cols">
-<div>
+# Demo
 
-**A year ago**
-- I wrote most of my code by hand
-- AI suggested lines and answered questions
+<svg class="diagram" viewBox="0 0 1088 160" xmlns="http://www.w3.org/2000/svg" style="margin-top:40px">
+<defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#161412"/></marker></defs>
+<g font-family="Shippori Mincho, serif" font-weight="600" text-anchor="middle" font-size="36">
+<rect x="40" y="25" width="250" height="110" rx="8" fill="#ece6da"/><text x="165" y="93" fill="#161412">PDF</text>
+<rect x="419" y="25" width="250" height="110" rx="8" fill="#ece6da"/><text x="544" y="93" fill="#161412">Website</text>
+<rect x="798" y="25" width="250" height="110" rx="8" fill="#b3341f"/><text x="923" y="93" fill="#f6f2ea">Live online</text>
+<line x1="300" y1="80" x2="409" y2="80" stroke="#161412" stroke-width="3" marker-end="url(#a3)"/>
+<line x1="679" y1="80" x2="788" y2="80" stroke="#161412" stroke-width="3" marker-end="url(#a3)"/>
+</g>
+</svg>
 
-</div>
-<div>
-
-**Today**
-- Agents write most of my code
-- I decide what to build and check the work
-- Several agents work at once
-
-</div>
-</div>
-
-<!--
-Tell the story in your own words: when it changed, what the turning point was, what a typical day looks like now, how much more you get done, and how it felt.
--->
-
----
-
-## Live demo: Claude Code
-
-1. Make a **PDF** flyer for a local business
-2. Turn it into a **website**
-3. Put it **live on the internet**, right now
+<p>Claude Code</p>
 
 <!--
 Ask the room for a business name (or use a made-up one, e.g. "Big Spring Coffee, 101 Main St").
-Prompts:
 1. "Create a one-page PDF flyer for <business>: name, a one-line description, three menu items with prices, hours, and address. Open it when done."
 2. "Turn the flyer into a simple, good-looking one-page website with the same content."
 3. "Create a public GitHub repository for it under my account, push it, turn on GitHub Pages, and give me the live URL and a QR code for it."
@@ -256,112 +218,222 @@ Rehearse beforehand. Pre-approve gh. Have a finished copy ready in case the Wi-F
 
 ---
 
-## Any field of knowledge work
+## Any knowledge work
 
-If the work happens on a computer, an agent can help do it.
+<div class="tiles">
+<div>Software</div>
+<div>Drafting and CAD</div>
+<div>Accounting</div>
+<div>Contracts</div>
+<div>Marketing</div>
+<div>Research</div>
+<div>Office work</div>
+<div>Teaching</div>
+</div>
 
-- Software engineering
-- Computer-aided drafting and design
-- Accounting and bookkeeping
-- Legal documents and contracts
-- Marketing, writing and research
-- Office work: forms, scheduling, data entry
-
----
-
-<!-- _class: lead -->
-
-# Part 3: Checking AI's work
+<p class="caption">If the work happens on a computer, an agent can help do it.</p>
 
 ---
 
-## How I work with agents
+<!-- _class: divider -->
 
-1. **Deliberate and specify:** decide exactly what I want, with the AI's help
-2. **Autonomous implementation:** the agent does the work
-3. **Check the work:**
-   - **Human review:** I read it
-   - **AI review:** other AI agents read it
-   - **Automated checks:** tests and tools that give the same answer every time
-4. **Judge the evidence**
+<div class="num">04</div>
+
+# One Year Ago
+
+<div class="brush"></div>
+
+---
+
+## Then and now
+
+<svg class="diagram" viewBox="0 0 1088 420" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#161412"/></marker></defs>
+<g font-family="Shippori Mincho, serif" font-weight="600" text-anchor="middle">
+<text x="10" y="86" font-size="30" fill="#57524b" text-anchor="start">A year ago</text>
+<rect x="250" y="35" width="170" height="80" rx="8" fill="#ece6da"/><text x="335" y="86" font-size="32" fill="#161412">Me</text>
+<rect x="878" y="35" width="200" height="80" rx="8" fill="#ece6da"/><text x="978" y="86" font-size="32" fill="#161412">Code</text>
+<line x1="430" y1="75" x2="868" y2="75" stroke="#161412" stroke-width="3" marker-end="url(#a4)"/>
+<text x="649" y="60" font-size="24" fill="#57524b" font-weight="500">I write it, AI suggests a line</text>
+<line x1="10" y1="170" x2="1078" y2="170" stroke="#d9d2c5" stroke-width="2"/>
+<text x="10" y="326" font-size="30" fill="#b3341f" text-anchor="start">Today</text>
+<rect x="250" y="275" width="170" height="80" rx="8" fill="#ece6da"/><text x="335" y="326" font-size="32" fill="#161412">Me</text>
+<g font-size="24" fill="#f6f2ea">
+<rect x="560" y="205" width="170" height="52" rx="6" fill="#b3341f"/><text x="645" y="240">Agent</text>
+<rect x="560" y="265" width="170" height="52" rx="6" fill="#b3341f"/><text x="645" y="300">Agent</text>
+<rect x="560" y="325" width="170" height="52" rx="6" fill="#b3341f"/><text x="645" y="360">Agent</text>
+</g>
+<text x="645" y="410" font-size="30" fill="#b3341f">⋮</text>
+<rect x="878" y="275" width="200" height="80" rx="8" fill="#ece6da"/><text x="978" y="326" font-size="32" fill="#161412">Code</text>
+<g stroke="#161412" stroke-width="2.5">
+<line x1="430" y1="315" x2="552" y2="231" marker-end="url(#a4)"/><line x1="430" y1="315" x2="552" y2="291" marker-end="url(#a4)"/><line x1="430" y1="315" x2="552" y2="351" marker-end="url(#a4)"/>
+<line x1="738" y1="231" x2="870" y2="305" marker-end="url(#a4)"/><line x1="738" y1="291" x2="870" y2="313" marker-end="url(#a4)"/><line x1="738" y1="351" x2="870" y2="323" marker-end="url(#a4)"/>
+</g>
+</g>
+</svg>
 
 <!--
-"Stochastic" checks (human and AI review) are like spot checks: useful, but they can miss things. "Deterministic" checks are programs that give the same answer every time: tests, type checkers, linters, mathematical proofs.
+Tell the story in your own words: when it changed, the turning point, what a typical day looks like now, how much more you get done, and how it felt.
 -->
 
 ---
 
-## Becoming an agentic engineer
+<!-- _class: divider -->
 
-- My job shifts from **doing** the work to **judging the evidence** that the work is right.
-- The goal: let the AI do more and more, and present me with evidence.
-- That's how one person scales.
+<div class="num">05</div>
 
-This works for any knowledge work: a contract, a drawing, a budget, a report.
+# Slop Refinery Pipeline
+
+<div class="brush"></div>
+
+---
+
+## Specify, implement, check, judge
+
+<svg class="diagram" viewBox="0 0 1088 420" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#161412"/></marker><marker id="a5r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3341f"/></marker></defs>
+<g font-family="Shippori Mincho, serif" font-weight="600" text-anchor="middle">
+<rect x="0" y="130" width="190" height="110" rx="8" fill="#ece6da"/><text x="95" y="182" font-size="30" fill="#161412">Specify</text><text x="95" y="218" font-size="20" fill="#57524b" font-weight="500">you + AI</text>
+<rect x="250" y="130" width="190" height="110" rx="8" fill="#b3341f"/><text x="345" y="182" font-size="30" fill="#f6f2ea">Implement</text><text x="345" y="218" font-size="20" fill="#f6f2ea" font-weight="500">AI, on its own</text>
+<rect x="500" y="30" width="270" height="310" rx="8" fill="none" stroke="#161412" stroke-width="2"/>
+<text x="635" y="72" font-size="30" fill="#161412">Check</text>
+<g font-size="22" font-weight="500">
+<rect x="520" y="95" width="230" height="64" rx="6" fill="#ece6da"/><text x="635" y="135" fill="#161412">Human review</text>
+<rect x="520" y="175" width="230" height="64" rx="6" fill="#ece6da"/><text x="635" y="215" fill="#161412">AI review</text>
+<rect x="520" y="255" width="230" height="64" rx="6" fill="#ece6da"/><text x="635" y="295" fill="#161412">Deterministic checks</text>
+</g>
+<rect x="830" y="130" width="250" height="110" rx="8" fill="#ece6da"/><text x="955" y="182" font-size="30" fill="#161412">Evidence</text><text x="955" y="218" font-size="20" fill="#57524b" font-weight="500">you judge it</text>
+<g stroke="#161412" stroke-width="3">
+<line x1="198" y1="185" x2="242" y2="185" marker-end="url(#a5)"/>
+<line x1="448" y1="185" x2="492" y2="185" marker-end="url(#a5)"/>
+<line x1="778" y1="185" x2="822" y2="185" marker-end="url(#a5)"/>
+</g>
+<path d="M 955 248 C 955 415, 345 415, 345 250" fill="none" stroke="#b3341f" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#a5r)"/>
+<text x="650" y="406" font-size="24" fill="#b3341f">not yet: fix and check again</text>
+</g>
+</svg>
 
 <!--
-Example outside software: a contract. Specify the terms; the agent drafts it; you read it, a second AI reviews it against a checklist, and a tool checks every cited law and date.
+1. Deliberation and specification: decide exactly what you want, with the AI's help.
+2. Autonomous implementation: the AI does the work.
+3. Checks: human cognitive stochastic checks (you read it), AI cognitive stochastic checks (other agents review it), and deterministic checks (tests, type checks, linters, proofs: same answer every time).
+4. The AI presents evidence; you judge it. If it's not right yet, back to implementation.
+This works for any knowledge work, not just software.
 -->
 
 ---
 
-## The automated checks
+## Three kinds of checks
 
-- **Tests:** run the work against examples
-- **Property-based testing:** check rules across thousands of generated cases
-- **Formal verification:** a mathematical proof that the software is correct
-- **Slop Refinery:** automated checks for common AI coding mistakes
+<div class="tiles three">
+<div><span class="big">Human</span><span class="cap">You read the work. Smart, but can miss things.</span></div>
+<div><span class="big">AI</span><span class="cap">Other agents review it. Fast and thorough, but can miss things.</span></div>
+<div><span class="big">Deterministic</span><span class="cap">Tests, type checks, proofs. Same answer every time.</span></div>
+</div>
 
 <!--
-Show the Slop Refinery repo (github.com/HOWMZofficial/slop-refinery). Note it's from your work at HOWMZ.
+Human and AI review are "stochastic": like spot checks, useful but not guaranteed. Deterministic checks are programs that give the same answer every time. Formal verification is the strongest: a mathematical proof that the code is correct.
 -->
 
 ---
 
-## What I've built with AI
+<!-- _class: statement -->
 
-- **Millillion:** millillion.org
-- **Lasm:** runs Lean (a language for mathematical proofs) in JavaScript and WebAssembly
-- **ProofScript:** a planned version of TypeScript with built-in proofs
-- **Wasmetal:** a WebAssembly CPU in hardware
+# Lasm
+
+<p>Years of work for several people, done in weeks</p>
 
 <!--
-Show millillion.org and millillion.org/projects.
-Show the tweet with the Fable video: <TWEET URL>
-Lasm: my estimate is several people's work over about three years, done in about three weeks.
+Lasm runs Lean (a language for mathematical proofs) in JavaScript and WebAssembly. My estimate: about three years of work for several people, done in about three weeks, built with this pipeline.
+Show github.com/Millillion/lasm, ProofScript, and the Fable video tweet: <TWEET URL>
 -->
 
 ---
 
-## How AI helped with tonight
+<!-- _class: divider -->
 
-- The meetup website and calendar file
-- The flyer and its QR code
-- Finding who to contact, drafting emails, and checking the listings
-- These slides, and publishing them online
+<div class="num">06</div>
+
+# Agentic Engineers
+
+<div class="brush"></div>
 
 ---
 
-<!-- _class: lead -->
+## Jagged intelligence
 
-# Q&A
+<svg class="diagram" viewBox="0 0 1088 440" xmlns="http://www.w3.org/2000/svg">
+<defs><clipPath id="valleys"><rect x="0" y="200" width="1088" height="200"/></clipPath></defs>
+<g font-family="Shippori Mincho, serif" font-weight="600">
+<polygon clip-path="url(#valleys)" fill="#b3341f" opacity="0.18" points="40,0 40,260 110,120 170,230 230,80 300,290 360,150 420,60 490,250 550,330 610,170 670,100 740,270 800,140 860,50 930,240 990,130 1048,180 1048,0"/>
+<polyline fill="none" stroke="#57524b" stroke-width="2" stroke-dasharray="3 7" opacity="0.8" points="40,200 110,60 170,170 230,20 300,230 360,90 420,0 490,190 550,270 610,110 670,40 740,210 800,80 860,0 930,180 990,70 1048,120"/>
+<line x1="20" y1="200" x2="1068" y2="200" stroke="#161412" stroke-width="2" stroke-dasharray="10 8"/>
+<polyline fill="none" stroke="#161412" stroke-width="4" stroke-linejoin="round" points="40,260 110,120 170,230 230,80 300,290 360,150 420,60 490,250 550,330 610,170 670,100 740,270 800,140 860,50 930,240 990,130 1048,180"/>
+<text x="550" y="370" font-size="26" fill="#b3341f" text-anchor="middle">our opportunity</text>
+<g font-size="22" fill="#161412" font-weight="500">
+<line x1="150" y1="425" x2="200" y2="425" stroke="#161412" stroke-width="4"/><text x="212" y="433">AI today</text>
+<line x1="420" y1="425" x2="470" y2="425" stroke="#161412" stroke-width="2" stroke-dasharray="10 8"/><text x="482" y="433">Human level</text>
+<line x1="700" y1="425" x2="750" y2="425" stroke="#57524b" stroke-width="2" stroke-dasharray="3 7"/><text x="762" y="433" fill="#57524b">AI next year?</text>
+</g>
+</g>
+</svg>
 
-Ask anything, at any level.
+<p class="caption">The valleys are where people still have the edge. For how long?</p>
+
+<!--
+AI's abilities are jagged: far better than people at some things, surprisingly bad at others.
+Peaks: writing, translation, coding, summarizing, recalling facts across every field.
+Valleys (examples to choose from): local knowledge and relationships, judgment and taste, trust and accountability, physical work, long tasks with unclear goals, knowing what's worth doing.
+The valleys are our opportunity, if we build those skills. But each new model raises the line, and the valleys keep shrinking. How long they last is the open question.
+-->
+
+---
+
+## Judging the evidence
+
+<svg class="diagram" viewBox="0 0 1088 380" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#161412"/></marker><marker id="a6r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3341f"/></marker></defs>
+<g font-family="Shippori Mincho, serif" font-weight="600" text-anchor="middle">
+<rect x="444" y="10" width="200" height="90" rx="8" fill="#ece6da"/><text x="544" y="67" font-size="34" fill="#161412">You</text>
+<g font-size="24" fill="#f6f2ea">
+<rect x="60" y="290" width="160" height="70" rx="6" fill="#b3341f"/><text x="140" y="333">Agent</text>
+<rect x="270" y="290" width="160" height="70" rx="6" fill="#b3341f"/><text x="350" y="333">Agent</text>
+<rect x="464" y="290" width="160" height="70" rx="6" fill="#b3341f"/><text x="544" y="333">Agent</text>
+<rect x="658" y="290" width="160" height="70" rx="6" fill="#b3341f"/><text x="738" y="333">Agent</text>
+<rect x="868" y="290" width="160" height="70" rx="6" fill="#b3341f"/><text x="948" y="333">Agent</text>
+</g>
+<g stroke="#161412" stroke-width="2.5">
+<line x1="490" y1="108" x2="150" y2="282" marker-end="url(#a6)"/><line x1="510" y1="108" x2="360" y2="282" marker-end="url(#a6)"/><line x1="530" y1="108" x2="530" y2="282" marker-end="url(#a6)"/>
+</g>
+<g stroke="#b3341f" stroke-width="2.5" stroke-dasharray="7 6">
+<line x1="558" y1="282" x2="558" y2="108" marker-end="url(#a6r)"/><line x1="728" y1="282" x2="578" y2="108" marker-end="url(#a6r)"/><line x1="938" y1="282" x2="598" y2="108" marker-end="url(#a6r)"/>
+</g>
+<text x="260" y="170" font-size="26" fill="#161412">goals</text>
+<text x="830" y="170" font-size="26" fill="#b3341f">evidence</text>
+</g>
+</svg>
+
+<p class="caption">You decide what to build, and judge the evidence that it's right.</p>
+
+<!--
+The job shifts from doing the work to judging the evidence the AI presents. Let the AI do more and more, and present you with evidence. That's how one person scales. It applies to any knowledge work: a contract, a drawing, a budget, a report.
+-->
+
+---
+
+<!-- _class: statement -->
+
+# Questions
+
+<p>Ask anything, at any level.</p>
 
 ---
 
 ## Thank you
 
-- **Sign up** to hear about the next meetup.
-- **Next time:** locals presenting how they use AI in their businesses and lives. Want to present? Talk to me tonight or get in touch.
-- **Contact:** millillion.org/contact
-
-<div class="cols">
-<div>
-
-**Slides:** millillion.org/meetup/slides
-**Meetup:** millillion.org/meetup
-
+<div class="qrrow">
+<div><img class="qr" src="images/qr-meetup.svg" alt="QR code for the meetup page"><p>Sign up for the next meetup<br>millillion.org/meetup</p></div>
+<div><img class="qr" src="images/qr-slides.svg" alt="QR code for the slides"><p>These slides<br>millillion.org/meetup/slides</p></div>
 </div>
-<img class="qr" src="images/qr-meetup.svg" alt="QR code for the meetup page">
-</div>
+
+<p class="caption">Next time: locals showing how they use AI. Want to present? Talk to me.</p>

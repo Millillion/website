@@ -1,0 +1,103 @@
+/* @theme millillion */
+/* Sumi ink on washi paper, matching millillion.org. One ink, one seal-red accent, lots of space. */
+
+@font-face { font-family: 'Shippori Mincho'; font-weight: 500; font-display: swap; src: url(fonts/ShipporiMincho-500.woff2) format('woff2'); }
+@font-face { font-family: 'Shippori Mincho'; font-weight: 600; font-display: swap; src: url(fonts/ShipporiMincho-600.woff2) format('woff2'); }
+@font-face { font-family: 'Shippori Mincho'; font-weight: 800; font-display: swap; src: url(fonts/ShipporiMincho-800.woff2) format('woff2'); }
+@font-face { font-family: 'Zen Kaku Gothic New'; font-weight: 400; font-display: swap; src: url(fonts/ZenKakuGothicNew-400.woff2) format('woff2'); }
+@font-face { font-family: 'Zen Kaku Gothic New'; font-weight: 500; font-display: swap; src: url(fonts/ZenKakuGothicNew-500.woff2) format('woff2'); }
+@font-face { font-family: 'Zen Kaku Gothic New'; font-weight: 700; font-display: swap; src: url(fonts/ZenKakuGothicNew-700.woff2) format('woff2'); }
+
+:root {
+  --paper: #f6f2ea;
+  --ink: #161412;
+  --ink-soft: #57524b;
+  --ink-faint: #d9d2c5;
+  --wash: #ece6da;
+  --shu: #b3341f;
+  --serif: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', Georgia, serif;
+  --sans: 'Zen Kaku Gothic New', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+section {
+  width: 1280px;
+  height: 720px;
+  box-sizing: border-box;
+  padding: 72px 96px;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 34px/1.6 var(--sans);
+  letter-spacing: 0.01em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: 0.03em; line-height: 1.3; margin: 0; color: var(--ink); }
+h1 { font-size: 64px; }
+h2 { font-size: 46px; margin-bottom: 40px; }
+h2::after {
+  content: ""; display: block; width: 150px; height: 8px; margin-top: 18px;
+  background: var(--ink); opacity: 0.85;
+  -webkit-mask: url(images/brush-rule-short.svg) left center / 100% 100% no-repeat;
+  mask: url(images/brush-rule-short.svg) left center / 100% 100% no-repeat;
+}
+p { margin: 0 0 0.6em; }
+strong { font-weight: 700; }
+em { font-style: normal; color: var(--shu); }
+a { color: inherit; text-decoration: none; }
+ul, ol { margin: 0; padding-left: 1.1em; }
+li { margin: 0.3em 0; }
+li::marker { color: var(--shu); }
+.muted { color: var(--ink-soft); }
+.small { font-size: 24px; }
+
+/* page number: a small seal */
+section::after {
+  font: 500 18px/1 var(--serif); color: var(--ink-soft);
+  right: 48px; bottom: 36px;
+}
+
+/* title slide */
+section.title { align-items: center; text-align: center; padding-top: 40px; }
+section.title img.logo { width: 520px; height: auto; }
+section.title h1 { font-size: 52px; margin-top: 28px; letter-spacing: 0.12em; }
+section.title .sub { font: 500 30px/1.4 var(--serif); letter-spacing: 0.1em; color: var(--ink-soft); margin-top: 14px; }
+section.title .meta { font-size: 22px; color: var(--ink-soft); margin-top: 34px; letter-spacing: 0.04em; }
+.seal { display: inline-block; width: 14px; height: 14px; background: var(--shu); border-radius: 2px; transform: rotate(45deg); margin: 26px auto 0; }
+
+/* section dividers */
+section.divider { align-items: flex-start; }
+section.divider .num { font: 800 120px/1 var(--serif); color: var(--shu); opacity: 0.9; }
+section.divider h1 { font-size: 72px; margin-top: 18px; }
+section.divider .brush {
+  width: 520px; height: 12px; margin-top: 30px; background: var(--ink); opacity: 0.85;
+  -webkit-mask: url(images/brush-rule.svg) left center / 100% 100% no-repeat;
+  mask: url(images/brush-rule.svg) left center / 100% 100% no-repeat;
+}
+
+/* one big statement */
+section.statement { align-items: center; text-align: center; }
+section.statement h1 { font-size: 88px; }
+section.statement p { font: 500 34px/1.5 var(--serif); color: var(--ink-soft); margin-top: 24px; }
+
+/* overview list */
+ol.overview { list-style: none; padding: 0; counter-reset: o; columns: 2; column-gap: 80px; }
+ol.overview li { counter-increment: o; font: 600 38px/1.3 var(--serif); margin: 0 0 30px; break-inside: avoid; }
+ol.overview li::before { content: counter(o, decimal-leading-zero); color: var(--shu); font-size: 26px; margin-right: 18px; vertical-align: middle; }
+
+/* tiles */
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.tiles div { background: var(--wash); border-radius: 6px; padding: 26px 18px; text-align: center; font: 600 28px/1.3 var(--serif); }
+.tiles.three { grid-template-columns: repeat(3, 1fr); }
+.tiles.two { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+.tiles .big { font-size: 44px; display: block; }
+.tiles .cap { font: 400 22px/1.4 var(--sans); color: var(--ink-soft); display: block; margin-top: 10px; }
+
+/* diagrams */
+svg.diagram { width: 100%; height: auto; display: block; }
+.caption { text-align: center; font: 500 30px/1.4 var(--serif); color: var(--ink-soft); margin-top: 26px; }
+
+.qr { width: 220px; height: 220px; }
+.qrrow { display: flex; gap: 70px; justify-content: center; align-items: flex-start; text-align: center; margin-top: 10px; }
+.qrrow p { font-size: 24px; color: var(--ink-soft); margin-top: 12px; }

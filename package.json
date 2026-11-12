@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "slides": "marp meetup/slides.md --html -o public/meetup/slides/index.html && marp meetup/slides.md --html --pdf --allow-local-files -o public/meetup/slides/slides.pdf && rm -rf public/meetup/slides/images && cp -r meetup/images public/meetup/slides/"
+    "slides": "rm -rf public/meetup/slides && mkdir -p public/meetup/slides && cp -r meetup/images meetup/fonts public/meetup/slides/ && marp meetup/slides.md --html --theme meetup/millillion.css --allow-local-files -o public/meetup/slides/index.html && marp meetup/slides.md --html --theme meetup/millillion.css --allow-local-files --pdf -o public/meetup/slides/slides.pdf"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",

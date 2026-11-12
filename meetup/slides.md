@@ -495,6 +495,26 @@ Show github.com/Millillion/lasm, ProofScript, and the Fable video tweet: <TWEET 
 
 ---
 
+<!-- _class: statement everyone -->
+
+# Everyone is an agentic engineer now
+
+<p>An agentic engineer with an emphasis in your own field</p>
+
+<div class="fields">
+<span>Software development</span><span>Accounting</span><span>Real estate</span><span>Manufacturing</span><span>Law</span><span>Healthcare</span><span>Teaching</span><span><em>Your field</em></span>
+</div>
+
+<p class="caption">To stay effective, valuable and relevant from here on, that's what each of us has to become.</p>
+
+<!--
+I call myself "an agentic engineer with an emphasis in software development." Everyone here can become an agentic engineer with an emphasis in what they already know: accounting, real estate, manufacturing, law, healthcare, teaching.
+Your expertise is what lets you direct the AI well and judge whether its work is right. The agent does more and more of the doing; you supply the knowledge, the goals and the judgment.
+To stay effective, valuable and relevant from here on, that's what each of us has to become.
+-->
+
+---
+
 ## Jagged intelligence
 
 <svg class="diagram" viewBox="0 0 1088 440" xmlns="http://www.w3.org/2000/svg">

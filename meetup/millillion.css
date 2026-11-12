@@ -81,6 +81,13 @@ section.statement { align-items: center; text-align: center; }
 section.statement h1 { font-size: 88px; }
 section.statement p { font: 500 34px/1.5 var(--serif); color: var(--ink-soft); margin-top: 24px; }
 
+section.everyone h1 { font-size: 56px; white-space: nowrap; }
+section.everyone > p:not(.caption) { margin-top: 18px; }
+.fields { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 40px; max-width: 1000px; }
+.fields span { font: 600 26px/1.2 var(--serif); background: var(--wash); padding: 14px 22px; border-radius: 6px; }
+.fields em { color: var(--shu); }
+section.everyone .caption { margin-top: 40px; font-size: 28px; }
+
 /* overview list */
 ol.overview { list-style: none; padding: 0; counter-reset: o; columns: 2; column-gap: 80px; }
 ol.overview li { counter-increment: o; font: 600 38px/1.3 var(--serif); margin: 0 0 30px; break-inside: avoid; }

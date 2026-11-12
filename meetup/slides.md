@@ -134,12 +134,14 @@ Others: Google (Gemini), Microsoft (Copilot), Meta (Meta AI), xAI (Grok), DeepSe
 <p>claude.ai</p>
 
 <!--
-Try along on your phone.
-1. "I run a small family restaurant on Main Street in Greeneville, Tennessee. Give me five low-cost ideas to bring in more customers this winter."
-2. "Write a short Facebook post announcing the second idea."
-3. "Translate that post into Spanish." Ask if anyone in the room can judge it.
-4. Take a question from the audience.
-Optional: voice mode, or a photo of something in the room.
+Jordan's plan (claude.ai):
+1. "Are there any AI meetups in Greeneville tonight?"
+2. Ask where it is, and how much it costs.
+3. "What if I don't know anything about AI?"
+4. Ask it to translate the answer into Spanish for my wife, then play the audio.
+5. Voice mode: talk to it out loud.
+6. "Can you teach me about yourself?"
+People can try along on their phones at claude.ai.
 -->
 
 ---

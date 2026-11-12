@@ -235,26 +235,19 @@ It can make PDFs, spreadsheets, websites and whole software projects. Examples: 
 
 # Demo
 
-<svg class="diagram" viewBox="0 0 1088 160" xmlns="http://www.w3.org/2000/svg" style="margin-top:40px">
-<defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#161412"/></marker></defs>
-<g font-family="Shippori Mincho, serif" font-weight="600" text-anchor="middle" font-size="36">
-<rect x="40" y="25" width="250" height="110" rx="8" fill="#ece6da"/><text x="165" y="93" fill="#161412">PDF</text>
-<rect x="419" y="25" width="250" height="110" rx="8" fill="#ece6da"/><text x="544" y="93" fill="#161412">Website</text>
-<rect x="798" y="25" width="250" height="110" rx="8" fill="#b3341f"/><text x="923" y="93" fill="#f6f2ea">Live online</text>
-<line x1="300" y1="80" x2="409" y2="80" stroke="#161412" stroke-width="3" marker-end="url(#a3)"/>
-<line x1="679" y1="80" x2="788" y2="80" stroke="#161412" stroke-width="3" marker-end="url(#a3)"/>
-</g>
-</svg>
-
-<p>Claude Code</p>
+<p>Big Spring Room PDF · Greene County Budget Website</p>
 
 <!--
-Ask the room for a business name (or use a made-up one, e.g. "Big Spring Coffee, 101 Main St").
-1. "Create a one-page PDF flyer for <business>: name, a one-line description, three menu items with prices, hours, and address. Open it when done."
-2. "Turn the flyer into a simple, good-looking one-page website with the same content."
-3. "Create a public GitHub repository for it under my account, push it, turn on GitHub Pages, and give me the live URL and a QR code for it."
-Show the QR so people can open the site on their phones.
-Rehearse beforehand. Pre-approve gh. Have a finished copy ready in case the Wi-Fi fails.
+Claude Code. Two demos.
+
+1. Big Spring Room PDF (the library's flat, non-fillable room application: https://www.ggcpl.org/_files/ugd/f98f58_c9430b5bc8444861b13f87592556c1f5.pdf)
+"Here's the library's room application. Fill it out for the next Greeneville AI Meetup: <date>, 7 to 9pm, about 20 people, no refreshments, projector needed, contact is me, Millillion. Leave the signature blank. Then show me the finished PDF and check that every answer sits on the right line."
+
+2. Greene County Budget Website
+Put the official Greene County, Tennessee budget document in the demo folder beforehand (not North Carolina's Greene County).
+"Build an interactive web page from this budget: the General Fund's main revenue sources and spending categories, with sliders to change each one and a live readout of the property tax rate needed to balance it. Label it as a demo built from the official budget. Then publish it on GitHub Pages, give me the URL and a QR code, and show me that every total matches the official document."
+
+Rehearse both. Pre-approve git and gh. Have finished copies ready in case the Wi-Fi fails.
 -->
 
 ---

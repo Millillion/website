@@ -15,7 +15,23 @@ import Base from "../layouts/Base.astro";
     </ul>
     <p>Presented by Jordan Last, an agentic engineer with an emphasis in software development.</p>
     <p><strong>Thursday, November 12, 2026, 7–9pm</strong><br>Big Spring Room, Greeneville/Greene County Public Library, 210 N Main St<br>Free and open to everyone. Hosted by Millillion.</p>
-    <p><a class="cta" href="/greeneville-ai-meetup.ics">Add to calendar</a> <a class="cta" href="mailto:lastmjs@millillion.org?subject=Greeneville%20AI%20Meetup%20RSVP">RSVP by email</a> <a class="cta" href="/meetup/slides/">Slides</a></p>
+    <p><a class="cta" href="/greeneville-ai-meetup.ics">Add to calendar</a> <a class="cta" href="mailto:lastmjs@millillion.org?subject=Greeneville%20AI%20Meetup%20RSVP">RSVP by email</a> <a class="cta" href="/meetup/slides/">Slides</a> <a class="cta" href="#event-news">Sign up for event news</a></p>
     <p class="muted">The meetup is held at the library; it isn't a library-sponsored program.</p>
+    <h2 id="event-news">Millillion event news</h2>
+    <p>Sign up to hear about Millillion events: the next Greeneville AI Meetup, other meetups, conferences and anything else Millillion hosts.</p>
+    <p id="joined" class="notice" hidden>Thank you. You're on the list.</p>
+    <p id="join-error" class="notice" hidden>Sorry, that didn't go through. Please check your email address and try again.</p>
+    <form class="contact-form" method="post" action="/api/events">
+      <label>Name <input name="name" required maxlength="200" autocomplete="name" /></label>
+      <label>Email <input name="email" type="email" required maxlength="200" autocomplete="email" /></label>
+      <input type="hidden" name="source" value="meetup page" />
+      <label class="hp" aria-hidden="true">Company <input name="company" tabindex="-1" autocomplete="off" /></label>
+      <button class="cta primary" type="submit">Sign up</button>
+    </form>
   </article>
+  <script is:inline>
+    const q = new URLSearchParams(location.search);
+    if (q.has("joined")) document.getElementById("joined").hidden = false;
+    if (q.has("error")) document.getElementById("join-error").hidden = false;
+  </script>
 </Base>

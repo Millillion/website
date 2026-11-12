@@ -131,7 +131,7 @@ Others: Google (Gemini), Microsoft (Copilot), Meta (Meta AI), xAI (Grok), DeepSe
 
 # Demo
 
-<p>chatgpt.com · claude.ai</p>
+<p>claude.ai</p>
 
 <!--
 Try along on your phone.

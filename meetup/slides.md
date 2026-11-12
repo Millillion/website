@@ -499,17 +499,17 @@ Show github.com/Millillion/lasm, ProofScript, and the Fable video tweet: <TWEET 
 
 <div class="entry">
 <div class="term">engineer <span>noun</span></div>
-<div class="def">A person who applies knowledge and judgment to design and build solutions to practical problems.</div>
+<div class="def">A person who applies knowledge of math and science, with judgment, to solve practical problems.</div>
 </div>
 
 <div class="entry">
 <div class="term">agentic engineer <span>noun</span></div>
-<div class="def">A person who applies knowledge and judgment to design and build solutions to practical problems, <em>using AI agents as the medium</em>.</div>
+<div class="def">A person who <em>directs AI agents</em>, with knowledge and judgment, to solve practical problems.</div>
 </div>
 
 <!--
-An engineer has always been someone who uses knowledge and judgment to design and build solutions to practical problems. The medium changes: steel, circuits, code.
-An agentic engineer does the same thing, but the medium is AI agents. You decide what the problem is, specify the solution, direct the agents, and judge the evidence that the work is right.
+The engineer definition is based on the classic definition of engineering that engineering educators have used for decades (the Engineers' Council for Professional Development, which became ABET): knowledge of math and science, applied with judgment, for practical ends.
+An agentic engineer directs AI agents, with knowledge and judgment, to solve practical problems. The agents do more and more of the work; the knowledge and the judgment are yours.
 -->
 
 ---

@@ -537,13 +537,19 @@ To stay effective, valuable and relevant from here on, that's what each of us ha
 ## Jagged intelligence
 
 <svg class="diagram" viewBox="0 0 1088 440" xmlns="http://www.w3.org/2000/svg">
-<defs><clipPath id="valleys"><rect x="0" y="200" width="1088" height="200"/></clipPath></defs>
+<defs><clipPath id="valleys"><rect x="0" y="200" width="1088" height="200"/></clipPath><marker id="ya" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#161412"/></marker></defs>
 <g font-family="Shippori Mincho, serif" font-weight="600">
+<g transform="translate(84,8) scale(0.92,0.98)">
 <polygon clip-path="url(#valleys)" fill="#b3341f" opacity="0.18" points="40,0 40,260 110,120 170,230 230,80 300,290 360,150 420,60 490,250 550,330 610,170 670,100 740,270 800,140 860,50 930,240 990,130 1048,180 1048,0"/>
 <polyline fill="none" stroke="#57524b" stroke-width="2" stroke-dasharray="3 7" opacity="0.8" points="40,200 110,60 170,170 230,20 300,230 360,90 420,0 490,190 550,270 610,110 670,40 740,210 800,80 860,0 930,180 990,70 1048,120"/>
 <line x1="20" y1="200" x2="1068" y2="200" stroke="#161412" stroke-width="2" stroke-dasharray="10 8"/>
 <polyline fill="none" stroke="#161412" stroke-width="4" stroke-linejoin="round" points="40,260 110,120 170,230 230,80 300,290 360,150 420,60 490,250 550,330 610,170 670,100 740,270 800,140 860,50 930,240 990,130 1048,180"/>
-<text x="550" y="370" font-size="26" fill="#b3341f" text-anchor="middle">our opportunity</text>
+</g>
+<line x1="78" y1="350" x2="78" y2="6" stroke="#161412" stroke-width="2.5" marker-end="url(#ya)"/>
+<line x1="78" y1="350" x2="1068" y2="350" stroke="#161412" stroke-width="2.5"/>
+<text transform="translate(52,178) rotate(-90)" font-size="24" fill="#161412" text-anchor="middle">Ability</text>
+<text x="1068" y="378" font-size="20" fill="#57524b" font-weight="500" text-anchor="end">Different skills and tasks</text>
+<text x="590" y="380" font-size="26" fill="#b3341f" text-anchor="middle">our opportunity</text>
 <g font-size="22" fill="#161412" font-weight="500">
 <line x1="150" y1="425" x2="200" y2="425" stroke="#161412" stroke-width="4"/><text x="212" y="433">AI today</text>
 <line x1="420" y1="425" x2="470" y2="425" stroke="#161412" stroke-width="2" stroke-dasharray="10 8"/><text x="482" y="433">Human level</text>

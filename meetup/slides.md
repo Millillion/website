@@ -113,7 +113,7 @@ What Millillion is and why. Show millillion.org and the projects page.
 ## The two main chatbots
 
 <div class="tiles two">
-<div><span class="big">ChatGPT</span><span class="cap">OpenAI · 2015 · Sam Altman</span></div>
+<div><span class="big">ChatGPT</span><span class="cap">OpenAI · 2015 · Sam Altman, Elon Musk</span></div>
 <div><span class="big">Claude</span><span class="cap">Anthropic · 2021 · Dario and Daniela Amodei</span></div>
 </div>
 

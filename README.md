@@ -48,6 +48,9 @@ npm run build
 - Output directory: `dist`
 - Rebuild on pushes to this repo. README and content edits elsewhere arrive as `sync-content` commits.
 
+## Meetup slides
+The Greeneville AI Meetup slides are [Marp](https://marp.app/) Markdown in `meetup/slides.md`. Run `npm run slides` to rebuild `public/meetup/slides/` (HTML and PDF), then commit the output. They're served at millillion.org/meetup/slides/. In the browser, arrow keys move between slides, F goes full-screen and P opens presenter view with notes.
+
 ## AI skills (how episodes and posts are made)
 - [`publish-episode`](.claude/skills/publish-episode/SKILL.md): a raw recording becomes a mastered episode, transcript, blog post, and is published.
 - [`review-episode`](.claude/skills/review-episode/SKILL.md): automated checks, plus checking that the post says only what Jordan said.

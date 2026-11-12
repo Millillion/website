@@ -5,12 +5,16 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "slides": "marp meetup/slides.md --html -o public/meetup/slides/index.html && marp meetup/slides.md --html --pdf --allow-local-files -o public/meetup/slides/slides.pdf && rm -rf public/meetup/slides/images && cp -r meetup/images public/meetup/slides/"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.4",
     "astro": "^7.4.2",
     "marked": "^18.1.1"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "4.5.1"
   }
 }

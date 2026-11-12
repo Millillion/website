@@ -66,7 +66,7 @@ Quick show of hands: who has used ChatGPT or Claude? Who uses one every week? Wh
 
 <div class="tiles three">
 <div><span class="big">Lasm</span><span class="cap">Lean for JavaScript and WebAssembly runtimes</span></div>
-<div><span class="big">ProofScript</span><span class="cap">A planned variant of TypeScript with dependent types and formal verification</span></div>
+<div><span class="big">ProofScript</span><span class="cap">A variant of TypeScript with dependent types and formal verification</span></div>
 <div><span class="big">Wasmetal</span><span class="cap">A bare metal physical implementation of WebAssembly. That's right, a WebAssembly CPU.</span></div>
 </div>
 

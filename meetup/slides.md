@@ -210,20 +210,22 @@ Advice: start with the free plan. If you use it every day, $20 a month (Claude P
 <line x1="744" y1="125" x2="868" y2="125" stroke="#161412" stroke-width="3" marker-end="url(#a2)"/>
 <text x="282" y="106" font-size="26" fill="#57524b">prompt</text>
 <g font-size="26" fill="#161412">
-<rect x="234" y="310" width="130" height="70" rx="6" fill="none" stroke="#161412" stroke-width="2"/><text x="299" y="354">Files</text>
-<rect x="384" y="310" width="130" height="70" rx="6" fill="none" stroke="#161412" stroke-width="2"/><text x="449" y="354">Email</text>
-<rect x="534" y="310" width="150" height="70" rx="6" fill="none" stroke="#161412" stroke-width="2"/><text x="609" y="354">Calendar</text>
-<rect x="704" y="310" width="150" height="70" rx="6" fill="none" stroke="#161412" stroke-width="2"/><text x="779" y="354">Browser</text>
+<rect x="84" y="310" width="140" height="70" rx="6" fill="none" stroke="#161412" stroke-width="2"/><text x="154" y="354">Files</text>
+<rect x="240" y="310" width="140" height="70" rx="6" fill="none" stroke="#161412" stroke-width="2"/><text x="310" y="354">Terminal</text>
+<rect x="396" y="310" width="140" height="70" rx="6" fill="none" stroke="#161412" stroke-width="2"/><text x="466" y="354">Programs</text>
+<rect x="552" y="310" width="140" height="70" rx="6" fill="none" stroke="#161412" stroke-width="2"/><text x="622" y="354">Browser</text>
+<rect x="708" y="310" width="140" height="70" rx="6" fill="none" stroke="#161412" stroke-width="2"/><text x="778" y="354">Email</text>
+<rect x="864" y="310" width="140" height="70" rx="6" fill="none" stroke="#161412" stroke-width="2"/><text x="934" y="354">Calendar</text>
 </g>
 <g stroke="#57524b" stroke-width="2" stroke-dasharray="6 6">
-<line x1="299" y1="308" x2="440" y2="232"/><line x1="449" y1="308" x2="510" y2="232"/><line x1="609" y1="308" x2="580" y2="232"/><line x1="779" y1="308" x2="650" y2="232"/>
+<line x1="154" y1="308" x2="400" y2="232"/><line x1="310" y1="308" x2="458" y2="232"/><line x1="466" y1="308" x2="516" y2="232"/><line x1="622" y1="308" x2="574" y2="232"/><line x1="778" y1="308" x2="632" y2="232"/><line x1="934" y1="308" x2="690" y2="232"/>
 </g>
 </g>
 </svg>
 
 <!--
 A chatbot gives you an answer. An agent does the work: it plans, takes many steps on its own, checks its work, and hands you the result.
-It can read and write your files, use your email and calendar if you connect them, and control your browser: click, type, fill in forms.
+It can read and write your files, run commands in the terminal, use the programs on your computer, use your email and calendar if you connect them, and control your browser: click, type, fill in forms.
 It can make PDFs, spreadsheets, websites and whole software projects. Examples: Claude Code (Anthropic), Codex (OpenAI).
 -->
 
@@ -271,6 +273,82 @@ Rehearse beforehand. Pre-approve gh. Have a finished copy ready in case the Wi-F
 </div>
 
 <p class="caption">If the work happens on a computer, an agent can help do it.</p>
+
+---
+
+## The main levers
+
+<svg class="diagram" viewBox="0 0 1088 432" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<filter id="ink" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="3.5"/></filter>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7"><circle cx="5" cy="5" r="4" fill="#b3341f"/></marker>
+</defs>
+<g filter="url(#ink)" fill="none" stroke="#161412" stroke-linecap="round" stroke-linejoin="round">
+<rect x="14" y="8" width="1060" height="232" rx="14" stroke-width="4.5"/>
+<line x1="14" y1="54" x2="1074" y2="54" stroke-width="3"/>
+<line x1="34" y1="176" x2="1054" y2="176" stroke-width="2.5" stroke="#57524b"/>
+<rect x="852" y="198" width="190" height="20" rx="4" stroke-width="2.5"/>
+</g>
+<g filter="url(#ink)"><rect x="854" y="200" width="76" height="16" rx="3" fill="#b3341f"/></g>
+<g fill="#161412"><circle cx="44" cy="31" r="7"/><circle cx="68" cy="31" r="7"/><circle cx="92" cy="31" r="7"/></g>
+<g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="24" fill="#161412">
+<text x="44" y="98">&gt; Make a PDF flyer for Big Spring Coffee</text>
+<text x="44" y="140" fill="#57524b">● Writing flyer.pdf … done</text>
+<text x="70" y="216" font-weight="700">Opus</text><text x="150" y="216">5.5</text>
+<text x="330" y="216">effort: high</text>
+<text x="600" y="216">fast: off</text>
+</g>
+<g filter="url(#ink)" stroke="#b3341f" stroke-width="3" stroke-linecap="round" fill="none">
+<path d="M 102 226 C 98 260, 106 290, 110 318" marker-start="url(#dot)"/>
+<path d="M 170 226 C 210 262, 280 290, 310 318" marker-start="url(#dot)"/>
+<path d="M 410 226 C 420 262, 510 292, 525 318" marker-start="url(#dot)"/>
+<path d="M 655 226 C 680 262, 735 292, 745 318" marker-start="url(#dot)"/>
+<path d="M 946 226 C 950 262, 958 292, 960 318" marker-start="url(#dot)"/>
+</g>
+<g font-family="Shippori Mincho, serif" text-anchor="middle">
+<g font-size="28" font-weight="600" fill="#161412">
+<text x="110" y="356">Model family</text><text x="310" y="356">Version</text><text x="525" y="356">Reasoning effort</text><text x="745" y="356">Speed</text><text x="960" y="356">Cost</text>
+</g>
+<g font-size="21" font-weight="500" fill="#57524b">
+<text x="110" y="392">Fable, Opus,</text><text x="110" y="420">Sonnet, Haiku</text>
+<text x="310" y="392">newer is</text><text x="310" y="420">smarter</text>
+<text x="525" y="392">how long it thinks:</text><text x="525" y="420">low to max</text>
+<text x="745" y="392">fast mode and</text><text x="745" y="420">smaller models</text>
+<text x="960" y="392">your plan's</text><text x="960" y="420">usage</text>
+</g>
+</g>
+</svg>
+
+
+<!--
+These are the controls that matter most, in Claude Code, claude.ai and ChatGPT alike.
+The tradeoff: more capable models and more thinking give better work, but cost more usage and take more time.
+Model family: Fable (Anthropic's top model), Opus, Sonnet, Haiku. Bigger is more capable; smaller is faster and cheaper. ChatGPT has its own families in a model picker.
+Version: the number, like 5.5. Newer versions are smarter. Use the latest.
+Reasoning effort: how long the model thinks before it answers: low, medium, high, extra high, max. Harder problems deserve more effort.
+Speed: smaller models and fast mode answer sooner.
+Cost: every request uses part of your plan's usage. Bigger models and more effort use it up faster. Check your usage in settings.
+Rule of thumb: start with a strong model at medium or high effort; turn effort up for hard problems and down for quick ones.
+The interface drawn here is a sketch in the style of Claude Code, not an exact screenshot.
+-->
+
+---
+
+<!-- _class: statement -->
+
+# Ask it to teach you
+
+<p>Anything from tonight, explained the way you learn best.</p>
+
+<div class="examples">
+<div>“Explain reasoning effort like I’m new to computers.”</div>
+<div>“Quiz me on the difference between a chatbot and an agent.”</div>
+<div>“Make me a one-page cheat sheet of tonight’s ideas.”</div>
+</div>
+
+<!--
+The AI can teach you how to use the AI. Any concept from tonight: ask it to explain it simply, with examples from your own work, as a quiz, a diagram, a story, or out loud in voice mode. Ask follow-up questions until it makes sense.
+-->
 
 ---
 

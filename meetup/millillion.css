@@ -104,6 +104,9 @@ ol.overview li::before { content: counter(o, decimal-leading-zero); color: var(-
 .plans td:first-child { font-family: var(--serif); font-weight: 600; }
 .plans td:last-child { text-align: right; color: var(--ink-soft); }
 
+.examples { margin-top: 44px; display: flex; flex-direction: column; gap: 14px; align-items: center; }
+.examples div { font: 500 28px/1.4 var(--serif); background: var(--wash); border-left: 4px solid var(--shu); padding: 12px 26px; border-radius: 4px; }
+
 /* diagrams */
 svg.diagram { width: 100%; height: auto; display: block; }
 .caption { text-align: center; font: 500 30px/1.4 var(--serif); color: var(--ink-soft); margin-top: 26px; }
